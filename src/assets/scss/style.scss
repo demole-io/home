@@ -1,0 +1,840 @@
+// toast scss
+// VARIABLES
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+p,
+ul,
+span {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: "Montserrat", sans-serif;
+	color: white;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+*:focus {
+	outline: 0;
+}
+
+@font-face {
+	font-family: "EvilEmpire";
+	src: url("../fonts/Evil Empire.otf");
+}
+
+@font-face {
+	font-family: "LibreBaskerville";
+	src: url("../fonts/LibreBaskerville-Regular.ttf");
+}
+
+body {
+	background-image: url("../img/bg-body.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*#region General*/
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	top: 0px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	.icon-mobile {
+		display: none;
+	}
+	p,
+	li,
+	a,
+	svg {
+		transition: all 0.1s ease-out;
+	}
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		overflow: visible;
+		position: relative;
+	}
+	.waper-logo {
+		cursor: pointer;
+		align-items: center;
+		display: flex;
+		align-items: center;
+		p {
+			font-size: 26px;
+			margin-left: 20px;
+			color: #36a2de;
+			font-family: "EvilEmpire";
+		}
+	}
+
+	.menu {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		li,
+		a {
+			border-radius: 2px;
+			margin-left: 40px;
+			font-size: 16px;
+			font-weight: 600;
+			&:first-child {
+				margin-left: 0px;
+			}
+			font-family: "LibreBaskerville";
+		}
+
+		a:hover {
+			color: #ffb337;
+		}
+	}
+}
+
+.container {
+	width: 1270px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+/*#endregion */
+#home {
+	min-height: 100vh;
+	.container {
+		height: 100%;
+		align-items: center;
+		padding-top: 250px;
+		text-align: center;
+
+		.title {
+			font-family: "EvilEmpire";
+			font-size: 70px;
+		}
+
+		.content {
+			font-family: "EvilEmpire";
+			color: #ffc970;
+			font-size: 30px;
+			margin: 30px 0;
+		}
+
+		.waper-phone {
+			position: relative;
+			margin: auto;
+			height: 380px;
+			width: 742px;
+			.sketchfab-embed-wrapper {
+				iframe {
+					width: 92%;
+					height: 317px;
+					border-radius: 20px;
+				}
+			}
+
+			.phone {
+				position: absolute;
+				top: -15px;
+				left: -15px;
+				z-index: -1;
+			}
+		}
+	}
+}
+
+#characters {
+	min-height: 100vh;
+	.container {
+		height: 100%;
+		align-items: center;
+		padding-top: 100px;
+		padding-bottom: 150px;
+		text-align: center;
+
+		.title {
+			font-family: "EvilEmpire";
+			font-size: 70px;
+		}
+
+		.content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 150px;
+
+			.group1 {
+				position: relative;
+				.hmm {
+					height: 500px;
+				}
+				div {
+					position: absolute;
+					top: 0;
+
+					img {
+						display: block;
+						margin: 50px 0;
+						width: 90px;
+					}
+
+					.Knight {
+						margin-left: 45px;
+					}
+
+					.Wizard {
+					}
+
+					.Archery {
+						margin-left: 40px;
+					}
+				}
+			}
+
+			.Character {
+				margin-left: -150px;
+			}
+
+			.group2 {
+				position: relative;
+				margin-left: -70px;
+				div {
+					position: absolute;
+					top: 0;
+
+					img,
+					p {
+						margin: 20px 0;
+					}
+
+					p {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+
+		.group2-mobie {
+			display: none;
+		}
+		.txt {
+			font-family: "vanvan";
+			margin-top: 150px;
+			padding: 0 50px;
+		}
+	}
+}
+
+#features {
+	min-height: 100vh;
+	padding-bottom: 150px;
+
+	.container {
+		height: 100%;
+		align-items: center;
+		padding-top: 50px;
+		text-align: center;
+
+		.title {
+			font-family: "EvilEmpire";
+			font-size: 70px;
+		}
+
+		.txt {
+			font-family: "vanvan";
+			padding: 0 50px;
+		}
+
+		.slider-card {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-content: space-between;
+			[type="radio"] {
+				display: none;
+			}
+
+			.items-center {
+				margin-top: 100px;
+			}
+
+			.arrow {
+				cursor: pointer;
+			}
+
+			#slider {
+				height: 30vw;
+				width: 40vw;
+				margin: 0 auto;
+				left: -15%;
+				position: relative;
+				perspective: 1000px;
+				transform-style: preserve-3d;
+			}
+
+			#slider label {
+				margin: auto;
+				width: 60%;
+				border-radius: 4px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				transition: transform 0.4s ease;
+
+				img {
+					width: 700px;
+					height: 400px;
+				}
+			}
+
+			#s1:checked ~ #slide3,
+			#s2:checked ~ #slide1,
+			#s3:checked ~ #slide2 {
+				transform: translate3d(-50%, 0, -100px);
+			}
+
+			#s1:checked ~ #slide1,
+			#s2:checked ~ #slide2,
+			#s3:checked ~ #slide3 {
+				transform: translate3d(0, 0, 0);
+			}
+
+			#s1:checked ~ #slide2,
+			#s2:checked ~ #slide3,
+			#s3:checked ~ #slide1 {
+				transform: translate3d(50%, 0, -100px);
+			}
+		}
+	}
+}
+
+#roadmap {
+	min-height: 100vh;
+	.container {
+		padding-top: 50px;
+		height: 100%;
+		align-items: center;
+		text-align: center;
+
+		.title {
+			font-family: "EvilEmpire";
+			font-size: 70px;
+		}
+
+		.hmm {
+			display: block;
+		}
+
+		.txt {
+			font-family: "vanvan";
+			margin-top: 30px;
+		}
+
+		.content {
+			margin-top: 70px;
+			padding: 0 50px;
+			display: block;
+
+			.line {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			.waper-data {
+				display: flex;
+				justify-content: space-between;
+
+				.child {
+					background-color: #2a282b;
+					text-align: left;
+					height: 500px;
+					.color {
+						background-color: #c7f88f;
+						height: 5px;
+						width: 100%;
+					}
+
+					.waper-txt {
+						padding: 20px;
+					}
+
+					.titlee {
+						color: #c8b79c;
+						font-size: 30px;
+						font-weight: bold;
+					}
+
+					.date {
+						color: #ce985e;
+						font-size: 25px;
+						font-weight: bold;
+					}
+
+					ul {
+						padding: 20px 10px;
+						li {
+							list-style-type: circle;
+							list-style: inside;
+							color: #c1bcb1;
+							margin: 5px 0;
+						}
+					}
+				}
+			}
+		}
+
+		.content-mobile {
+			display: none;
+		}
+	}
+}
+
+#backed {
+	min-height: 100vh;
+	.container {
+		height: 100%;
+		align-items: center;
+		padding-top: 150px;
+		text-align: center;
+
+		.title {
+			font-family: "EvilEmpire";
+			font-size: 70px;
+		}
+
+		.content {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+
+			img {
+				margin: 20px;
+			}
+		}
+	}
+}
+
+#fooder {
+	.is-web {
+		height: 100%;
+		align-items: flex-start;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 100px;
+
+		div {
+			text-align: left;
+			.title {
+				margin-bottom: 20px;
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			p {
+				margin: 10px 0;
+			}
+
+			img {
+				width: 15px;
+				height: 10px;
+				margin-right: 20px;
+			}
+		}
+	}
+
+	.is-mobie {
+		display: none;
+	}
+}
+@media only screen and (max-height: 900px) {
+	#home {
+		// .container {
+		// 	.title {
+		// 		font-size: 35px;
+		// 	}
+		// 	.description {
+		// 		font-size: 14px;
+		// 	}
+		// }
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	body {
+		background-image: url("../img/bg-body-mobie.png");
+		background-size: 100% 100%;
+	}
+
+	.header {
+		margin-top: 0;
+		.container {
+			display: block;
+			background-color: transparent;
+		}
+		.icon-mobile {
+			float: right;
+			width: 30px;
+			margin-top: 13px;
+			margin-right: 20px;
+			display: block;
+			position: relative;
+			z-index: 2;
+		}
+		.waper-logo {
+			position: relative;
+			left: 10px;
+			svg {
+				position: relative;
+				left: -10px;
+				fill: white;
+			}
+		}
+		.menu {
+			position: fixed;
+			width: 50%;
+			height: 100vh;
+			background-color: #1e1e1e;
+			display: block;
+			top: 60px;
+			right: 0;
+			margin-right: -60%;
+			transition: all 0.3s ease-out;
+			padding-left: 20px;
+			padding-top: 20px;
+			a,
+			li {
+				display: flex;
+				margin-left: 0px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				color: white;
+				align-items: center;
+				justify-content: flex-start;
+				img {
+					margin-right: 10px;
+				}
+			}
+		}
+		.is-toggle {
+			margin-right: 0px;
+			z-index: 50;
+		}
+		.ovelay-mobile {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.7);
+			top: 0;
+			z-index: 1;
+		}
+	}
+
+	#home {
+		padding-top: 70px;
+		min-height: fit-content;
+		.container {
+			padding: 10px;
+			.title {
+				font-size: 37px;
+				margin-top: 50px;
+			}
+
+			.content {
+				font-size: 17px;
+				margin: 15px 0;
+			}
+
+			.waper-phone {
+				height: 200px;
+				width: 100%;
+				.sketchfab-embed-wrapper {
+					iframe {
+						width: 90%;
+						height: 160px;
+					}
+				}
+
+				.phone {
+					width: 100%;
+					height: 200px;
+					position: absolute;
+					top: -12px;
+					left: -7px;
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	#characters {
+		padding-top: 100px;
+		min-height: fit-content;
+		.container {
+			padding: 10px;
+			.title {
+				font-size: 35px;
+			}
+
+			.content {
+				margin-top: 50px;
+				.arrow {
+					width: 25px;
+				}
+
+				.group1 {
+					display: none;
+				}
+
+				.Character {
+					margin-left: 0;
+					width: 60%;
+				}
+
+				.group2 {
+					display: none;
+				}
+			}
+
+			.group2-mobie {
+				display: block;
+				position: relative;
+				margin-top: 20px;
+				.child {
+					position: absolute;
+					top: 0;
+
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 20px;
+
+					.name {
+						font-family: "EvilEmpire";
+						font-size: 25px;
+						color: #fff6e7;
+					}
+
+					.des {
+						font-size: 12px;
+						font-family: "vanvan";
+					}
+
+					img {
+						width: 40%;
+					}
+				}
+			}
+
+			.txt {
+				display: none;
+			}
+		}
+	}
+
+	#features {
+		padding-top: 50px;
+		padding-bottom: 0px;
+		.container {
+			padding: 10px;
+			.title {
+				font-size: 35px;
+			}
+
+			.slider-card {
+				margin-top: 100px;
+				.arrow {
+					width: 25px;
+				}
+
+				.items-center {
+					margin-top: -10px;
+				}
+
+				#slider {
+					left: -35%;
+				}
+
+				#slider label {
+					width: 60%;
+
+					img {
+						width: 200px;
+						height: 150px;
+					}
+				}
+			}
+
+			.txt {
+				padding: 0 10px;
+				margin-top: 100px;
+			}
+		}
+	}
+
+	#roadmap {
+		padding-top: 100px;
+
+		.container {
+			padding: 10px;
+			.title {
+				font-size: 35px;
+			}
+
+			.hmm {
+				display: none;
+			}
+
+			.content {
+				display: none;
+			}
+
+			.content-mobile {
+				display: block;
+				margin-top: 50px;
+				position: relative;
+
+				.waper-data {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					.child {
+						background-color: #2a282b;
+						width: 47%;
+						height: 100%;
+
+						.color {
+							background-color: #c7f88f;
+							height: 5px;
+							width: 100%;
+						}
+
+						.group1 {
+							display: flex;
+							align-items: center;
+							padding: 10px;
+							background-size: cover;
+							background-repeat: no-repeat;
+							justify-content: space-between;
+							.titlee {
+								color: #c8b79c;
+								font-size: 20px;
+								font-weight: bold;
+							}
+
+							.date {
+								color: #ce985e;
+								font-size: 15px;
+								font-weight: bold;
+							}
+						}
+
+						ul {
+							text-align: left;
+							padding: 0 10px;
+							li {
+								list-style-type: circle;
+								list-style: inside;
+								color: #c1bcb1;
+								margin: 5px 0;
+								font-size: 12px;
+							}
+						}
+					}
+				}
+
+				.line {
+					position: absolute;
+					top: 0;
+					margin-left: -5px;
+				}
+			}
+
+			.txt {
+				font-size: 15px;
+			}
+		}
+	}
+
+	#backed {
+		padding-top: 250px;
+
+		.container {
+			padding: 10px;
+			.title {
+				font-size: 35px;
+			}
+
+			.content {
+				img {
+					width: 70px;
+					margin: 10px;
+				}
+			}
+		}
+	}
+
+	#fooder {
+		.is-web {
+			display: none;
+		}
+
+		.is-mobie {
+			display: block;
+			padding: 10px;
+			text-align: center;
+			.title {
+				p {
+					font-weight: bold;
+					margin-bottom: 15px;
+				}
+			}
+			.group1 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				img {
+					margin: 5px;
+				}
+			}
+
+			.line {
+				background-color: #ffffff;
+				height: 0.5px;
+				width: 100%;
+				opacity: 0.2;
+				margin: 20px 0;
+			}
+
+			.txt {
+				color: rgba(255, 255, 255, 0.502972);
+				margin-bottom: 30px;
+			}
+
+			.group2 {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
