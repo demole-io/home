@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
 import img1 from '../assets/img/Mask Group7.png'
@@ -6,30 +6,51 @@ import img2 from '../assets/img/Group 8093.png'
 import img3 from '../assets/img/Mask Group9.png'
 
 export default function Features() {
+    const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         { img: img1 },
         { img: img2 },
         { img: img3 },
     ])
 
-    const [selectedIndex, setSelectedIndex] = useState(0)
+    // const [selectedIndex, setSelectedIndex] = useState(0)
+
+    const selectedIndex = useRef(0)
+    const [indexx, setindexx] = useState(0)
+
+    useEffect(() => {
+        if (didMount) {
+            console.log("Did Update");
+        } else {
+            setDidMount(true);
+            console.log("Did mount");
+
+            setInterval(() => {
+                selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
+                setindexx(selectedIndex.current)
+            }, 1000);
+        }
+    });
 
     const onClickLeft = () => {
-        const nextIndex = selectedIndex === 0 ? data.length - 1 : selectedIndex - 1;
-        setSelectedIndex(nextIndex);
+        // const nextIndex = selectedIndex === 0 ? data.length - 1 : selectedIndex - 1;
+        // setSelectedIndex(nextIndex);
     }
 
     const onClickRight = () => {
-        const nextIndex = selectedIndex === (data.length - 1) ? 0 : selectedIndex + 1;
-        setSelectedIndex(nextIndex);
+        // const nextIndex = selectedIndex === (data.length - 1) ? 0 : selectedIndex + 1;
+        // setSelectedIndex(nextIndex);
     }
 
     const renderData = () => {
         return (
             <div className="slider-card">
+
                 <img className="arrow" src={ArrowLeft} alt="photos" onClick={() => onClickLeft()}></img>
 
-                <div className="items-center">
+
+                <img className="imgg" src={data[selectedIndex.current].img} alt="photos"></img>
+                {/* <div className="items-center">
                     <section
                         id="slider"
                         className="w-16 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0"
@@ -52,9 +73,6 @@ export default function Features() {
                             id="s3"
                             checked={selectedIndex === 2}
                         />
-
-
-
                         <label htmlFor="s1" id="slide1">
                             <img src={data[0].img} alt="photos"></img>
                         </label>
@@ -66,6 +84,9 @@ export default function Features() {
                         </label>
                     </section>
                 </div>
+               
+                */}
+
                 <img className="arrow" src={ArrowRight} alt="photos" onClick={() => onClickRight()}></img>
             </div>
         )

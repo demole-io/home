@@ -29,7 +29,7 @@ export default function Header() {
                     <ul className={`menu ${toggleMenu ? 'is-toggle' : ''}`}>
                         <a href='/'> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</a>
                         <a href='/'> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</a>
-                        <a href='/'>{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</a>
+                        <a href='/summon'>{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</a>
                         <a href='/'>{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a>
                         <a href='/'>{toggleMenu && <img src={Commun} alt="photos"></img>} Community</a>
                     </ul>

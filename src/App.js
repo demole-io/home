@@ -1,37 +1,39 @@
 import React, { Fragment } from 'react';
+import About from './About'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import 'react-redux-toastr/src/styles/index.scss'
 import './assets/scss/style.scss';
-import Header from './components/Header';
-import Home from './controllers/Home';
-import $ from 'jquery'
-import Characters from './controllers/Characters';
-import Roadmap from './controllers/Roadmap';
-import Backed from './controllers/Backed';
-import Fooder from './components/Fooder';
-import Features from './controllers/Features';
-import Earn from './controllers/Earn';
+import Summon from './controllers/Summon';
 
-const width = $("body").width();
-
-const pathname = window.location.pathname
-const isMobile = width <= 768 ? true : false
+const routes = [
+    {
+        path: '/summon',
+        exact: false,
+        main: ({ location, match }) => <Summon match={match}></Summon>
+    },
+    {
+        path: '/',
+        exact: true,
+        main: ({ location, match }) => <About match={match} />
+    },
+];
 
 class App extends React.Component {
     render() {
         return (
             <Fragment>
-                <Header pathname={pathname} isMobile={isMobile}></Header>
-                <Home></Home>
-                <Characters></Characters>
-                <Features></Features>
-                <Earn></Earn>
-                <Roadmap></Roadmap>
-                <Backed></Backed>
-                <Fooder></Fooder>
+                <Router>
+                    {routes.map((route, index) => {
+                        return <Route key={index}
+                            path={route.path}
+                            exact={route.exact}
+                            component={route.main} />
+                    })}
+                </Router>
             </Fragment>
         )
     }
 }
+
 
 export default App

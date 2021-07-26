@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
 import Unknow1 from '../assets/img/Subtract.png'
@@ -11,7 +11,8 @@ import Cirke from '../assets/img/Ellipse 15.png'
 import Unknow3 from '../assets/img/Frame 77.png'
 // import Unknow4Mobie from '../assets/img/Group 8094.png'
 
-export default function Characters() {
+const Characters = props => {
+    const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         {
             name: 'knight',
@@ -35,15 +36,31 @@ export default function Characters() {
         }
     ])
 
-    const [seleted, setseleted] = useState(0)
+    const selected = useRef(0)
 
+    const [indexx, setindexx] = useState(0)
+
+    useEffect(() => {
+        if (didMount) {
+            console.log("Did Update");
+        } else {
+            setDidMount(true);
+            console.log("Did mount");
+
+            setInterval(() => {
+                selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
+                setindexx(selected.current)
+            }, 1000);
+        }
+    });
 
     const onClickLeft = () => {
-        setseleted(seleted === 0 ? data.length - 1 : seleted - 1)
+       // setseleted(seleted === 0 ? data.length - 1 : seleted - 1)
     }
 
     const onCliclRight = () => {
-        setseleted(seleted === data.length - 1 ? 0 : seleted + 1)
+        //setseleted(seleted === data.length - 1 ? 0 : seleted + 1)
+
     }
     return (
         <div id="characters">
@@ -59,14 +76,14 @@ export default function Characters() {
                     <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
                         <div>
-                            <p className={` ${seleted === 0 ? 'selected' : ''}`} style={{ marginLeft: '60px' }}>{data[0].name}</p>
-                            <p className={` ${seleted === 1 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[1].name}</p>
-                            <p className={` ${seleted === 2 ? 'selected' : ''}`} style={{ marginLeft: '20px' }}>{data[2].name}</p>
-                            <p className={` ${seleted === 3 ? 'selected' : ''}`} style={{ marginLeft: '50px' }}>{data[3].name}</p>
+                            <p className={` ${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '60px' }}>{data[0].name}</p>
+                            <p className={` ${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[1].name}</p>
+                            <p className={` ${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '20px' }}>{data[2].name}</p>
+                            <p className={` ${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '50px' }}>{data[3].name}</p>
                         </div>
                     </div>
 
-                    <img className="Character" src={data[seleted].img} alt="photos"></img>
+                    <img className="Character" src={data[selected.current].img} alt="photos"></img>
 
                     <div className="group2">
                         <img className="hmmm" src={Unknow2} alt="photos"></img>
@@ -83,14 +100,14 @@ export default function Characters() {
                 </div>
 
                 <div className="des">
-                    <p className="name">{data[seleted].name}</p>
-                    <p className="txtt">{data[seleted].des}</p>
+                    <p className="name">{data[selected.current].name}</p>
+                    <p className="txtt">{data[selected.current].des}</p>
                 </div>
 
                 <div className="group2-mobie">
                     <div>
-                        <p className="name">{data[seleted].name}</p>
-                        <p className="txtt">{data[seleted].des}</p>
+                        <p className="name">{data[selected.current].name}</p>
+                        <p className="txtt">{data[selected.current].des}</p>
                     </div>
                     <img src={Unknow3} alt="photos"></img>
                 </div>
@@ -98,3 +115,5 @@ export default function Characters() {
         </div>
     )
 }
+
+export default Characters

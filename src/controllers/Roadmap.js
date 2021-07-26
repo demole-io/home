@@ -51,7 +51,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img4,
+            img: img2,
             title: "11/2021",
             content: [
                 "Campaign/Story"
@@ -67,7 +67,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img4,
+            img: img1,
             title: "QI/2022",
             content: [
                 "Pet system",
@@ -76,7 +76,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img4,
+            img: img3,
             title: "QII/2022",
             content: [
                 "Item crafting system",
