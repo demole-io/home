@@ -4,12 +4,18 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import 'react-redux-toastr/src/styles/index.scss'
 import './assets/scss/style.scss';
 import Summon from './controllers/Summon';
+import Comming from './controllers/Comming';
 
 const routes = [
     {
         path: '/summon',
         exact: false,
         main: ({ location, match }) => <Summon match={match}></Summon>
+    },
+    {
+        path: '/comming',
+        exact: false,
+        main: ({ location, match }) => <Comming match={match}></Comming>
     },
     {
         path: '/',

@@ -27,11 +27,11 @@ export default function Header() {
 
                 <div className="right">
                     <ul className={`menu ${toggleMenu ? 'is-toggle' : ''}`}>
-                        <a href='/'> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</a>
-                        <a href='/'> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</a>
-                        <a href='/summon'>{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</a>
-                        <a href='/'>{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a>
-                        <a href='/'>{toggleMenu && <img src={Commun} alt="photos"></img>} Community</a>
+                        <a href='/comming' target="_blank" rel="noopener noreferrer"> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</a>
+                        <a href='/comming' target="_blank" rel="noopener noreferrer"> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</a>
+                        <a href='/summon' target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</a>
+                        <a href='/comming' target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a>
+                        <a href='/comming' target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Commun} alt="photos"></img>} Community</a>
                     </ul>
                 </div>
             </div>

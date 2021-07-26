@@ -694,6 +694,17 @@ body {
 	}
 }
 
+#comming {
+	background-color: white;
+	align-items: center;
+	text-align: center;
+	
+	p {
+		font-size: 50px;
+		color: black
+	}
+}
+
 @media only screen and (max-height: 900px) {
 	#home {
 		// .container {
