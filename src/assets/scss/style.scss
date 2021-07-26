@@ -75,6 +75,7 @@ body {
 		align-items: center;
 		display: flex;
 		align-items: center;
+		padding-top: 10px;
 		p {
 			font-size: 26px;
 			margin-left: 20px;
@@ -133,6 +134,19 @@ body {
 			margin: 30px 0;
 		}
 
+		.group {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 50px;
+			p {
+				font-family: "vanvan";
+				text-align: left;
+				font-size: 20px;
+				width: 40%;
+				padding-top: 20px;
+			}
+		}
+
 		.waper-phone {
 			position: relative;
 			margin: auto;
@@ -158,6 +172,7 @@ body {
 
 #characters {
 	min-height: 100vh;
+	margin-top: 100px;
 	.container {
 		height: 100%;
 		align-items: center;
@@ -165,9 +180,21 @@ body {
 		padding-bottom: 150px;
 		text-align: center;
 
-		.title {
-			font-family: "EvilEmpire";
-			font-size: 70px;
+		.waper-title {
+			position: relative;
+			.title {
+				font-family: "EvilEmpire";
+				font-size: 70px;
+			}
+
+			.big-title {
+				position: absolute;
+				top: -50px;
+				left: 250px;
+				font-family: "EvilEmpire";
+				font-size: 170px;
+				opacity: 0.1;
+			}
 		}
 
 		.content {
@@ -175,42 +202,54 @@ body {
 			align-items: center;
 			justify-content: space-between;
 			margin-top: 150px;
+			position: relative;
+			margin-bottom: 50px;
+			height: 600px;
 
-			.group1 {
+			.arrow {
+				flex: 0.1;
+				cursor: pointer;
+			}
+
+			.somee {
+				flex: 1;
+			}
+
+			.waper-name {
 				position: relative;
+				flex: 1;
+				text-align: left;
+				margin-left: 50px;
 				.hmm {
 					height: 500px;
 				}
 				div {
 					position: absolute;
-					top: 0;
+					top: 20px;
 
-					img {
+					p {
 						display: block;
-						margin: 50px 0;
-						width: 90px;
+						margin: 70px 0;
+						font-size: 25px;
+						font-family: "EvilEmpire";
+						text-align: left;
 					}
 
-					.Knight {
-						margin-left: 45px;
-					}
-
-					.Wizard {
-					}
-
-					.Archery {
-						margin-left: 40px;
+					.selected {
+						color: #ffd286;
 					}
 				}
 			}
 
 			.Character {
-				margin-left: -150px;
+				margin-left: -200px;
+				flex: 1;
+				z-index: 2;
 			}
 
 			.group2 {
-				position: relative;
-				margin-left: -70px;
+				position: absolute;
+				right: 150px;
 				div {
 					position: absolute;
 					top: 0;
@@ -227,13 +266,27 @@ body {
 			}
 		}
 
+		.des {
+			background-image: url("../img/Group8109.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			padding: 20px;
+			margin: 50px 250px;
+			.name {
+				font-family: "EvilEmpire";
+				font-size: 50px;
+				margin-bottom: 10px;
+			}
+
+			.txtt {
+				font-family: "vanvan";
+				text-align: left;
+				padding: 0 50px;
+			}
+		}
+
 		.group2-mobie {
 			display: none;
-		}
-		.txt {
-			font-family: "vanvan";
-			margin-top: 150px;
-			padding: 0 50px;
 		}
 	}
 }
@@ -241,24 +294,33 @@ body {
 #features {
 	min-height: 100vh;
 	padding-bottom: 150px;
+	margin-top: 100px;
 
 	.container {
+		padding-top: 100px;
 		height: 100%;
 		align-items: center;
-		padding-top: 50px;
 		text-align: center;
 
-		.title {
-			font-family: "EvilEmpire";
-			font-size: 70px;
-		}
+		.waper-title {
+			position: relative;
+			.title {
+				font-family: "EvilEmpire";
+				font-size: 70px;
+			}
 
-		.txt {
-			font-family: "vanvan";
-			padding: 0 50px;
+			.big-title {
+				position: absolute;
+				top: -50px;
+				left: 50px;
+				font-family: "EvilEmpire";
+				font-size: 170px;
+				opacity: 0.1;
+			}
 		}
 
 		.slider-card {
+			margin: 50px 0;
 			display: flex;
 			align-items: center;
 			width: 100%;
@@ -276,7 +338,7 @@ body {
 			}
 
 			#slider {
-				height: 30vw;
+				height: 25vw;
 				width: 40vw;
 				margin: 0 auto;
 				left: -15%;
@@ -318,20 +380,108 @@ body {
 				transform: translate3d(50%, 0, -100px);
 			}
 		}
+
+		.content {
+			background-image: url("../img/Group8109.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			padding: 20px 50px;
+			margin: 0px 200px;
+
+			p {
+				font-family: "vanvan";
+				margin: 10px 0;
+				text-align: left;
+			}
+
+			.upcase {
+				font-family: "EvilEmpire";
+				font-size: 22px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+#earn {
+	min-height: 100vh;
+	.container {
+		height: 100%;
+		align-items: center;
+		padding-top: 100px;
+		text-align: center;
+
+		.waper-title {
+			position: relative;
+			margin-bottom: 70px;
+			.title {
+				font-family: "EvilEmpire";
+				font-size: 70px;
+			}
+
+			.big-title {
+				position: absolute;
+				top: -50px;
+				left: 250px;
+				font-family: "EvilEmpire";
+				font-size: 170px;
+				opacity: 0.1;
+			}
+		}
+
+		.txt {
+			font-family: "vanvan";
+		}
+
+		.waper-content {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 150px;
+
+			.child {
+				flex: 1;
+				margin: 0 50px;
+				.titlee {
+					font-family: "EvilEmpire";
+					color: #ffd286;
+					font-size: 20px;
+					margin: 20px 0;
+					height: 50px;
+				}
+
+				.contentt {
+					font-family: "vanvan";
+					text-align: left;
+				}
+			}
+		}
 	}
 }
 
 #roadmap {
 	min-height: 100vh;
+	padding-bottom: 100px;
 	.container {
-		padding-top: 50px;
+		padding-top: 150px;
 		height: 100%;
 		align-items: center;
 		text-align: center;
 
-		.title {
-			font-family: "EvilEmpire";
-			font-size: 70px;
+		.waper-title {
+			position: relative;
+			.title {
+				font-family: "EvilEmpire";
+				font-size: 70px;
+			}
+
+			.big-title {
+				position: absolute;
+				top: -50px;
+				left: 350px;
+				font-family: "EvilEmpire";
+				font-size: 170px;
+				opacity: 0.1;
+			}
 		}
 
 		.hmm {
@@ -356,11 +506,14 @@ body {
 			.waper-data {
 				display: flex;
 				justify-content: space-between;
+				flex-wrap: wrap;
 
 				.child {
 					background-color: #2a282b;
 					text-align: left;
-					height: 500px;
+					height: 350px;
+					width: 22%;
+					margin: 10px 0;
 					.color {
 						background-color: #c7f88f;
 						height: 5px;
@@ -384,7 +537,7 @@ body {
 					}
 
 					ul {
-						padding: 20px 10px;
+						padding: 20px 0px;
 						li {
 							list-style-type: circle;
 							list-style: inside;
@@ -407,12 +560,24 @@ body {
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 150px;
+		padding-top: 50px;
 		text-align: center;
+		.waper-title {
+			position: relative;
+			margin-bottom: 20px;
+			.title {
+				font-family: "EvilEmpire";
+				font-size: 70px;
+			}
 
-		.title {
-			font-family: "EvilEmpire";
-			font-size: 70px;
+			.big-title {
+				position: absolute;
+				top: -50px;
+				left: 350px;
+				font-family: "EvilEmpire";
+				font-size: 170px;
+				opacity: 0.1;
+			}
 		}
 
 		.content {
@@ -423,6 +588,14 @@ body {
 
 			img {
 				margin: 20px;
+			}
+		}
+
+		.sketchfab-embed-wrapper {
+			margin-top: -100px;
+			iframe {
+				width: 100%;
+				height: 90vh;
 			}
 		}
 	}
@@ -492,6 +665,7 @@ body {
 		}
 		.icon-mobile {
 			float: right;
+			top: 20px;
 			width: 30px;
 			margin-top: 13px;
 			margin-right: 20px;
@@ -553,6 +727,7 @@ body {
 		min-height: fit-content;
 		.container {
 			padding: 10px;
+			margin-top: 50px;
 			.title {
 				font-size: 37px;
 				margin-top: 50px;
@@ -561,6 +736,25 @@ body {
 			.content {
 				font-size: 17px;
 				margin: 15px 0;
+			}
+
+			.group {
+				display: block;
+				position: relative;
+				padding-top: 200px;
+
+				p {
+					width: 100%;
+					font-size: 14px;
+					padding: 0 20px;
+				}
+
+				img {
+					width: 90%;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 			}
 
 			.waper-phone {
@@ -586,66 +780,75 @@ body {
 	}
 
 	#characters {
-		padding-top: 100px;
+		padding-top: 150px;
 		min-height: fit-content;
 		.container {
 			padding: 10px;
-			.title {
-				font-size: 35px;
+			.waper-title {
+				.title {
+					font-size: 30px;
+				}
+
+				.big-title {
+					font-size: 60px;
+					left: 60px;
+					top: -15px;
+				}
 			}
 
 			.content {
 				margin-top: 50px;
+				height: 350px;
 				.arrow {
 					width: 25px;
 				}
 
-				.group1 {
+				.waper-name,
+				.somee,
+				.group2 {
 					display: none;
 				}
 
 				.Character {
 					margin-left: 0;
 					width: 60%;
+					height: 100%;
 				}
+			}
 
-				.group2 {
-					display: none;
-				}
+			.des {
+				display: none;
 			}
 
 			.group2-mobie {
-				display: block;
-				position: relative;
-				margin-top: 20px;
-				.child {
-					position: absolute;
-					top: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					padding: 20px;
+				background-image: url("../img/Group8094.png");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				padding: 20px;
+				height: 150px;
 
+				div {
+					text-align: left;
 					.name {
 						font-family: "EvilEmpire";
-						font-size: 25px;
+						font-size: 20px;
+						margin-bottom: 10px;
 						color: #fff6e7;
 					}
 
-					.des {
-						font-size: 12px;
+					.txtt {
 						font-family: "vanvan";
-					}
-
-					img {
-						width: 40%;
+						font-size: 10px;
 					}
 				}
-			}
 
-			.txt {
-				display: none;
+				img {
+					width: 30%;
+				}
 			}
 		}
 	}
@@ -653,14 +856,25 @@ body {
 	#features {
 		padding-top: 50px;
 		padding-bottom: 0px;
+		min-height: fit-content;
+		margin-top: 50px;
 		.container {
 			padding: 10px;
-			.title {
-				font-size: 35px;
+			.waper-title {
+				margin-bottom: 50px;
+				.title {
+					font-size: 30px;
+				}
+
+				.big-title {
+					font-size: 60px;
+					left: 0px;
+					top: -15px;
+				}
 			}
 
 			.slider-card {
-				margin-top: 100px;
+				margin-top: 50px;
 				.arrow {
 					width: 25px;
 				}
@@ -683,20 +897,74 @@ body {
 				}
 			}
 
-			.txt {
-				padding: 0 10px;
-				margin-top: 100px;
+			.content {
+				padding: 10px 30px;
+				margin: 100px 0 50px 0;
+
+				p {
+					font-size: 10px;
+					margin: 5px 0;
+				}
+
+				.upcase {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+
+	#earn {
+		padding-bottom: 0px;
+		padding-top: 50px;
+		.container {
+			padding: 10px;
+			.waper-title {
+				margin-bottom: 50px;
+				.title {
+					font-size: 30px;
+				}
+
+				.big-title {
+					font-size: 60px;
+					left: 50px;
+					top: -15px;
+				}
+			}
+
+			.waper-content {
+				flex-wrap: wrap;
+				margin-top: 50px;
+
+				.child {
+					width: 25%;
+					margin: 10px;
+
+					img {
+						width: 90px;
+						height: 100px;
+					}
+				}
+				
 			}
 		}
 	}
 
 	#roadmap {
-		padding-top: 100px;
+		padding-top: 150px;
 
 		.container {
 			padding: 10px;
-			.title {
-				font-size: 35px;
+			.waper-title {
+				margin-bottom: 50px;
+				.title {
+					font-size: 30px;
+				}
+
+				.big-title {
+					font-size: 60px;
+					left: 100px;
+					top: -15px;
+				}
 			}
 
 			.hmm {
@@ -709,7 +977,7 @@ body {
 
 			.content-mobile {
 				display: block;
-				margin-top: 50px;
+				margin-top: 10px;
 				position: relative;
 
 				.waper-data {
@@ -719,7 +987,7 @@ body {
 					.child {
 						background-color: #2a282b;
 						width: 47%;
-						height: 100%;
+						height: 150px;
 
 						.color {
 							background-color: #c7f88f;
@@ -765,6 +1033,7 @@ body {
 					position: absolute;
 					top: 0;
 					margin-left: -5px;
+					height: 100%;
 				}
 			}
 
@@ -779,8 +1048,17 @@ body {
 
 		.container {
 			padding: 10px;
-			.title {
-				font-size: 35px;
+			.waper-title {
+				margin-bottom: 50px;
+				.title {
+					font-size: 30px;
+				}
+
+				.big-title {
+					font-size: 60px;
+					left: 80px;
+					top: -15px;
+				}
 			}
 
 			.content {
@@ -788,6 +1066,9 @@ body {
 					width: 70px;
 					margin: 10px;
 				}
+			}
+
+			.sketchfab-embed-wrapper {
 			}
 		}
 	}

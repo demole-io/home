@@ -74,12 +74,25 @@ export default function Features() {
     return (
         <div id="features">
             <div className="container">
-                <p className="title">special features</p>
+                <div className="waper-title">
+                    <p className="title">special features</p>
+                    <p className="big-title">special features</p>
+                </div>
 
                 {renderData()}
 
-                <p className="txt">Faraland are exquisitely digital collectibles created using blockchain technology. Each collectible is matchless, genuine and varies in rarity. Faraland Universe has a lot of different races like human, orc, angel, demon, dragonborn, elf and fairy which are waiting for the user to discover.
-                    Last but not least, Faraland is also a multiplayer RPG NFT GAME that lets user engaging in the combat arena and profit from battles</p>
+                <div className="content">
+                    <p className="upcase">Play it your way</p>
+                    <p>Immerse yourself in an engaging world of monsters with endless content and quests to explore.
+                        OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.
+                    </p>
+
+                    <p className="upcase">Interact with players around the world</p>
+                    <p>Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features </p>
+
+                    <p className="upcase">Create and trade your own NFT</p>
+                    <p>Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.</p>
+                </div>
             </div>
 
         </div>

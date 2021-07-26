@@ -10,55 +10,79 @@ export default function Roadmap() {
     const [data, setdata] = useState([
         {
             img: img1,
-            title: "OCTOBER",
-            date: '15-20',
+            title: "7/2021",
             content: [
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay"
+                "Character design/ NFT system",
+                "Monster system ( stat/skill/graphic v.v.. )",
             ],
             imgMobile: img
 
         },
         {
             img: img2,
-            title: "OCTOBER",
-            date: '14-19',
+            title: "8/2021",
             content: [
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay"
+                "Monster summon",
+                "Marketplace",
+                "Training ground / Staking",
+                "LP adding"
             ],
             imgMobile: img
 
         },
         {
             img: img3,
-            title: "OCTOBER",
-            date: '2020',
+            title: "9/2021",
             content: [
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay"
+                "World Boss",
+                "Social features: Chatting, Line-up visiting",
+                "Arena",
+                "Mobile (Android/IOS)"
             ],
             imgMobile: img
-
         },
         {
             img: img4,
-            title: "OCTOBER",
-            date: '2020',
+            title: "10/2021",
             content: [
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay",
-                "Core gameplay"
+                "Auction",
+                "Monster upgrading system",
             ],
             imgMobile: img
-
+        },
+        {
+            img: img4,
+            title: "11/2021",
+            content: [
+                "Campaign/Story"
+            ],
+            imgMobile: img
+        },
+        {
+            img: img4,
+            title: "12/2021",
+            content: [
+                "Boosters"
+            ],
+            imgMobile: img
+        },
+        {
+            img: img4,
+            title: "QI/2022",
+            content: [
+                "Pet system",
+                "More social features: Team up, Guild",
+            ],
+            imgMobile: img
+        },
+        {
+            img: img4,
+            title: "QII/2022",
+            content: [
+                "Item crafting system",
+                "DAO Voting",
+            ],
+            imgMobile: img
         }
     ])
 
@@ -69,7 +93,6 @@ export default function Roadmap() {
                 <img src={value.img} alt="photos"></img>
                 <div className="waper-txt">
                     <p className="titlee">{value.title}</p>
-                    <p className="date">{value.date}</p>
                     <ul>
                         {value.content.map((valuee, indexx) => {
                             return <li>{valuee}</li>
@@ -84,10 +107,9 @@ export default function Roadmap() {
 
     const renderDataMobile = (value, index) => {
         return (
-            <div className="child" style={{marginTop: `${index % 2 !== 0 ? index * 30  : index * 20}px`}}>
+            <div className="child" style={{marginTop: `${index % 2 !== 0 ? 40  : 10}px`}}>
                 <div className="color"></div>
                 <div className="group1" style={{backgroundImage: `url(${value.imgMobile})`}}>
-                    <p className="date">{value.date}</p>
                     <p className="titlee">{value.title}</p>
                 </div>
                 <ul>
@@ -104,7 +126,11 @@ export default function Roadmap() {
     return (
         <div id="roadmap">
             <div className="container">
-                <p className="title">Roadmap</p>
+            <div className="waper-title">
+                    <p className="title">Roadmap</p>
+                    <p className="big-title">Roadmap</p>
+                </div>
+
                 <p className="txt hmm">This timeline details our funding and development goals</p>
 
                 <div className="content">

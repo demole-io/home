@@ -10,6 +10,7 @@ import Roadmap from './controllers/Roadmap';
 import Backed from './controllers/Backed';
 import Fooder from './components/Fooder';
 import Features from './controllers/Features';
+import Earn from './controllers/Earn';
 
 const width = $("body").width();
 
@@ -24,6 +25,7 @@ class App extends React.Component {
                 <Home></Home>
                 <Characters></Characters>
                 <Features></Features>
+                <Earn></Earn>
                 <Roadmap></Roadmap>
                 <Backed></Backed>
                 <Fooder></Fooder>

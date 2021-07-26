@@ -1,35 +1,72 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
 import Unknow1 from '../assets/img/Subtract.png'
-import Knight from '../assets/img/Frame2.png'
-import Wizard from '../assets/img/Frame3.png'
-import Archery from '../assets/img/Frame4.png'
-import Character from '../assets/img/rong 2.png'
+import Knight from '../assets/img/rong 2.png'
+import ORC from '../assets/img/Orc2.png'
+import WARRIOR from '../assets/img/Tiennu.png'
+import MEMALD from '../assets/img/nguoica.png'
 import Unknow2 from '../assets/img/Subtract1.png'
 import Cirke from '../assets/img/Ellipse 15.png'
 import Unknow3 from '../assets/img/Frame 77.png'
-import Unknow4Mobie from '../assets/img/Group 8094.png'
+// import Unknow4Mobie from '../assets/img/Group 8094.png'
 
 export default function Characters() {
+    const [data, setdata] = useState([
+        {
+            name: 'knight',
+            img: Knight,
+            des: 'Sinh sống ở các hang đá trên vách núi cao phía bắc vùng lục địa, tộc Rồng là bộ tộc dũng mãnh với đôi cánh dang rộng trên bầu trời, thân hình lực lưỡng cùng những chiếc móng sắc nhọn. Rồng còn có những chiếc vảy cứng chắc như một bộ giáp bảo vệ thân thể. Với lợi thế bay lượn trên cao, tộc rồng tỏ ra ưu thế trong những cuộc đi săn đơn lẻ.'
+        },
+        {
+            name: 'ORC',
+            img: ORC,
+            des: 'Những cánh rừng già âm u dưới chân các vách núi cao phía bắc vùng lục địa là nơi cư ngụ của tộc Người cây. Lãnh thổ của họ gần như bất khả xâm phạm bởi sự âm u tăm tối rất đáng sợ. Người cây được sinh ra từ những thân cây cổ thụ ngàn năm nên cơ thể săn chắc, di chuyển mềm mại, đặc biệt nguy hiểm trong những trận chiến đồng đội.'
+        },
+        {
+            name: 'WARRIOR',
+            img: WARRIOR,
+            des: 'Nơi Bắc cực xa xôi quanh năm lạnh giá là nhà của tộc Thiên Sứ. Họ được sinh ra từ những linh hồn thánh thiện. Các thành viên của bộ tộc Thiên Sứ khi trưởng thành sẽ tỏa đi khắp mọi nơi, liên kết với nhiều bộ tộc khác nhau để giúp họ chiến đấu. Tộc Thiên Sứ nổi tiếng là bộ tộc không có kẻ thù'
+        },
+        {
+            name: 'MEMALD',
+            img: MEMALD,
+            des: 'Chiếm lĩnh toàn bộ đại dương, Tộc Người cá từ lâu đã nuôi tham vọng thống trị vùng lục địa. Làm chủ biển cả bao la, tộc Người cá đặc biệt mạnh trong các cuộc chiến dưới nước. Họ thường xuyên đưa quân men các dòng sông tập kích vào vùng Trung địa và xâm nhập các mê cung để cướp tài nguyên.'
+        }
+    ])
+
+    const [seleted, setseleted] = useState(0)
+
+
+    const onClickLeft = () => {
+        setseleted(seleted === 0 ? data.length - 1 : seleted - 1)
+    }
+
+    const onCliclRight = () => {
+        setseleted(seleted === data.length - 1 ? 0 : seleted + 1)
+    }
     return (
         <div id="characters">
             <div className="container">
-                <p className="title">Characters</p>
+                <div className="waper-title">
+                    <p className="title">Characters</p>
+                    <p className="big-title">Characters</p>
+                </div>
 
                 <div className="content">
-                    <img className="arrow" src={ArrowLeft} alt="photos"></img>
+                    <img className="arrow" src={ArrowLeft} alt="photos" onClick={onClickLeft}></img>
 
-                    <div className="group1">
+                    <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
                         <div>
-                            <img className="Knight" src={Knight} alt="photos"></img>
-                            <img className="Wizard" src={Wizard} alt="photos"></img>
-                            <img className="Archery" src={Archery} alt="photos"></img>
+                            <p className={` ${seleted === 0 ? 'selected' : ''}`} style={{ marginLeft: '60px' }}>{data[0].name}</p>
+                            <p className={` ${seleted === 1 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[1].name}</p>
+                            <p className={` ${seleted === 2 ? 'selected' : ''}`} style={{ marginLeft: '20px' }}>{data[2].name}</p>
+                            <p className={` ${seleted === 3 ? 'selected' : ''}`} style={{ marginLeft: '50px' }}>{data[3].name}</p>
                         </div>
                     </div>
 
-                    <img className="Character" src={Character} alt="photos"></img>
+                    <img className="Character" src={data[seleted].img} alt="photos"></img>
 
                     <div className="group2">
                         <img className="hmmm" src={Unknow2} alt="photos"></img>
@@ -40,24 +77,23 @@ export default function Characters() {
                         </div>
                     </div>
 
-                    <img className="arrow" src={ArrowRight} alt="photos"></img>
+                    <div className="somee"></div>
+
+                    <img className="arrow" src={ArrowRight} alt="photos" onClick={onCliclRight}></img>
+                </div>
+
+                <div className="des">
+                    <p className="name">{data[seleted].name}</p>
+                    <p className="txtt">{data[seleted].des}</p>
                 </div>
 
                 <div className="group2-mobie">
-                    <img className="hmmm" src={Unknow4Mobie} alt="photos"></img>
-                    <div className="child">
-                        <div>
-                            <p className="name">DRAGON WARRIOR</p>
-                            <p className="des">Faraland are exquisitely digital collectibles created using blockchain technology.</p>
-                        </div>
-
-                        <img src={Unknow3} alt="photos"></img>
+                    <div>
+                        <p className="name">{data[seleted].name}</p>
+                        <p className="txtt">{data[seleted].des}</p>
                     </div>
+                    <img src={Unknow3} alt="photos"></img>
                 </div>
-
-                <p className="txt">Faraland are exquisitely digital collectibles created using blockchain technology. Each collectible is matchless, genuine and varies in rarity. Faraland Universe has a lot of different races like human, orc, angel, demon, dragonborn, elf and fairy which are waiting for the user to discover.
-                    Last but not least, Faraland is also a multiplayer RPG NFT GAME that lets user engaging in the combat arena and profit from battles</p>
-
             </div>
         </div>
     )
