@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git credentialsId: 'demole-github', url: 'https://github.com/demoleio/demole-frontend.git'
-            }
-        }
         stage('Build Image') {
             steps {
                 sh 'docker build -t demole-frontend:latest'
