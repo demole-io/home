@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-                sh 'docker build -t demole-frontend:latest'
+                sh 'docker build -t demole-frontend:latest .'
             }
         }
         stage('Run Docker') {
