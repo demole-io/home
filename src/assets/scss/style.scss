@@ -98,9 +98,10 @@ body {
 				margin-left: 0px;
 			}
 			font-family: "LibreBaskerville";
+			cursor: pointer;
 		}
 
-		a:hover {
+		a:hover, li:hover {
 			color: #ffb337;
 		}
 	}
@@ -691,17 +692,6 @@ body {
 				}
 			}
 		}
-	}
-}
-
-#comming {
-	background-color: white;
-	align-items: center;
-	text-align: center;
-	
-	p {
-		font-size: 50px;
-		color: black
 	}
 }
 

@@ -27,11 +27,11 @@ export default function Header() {
 
                 <div className="right">
                     <ul className={`menu ${toggleMenu ? 'is-toggle' : ''}`}>
-                        <a href='/comming' target="_blank" rel="noopener noreferrer"> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</a>
-                        <a href='/comming' target="_blank" rel="noopener noreferrer"> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</a>
+                        <li title="Comming Soon"> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</li>
+                        <li title="Comming Soon"> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</li>
                         <a href='/summon' target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</a>
-                        <a href='/comming' target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a>
-                        <a href='/comming' target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Commun} alt="photos"></img>} Community</a>
+                        <li title="Comming Soon">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</li>
+                        <li title="Comming Soon">{toggleMenu && <img src={Commun} alt="photos"></img>} Community</li>
                     </ul>
                 </div>
             </div>
