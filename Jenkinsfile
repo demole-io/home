@@ -7,10 +7,14 @@ pipeline {
                 git credentialsId: 'demole-github', url: 'https://github.com/demoleio/demole-frontend.git'
             }
         }
-        stage('Build Image & Run Docker') {
+        stage('Build Image') {
             steps {
-                sh '''docker build -t demole-frontend:latest .
-                docker run -d -p 80:80 demole-frontend:latest'''
+                sh 'docker build -t demole-frontend:latest'
+            }
+        }
+        stage('Run Docker') {
+            steps {
+                sh 'docker run -d -p 80:80 demole-frontend:latest'
             }
         }
     }
