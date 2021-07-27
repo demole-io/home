@@ -59,8 +59,8 @@ export default function Summon() {
                     </div>
 
                     <div className="group2">
-                        <img src={PayBtn} alt="photos" className="phone" onClick={onClickPay}></img>
-                        <img src={Ques} alt="photos" className="phone"></img>
+                        <img src={PayBtn} alt="photos" onClick={onClickPay}></img>
+                        <img src={Ques} alt="photos" className="ques"></img>
                     </div>
 
                 </div>

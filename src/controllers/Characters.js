@@ -47,11 +47,6 @@ const Characters = props => {
             console.log("Did mount");
 
             autoNext()
-
-            // setInterval(() => {
-            //     selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
-            //     setindexx(selected.current)
-            // }, 1000);
         }
     });
 

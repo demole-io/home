@@ -44,26 +44,16 @@ export default function Earn() {
             setDidMount(true);
             console.log("Did mount");
 
-            setInterval(() => {
-                $(".img-earn").css({
-                    opacity: 0,
-                    transition: "opacity 0.5s",
-                })
-
-                setTimeout(() => {
-                    $(".img-earn").css({
-                        opacity: 1,
-                        transition: "opacity 0.5s",
-                    })
-                }, 1000);
-            }, 3000);
+            // for (let i = 0; i < data.length; i++) {
+            //     $(`.img-earn-${i}`).delay(i * 1000).show(0)
+            // }
         }
     });
 
-    const renderChild = (value) => {
+    const renderChild = (value, index) => {
         return (
             <div className="child">
-                <img className='img-earn' src={value.img} alt="photos"></img>
+                <img className={`img-earn-${index} jump`} src={value.img} alt="photos"></img>
                 <p className="titlee">{value.title}</p>
                 <p className="contentt">{value.content}</p>
             </div>
@@ -80,7 +70,7 @@ export default function Earn() {
                 <p className='txt'>This timeline details our funding and development goals</p>
                 <div className="waper-content">
                     {data.map((value, index) => {
-                        return renderChild(value)
+                        return renderChild(value, index)
                     })}
                 </div>
             </div>
