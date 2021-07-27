@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Training from '../assets/img/1@4x.png'
 import Arena from '../assets/img/2@4x.png'
 import Daily from '../assets/img/3@4x.png'
 import Upgrade from '../assets/img/4@4x.png'
 import World from '../assets/img/5@4x.png'
+import $ from 'jquery'
 
 export default function Earn() {
+    const [didMount, setDidMount] = useState(false)
+
     const [data, setdata] = useState([
         {
             title: 'Training ground',
@@ -34,10 +37,33 @@ export default function Earn() {
         },
     ])
 
+    useEffect(() => {
+        if (didMount) {
+            console.log("Did Update");
+        } else {
+            setDidMount(true);
+            console.log("Did mount");
+
+            setInterval(() => {
+                $(".img-earn").css({
+                    opacity: 0,
+                    transition: "opacity 0.5s",
+                })
+
+                setTimeout(() => {
+                    $(".img-earn").css({
+                        opacity: 1,
+                        transition: "opacity 0.5s",
+                    })
+                }, 1000);
+            }, 3000);
+        }
+    });
+
     const renderChild = (value) => {
         return (
             <div className="child">
-                <img src={value.img} alt="photos"></img>
+                <img className='img-earn' src={value.img} alt="photos"></img>
                 <p className="titlee">{value.title}</p>
                 <p className="contentt">{value.content}</p>
             </div>

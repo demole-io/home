@@ -101,14 +101,15 @@ body {
 			cursor: pointer;
 		}
 
-		a:hover, li:hover {
+		a:hover,
+		li:hover {
 			color: #ffb337;
 		}
 	}
 }
 
 .container {
-	width: 1270px;
+	width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
@@ -157,15 +158,15 @@ body {
 			.wrapper {
 				img {
 					border-radius: 20px;
-					width: 92%;
-					height: 317px;
+					width: 95%;
+					height: 310px;
 				}
 			}
 
 			.phone {
 				position: absolute;
-				top: -15px;
-				left: -15px;
+				top: -19px;
+				left: -27px;
 				z-index: -1;
 			}
 		}
@@ -214,7 +215,7 @@ body {
 			}
 
 			.somee {
-				flex: 1;
+				flex: 0.5;
 			}
 
 			.waper-name {
@@ -244,7 +245,7 @@ body {
 			}
 
 			.Character {
-				margin-left: -200px;
+				margin-left: -270px;
 				flex: 1;
 				z-index: 2;
 			}
@@ -524,6 +525,10 @@ body {
 					height: 350px;
 					width: 22%;
 					margin: 10px 0;
+
+					img {
+						width: 100%;
+					}
 					.color {
 						background-color: #c7f88f;
 						height: 5px;
@@ -666,13 +671,8 @@ body {
 				align-items: center;
 				display: flex;
 				justify-content: center;
-				.box {
-					margin-top: 400px;
-				}
 				.egg {
-					display: none;
 					margin-top: 100px;
-					opacity: 0;
 				}
 
 				.dragon {
@@ -692,6 +692,53 @@ body {
 				}
 			}
 		}
+	}
+}
+
+#faq {
+	background-image: url("../img/bg-faq.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	padding-top: 75px;
+	min-height: 100vh;
+	.faqq {
+		display: flex;
+		padding-top: 100px;
+		.left {
+			flex: 1;
+			border-right: 5px solid #323232;
+			padding: 50px;
+
+			p {
+				cursor: pointer;
+				padding: 20px;
+			}
+
+			.selected {
+				background-color: #323232;
+			}
+		}
+		.right {
+			flex: 4;
+			padding: 50px;
+
+			.title {
+				font-weight: bold;
+				font-size: 30px;
+				margin-bottom: 30px;
+			}
+
+			.text1 {
+				font-weight: bold;
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.is-mobile {
+		display: none;
 	}
 }
 
@@ -1176,6 +1223,75 @@ body {
 				align-items: center;
 				justify-content: space-between;
 				margin-bottom: 30px;
+			}
+		}
+	}
+
+	#faq {
+		.faqq {
+			display: none;
+		}
+		.is-mobile {
+			display: block;
+			align-items: center;
+			text-align: center;
+			padding: 10px;
+
+			.title {
+				font-family: "EvilEmpire";
+				font-size: 40px;
+				margin-top: 20px;
+			}
+
+			.waper-child {
+				border-bottom: 0.5px solid #ffffff;
+				padding: 20px 10px;
+				.child {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.child-detail {
+					text-align: left;
+					margin-top: 20px;
+
+					p {
+						color: #fff6e7;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+
+	#summon {
+		.container {
+			padding: 10px;
+
+			.waper {
+				.group1 {
+					height: 400px;
+					width: 100%;
+					padding-top: 100px;
+
+					.egg, .dragon {
+						width: 100%;
+						margin-top: 150px;
+					}
+
+					// .dragon {
+					// 	margin-top: 150px;
+					// }
+				}
+
+				.group2 {
+					padding: 0 20px;
+					margin-top: 50px;
+					img {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
