@@ -12,7 +12,7 @@ pipeline {
                 sh 'docker-compose up -d'
             }
         }
-        state('Clean old images') {
+        stage('Clean old images') {
             steps {
                 sh 'docker rmi `docker images --filter dangling=true -q`'
             }
