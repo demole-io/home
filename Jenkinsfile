@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Clean old images') {
             steps {
-                sh 'docker rmi `docker images --filter dangling=true -q`'
+                sh 'docker rmi `docker images --filter dangling=true -q` --force'
             }
         }
     }
