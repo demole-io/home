@@ -17,6 +17,7 @@ export default function Features() {
 
     const selectedIndex = useRef(0)
     const [indexx, setindexx] = useState(0)
+    const [interval, setinterval] = useState(false)
 
     useEffect(() => {
         if (didMount) {
@@ -24,22 +25,40 @@ export default function Features() {
         } else {
             setDidMount(true);
             console.log("Did mount");
-
-            setInterval(() => {
-                selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
-                setindexx(selectedIndex.current)
-            }, 1000);
+            autoNext()
         }
     });
 
+    const autoNext = () => {
+        setinterval(
+            setInterval(() => {
+                selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
+                setindexx(selectedIndex.current)
+            }, 1000)
+        )
+    }
+
+    const stopNext = () => {
+        clearInterval(interval)
+        setinterval(false)
+    }
+
     const onClickLeft = () => {
-        // const nextIndex = selectedIndex === 0 ? data.length - 1 : selectedIndex - 1;
-        // setSelectedIndex(nextIndex);
+
+        if (interval) {
+            stopNext()
+        }
+        selectedIndex.current = selectedIndex.current === 0 ? data.length - 1 : selectedIndex.current - 1;
+        setindexx(selectedIndex.current)
     }
 
     const onClickRight = () => {
-        // const nextIndex = selectedIndex === (data.length - 1) ? 0 : selectedIndex + 1;
-        // setSelectedIndex(nextIndex);
+        if (interval) {
+            stopNext()
+        }
+
+        selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
+        setindexx(selectedIndex.current)
     }
 
     const renderData = () => {

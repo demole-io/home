@@ -4,12 +4,30 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import 'react-redux-toastr/src/styles/index.scss'
 import './assets/scss/style.scss';
 import Summon from './controllers/Summon';
+import Faq from './controllers/Faq';
+import Marketplace from './controllers/Marketplace';
+import MonterDetail from './controllers/MonterDetail';
 
 const routes = [
+    {
+        path: '/monter-detail/:index',
+        exact: false,
+        main: ({ location, match }) => <MonterDetail match={match} location={location}></MonterDetail>
+    },
+    {
+        path: '/marketplace',
+        exact: false,
+        main: ({ location, match }) => <Marketplace match={match} location={location}></Marketplace>
+    },
     {
         path: '/summon',
         exact: false,
         main: ({ location, match }) => <Summon match={match}></Summon>
+    },
+    {
+        path: '/faq',
+        exact: false,
+        main: ({ location, match }) => <Faq match={match}></Faq>
     },
     {
         path: '/',

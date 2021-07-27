@@ -9,7 +9,6 @@ import MEMALD from '../assets/img/nguoica.png'
 import Unknow2 from '../assets/img/Subtract1.png'
 import Cirke from '../assets/img/Ellipse 15.png'
 import Unknow3 from '../assets/img/Frame 77.png'
-// import Unknow4Mobie from '../assets/img/Group 8094.png'
 
 const Characters = props => {
     const [didMount, setDidMount] = useState(false)
@@ -37,8 +36,8 @@ const Characters = props => {
     ])
 
     const selected = useRef(0)
-
     const [indexx, setindexx] = useState(0)
+    const [interval, setinterval] = useState(false)
 
     useEffect(() => {
         if (didMount) {
@@ -47,20 +46,39 @@ const Characters = props => {
             setDidMount(true);
             console.log("Did mount");
 
-            setInterval(() => {
-                selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
-                setindexx(selected.current)
-            }, 1000);
+            autoNext()
         }
     });
 
+    const autoNext = () => {
+        setinterval(
+            setInterval(() => {
+                selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
+                setindexx(selected.current)
+            }, 1000)
+        )
+    }
+
+    const stopNext = () => {
+        clearInterval(interval)
+        setinterval(false)
+    }
+
     const onClickLeft = () => {
-       // setseleted(seleted === 0 ? data.length - 1 : seleted - 1)
+        if (interval) {
+            stopNext()
+        }
+        selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
+        setindexx(selected.current)
     }
 
     const onCliclRight = () => {
-        //setseleted(seleted === data.length - 1 ? 0 : seleted + 1)
+        if (interval) {
+            stopNext()
+        }
 
+        selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
+        setindexx(selected.current)
     }
     return (
         <div id="characters">

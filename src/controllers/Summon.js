@@ -10,14 +10,9 @@ import $ from 'jquery'
 export default function Summon() {
 
     const reset = () => {
-        $(".box").css({
+        $(".egg").css({
             opacity: 1,
             display: 'block'
-        })
-
-        $(".egg").css({
-            opacity: 0,
-            display: 'none'
         })
 
         $(".dragon").css({
@@ -30,59 +25,26 @@ export default function Summon() {
     const onClickPay = () => {
 
         reset()
-        $(".box").css({
+        $(".egg").css({
             opacity: 0,
             transition: "opacity 2s",
         })
 
         setTimeout(() => {
 
-            $(".box").css({
+            $(".egg").css({
                 display: 'none'
             })
 
-            $(".egg").css({
+            $(".dragon").css({
                 display: 'block',
             })
             setTimeout(() => {
-                $(".egg").css({
+                $(".dragon").css({
                     opacity: 1,
                     transition: "opacity 2s",
                 })
-
-                setTimeout(() => {
-                    $(".egg").css({
-                        opacity: 0,
-                        transition: "opacity 2s",
-                    })
-
-                    setTimeout(() => {
-                        $(".egg").css({
-                            display: 'none'
-                        })
-
-                        $(".dragon").css({
-                            display: 'block',
-                        })
-
-                        setTimeout(() => {
-                            $(".dragon").css({
-                                opacity: 1,
-                                transition: "opacity 2s",
-                            })
-
-                        }, 1000);
-
-
-                    }, 1000);
-                }, 1000);
-
-
-
-
             }, 1000);
-
-
         }, 1000);
     }
 
@@ -92,14 +54,13 @@ export default function Summon() {
             <div className="container">
                 <div className="waper">
                     <div className="group1">
-                        <img className="box" src={Box} alt="photos"></img>
                         <img className="egg" src={Egg} alt="photos"></img>
                         <img className="dragon" src={Dragon} alt="photos"></img>
                     </div>
 
                     <div className="group2">
-                        <img src={PayBtn} alt="photos" className="phone" onClick={onClickPay}></img>
-                        <img src={Ques} alt="photos" className="phone"></img>
+                        <img src={PayBtn} alt="photos" onClick={onClickPay}></img>
+                        <img src={Ques} alt="photos" className="ques"></img>
                     </div>
 
                 </div>

@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Training from '../assets/img/1@4x.png'
 import Arena from '../assets/img/2@4x.png'
 import Daily from '../assets/img/3@4x.png'
 import Upgrade from '../assets/img/4@4x.png'
 import World from '../assets/img/5@4x.png'
+import $ from 'jquery'
 
 export default function Earn() {
+    const [didMount, setDidMount] = useState(false)
+
     const [data, setdata] = useState([
         {
             title: 'Training ground',
@@ -34,10 +37,23 @@ export default function Earn() {
         },
     ])
 
-    const renderChild = (value) => {
+    useEffect(() => {
+        if (didMount) {
+            console.log("Did Update");
+        } else {
+            setDidMount(true);
+            console.log("Did mount");
+
+            // for (let i = 0; i < data.length; i++) {
+            //     $(`.img-earn-${i}`).delay(i * 1000).show(0)
+            // }
+        }
+    });
+
+    const renderChild = (value, index) => {
         return (
             <div className="child">
-                <img src={value.img} alt="photos"></img>
+                <img className={`img-earn-${index} jump`} src={value.img} alt="photos"></img>
                 <p className="titlee">{value.title}</p>
                 <p className="contentt">{value.content}</p>
             </div>
@@ -54,7 +70,7 @@ export default function Earn() {
                 <p className='txt'>This timeline details our funding and development goals</p>
                 <div className="waper-content">
                     {data.map((value, index) => {
-                        return renderChild(value)
+                        return renderChild(value, index)
                     })}
                 </div>
             </div>
