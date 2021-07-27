@@ -7,9 +7,9 @@ pipeline {
                 sh 'docker build -t demole-frontend:latest .'
             }
         }
-        stage('Run Docker') {
+        stage('Run Docker-compose') {
             steps {
-                sh 'docker run -d -p 80:80 demole-frontend:latest'
+                sh 'docker-compose up -d'
             }
         }
     }
