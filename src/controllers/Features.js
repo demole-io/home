@@ -1,19 +1,59 @@
 import React, { useState, useRef, useEffect } from "react";
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
-import img1 from '../assets/img/Mask Group7.png'
-import img2 from '../assets/img/Group 8093.png'
-import img3 from '../assets/img/Mask Group9.png'
+import img1 from '../assets/img/bn6.png'
+import img2 from '../assets/img/bn7.png'
+import img3 from '../assets/img/bn8.png'
+import img4 from '../assets/img/bn9.png'
+import img5 from '../assets/img/bn10.png'
+import img6 from '../assets/img/bn11.png'
 
 export default function Features() {
     const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
-        { img: img1 },
-        { img: img2 },
-        { img: img3 },
+        {
+            img: img1,
+            content: {
+                title: 'Fully Playable 3D Animation',
+                des: 'Enjoy amazing monster design and dazzling skill animations in battle!'
+            }
+        },
+        {
+            img: img2,
+            content: {
+                title: 'Play it your way',
+                des: 'Immerse yourself in an engaging world of monsters with endless content and quests to explore. OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.'
+            }
+        },
+        {
+            img: img3,
+            content: {
+                title: 'Interact with players around the world',
+                des: 'Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features'
+            }
+        },
+        {
+            img: img4,
+            content: {
+                title: 'Create and trade your own NFT',
+                des: 'Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.'
+            }
+        },
+        {
+            img: img5,
+            content: {
+                title: 'Fully Playable 3D Animation',
+                des: 'Enjoy amazing monster design and dazzling skill animations in battle!'
+            }
+        },
+        {
+            img: img6,
+            content: {
+                title: 'Fully Playable 3D Animation',
+                des: 'Enjoy amazing monster design and dazzling skill animations in battle!'
+            }
+        },
     ])
-
-    // const [selectedIndex, setSelectedIndex] = useState(0)
 
     const selectedIndex = useRef(0)
     const [indexx, setindexx] = useState(0)
@@ -122,17 +162,10 @@ export default function Features() {
                 {renderData()}
 
                 <div className="content">
-                    <p className="upcase">Fully Playable 3D Animation</p>
-                    <p>Enjoy amazing monster design and dazzling skill animations in battle!</p>
+                    <p className="upcase">{data[selectedIndex.current].content.title}</p>
+                    <p>{data[selectedIndex.current].content.des}</p>
 
-                    <p className="upcase">Play it your way</p>
-                    <p>Immerse yourself in an engaging world of monsters with endless content and quests to explore. OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</p>
-
-                    <p className="upcase">Interact with players around the world</p>
-                    <p>Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features</p>
-
-                    <p className="upcase">Create and trade your own NFT</p>
-                    <p>Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.</p>
+                  
                 </div>
             </div>
 

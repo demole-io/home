@@ -37,6 +37,7 @@ export default function Earn() {
         },
     ])
 
+
     useEffect(() => {
         if (didMount) {
             console.log("Did Update");
@@ -45,9 +46,13 @@ export default function Earn() {
             console.log("Did mount");
 
             jumpp()
-            setInterval(() => {
+            var interver =  setInterval(() => {
                 jumpp()
-            }, 10 * 1000);
+            }, 10 * 1000)
+        }
+
+        return () => {
+            clearInterval(interver)
         }
     });
 

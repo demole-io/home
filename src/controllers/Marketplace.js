@@ -52,27 +52,27 @@ export default function Marketplace() {
             luck: 'Thunder',
             offers: [
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
@@ -81,51 +81,51 @@ export default function Marketplace() {
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
 
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
             ]
@@ -145,27 +145,27 @@ export default function Marketplace() {
             luck: 'Thunder',
             offers: [
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
@@ -174,51 +174,51 @@ export default function Marketplace() {
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
 
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
             ]
@@ -238,27 +238,27 @@ export default function Marketplace() {
             luck: 'Thunder',
             offers: [
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
@@ -267,51 +267,51 @@ export default function Marketplace() {
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
 
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
             ]
@@ -331,27 +331,27 @@ export default function Marketplace() {
             luck: 'Thunder',
             offers: [
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
                 {
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
                     price: 5,
                     time: '	2 days ago'
                 },
@@ -360,51 +360,51 @@ export default function Marketplace() {
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
 
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
                 {
                     event: 'OFFER',
                     price: 0.05,
-                    from: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
-                    to: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
                     time: '	2 days ago'
                 },
             ]
@@ -432,7 +432,7 @@ export default function Marketplace() {
                     pathname: `/monter-detail/${index}`,
                     state: {
                         value,
-                        index
+                        indexx: index
                     }
                 }}>
                     <button>

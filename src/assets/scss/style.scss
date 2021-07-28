@@ -43,7 +43,6 @@ a {
 	src: url("../fonts/Poppins-Black.ttf");
 }
 
-
 #about {
 	background-image: url("../img/bg-body.png");
 	background-repeat: no-repeat;
@@ -170,18 +169,14 @@ a {
 			margin-bottom: 100px;
 
 			.wrapper {
+				position: absolute;
+				top: 17px;
+				left: 48px;
 				img {
 					border-radius: 20px;
-					width: 92%;
-					height: 310px;
+					width: 100%;
+					height: 315px;
 				}
-			}
-
-			.phone {
-				position: absolute;
-				top: -19px;
-				left: -15px;
-				z-index: -1;
 			}
 		}
 	}
@@ -830,6 +825,7 @@ a {
 				& :last-child {
 					font-size: 40px;
 					margin-top: 10px;
+					font-family: "PoppinsMedium";
 				}
 			}
 		}
@@ -919,10 +915,16 @@ a {
 						justify-content: space-between;
 						align-items: center;
 						margin-bottom: 30px;
+						
 						span {
 							background-color: #2ee36d;
 							border-radius: 6px;
 							padding: 5px;
+						}
+
+						p {
+							font-family: "PoppinsBlack";
+							text-transform: uppercase;
 						}
 					}
 
@@ -934,6 +936,8 @@ a {
 						font-size: 20px;
 						margin-top: 30px;
 						cursor: pointer;
+						text-transform: uppercase;
+						font-family: "PoppinsMedium";
 					}
 				}
 			}
@@ -944,6 +948,156 @@ a {
 #monter-detail {
 	background-color: #0c0c0c;
 	min-height: 100vh;
+
+	background-image: url("../img/bg-monter-detail.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+	.titlee {
+		font-size: 25px;
+		font-family: "PoppinsBlack";
+		margin: 20px 0;
+	}
+
+	.waper-info {
+		display: flex;
+		margin-top: 100px;
+		.left {
+			flex: 1;
+
+			span {
+				background-color: #2ee36d;
+				border-radius: 6px;
+				padding: 5px;
+			}
+
+			p {
+				font-family: "PoppinsBlack";
+				text-transform: uppercase;
+				margin: 50px 0;
+			}
+
+			img {
+				width: 100%;
+			}
+			.back {
+				cursor: pointer;
+				font-family: "Poppins";
+				margin: 0 0 10px 0;
+				text-transform: capitalize;
+			}
+		}
+
+		.right {
+			flex: 1;
+			button {
+				background-color: transparent;
+				cursor: pointer;
+				border-radius: 3px;
+				border: 1px solid white;
+				padding: 5px 10px;
+				margin-right: 20px;
+			}
+			
+			.group1 {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+
+				div {
+					text-align: right;
+					span {
+						color: #606060;
+					}
+				}
+			}
+
+			.group2 {
+				border: 1px solid #606060;
+				border-radius: 20px;
+				padding: 30px;
+				margin-top: 30px;
+				.gr-child {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					div {
+						text-align: center;
+						margin-bottom: 30px;
+						span {
+							color: #606060;
+						}
+
+						p {
+							font-size: 18px;
+							font-family: "PoppinsMedium";
+						}
+					}
+				}
+			}
+
+			.group3 {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 10px;
+				div {
+					text-align: center;
+					span {
+						color: #606060;
+					}
+
+					p {
+						font-size: 18px;
+						font-family: "PoppinsMedium";
+					}
+				}
+			}
+
+			.group4 {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.gr-child {
+					display: flex;
+					width: 45%;
+					margin: 10px;
+
+					div {
+						margin-left: 10px;
+						span {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+		
+		}
+	}
+
+	.offer-table {
+		border-radius: 4px;
+		border: 0.5px solid white;
+		margin-bottom: 20px;
+
+		.waper-offer {
+			display: flex;
+			padding: 10px 20px;
+			border-top: 1px solid #dee2e5;
+			text-align: left;
+			p {
+				flex: 1;
+			}
+		}
+
+		.tl {
+			border-top: 0px;
+			p {
+				font-weight: bold;
+			}
+		}
+	}
 }
 @media only screen and (max-height: 900px) {
 	#home {
@@ -1057,7 +1211,7 @@ a {
 				position: relative;
 				padding-top: 400px;
 				margin-top: -100px;
-				margin-bottom: 450px;
+				margin-bottom: 300px;
 				p {
 					width: 100%;
 					font-size: 14px;
@@ -1076,19 +1230,17 @@ a {
 				height: 200px;
 				width: 100%;
 				.wrapper {
+					top: 10px;
+					left: 28px;
 					img {
-						width: 90%;
-						height: 160px;
+						width: 100%;
+						height: 165px;
 					}
 				}
 
 				.phone {
 					width: 100%;
 					height: 200px;
-					position: absolute;
-					top: -12px;
-					left: -7px;
-					z-index: -1;
 				}
 			}
 		}
@@ -1221,6 +1373,7 @@ a {
 			.content {
 				padding: 10px 30px;
 				margin: 100px 0 50px 0;
+				height: 120px;
 
 				p {
 					font-size: 10px;
