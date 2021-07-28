@@ -41,7 +41,7 @@ const Characters = props => {
     useEffect(() => {
         console.log("Did mount");
         autoNext()
-    });
+    }, []);
 
     const autoNext = () => {
         setinterval(

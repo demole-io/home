@@ -61,7 +61,7 @@ export default function Features() {
     useEffect(() => {
         console.log("Did mount");
         autoNext()
-    });
+    }, []);
 
     const autoNext = () => {
         setinterval(

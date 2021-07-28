@@ -47,7 +47,7 @@ const MonterDetail = props => {
         console.log("Did mount");
         setdetail(props.location && props.location.state ? props.location.state.value : false)
         setindexx(props.location && props.location.state ? props.location.state.indexx : false)
-    });
+    }, []);
 
     const goBack = () => {
         history.goBack()
