@@ -7,7 +7,6 @@ import World from '../assets/img/5@4x.png'
 import $ from 'jquery'
 
 export default function Earn() {
-    const [didMount, setDidMount] = useState(false)
 
     const [data, setdata] = useState([
         {
@@ -37,26 +36,21 @@ export default function Earn() {
         },
     ])
 
-
     useEffect(() => {
-        if (didMount) {
-            console.log("Did Update");
-        } else {
-            setDidMount(true);
-            console.log("Did mount");
+        console.log("Did mount");
 
+        jumpp()
+        var interver = setInterval(() => {
             jumpp()
-            var interver =  setInterval(() => {
-                jumpp()
-            }, 10 * 1000)
-        }
+        }, 10 * 1000)
 
         return () => {
             clearInterval(interver)
         }
-    });
+    }, []);
 
     const jumpp = () => {
+        console.log("JUMP===")
         for (let i = 0; i < data.length; i++) {
             setTimeout(() => {
                 $(`.img-earn-${i}`).addClass("jump")

@@ -5,7 +5,6 @@ import Elip from '../assets/img/Ellipse 19.png'
 import { useHistory } from "react-router-dom";
 
 const MonterDetail = props => {
-    const [didMount, setDidMount] = useState(false)
     const [detail, setdetail] = useState(false)
     const [indexx, setindexx] = useState(false)
 
@@ -45,15 +44,9 @@ const MonterDetail = props => {
     const history = useHistory()
 
     useEffect(() => {
-        if (didMount) {
-            console.log("Did Update");
-        } else {
-            setDidMount(true);
-            console.log("Did mount");
-            console.log(props.location)
-            setdetail(props.location && props.location.state ? props.location.state.value : false)
-            setindexx(props.location && props.location.state ? props.location.state.indexx : false)
-        }
+        console.log("Did mount");
+        setdetail(props.location && props.location.state ? props.location.state.value : false)
+        setindexx(props.location && props.location.state ? props.location.state.indexx : false)
     });
 
     const goBack = () => {

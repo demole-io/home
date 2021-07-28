@@ -11,7 +11,6 @@ import Cirke from '../assets/img/Ellipse 15.png'
 import Unknow3 from '../assets/img/Frame 77.png'
 
 const Characters = props => {
-    const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         {
             name: 'Dragon Tribe',
@@ -40,14 +39,8 @@ const Characters = props => {
     const [interval, setinterval] = useState(false)
 
     useEffect(() => {
-        if (didMount) {
-            console.log("Did Update");
-        } else {
-            setDidMount(true);
-            console.log("Did mount");
-
-            autoNext()
-        }
+        console.log("Did mount");
+        autoNext()
     });
 
     const autoNext = () => {
