@@ -10,7 +10,7 @@ import MonterDetail from './controllers/MonterDetail';
 
 const routes = [
     {
-        path: '/monter-detail/:index',
+        path: '/monster-detail/:index',
         exact: false,
         main: ({ location, match }) => <MonterDetail match={match} location={location}></MonterDetail>
     },
