@@ -17,7 +17,7 @@ span {
 	border: 0;
 	box-sizing: border-box;
 	list-style: none;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Poppins", sans-serif;
 	color: white;
 	font-weight: 400;
 }
@@ -29,21 +29,22 @@ a {
 }
 
 @font-face {
-	font-family: "EvilEmpire";
-	src: url("../fonts/Evil Empire.otf");
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Light.ttf");
 }
 
 @font-face {
-	font-family: "LibreBaskerville";
-	src: url("../fonts/LibreBaskerville-Regular.ttf");
+	font-family: "PoppinsMedium";
+	src: url("../fonts/Poppins-Medium.ttf");
 }
 
 @font-face {
-	font-family: "Montserrat";
-	src: url("../fonts/Montserrat-Light.ttf");
+	font-family: "PoppinsBlack";
+	src: url("../fonts/Poppins-Black.ttf");
 }
 
-body {
+
+#about {
 	background-image: url("../img/bg-body.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -51,7 +52,7 @@ body {
 
 /*#region General*/
 .header {
-	position: fixed;
+	// position: fixed;
 	width: 100%;
 	z-index: 100;
 	top: 0px;
@@ -81,11 +82,11 @@ body {
 		display: flex;
 		align-items: center;
 		padding-top: 10px;
+		padding-left: 200px;
 		p {
 			font-size: 26px;
 			margin-left: 20px;
 			color: #36a2de;
-			font-family: "EvilEmpire";
 		}
 	}
 
@@ -102,7 +103,6 @@ body {
 			&:first-child {
 				margin-left: 0px;
 			}
-			font-family: "LibreBaskerville";
 			cursor: pointer;
 		}
 
@@ -130,12 +130,12 @@ body {
 		text-align: center;
 
 		.title {
-			font-family: "EvilEmpire";
+			font-family: "PoppinsMedium";
 			font-size: 70px;
 		}
 
 		.content {
-			font-family: "EvilEmpire";
+			font-family: "PoppinsMedium";
 			color: #ffc970;
 			font-size: 30px;
 			margin: 30px 0;
@@ -199,16 +199,18 @@ body {
 
 		.waper-title {
 			position: relative;
+
+			p {
+				font-family: "PoppinsBlack";
+			}
 			.title {
-				font-family: "EvilEmpire";
 				font-size: 70px;
 			}
 
 			.big-title {
 				position: absolute;
-				top: -50px;
-				left: 250px;
-				font-family: "EvilEmpire";
+				top: -80px;
+				left: 80px;
 				font-size: 170px;
 				opacity: 0.1;
 			}
@@ -226,6 +228,7 @@ body {
 			.arrow {
 				flex: 0.1;
 				cursor: pointer;
+				z-index: 10;
 			}
 
 			.somee {
@@ -247,8 +250,8 @@ body {
 					p {
 						display: block;
 						margin: 70px 0;
-						font-size: 25px;
-						font-family: "EvilEmpire";
+						font-size: 15px;
+						font-family: "PoppinsMedium";
 						text-align: left;
 					}
 
@@ -262,6 +265,13 @@ body {
 				margin-left: -270px;
 				flex: 1;
 				z-index: 2;
+				width: 100%;
+			}
+
+			.tiennu {
+				width: 90%;
+				margin-left: -450px;
+				margin-top: -150px;
 			}
 
 			.group2 {
@@ -278,7 +288,6 @@ body {
 
 					p {
 						font-size: 13px;
-						font-family: "LibreBaskerville";
 					}
 				}
 			}
@@ -292,7 +301,7 @@ body {
 			margin: 50px 250px;
 			height: 250px;
 			.name {
-				font-family: "EvilEmpire";
+				font-family: "PoppinsMedium";
 				font-size: 50px;
 				margin-bottom: 10px;
 			}
@@ -322,17 +331,19 @@ body {
 
 		.waper-title {
 			position: relative;
+
+			p {
+				font-family: "PoppinsBlack";
+			}
 			.title {
-				font-family: "EvilEmpire";
 				font-size: 70px;
 			}
 
 			.big-title {
 				position: absolute;
 				top: -50px;
-				left: 50px;
-				font-family: "EvilEmpire";
-				font-size: 170px;
+				left: 80px;
+				font-size: 135px;
 				opacity: 0.1;
 			}
 		}
@@ -417,11 +428,11 @@ body {
 			p {
 				margin: 10px 0;
 				text-align: left;
-				font-family: "LibreBaskerville";
+				font-size: 13px;
 			}
 
 			.upcase {
-				font-family: "EvilEmpire";
+				font-family: "PoppinsMedium";
 				font-size: 22px;
 				text-align: center;
 			}
@@ -439,36 +450,36 @@ body {
 
 		.waper-title {
 			position: relative;
-			margin-bottom: 70px;
+
+			p {
+				font-family: "PoppinsBlack";
+			}
 			.title {
-				font-family: "EvilEmpire";
 				font-size: 70px;
 			}
 
 			.big-title {
 				position: absolute;
-				top: -50px;
-				left: 250px;
-				font-family: "EvilEmpire";
+				top: -90px;
+				left: 80px;
 				font-size: 170px;
 				opacity: 0.1;
 			}
 		}
 
 		.txt {
-			font-family: "LibreBaskerville";
+			margin-top: 30px;
 		}
 
 		.waper-content {
 			display: flex;
 			justify-content: space-between;
-			margin-top: 50px;
+			margin-top: 70px;
 
 			.child {
 				flex: 1;
 				margin: 0 50px;
 				.titlee {
-					font-family: "EvilEmpire";
 					color: #ffd286;
 					font-size: 20px;
 					margin: 20px 0;
@@ -476,25 +487,38 @@ body {
 				}
 
 				.contentt {
-					font-family: "LibreBaskerville";
 					text-align: left;
 				}
 
 				@keyframes jump {
 					0% {
-						transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+						transform: scale(1, 1) translateY(0);
 					}
-					40% {
-						transform: translate3d(0, 30%, 0) scale3d(0.7, 1.5, 1);
+					10% {
+						transform: scale(1.1, 0.9) translateY(0);
+					}
+					30% {
+						transform: scale(0.9, 1.1) translateY(-50px);
+					}
+					50% {
+						transform: scale(1.05, 0.95) translateY(0);
+					}
+					57% {
+						transform: scale(1, 1) translateY(-7px);
+					}
+					64% {
+						transform: scale(1, 1) translateY(0);
 					}
 					100% {
-						transform: translate3d(0, 100%, 0) scale3d(1.5, 0.7, 1);
+						transform: scale(1, 1) translateY(0);
 					}
 				}
 				.jump {
-					transform-origin: 50% 50%;
-					animation: jump 0.5s linear alternate infinite;
-					margin-bottom: 100px;
+					animation-timing-function: ease;
+					animation-name: jump;
+					animation-duration: 3s;
+					animation-iteration-count: infinite;
+					transform-origin: bottom;
 				}
 			}
 		}
@@ -512,16 +536,18 @@ body {
 
 		.waper-title {
 			position: relative;
+
+			p {
+				font-family: "PoppinsBlack";
+			}
 			.title {
-				font-family: "EvilEmpire";
 				font-size: 70px;
 			}
 
 			.big-title {
 				position: absolute;
-				top: -50px;
-				left: 350px;
-				font-family: "EvilEmpire";
+				top: -80px;
+				left: 160px;
 				font-size: 170px;
 				opacity: 0.1;
 			}
@@ -532,7 +558,6 @@ body {
 		}
 
 		.txt {
-			font-family: "LibreBaskerville";
 			margin-top: 30px;
 		}
 
@@ -554,7 +579,7 @@ body {
 				.child {
 					background-color: #2a282b;
 					text-align: left;
-					height: 350px;
+					height: 370px;
 					width: 22%;
 					margin: 10px 0;
 
@@ -590,7 +615,6 @@ body {
 							list-style: inside;
 							color: #c1bcb1;
 							margin: 5px 0;
-							font-family: "LibreBaskerville";
 						}
 					}
 				}
@@ -612,17 +636,18 @@ body {
 		text-align: center;
 		.waper-title {
 			position: relative;
-			margin-bottom: 20px;
+
+			p {
+				font-family: "PoppinsBlack";
+			}
 			.title {
-				font-family: "EvilEmpire";
 				font-size: 70px;
 			}
 
 			.big-title {
 				position: absolute;
-				top: -50px;
-				left: 350px;
-				font-family: "EvilEmpire";
+				top: -80px;
+				left: 140px;
 				font-size: 170px;
 				opacity: 0.1;
 			}
@@ -778,7 +803,7 @@ body {
 #marketplace {
 	background-color: #0c0c0c;
 	min-height: 100vh;
-	padding-top: 100px;
+	// padding-top: 100px;
 
 	.container {
 		height: 100%;
@@ -786,7 +811,6 @@ body {
 		text-align: center;
 
 		.des {
-			font-family: "LibreBaskerville";
 			margin-top: 100px;
 			line-height: 35px;
 		}
@@ -804,14 +828,13 @@ body {
 				text-align: left;
 
 				& :last-child {
-					font-family: "EvilEmpire";
 					font-size: 40px;
 					margin-top: 10px;
 				}
 			}
 		}
 
-		.menu {
+		.menuu {
 			display: flex;
 			margin-top: 50px;
 			justify-content: space-around;
@@ -901,16 +924,11 @@ body {
 							border-radius: 6px;
 							padding: 5px;
 						}
-
-						p {
-							font-family: "EvilEmpire";
-						}
 					}
 
 					button {
 						background-image: linear-gradient(180deg, #ffb337 0%, #ff8037 100%);
 						border-radius: 10px;
-						font-family: "EvilEmpire";
 						width: 100%;
 						padding: 10px;
 						font-size: 20px;
@@ -945,7 +963,7 @@ body {
 		width: 100%;
 	}
 
-	body {
+	#about {
 		background-image: url("../img/bg-body-mobie.png");
 		background-size: 100% 100%;
 	}
@@ -967,8 +985,10 @@ body {
 			z-index: 2;
 		}
 		.waper-logo {
-			position: relative;
-			left: 10px;
+			display: flex;
+			justify-content: center;
+			padding-left: 0;
+			margin-left: 50px;
 			svg {
 				position: relative;
 				left: -10px;
@@ -1035,7 +1055,7 @@ body {
 			.group {
 				display: block;
 				position: relative;
-				padding-top: 350px;
+				padding-top: 400px;
 				margin-top: -100px;
 				margin-bottom: 450px;
 				p {
@@ -1085,8 +1105,8 @@ body {
 
 				.big-title {
 					font-size: 60px;
-					left: 60px;
-					top: -15px;
+					left: 5px;
+					top: -25px;
 				}
 			}
 
@@ -1101,6 +1121,10 @@ body {
 				.somee,
 				.group2 {
 					display: none;
+				}
+
+				.tiennu {
+					margin-top: 0;
 				}
 
 				.Character {
@@ -1128,15 +1152,13 @@ body {
 				div {
 					text-align: left;
 					.name {
-						font-family: "EvilEmpire";
 						font-size: 20px;
 						margin-bottom: 10px;
 						color: #fff6e7;
 					}
 
 					.txtt {
-						// font-family: "vanvan";
-						font-size: 10px;
+						font-size: 9px;
 					}
 				}
 
@@ -1157,13 +1179,13 @@ body {
 			.waper-title {
 				margin-bottom: 50px;
 				.title {
-					font-size: 30px;
+					font-size: 25px;
 				}
 
 				.big-title {
-					font-size: 50px;
+					font-size: 43px;
 					left: 10px;
-					top: -10px;
+					top: -15px;
 				}
 			}
 
@@ -1224,12 +1246,15 @@ body {
 				}
 
 				.big-title {
-					font-size: 60px;
-					left: 50px;
+					font-size: 50px;
+					left: 35px;
 					top: -15px;
 				}
 			}
 
+			.txt {
+				font-size: 13px;
+			}
 			.waper-content {
 				flex-wrap: wrap;
 				margin-top: 20px;
@@ -1247,10 +1272,7 @@ body {
 					}
 
 					.titlee {
-						margin: 10px 0 0 0;
-					}
-					.jump {
-						margin-bottom: 30px;
+						margin: 10px 0;
 					}
 				}
 			}
@@ -1263,15 +1285,14 @@ body {
 		.container {
 			padding: 10px;
 			.waper-title {
-				margin-bottom: 50px;
 				.title {
 					font-size: 30px;
 				}
 
 				.big-title {
 					font-size: 60px;
-					left: 100px;
-					top: -15px;
+					left: 30px;
+					top: -25px;
 				}
 			}
 
@@ -1295,7 +1316,7 @@ body {
 					.child {
 						background-color: #2a282b;
 						width: 47%;
-						height: 150px;
+						height: 170px;
 
 						.color {
 							background-color: #c7f88f;
@@ -1355,15 +1376,14 @@ body {
 		.container {
 			padding: 10px;
 			.waper-title {
-				margin-bottom: 50px;
 				.title {
 					font-size: 30px;
 				}
 
 				.big-title {
-					font-size: 60px;
-					left: 80px;
-					top: -15px;
+					font-size: 55px;
+					left: 20px;
+					top: -20px;
 				}
 			}
 
@@ -1426,6 +1446,7 @@ body {
 	}
 
 	#faq {
+		padding-top: 0;
 		.faqq {
 			display: none;
 		}
@@ -1436,7 +1457,6 @@ body {
 			padding: 10px;
 
 			.title {
-				font-family: "EvilEmpire";
 				font-size: 40px;
 				margin-top: 20px;
 			}
@@ -1466,7 +1486,7 @@ body {
 	#summon {
 		background-image: url("../img/bg-summon-mobile.png");
 		.container {
-			padding: 10px;
+			// padding: 10px;
 
 			.waper {
 				align-items: center;

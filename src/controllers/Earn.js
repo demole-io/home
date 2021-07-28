@@ -16,24 +16,24 @@ export default function Earn() {
             img: Training
         },
         {
-            title: 'Arena',
-            content: 'Complete daily missions for rewards',
-            img: Arena
-        },
-        {
             title: 'Daily quests',
-            content: 'Accompanying players around the world to defeat the world Boss and receive valuable rewards',
+            content: 'Complete daily missions for rewards',
             img: Daily
         },
         {
-            title: 'Upgrade your monsters',
+            title: 'Arena',
             content: 'Accompanying players around the world to defeat the world Boss and receive valuable rewards',
-            img: Upgrade
+            img: Arena
         },
         {
             title: 'World Bosses',
-            content: 'Find unique monsters and items and exchange with other players.',
+            content: 'Accompanying players around the world to defeat the world Boss and receive valuable rewards ',
             img: World
+        },
+        {
+            title: 'Upgrade your monsters',
+            content: 'Find unique monsters and items and exchange with other players.',
+            img: Upgrade
         },
     ])
 
@@ -44,16 +44,30 @@ export default function Earn() {
             setDidMount(true);
             console.log("Did mount");
 
-            // for (let i = 0; i < data.length; i++) {
-            //     $(`.img-earn-${i}`).delay(i * 1000).show(0)
-            // }
+            jumpp()
+            setInterval(() => {
+                jumpp()
+            }, 10 * 1000);
         }
     });
+
+    const jumpp = () => {
+        for (let i = 0; i < data.length; i++) {
+            setTimeout(() => {
+                $(`.img-earn-${i}`).addClass("jump")
+                setTimeout(() => {
+                    $(`.img-earn-${i}`).removeClass("jump")
+                }, 3000);
+            }, (i + 1) * 2000);
+
+        }
+    }
 
     const renderChild = (value, index) => {
         return (
             <div className="child">
-                <img className={`img-earn-${index} jump`} src={value.img} alt="photos"></img>
+                <img className={`img-earn-${index}`} src={value.img} alt="photos"
+                ></img>
                 <p className="titlee">{value.title}</p>
                 <p className="contentt">{value.content}</p>
             </div>
@@ -67,7 +81,9 @@ export default function Earn() {
                     <p className="title">Play to earn</p>
                     <p className="big-title">Play to earn</p>
                 </div>
-                <p className='txt'>This timeline details our funding and development goals</p>
+                <p className='txt'>Why invest huge amounts of money in the game when you can make money from it?
+                    <br></br>
+                    Each and every activity in the game is a great source of real-life rewards awaiting for you to explore</p>
                 <div className="waper-content">
                     {data.map((value, index) => {
                         return renderChild(value, index)

@@ -20,7 +20,7 @@ const isMobile = width <= 768 ? true : false
 class App extends React.Component {
     render() {
         return (
-            <Fragment>
+            <div id="about">
                 <Header pathname={pathname} isMobile={isMobile}></Header>
                 <Home></Home>
                 <Characters></Characters>
@@ -29,7 +29,7 @@ class App extends React.Component {
                 <Roadmap></Roadmap>
                 <Backed></Backed>
                 <Fooder></Fooder>
-            </Fragment>
+            </div>
         )
     }
 }

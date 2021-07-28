@@ -130,9 +130,6 @@ export default function Roadmap() {
                     <p className="title">Roadmap</p>
                     <p className="big-title">Roadmap</p>
                 </div>
-
-                <p className="txt hmm">This timeline details our funding and development goals</p>
-
                 <div className="content">
                     <img className="line" src={Line} alt="photos"></img>
                     <div className="waper-data">
@@ -150,8 +147,6 @@ export default function Roadmap() {
                     </div>
                     <img className="line" src={LineMobile} alt="photos"></img>
                 </div>
-
-                <p className="txt">This timeline details our funding and development goals</p>
             </div>
 
         </div>

@@ -115,20 +115,21 @@ export default function Features() {
         <div id="features">
             <div className="container">
                 <div className="waper-title">
-                    <p className="title">special features</p>
-                    <p className="big-title">special features</p>
+                    <p className="title">Game Features</p>
+                    <p className="big-title">Game Features</p>
                 </div>
 
                 {renderData()}
 
                 <div className="content">
+                    <p className="upcase">Fully Playable 3D Animation</p>
+                    <p>Enjoy amazing monster design and dazzling skill animations in battle!</p>
+
                     <p className="upcase">Play it your way</p>
-                    <p>Immerse yourself in an engaging world of monsters with endless content and quests to explore.
-                        OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.
-                    </p>
+                    <p>Immerse yourself in an engaging world of monsters with endless content and quests to explore. OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</p>
 
                     <p className="upcase">Interact with players around the world</p>
-                    <p>Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features </p>
+                    <p>Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features</p>
 
                     <p className="upcase">Create and trade your own NFT</p>
                     <p>Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.</p>

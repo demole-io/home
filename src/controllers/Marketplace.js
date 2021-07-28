@@ -504,7 +504,7 @@ export default function Marketplace() {
                     </div>
                 </div>
 
-                <div className="menu">
+                <div className="menuu">
                     <p>Filter</p>
                     <p>Clear Filter</p>
                     <div>

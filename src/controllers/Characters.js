@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
 import Unknow1 from '../assets/img/Subtract.png'
-import Knight from '../assets/img/rong 2.png'
-import ORC from '../assets/img/Orc2.png'
-import WARRIOR from '../assets/img/Tiennu.png'
-import MEMALD from '../assets/img/nguoica.png'
+import Knight from '../assets/img/ideal_Dargon.gif'
+import ORC from '../assets/img/ideal_Orc.gif'
+import WARRIOR from '../assets/img/TienNu.gif'
+import MEMALD from '../assets/img/TienCa.gif'
 import Unknow2 from '../assets/img/Subtract1.png'
 import Cirke from '../assets/img/Ellipse 15.png'
 import Unknow3 from '../assets/img/Frame 77.png'
@@ -14,24 +14,24 @@ const Characters = props => {
     const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         {
-            name: 'knight',
+            name: 'Dragon Tribe',
             img: Knight,
-            des: 'Sinh sống ở các hang đá trên vách núi cao phía bắc vùng lục địa, tộc Rồng là bộ tộc dũng mãnh với đôi cánh dang rộng trên bầu trời, thân hình lực lưỡng cùng những chiếc móng sắc nhọn. Rồng còn có những chiếc vảy cứng chắc như một bộ giáp bảo vệ thân thể. Với lợi thế bay lượn trên cao, tộc rồng tỏ ra ưu thế trong những cuộc đi săn đơn lẻ.'
+            des: 'Living in the caves on the high cliffs of the northern continent, the Dragon tribe is a mighty tribe with wings spread in the sky, a muscular body, and sharp claws. Dragons also have hard scales like armor to protect the body. With the advantage of flying high, the dragon tribe proved to be dominant in single hunting.'
         },
         {
-            name: 'ORC',
+            name: 'Treeman Tribe',
             img: ORC,
-            des: 'Những cánh rừng già âm u dưới chân các vách núi cao phía bắc vùng lục địa là nơi cư ngụ của tộc Người cây. Lãnh thổ của họ gần như bất khả xâm phạm bởi sự âm u tăm tối rất đáng sợ. Người cây được sinh ra từ những thân cây cổ thụ ngàn năm nên cơ thể săn chắc, di chuyển mềm mại, đặc biệt nguy hiểm trong những trận chiến đồng đội.'
+            des: 'The murky old forests at the foot of the high cliffs in the northern part of the continent are inhabited by the Tree Tribe. Their territory is almost impregnable because of the murky darkness that is very scary. The inhabitants of the tribe were born from the trunks of thousands of years old trees, so their bodies were firm and soft, hazardous in team battles.'
         },
         {
-            name: 'WARRIOR',
+            name: 'Merman Tribe',
             img: WARRIOR,
-            des: 'Nơi Bắc cực xa xôi quanh năm lạnh giá là nhà của tộc Thiên Sứ. Họ được sinh ra từ những linh hồn thánh thiện. Các thành viên của bộ tộc Thiên Sứ khi trưởng thành sẽ tỏa đi khắp mọi nơi, liên kết với nhiều bộ tộc khác nhau để giúp họ chiến đấu. Tộc Thiên Sứ nổi tiếng là bộ tộc không có kẻ thù'
+            des: 'Conquering the entire ocean, the Mermen have long harbored ambitions to dominate the continent. Mastering the vast sea, the Mermaids are especially strong in underwater battles. They regularly sent troops by the rivers to raid Middle-earth and infiltrate the mazes to loot resources.'
         },
         {
-            name: 'MEMALD',
+            name: 'Angel Tribe',
             img: MEMALD,
-            des: 'Chiếm lĩnh toàn bộ đại dương, Tộc Người cá từ lâu đã nuôi tham vọng thống trị vùng lục địa. Làm chủ biển cả bao la, tộc Người cá đặc biệt mạnh trong các cuộc chiến dưới nước. Họ thường xuyên đưa quân men các dòng sông tập kích vào vùng Trung địa và xâm nhập các mê cung để cướp tài nguyên.'
+            des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
         }
     ])
 
@@ -55,7 +55,7 @@ const Characters = props => {
             setInterval(() => {
                 selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
                 setindexx(selected.current)
-            }, 1000)
+            }, 2000)
         )
     }
 
@@ -94,14 +94,14 @@ const Characters = props => {
                     <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
                         <div>
-                            <p className={` ${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '60px' }}>{data[0].name}</p>
-                            <p className={` ${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[1].name}</p>
-                            <p className={` ${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '20px' }}>{data[2].name}</p>
-                            <p className={` ${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '50px' }}>{data[3].name}</p>
+                            <p className={` ${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[0].name}</p>
+                            <p className={` ${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }}>{data[1].name}</p>
+                            <p className={` ${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '-5px' }}>{data[2].name}</p>
+                            <p className={` ${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[3].name}</p>
                         </div>
                     </div>
 
-                    <img className="Character" src={data[selected.current].img} alt="photos"></img>
+                    <img className={`Character ${selected.current === 2 ? 'tiennu' : ''}`} src={data[selected.current].img} alt="photos"></img>
 
                     <div className="group2">
                         <img className="hmmm" src={Unknow2} alt="photos"></img>
