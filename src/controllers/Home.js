@@ -1,13 +1,14 @@
 import React from 'react'
 import Phone from '../assets/img/phone1.png'
 import Giff from '../assets/img/RongFX3.gif'
+import Logo from '../assets/img/logo02 1.png'
 
 export default function Home() {
 
     return (
         <div id="home">
             <div className="container">
-                <p className="title">Defi Monster Legends</p>
+                <img className="title" src={Logo} alt="photos"></img>
                 <p className="content">A vast monster world on Blockchain</p>
 
                 <div className="group">
@@ -27,9 +28,7 @@ export default function Home() {
 
 
                 <div className="waper-phone">
-                    <div class="wrapper">
-                        <img src={Giff} alt="photos"></img>
-                    </div>
+                    <img class="wrapper" src={Giff} alt="photos"></img>
                     <img src={Phone} alt="photos" className="phone"></img>
                 </div>
 

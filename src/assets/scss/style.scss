@@ -81,7 +81,7 @@ a {
 		display: flex;
 		align-items: center;
 		padding-top: 10px;
-		padding-left: 200px;
+		// padding-left: 200px;
 		p {
 			font-size: 26px;
 			margin-left: 20px;
@@ -125,19 +125,18 @@ a {
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 250px;
+		padding-top: 50px;
 		text-align: center;
 
 		.title {
-			font-family: "PoppinsMedium";
-			font-size: 70px;
+			width: 60%;
 		}
 
 		.content {
 			font-family: "PoppinsMedium";
 			color: #ffc970;
 			font-size: 30px;
-			margin: 30px 0;
+			margin-top: -100px;
 		}
 
 		.group {
@@ -172,11 +171,9 @@ a {
 				position: absolute;
 				top: 17px;
 				left: 48px;
-				img {
-					border-radius: 20px;
-					width: 100%;
-					height: 315px;
-				}
+				border-radius: 20px;
+				width: 91%;
+				height: 315px;
 			}
 		}
 	}
@@ -256,17 +253,33 @@ a {
 				}
 			}
 
-			.Character {
+			.orc {
 				margin-left: -270px;
 				flex: 1;
 				z-index: 2;
-				width: 100%;
+				width: 80%;
+			}
+
+			.rong {
+				margin-left: -150px;
+				flex: 1;
+				z-index: 2;
+				width: 60%;
 			}
 
 			.tiennu {
+				flex: 1;
+				z-index: 2;
 				width: 90%;
 				margin-left: -450px;
-				margin-top: -150px;
+				margin-top: -300px;
+			}
+
+			.tienca {
+				flex: 1;
+				z-index: 2;
+				height: 100%;
+				margin-left: -350px;
 			}
 
 			.group2 {
@@ -419,6 +432,7 @@ a {
 			background-repeat: no-repeat;
 			padding: 20px 50px;
 			margin: 0px 200px;
+			height: 200px;
 
 			p {
 				margin: 10px 0;
@@ -915,7 +929,7 @@ a {
 						justify-content: space-between;
 						align-items: center;
 						margin-bottom: 30px;
-						
+
 						span {
 							background-color: #2ee36d;
 							border-radius: 6px;
@@ -998,7 +1012,7 @@ a {
 				padding: 5px 10px;
 				margin-right: 20px;
 			}
-			
+
 			.group1 {
 				display: flex;
 				justify-content: flex-end;
@@ -1071,8 +1085,6 @@ a {
 					}
 				}
 			}
-
-		
 		}
 	}
 
@@ -1197,13 +1209,12 @@ a {
 			padding: 10px;
 			margin-top: 50px;
 			.title {
-				font-size: 37px;
-				margin-top: 50px;
+				display: none;
 			}
 
 			.content {
 				font-size: 17px;
-				margin: 15px 0;
+				margin: 50px 0;
 			}
 
 			.group {
@@ -1230,12 +1241,10 @@ a {
 				height: 200px;
 				width: 100%;
 				.wrapper {
-					top: 10px;
-					left: 28px;
-					img {
-						width: 100%;
-						height: 165px;
-					}
+					top: 15px;
+					left: 22px;
+					// width: 91%;
+					height: 155px;
 				}
 
 				.phone {
@@ -1275,14 +1284,18 @@ a {
 					display: none;
 				}
 
-				.tiennu {
-					margin-top: 0;
+				.orc, .rong, .tiennu, .tienca {
+					margin-left: 0;
+					width: 80%;
+					height: 100%;
 				}
 
-				.Character {
-					margin-left: 0;
-					width: 60%;
-					height: 100%;
+				.tiennu {
+					margin-top: -70px;
+				}
+
+				.tienca {
+					margin-top: 50px;
 				}
 			}
 
@@ -1348,8 +1361,8 @@ a {
 				}
 
 				.imgg {
-					width: 200px;
-					height: 150px;
+					width: 300px;
+					height: 250px;
 				}
 
 				// .items-center {

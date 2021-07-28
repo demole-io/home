@@ -429,7 +429,7 @@ export default function Marketplace() {
                 </div>
 
                 <Link to={{
-                    pathname: `/monter-detail/${index}`,
+                    pathname: `/monster-detail/${index}`,
                     state: {
                         value,
                         indexx: index

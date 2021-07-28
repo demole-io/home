@@ -25,12 +25,12 @@ const Characters = props => {
         },
         {
             name: 'Merman Tribe',
-            img: WARRIOR,
+            img: MEMALD,
             des: 'Conquering the entire ocean, the Mermen have long harbored ambitions to dominate the continent. Mastering the vast sea, the Mermaids are especially strong in underwater battles. They regularly sent troops by the rivers to raid Middle-earth and infiltrate the mazes to loot resources.'
         },
         {
             name: 'Angel Tribe',
-            img: MEMALD,
+            img: WARRIOR,
             des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
         }
     ])
@@ -94,14 +94,22 @@ const Characters = props => {
                     <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
                         <div>
-                            <p className={` ${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[0].name}</p>
-                            <p className={` ${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }}>{data[1].name}</p>
-                            <p className={` ${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '-5px' }}>{data[2].name}</p>
-                            <p className={` ${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[3].name}</p>
+                            <p className={`${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[0].name}</p>
+                            <p className={`${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }}>{data[1].name}</p>
+                            <p className={`${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '-5px' }}>{data[2].name}</p>
+                            <p className={`${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '40px' }}>{data[3].name}</p>
                         </div>
                     </div>
 
-                    <img className={`Character ${selected.current === 2 ? 'tiennu' : ''}`} src={data[selected.current].img} alt="photos"></img>
+                    {/* <img className={`Character ${selected.current === 3 ? 'tiennu' : ''} ${selected.current === 2 ? 'tienca' : ''}`} src={data[selected.current].img} alt="photos"></img> */}
+
+                    {selected.current === 0 && <img className="rong" src={data[selected.current].img} alt="photos"></img>}
+                    {selected.current === 1 && <img className="orc" src={data[selected.current].img} alt="photos"></img>}
+                    {selected.current === 2 && <img className="tienca" src={data[selected.current].img} alt="photos"></img>}
+                    {selected.current === 3 && <img className="tiennu" src={data[selected.current].img} alt="photos"></img>}
+
+
+
 
                     <div className="group2">
                         <img className="hmmm" src={Unknow2} alt="photos"></img>
