@@ -2,15 +2,16 @@ import React, { useState, useEffect, useRef } from 'react'
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
 import Unknow1 from '../assets/img/Subtract.png'
-import Knight from '../assets/img/ideal_Dargon.gif'
-import ORC from '../assets/img/ideal_Orc.gif'
-import WARRIOR from '../assets/img/TienNu.gif'
-import MEMALD from '../assets/img/TienCa.gif'
+import Knight from '../assets/img/ideal_Dargon.webm'
+import ORC from '../assets/img/ideal_Orc.webm'
+import WARRIOR from '../assets/img/TienNu.webm'
+import MEMALD from '../assets/img/TienCa.webm'
 import Unknow2 from '../assets/img/Subtract1.png'
 import Cirke from '../assets/img/Ellipse 15.png'
 import Unknow3 from '../assets/img/Frame 77.png'
 
 const Characters = props => {
+    const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         {
             name: 'Dragon Tribe',
@@ -39,8 +40,14 @@ const Characters = props => {
     const [interval, setinterval] = useState(false)
 
     useEffect(() => {
-        console.log("Did mount");
-        autoNext()
+        if (didMount) {
+            console.log("Did Update");
+        } else {
+            setDidMount(true);
+            console.log("Did mount");
+
+            autoNext()
+        }
     }, []);
 
     const autoNext = () => {
@@ -96,11 +103,13 @@ const Characters = props => {
 
                     {/* <img className={`Character ${selected.current === 3 ? 'tiennu' : ''} ${selected.current === 2 ? 'tienca' : ''}`} src={data[selected.current].img} alt="photos"></img> */}
 
-                    {selected.current === 0 && <img className="rong" src={data[selected.current].img} alt="photos"></img>}
-                    {selected.current === 1 && <img className="orc" src={data[selected.current].img} alt="photos"></img>}
-                    {selected.current === 2 && <img className="tienca" src={data[selected.current].img} alt="photos"></img>}
-                    {selected.current === 3 && <img className="tiennu" src={data[selected.current].img} alt="photos"></img>}
+                    {selected.current === 0 &&  <video className="rong" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                    {selected.current === 1 && <video className="orc" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                    {selected.current === 2 && <video className="tienca" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                    {selected.current === 3 && <video className="tiennu" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
 
+
+                    {/* <video autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video> */}
 
 
 
@@ -128,7 +137,7 @@ const Characters = props => {
                         <p className="name">{data[selected.current].name}</p>
                         <p className="txtt">{data[selected.current].des}</p>
                     </div>
-                    <img src={Unknow3} alt="photos"></img>
+                    {/* <img src={Unknow3} alt="photos"></img> */}
                 </div>
             </div>
         </div>

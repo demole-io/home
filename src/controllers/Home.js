@@ -1,6 +1,6 @@
 import React from 'react'
 import Phone from '../assets/img/phone1.png'
-import Giff from '../assets/img/RongFX3.gif'
+import Giff from '../assets/img/RongFX3.webm'
 import Logo from '../assets/img/logo02 1.png'
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
 
 
                 <div className="waper-phone">
-                    <img class="wrapper" src={Giff} alt="photos"></img>
+                    <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm"></video>
                     <img src={Phone} alt="photos" className="phone"></img>
                 </div>
 

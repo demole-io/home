@@ -9,6 +9,7 @@ import img5 from '../assets/img/bn10.png'
 import img6 from '../assets/img/bn11.png'
 
 export default function Features() {
+    const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         {
             img: img1,
@@ -59,9 +60,15 @@ export default function Features() {
     const [interval, setinterval] = useState(false)
 
     useEffect(() => {
-        console.log("Did mount");
-        autoNext()
-    }, []);
+        if (didMount) {
+            console.log("Did Update");
+        } else {
+            setDidMount(true);
+            console.log("Did mount");
+
+            autoNext()
+        }
+    });
 
     const autoNext = () => {
         setinterval(
