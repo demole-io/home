@@ -16,7 +16,7 @@ export default function Fooder() {
     return (
         <div id="fooder">
             <div className="container is-web">
-                <img src={Img} alt="photos"></img>
+                {/* <img src={Img} alt="photos"></img> */}
                 <div>
                     <p className="title">ABOUT</p>
                     <p>Project Overview</p>

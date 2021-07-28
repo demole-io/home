@@ -104,14 +104,14 @@ const Characters = props => {
 
 
 
-                    <div className="group2">
+                    {/* <div className="group2">
                         <img className="hmmm" src={Unknow2} alt="photos"></img>
                         <div>
                             <img src={Cirke} alt="photos"></img>
                             <p>Faraland are exquisitely digital collectibles created using blockchain technology.</p>
                             <img src={Unknow3} alt="photos"></img>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="somee"></div>
 

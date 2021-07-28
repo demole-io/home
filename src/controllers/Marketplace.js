@@ -419,7 +419,7 @@ export default function Marketplace() {
         return (
             <div className="monter">
                 <div className="title">
-                    <span>#{index}</span>
+                    <span>#{index + 1}</span>
                     <p>{value.name}</p>
                     <p></p>
                 </div>
