@@ -1,9 +1,14 @@
 import React from 'react'
 import Phone from '../assets/img/phone1.png'
 import Giff from '../assets/img/RongFX3.webm'
+import Poster from '../assets/img/RongFX3.png'
 import Logo from '../assets/img/logo02 1.png'
 
 export default function Home() {
+
+    const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
+        !window.MSStream
 
     return (
         <div id="home">
@@ -28,7 +33,8 @@ export default function Home() {
 
 
                 <div className="waper-phone">
-                    <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm"></video>
+                    {!isIOS && <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm" muted={true}></video>}
+                    {isIOS && <img src={Poster} alt="photos" className="wrapper"></img>}
                     <img src={Phone} alt="photos" className="phone"></img>
                 </div>
 

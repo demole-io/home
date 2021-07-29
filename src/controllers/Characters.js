@@ -12,11 +12,17 @@ import iconMEMALD from '../assets/img/nguoi_ca.png'
 import iconKnight from '../assets/img/rong.png'
 import iconWARRIOR from '../assets/img/Group 8112.png'
 
-import Unknow2 from '../assets/img/Subtract1.png'
-import Cirke from '../assets/img/Ellipse 15.png'
-import Unknow3 from '../assets/img/Frame 77.png'
+import OrcPoster from '../assets/img/Orc2.png'
+import TiencaPoster from '../assets/img/nguoica.png'
+import RongPoster from '../assets/img/rong 2.png'
+import TiennuPoster from '../assets/img/Tiennu.png'
 
 const Characters = props => {
+    const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
+        !window.MSStream
+
+
     const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
         {
@@ -121,12 +127,19 @@ const Characters = props => {
                         </div>
                     </div>
 
-                    <div className="char">
-                        {selected.current === 0 && <video className="orc" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                        {selected.current === 1 && <video className="tienca" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                        {selected.current === 2 && <video className="rong" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                        {selected.current === 3 && <video className="tiennu" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                    </div>
+                    {!isIOS && <div className="char">
+                        {selected.current === 0 && <video muted={true} className="orc" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                        {selected.current === 1 && <video muted={true} className="tienca" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                        {selected.current === 2 && <video muted={true} className="rong" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                        {selected.current === 3 && <video muted={true} className="tiennu" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                    </div>}
+
+                    {isIOS && <div className="char">
+                        {selected.current === 0 && <img className="orc" src={OrcPoster} alt="photos"></img>}
+                        {selected.current === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
+                        {selected.current === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
+                        {selected.current === 3 && <img className="tiennu" src={TiennuPoster} alt="photos"></img>}
+                    </div>}
 
 
                     <img className="arrow" src={ArrowRight} alt="photos" onClick={onCliclRight}></img>

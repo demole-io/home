@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-import Box from '../assets/img/Asset 3@4x 1.png'
 import PayBtn from '../assets/img/fantastic-illustration-ancient-chinese-themes 3.png'
 import Ques from '../assets/img/Ouf7Ajd 2.png'
 import Dragon from '../assets/img/rong 2.png'
