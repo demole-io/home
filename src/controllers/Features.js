@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import ArrowLeft from '../assets/img/Frame1.png'
 import ArrowRight from '../assets/img/Frame.png'
-import img1 from '../assets/img/bn6.png'
-import img2 from '../assets/img/bn7.png'
-import img3 from '../assets/img/bn8.png'
-import img4 from '../assets/img/bn9.png'
-import img5 from '../assets/img/bn10.png'
-import img6 from '../assets/img/bn11.png'
-import img7 from '../assets/img/bn12.png'
+import img1 from '../assets/img/bn6.jpg'
+import img2 from '../assets/img/bn7.jpg'
+import img3 from '../assets/img/bn8.jpg'
+import img4 from '../assets/img/bn9.jpg'
+import img5 from '../assets/img/bn10.jpg'
+import img6 from '../assets/img/bn11.jpg'
+import img7 from '../assets/img/bn12.jpg'
 
-import img8 from '../assets/img/Method Draw Image (1).png'
-import img9 from '../assets/img/Method Draw Image (4).png'
-import img10 from '../assets/img/Method Draw Image (7).png'
+import img8 from '../assets/img/Method Draw Image (1).jpg'
+import img9 from '../assets/img/Method Draw Image (4).jpg'
+import img10 from '../assets/img/Method Draw Image (7).jpg'
 
 export default function Features() {
     const [didMount, setDidMount] = useState(false)

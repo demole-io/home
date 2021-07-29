@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import img1 from '../assets/img/Mask Group.png'
-import img2 from '../assets/img/Mask Group1.png'
-import img3 from '../assets/img/Mask Group2.png'
-import img4 from '../assets/img/Frame 86.png'
+import img1 from '../assets/img/Mask Group.jpg'
+import img2 from '../assets/img/Mask Group1.jpg'
+import img3 from '../assets/img/Mask Group2.jpg'
+import img4 from '../assets/img/Mask Group3.jpg'
+
 import img from '../assets/img/image3.png'
 import Line from '../assets/img/Group 8092.png'
 import LineMobile from '../assets/img/Group 8104.png'
