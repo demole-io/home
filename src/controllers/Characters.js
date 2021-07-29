@@ -65,7 +65,7 @@ const Characters = props => {
             setInterval(() => {
                 selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
                 setindexx(selected.current)
-            }, 2000)
+            }, 3000)
         )
     }
 
@@ -90,6 +90,16 @@ const Characters = props => {
         selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
         setindexx(selected.current)
     }
+
+    const onClickName = (index) => {
+        if (interval) {
+            stopNext()
+        }
+
+        selected.current = index;
+        setindexx(selected.current)
+    }
+
     return (
         <div id="characters">
             <div className="container">
@@ -104,11 +114,10 @@ const Characters = props => {
                     <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
                         <div>
-
-                            <img className={`${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }} src={data[0].icon} alt="photos"></img>
-                            <img className={`${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }} src={data[1].icon} alt="photos"></img>
-                            <img className={`${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '10px' }} src={data[2].icon} alt="photos"></img>
-                            <img className={`${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '80px' }} src={data[3].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(0)} className={`${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }} src={data[0].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(1)} className={`${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }} src={data[1].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(2)} className={`${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '10px' }} src={data[2].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(3)} className={`${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '80px' }} src={data[3].icon} alt="photos"></img>
                         </div>
                     </div>
 

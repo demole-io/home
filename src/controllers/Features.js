@@ -9,6 +9,10 @@ import img5 from '../assets/img/bn10.png'
 import img6 from '../assets/img/bn11.png'
 import img7 from '../assets/img/bn12.png'
 
+import img8 from '../assets/img/Method Draw Image (1).png'
+import img9 from '../assets/img/Method Draw Image (4).png'
+import img10 from '../assets/img/Method Draw Image (7).png'
+
 export default function Features() {
     const [didMount, setDidMount] = useState(false)
     const [data, setdata] = useState([
@@ -32,6 +36,15 @@ export default function Features() {
         },
         {
             img: img7,
+        },
+        {
+            img: img8,
+        },
+        {
+            img: img9,
+        },
+        {
+            img: img10,
         },
     ])
 
@@ -79,7 +92,7 @@ export default function Features() {
             setInterval(() => {
                 selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
                 setindexx(selectedIndex.current)
-            }, 1000)
+            }, 3000)
         )
     }
 
