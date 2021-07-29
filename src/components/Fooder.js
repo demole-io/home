@@ -1,20 +1,11 @@
 import React from 'react'
-import Img from '../assets/img/Mask Group4.png'
 
 import TweetIcon from '../assets/img/Group.png'
-import FbIcon from '../assets/img/brandico_facebook.png'
-import InIcon from '../assets/img/brandico_linkedin.png'
-import YtIcon from '../assets/img/Group3.png'
-import IgIcon from '../assets/img/ant-design_instagram-filled.png'
-
 import IconFb from '../assets/img/Group 8105.png'
-import IconTweet from '../assets/img/Group 8106.png'
 import IconIg from '../assets/img/Group 8107.png'
 import IconReddit from '../assets/img/reddit.png'
 import IconDiscord from '../assets/img/discord.png'
 import IconTele from '../assets/img/telegram.png'
-
-import IconYt from '../assets/img/Group 8103.png'
 
 export default function Fooder() {
     return (

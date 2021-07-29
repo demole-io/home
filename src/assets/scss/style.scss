@@ -109,6 +109,10 @@ a {
 		li:hover {
 			color: #ffb337;
 		}
+
+		.group1-mobile {
+			display: none;
+		}
 	}
 }
 
@@ -1157,6 +1161,13 @@ a {
 				img {
 					margin-right: 10px;
 				}
+			}
+
+			.group1-mobile {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				margin-top: 20px;
 			}
 		}
 		.is-toggle {
