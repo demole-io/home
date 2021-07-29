@@ -143,7 +143,7 @@ a {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 150px;
-			margin-bottom: 300px;
+			margin-bottom: 50px;
 			p {
 				text-align: left;
 				font-size: 20px;
@@ -181,7 +181,7 @@ a {
 
 #characters {
 	min-height: 100vh;
-	margin-top: 100px;
+	margin-top: 200px;
 	.container {
 		height: 100%;
 		align-items: center;
@@ -218,18 +218,16 @@ a {
 			height: 600px;
 
 			.arrow {
-				flex: 0.1;
+				// flex: 0.1;
 				cursor: pointer;
 				z-index: 10;
-			}
-
-			.somee {
-				flex: 0.5;
+				width: 10%;
 			}
 
 			.waper-name {
+				// flex: 0.1;
+				width: 10%;
 				position: relative;
-				flex: 1;
 				text-align: left;
 				margin-left: 50px;
 				.hmm {
@@ -239,64 +237,47 @@ a {
 					position: absolute;
 					top: 20px;
 
-					p {
+					img {
+						opacity: 0.5;
 						display: block;
-						margin: 70px 0;
-						font-size: 15px;
-						font-family: "PoppinsMedium";
-						text-align: left;
+						width: 100px;
+						height: 100px;
+						margin: 25px 0;
 					}
 
 					.selected {
-						color: #ffd286;
+						opacity: 1;
+						filter: drop-shadow(0px -8px 20px rgba(255, 255, 255, 0.25))
+							drop-shadow(0px 8px 16px rgba(255, 255, 255, 0.4)) drop-shadow(0px 0px 41px #ffffff);
 					}
 				}
 			}
 
-			.orc {
-				margin-left: -270px;
-				flex: 1;
-				z-index: 2;
-				height: 70%;
-			}
+			.char {
+				width: 80%;
+				.tiennu {
+					z-index: 2;
+					width: 120%;
+					margin-top: -200px;
+					margin-left: -100px;
+				}
 
-			.rong {
-				margin-left: -50px;
-				flex: 1;
-				z-index: 2;
-				height: 70%;
-			}
+				.orc {
+					z-index: 2;
+					width: 60%;
+				}
 
-			.tiennu {
-				flex: 1;
-				z-index: 2;
-				height: 100%;
-				margin-left: -250px;
-				margin-top: -200px;
-			}
+				.tienca {
+					z-index: 2;
+					width: 70%;
+					margin-left: -50px;
+					margin-top: 20px;
+				}
 
-			.tienca {
-				flex: 1;
-				z-index: 2;
-				height: 100%;
-				margin-left: -350px;
-			}
-
-			.group2 {
-				position: absolute;
-				right: 150px;
-				div {
-					position: absolute;
-					top: 0;
-
-					img,
-					p {
-						margin: 20px 0;
-					}
-
-					p {
-						font-size: 13px;
-					}
+				.rong {
+					z-index: 2;
+					width: 90%;
+					margin-left: 100px;
 				}
 			}
 		}
@@ -307,7 +288,7 @@ a {
 			background-repeat: no-repeat;
 			padding: 20px;
 			margin: 50px 250px;
-			height: 250px;
+			height: 270px;
 			.name {
 				font-family: "PoppinsMedium";
 				font-size: 50px;
@@ -328,7 +309,7 @@ a {
 
 #features {
 	min-height: 100vh;
-	padding-bottom: 150px;
+	padding-bottom: 450px;
 	margin-top: 100px;
 
 	.container {
@@ -356,94 +337,80 @@ a {
 			}
 		}
 
-		.slider-card {
-			margin-top: 100px;
-			margin-bottom: 100px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			// [type="radio"] {
-			// 	display: none;
-			// }
+		.wraper-cover {
+			margin-bottom: 50px;
+			.slider-card {
+				margin: 50px 0;
+				position: relative;
+				.txt {
+					position: absolute;
+					top: 200px;
+					left: 70px;
+					text-align: left;
+					width: 450px;
 
-			// .items-center {
-			// 	width: 100%;
-			// 	align-items: center;
-			// 	text-align: center;
-			// }
+					span {
+						color: #cccccc;
+					}
 
-			.arrow {
-				cursor: pointer;
+					p {
+						font-family: "PoppinsMedium";
+						font-size: 50px;
+						line-height: 44px;
+						text-transform: uppercase;
+						margin-bottom: 30px;
+					}
+				}
+
+				.imgg {
+					width: 100%;
+				}
 			}
 
-			.imgg {
-				width: 700px;
-				height: 400px;
+			.wraper-hinhtron {
+				display: flex;
+				justify-content: space-around;
+				padding: 0 500px;
+				.hinhtron {
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: white;
+					margin: 5px;
+					opacity: 0.5;
+				}
+
+				.selectedd {
+					opacity: 1;
+				}
 			}
-
-			// #slider {
-			// 	height: 25vw;
-			// 	// width: 40vw;
-			// 	width: 100%;
-			// 	margin: auto;
-			// 	left: -7%;
-			// 	position: relative;
-			// 	perspective: 1000px;
-			// 	transform-style: preserve-3d;
-			// }
-
-			// #slider label {
-			// 	margin: auto;
-			// 	width: 47%;
-			// 	border-radius: 4px;
-			// 	position: absolute;
-			// 	left: 0;
-			// 	right: 0;
-			// 	transition: transform 0.4s ease;
-
-			// 	img {
-			// 		width: 700px;
-			// 		height: 400px;
-			// 	}
-			// }
-
-			// #s1:checked ~ #slide3,
-			// #s2:checked ~ #slide1,
-			// #s3:checked ~ #slide2 {
-			// 	transform: translate3d(-50%, 0, -100px);
-			// }
-
-			// #s1:checked ~ #slide1,
-			// #s2:checked ~ #slide2,
-			// #s3:checked ~ #slide3 {
-			// 	transform: translate3d(0, 0, 0);
-			// }
-
-			// #s1:checked ~ #slide2,
-			// #s2:checked ~ #slide3,
-			// #s3:checked ~ #slide1 {
-			// 	transform: translate3d(50%, 0, -100px);
-			// }
 		}
 
-		.content {
-			background-image: url("../img/Group8109.png");
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
-			padding: 20px 50px;
-			margin: 0px 200px;
-			height: 200px;
+		.wraper-content {
+			.wraper-child {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 80px;
 
-			p {
-				margin: 10px 0;
-				text-align: left;
-				font-size: 13px;
-			}
+				img {
+					width: 40%;
+				}
 
-			.upcase {
-				font-family: "PoppinsMedium";
-				font-size: 22px;
-				text-align: center;
+				div {
+					text-align: left;
+					width: 40%;
+					span {
+						color: #cccccc;
+					}
+
+					p {
+						font-family: "PoppinsMedium";
+						font-size: 32px;
+						text-transform: uppercase;
+						line-height: 39px;
+					}
+				}
 			}
 		}
 	}
@@ -451,10 +418,12 @@ a {
 
 #earn {
 	min-height: 100vh;
+	margin-top: 100px;
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 100px;
+		padding-top: 300px;
+		margin-bottom: 200px;
 		text-align: center;
 
 		.waper-title {
@@ -701,15 +670,17 @@ a {
 				font-size: 18px;
 			}
 
-			p {
-				margin: 10px 0;
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				p {
+					margin: 10px;
+				}
 			}
 
-			img {
-				width: 15px;
-				height: 10px;
-				margin-right: 20px;
-			}
+			
+
 		}
 	}
 
@@ -1279,24 +1250,31 @@ a {
 					width: 25px;
 				}
 
-				.waper-name,
-				.somee,
-				.group2 {
+				.waper-name {
 					display: none;
 				}
 
-				.orc, .rong, .tiennu, .tienca {
-					margin-left: 0;
-					width: 80%;
-					height: 100%;
-				}
+				.char {
+					.rong {
+						margin-left: 50px;
+						width: 80%;
+					}
 
-				.tiennu {
-					margin-top: -70px;
-				}
+					.orc {
+						width: 70%;
+					}
 
-				.tienca {
-					margin-top: 50px;
+					.tiennu {
+						margin-top: -70px;
+						width: 120%;
+						margin-left: -20px;
+					}
+
+					.tienca {
+						margin-top: 50px;
+						width: 80%;
+						margin-left: 10px;
+					}
 				}
 			}
 
@@ -1355,47 +1333,53 @@ a {
 				}
 			}
 
-			.slider-card {
-				margin-top: 50px;
-				.arrow {
-					width: 25px;
+			.wraper-cover {
+				.slider-card {
+					margin: 20px 0;
+
+					.txt {
+						top: 50px;
+						left: 10px;
+						width: 200px;
+						p {
+							font-size: 20px;
+							margin-bottom: 5px;
+							line-height: 20px;
+						}
+
+						span {
+							font-size: 12px;
+							display: inline-block;
+							line-height: 15px;
+						}
+					}
 				}
 
-				.imgg {
-					width: 300px;
-					height: 250px;
+				.wraper-hinhtron {
+					padding: 0 100px;
 				}
-
-				// .items-center {
-				// 	margin-top: -10px;
-				// }
-
-				// #slider {
-				// 	left: -35%;
-				// }
-
-				// #slider label {
-				// 	width: 60%;
-
-				// 	img {
-				// 		width: 200px;
-				// 		height: 150px;
-				// 	}
-				// }
 			}
 
-			.content {
-				padding: 10px 30px;
-				margin: 100px 0 50px 0;
-				height: 120px;
+			.wraper-content {
+				.wraper-child {
+					margin-bottom: 30px;
+					img {
+						width: 50%;
+					}
+					div {
+						width: 45%;
+						span {
+							//color: #cccccc;
+							font-size: 12px;
+							display: inline-block;
+							line-height: 15px;
+						}
 
-				p {
-					font-size: 10px;
-					margin: 5px 0;
-				}
-
-				.upcase {
-					font-size: 15px;
+						p {
+							font-size: 18px;
+							line-height: 20px;
+						}
+					}
 				}
 			}
 		}
