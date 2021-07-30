@@ -39,14 +39,13 @@ export default function Header() {
                         {/* <Link to="/summon">{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</Link>
                         <Link to="/marketplace">{toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</Link> */}
                         <Link to="/summon">{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</Link>
-                        <li title="Comming Soon"> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</li>
-                        <li title="Comming Soon"> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</li>
-                        <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Deck</a>
-                        <li title="Comming Soon"> {toggleMenu && <img src={Faq} alt="photos"></img>} Demole-Wiki</li>
 
                         {/* <Link to="/faq"><a href="/faq">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a></Link> */}
-                        <li title="Comming Soon">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW</li>
-
+                        <li className="tip">{toggleMenu && <img src={Market} alt="photos"></img>} Marketplace<span>Comming Soon</span></li>
+                        <li className="tip">{toggleMenu && <img src={Stake} alt="photos"></img>} Stake<span>Comming Soon</span></li>
+                        <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Deck</a>
+                        <li className="tip">{toggleMenu && <img src={Faq} alt="photos"></img>} Demole-Wiki<span>Comming Soon</span></li>
+                        <li className="tip">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW<span>Comming Soon</span></li>
 
                         <div className="group1-mobile">
                             <p>

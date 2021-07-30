@@ -111,6 +111,28 @@ a {
 			color: #ffb337;
 		}
 
+		li.tip:hover {
+			position: relative
+		}
+		li.tip span {
+			display: none
+		}
+		li.tip:hover span {
+			border: #c0c0c0 1px dotted;
+			padding: 5px 10px;
+			display: block;
+			z-index: 100;
+			left: 0px;
+			margin: 10px;
+			width: 100px;
+			position: absolute;
+			top: 20px;
+			text-decoration: none;
+			border-radius: 16px;
+			color: #ffb337;
+			font-size: 10px;
+		}
+
 		.group1-mobile {
 			display: none;
 		}
@@ -1269,7 +1291,7 @@ a {
 					margin-left: 0;
 					.hmm {
 						display: none;
-					} 
+					}
 
 					div {
 						display: flex;
