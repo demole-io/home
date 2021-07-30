@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        state('Install & Build') {
+        stage('Install & Build') {
             steps {
                 sh 'npm install && npm run build'
             }
