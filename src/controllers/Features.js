@@ -11,6 +11,10 @@ import img8 from '../assets/img/Method Draw Image (1).jpg'
 import img9 from '../assets/img/Method Draw Image (4).jpg'
 import img10 from '../assets/img/Method Draw Image (7).jpg'
 
+import img11 from '../assets/img/nnnn.jpg'
+import img12 from '../assets/img/vvvvv.jpg'
+import img13 from '../assets/img/zzzzz.jpg'
+
 export default function Features() {
     const [data] = useState([
         {
@@ -47,21 +51,21 @@ export default function Features() {
 
     const [dataa] = useState([
         {
-            img: img5,
+            img: img11,
             content: {
                 title: 'Play it your way',
                 des: 'Immerse yourself in an engaging world of monsters with endless content and quests to explore. OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.'
             }
         },
         {
-            img: img6,
+            img: img12,
             content: {
                 title: 'Interact with players around the world',
                 des: 'Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features'
             }
         },
         {
-            img: img4,
+            img: img13,
             content: {
                 title: 'Create and trade your own NFT',
                 des: 'Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.'
