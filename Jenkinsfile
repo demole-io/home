@@ -22,11 +22,10 @@ pipeline {
                 sh 'docker rmi `docker images --filter dangling=true -q` --force'
             }
         }
-    }
-
-    post { 	//No matter success or failure will send information, youid is the group id sent
-        always {
-            telegramSend(message:'Build Status: ${PROJECT_NAME} is ${BUILD_STATUS}')
+        stage('Report') {
+            steps([$class: 'TelegramBotBuilder']) {
+                telegramSend(message:'Build Status: ${PROJECT_NAME} is ${BUILD_STATUS}')
+            }
         }
     }
 }
