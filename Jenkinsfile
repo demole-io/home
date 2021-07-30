@@ -2,12 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Image') {
+        state('Install & Build') {
+            steps {
+                sh 'npm install && npm run build'
+            }
+        }
+        stage('Build Docker Image') {
             steps {
                 sh 'docker build -t demole-frontend:latest .'
             }
         }
-        stage('Run Docker-compose') {
+        stage('Run') {
             steps {
                 sh 'docker-compose up -d'
             }
