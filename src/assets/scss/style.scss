@@ -678,9 +678,6 @@ a {
 					margin: 10px;
 				}
 			}
-
-			
-
 		}
 	}
 
@@ -784,7 +781,6 @@ a {
 #marketplace {
 	background-color: #0c0c0c;
 	min-height: 100vh;
-	// padding-top: 100px;
 
 	.container {
 		height: 100%;
@@ -977,10 +973,9 @@ a {
 		.right {
 			flex: 1;
 			button {
-				background-color: transparent;
+				background-color: #00c244;
 				cursor: pointer;
-				border-radius: 3px;
-				border: 1px solid white;
+				border-radius: 16px;
 				padding: 5px 10px;
 				margin-right: 20px;
 			}
@@ -1057,28 +1052,38 @@ a {
 					}
 				}
 			}
-		}
-	}
 
-	.offer-table {
-		border-radius: 4px;
-		border: 0.5px solid white;
-		margin-bottom: 20px;
+			.offer-table {
+				border-radius: 4px;
+				border: 0.5px solid white;
+				margin-bottom: 20px;
+				border-top-left-radius: 16px;
+				border-top-right-radius: 16px;
+				overflow: hidden;
+				margin-top: 20px;
+				.txt {
+					background-color: #ffb337;
+					text-align: center;
+					padding: 10px;
+					font-family: "PoppinsMedium";
+					text-transform: uppercase;
+				}
 
-		.waper-offer {
-			display: flex;
-			padding: 10px 20px;
-			border-top: 1px solid #dee2e5;
-			text-align: left;
-			p {
-				flex: 1;
-			}
-		}
+				.waper-offer {
+					display: flex;
+					padding: 10px 20px;
+					border-top: 1px solid #dee2e5;
+					text-align: left;
+					p {
+						flex: 1;
+					}
+				}
 
-		.tl {
-			border-top: 0px;
-			p {
-				font-weight: bold;
+				.tl {
+					p {
+						font-weight: bold;
+					}
+				}
 			}
 		}
 	}
@@ -1684,6 +1689,93 @@ a {
 						width: 100px;
 						height: 100px;
 						margin-top: -50px;
+					}
+				}
+			}
+		}
+	}
+
+	#marketplace {
+		.container {
+			.des {
+				display: none;
+			}
+
+			.waper-info {
+				div {
+					& :first-child {
+						font-size: 10px;
+					}
+
+					& :last-child {
+						font-size: 15px;
+					}
+				}
+			}
+
+			.menuu {
+				display: block;
+				text-align: left;
+			}
+
+			.waper-content {
+				display: block;
+
+				.waper-list-monter {
+					// display: block;
+					// text-align: center;
+					// align-items: center;
+					align-items: center;
+					justify-content: center;
+					.monter {
+						width: 90%;
+					}
+				}
+			}
+		}
+	}
+
+	#monter-detail {
+		.waper-info {
+			display: block;
+
+			// .left {
+			// 	width: 100%;
+			// }
+
+			.right {
+				// width: 100%;
+
+				button {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+				.group1 {
+					display: block;
+					text-align: right;
+				}
+
+				.group2 {
+					padding: 10px;
+					.owner {
+						font-size: 13px;
+					}
+				}
+
+				.group4 {
+					.gr-child {
+						width: 45%;
+						margin: 5px;
+
+						div {
+							p {
+								font-size: 14px;
+							}
+
+							span {
+								font-size: 10px;
+							}
+						}
 					}
 				}
 			}
