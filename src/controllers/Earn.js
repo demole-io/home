@@ -30,7 +30,7 @@ export default function Earn() {
             img: World
         },
         {
-            title: 'Upgrade your monsters',
+            title: 'Upgrade monsters',
             content: 'Find unique monsters and items and exchange with other players.',
             img: Upgrade
         },

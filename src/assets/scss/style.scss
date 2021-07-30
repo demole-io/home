@@ -116,13 +116,6 @@ a {
 	}
 }
 
-.container {
-	width: 1170px;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-}
-
 /*#endregion */
 #home {
 	min-height: 100vh;
@@ -463,10 +456,10 @@ a {
 
 			.child {
 				flex: 1;
-				margin: 0 50px;
+				margin: 0 25px;
 				.titlee {
 					color: #ffd286;
-					font-size: 20px;
+					font-size: 22px;
 					margin: 20px 0;
 					height: 50px;
 				}
