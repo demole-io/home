@@ -68,19 +68,22 @@ const MonterDetail = props => {
     const renderOffers = () => {
         return (
             <div className="offer-table">
-                <div className="waper-offer tl">
-                    <p>From</p>
-                    <p>Price</p>
-                    <p>Time</p>
-                </div>
-                {detail.offers.map((value, index) => {
-                    return <div className="waper-offer">
-                        <p>{value.from}</p>
-                        <p>{value.price}</p>
-                        <p>{value.time}</p>
+                <p className="txt">Offers</p>
+                <div>
+                    <div className="waper-offer tl">
+                        <p>From</p>
+                        <p>Price</p>
+                        <p>Time</p>
                     </div>
-                })}
+                    {detail.offers.map((value, index) => {
+                        return <div className="waper-offer">
+                            <p>{value.from}</p>
+                            <p>{value.price}</p>
+                            <p>{value.time}</p>
+                        </div>
+                    })}
 
+                </div>
             </div>
         )
     }
@@ -147,7 +150,7 @@ const MonterDetail = props => {
                                 </div>
                             </div>
 
-                            <p>Owner: {detail.owner}</p>
+                            <p className="owner">Owner: {detail.owner}</p>
                         </div>
 
                         <p className="titlee">Stats</p>
@@ -178,18 +181,18 @@ const MonterDetail = props => {
                             })}
                         </div>
 
-                        <p className="titlee">Offers</p>
+
                         {detail.offers && renderOffers()}
                         <button>Make offer</button>
 
                     </div>
                 </div>
 
-                <div className="waper-event">
+                {/* <div className="waper-event">
                     <p className="titlee">SALE HISTORY</p>
                     {detail.events && renderHistory()}
 
-                </div>
+                </div> */}
             </div>
             <Fooder></Fooder>
 
