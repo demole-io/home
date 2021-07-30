@@ -88,29 +88,29 @@ const MonterDetail = props => {
         )
     }
 
-    const renderHistory = () => {
-        return (
-            <div className="offer-table">
-                <div className="waper-offer tl">
-                    <p>Event</p>
-                    <p>Price</p>
-                    <p>From</p>
-                    <p>To</p>
-                    <p>Date</p>
-                </div>
-                {detail.offers.map((value, index) => {
-                    return <div className="waper-offer">
-                        <p>{value.event}</p>
-                        <p>{value.price}</p>
-                        <p>{value.from}</p>
-                        <p>{value.to}</p>
-                        <p>{value.time}</p>
-                    </div>
-                })}
+    // const renderHistory = () => {
+    //     return (
+    //         <div className="offer-table">
+    //             <div className="waper-offer tl">
+    //                 <p>Event</p>
+    //                 <p>Price</p>
+    //                 <p>From</p>
+    //                 <p>To</p>
+    //                 <p>Date</p>
+    //             </div>
+    //             {detail.offers.map((value, index) => {
+    //                 return <div className="waper-offer">
+    //                     <p>{value.event}</p>
+    //                     <p>{value.price}</p>
+    //                     <p>{value.from}</p>
+    //                     <p>{value.to}</p>
+    //                     <p>{value.time}</p>
+    //                 </div>
+    //             })}
 
-            </div>
-        )
-    }
+    //         </div>
+    //     )
+    // }
 
 
     return (
