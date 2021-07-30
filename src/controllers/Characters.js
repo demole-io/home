@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ArrowLeft from '../assets/img/Frame1.png'
-import ArrowRight from '../assets/img/Frame.png'
 import Unknow1 from '../assets/img/Subtract.png'
 import Knight from '../assets/img/ideal_Dargon.webm'
 import ORC from '../assets/img/ideal_Orc.webm'
@@ -65,33 +63,31 @@ const Characters = props => {
     }, [data]);
 
     const stopNext = () => {
-        if(interval.current) clearInterval(interval)
+        if(interval.current) clearInterval(interval.current)
     }
 
-    const onClickLeft = () => {
-        if (interval) {
-            stopNext()
-        }
-        selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
-        setindex(selected.current)
-    }
+    // const onClickLeft = () => {
+    //     if (interval) {
+    //         stopNext()
+    //     }
+    //     selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
+    //     setindex(selected.current)
+    // }
 
-    const onCliclRight = () => {
-        if (interval) {
-            stopNext()
-        }
+    // const onCliclRight = () => {
+    //     if (interval) {
+    //         stopNext()
+    //     }
 
-        selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
-        setindex(selected.current)
-    }
+    //     selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
+    //     setindex(selected.current)
+    // }
 
     const onClickName = (index) => {
-        if (interval) {
-            stopNext()
-        }
+        stopNext()
 
         selected.current = index;
-        // setindexx(selected.current)
+        setindex(selected.current)
     }
 
     return (
@@ -103,7 +99,7 @@ const Characters = props => {
                 </div>
 
                 <div className="content">
-                    <img className="arrow" src={ArrowLeft} alt="photos" onClick={onClickLeft}></img>
+                    {/* <img className="arrow" src={ArrowLeft} alt="photos" onClick={onClickLeft}></img> */}
 
                     <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
@@ -130,7 +126,7 @@ const Characters = props => {
                     </div>}
 
 
-                    <img className="arrow" src={ArrowRight} alt="photos" onClick={onCliclRight}></img>
+                    {/* <img className="arrow" src={ArrowRight} alt="photos" onClick={onCliclRight}></img> */}
                 </div>
 
                 <div className="des">

@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import img1 from '../assets/img/bn6.jpg'
-import img2 from '../assets/img/bn7.jpg'
-import img3 from '../assets/img/bn8.jpg'
 import img4 from '../assets/img/bn9.jpg'
 import img5 from '../assets/img/bn10.jpg'
 import img6 from '../assets/img/bn11.jpg'
@@ -11,61 +9,42 @@ import img8 from '../assets/img/Method Draw Image (1).jpg'
 import img9 from '../assets/img/Method Draw Image (4).jpg'
 import img10 from '../assets/img/Method Draw Image (7).jpg'
 
-import img11 from '../assets/img/nnnn.jpg'
-import img12 from '../assets/img/vvvvv.jpg'
-import img13 from '../assets/img/zzzzz.jpg'
-
 export default function Features() {
     const [data] = useState([
         {
             img: img1,
         },
         {
-            img: img2,
-        },
-        {
-            img: img3,
-        },
-        {
-            img: img4,
-        },
-        {
-            img: img5,
-        },
-        {
-            img: img6,
+            img: img8,
         },
         {
             img: img7,
-        },
-        {
-            img: img8,
         },
         {
             img: img9,
         },
         {
             img: img10,
-        },
+        }
     ])
 
     const [dataa] = useState([
         {
-            img: img11,
+            img: img5,
             content: {
                 title: 'Play it your way',
                 des: 'Immerse yourself in an engaging world of monsters with endless content and quests to explore. OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.'
             }
         },
         {
-            img: img12,
+            img: img6,
             content: {
                 title: 'Interact with players around the world',
                 des: 'Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features'
             }
         },
         {
-            img: img13,
+            img: img4,
             content: {
                 title: 'Create and trade your own NFT',
                 des: 'Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.'
@@ -74,7 +53,7 @@ export default function Features() {
     ])
 
     const selectedIndex = useRef(0)
-    const [index,setindex] = useState(0)
+    const [index, setindex] = useState(0)
     const interval = useRef(null)
 
     useEffect(() => {
@@ -84,13 +63,13 @@ export default function Features() {
         }, 3000)
 
         return () => {
-            if(interval.current) clearInterval(interval)
+            if (interval.current) clearInterval(interval.current)
         }
     }, [data]);
 
     // const stopNext = () => {
     //     clearInterval(interval)
-    //     setinterval(false)
+    //     // setinterval(false)
     // }
 
     // const onClickLeft = () => {
@@ -111,6 +90,12 @@ export default function Features() {
     //     setindexx(selectedIndex.current)
     // }
 
+    const onClickHinhTron = (indexx) => {
+        if (interval.current) clearInterval(interval.current)
+        selectedIndex.current = indexx;
+        setindex(selectedIndex.current)
+    }
+
     const renderData = () => {
         return (
             <div className="wraper-cover">
@@ -125,7 +110,7 @@ export default function Features() {
                 <div className="wraper-hinhtron">
                     {data.map((value, key) => {
                         return (
-                            <div key={key} className={`hinhtron ${index === key ? 'selectedd' : ''}`}>
+                            <div key={key} className={`hinhtron ${index === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
                             </div>
                         )
                     })}
@@ -151,7 +136,7 @@ export default function Features() {
             )
         } else {
             return (
-                <div  className="wraper-child" key={index}>
+                <div className="wraper-child" key={index}>
                     <div>
                         <p>{value.content.title}</p>
                         <span>{value.content.des}</span>

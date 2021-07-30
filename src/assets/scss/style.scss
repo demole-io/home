@@ -370,8 +370,7 @@ a {
 
 			.wraper-hinhtron {
 				display: flex;
-				justify-content: space-around;
-				padding: 0 450px;
+				justify-content: center;
 				.hinhtron {
 					width: 10px;
 					height: 10px;
@@ -379,6 +378,7 @@ a {
 					background-color: white;
 					margin: 5px;
 					opacity: 0.5;
+					cursor: pointer;
 				}
 
 				.selectedd {
@@ -419,11 +419,11 @@ a {
 
 #earn {
 	min-height: 100vh;
+	margin-top: 200px;
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 200px;
-		margin-bottom: 200px;
+		padding-top: 300px;
 		text-align: center;
 
 		.waper-title {
@@ -508,7 +508,7 @@ a {
 	min-height: 100vh;
 	padding-bottom: 100px;
 	.container {
-		padding-top: 150px;
+		padding-top: 250px;
 		height: 100%;
 		align-items: center;
 		text-align: center;
@@ -558,8 +558,8 @@ a {
 				.child {
 					background-color: #2a282b;
 					text-align: left;
-					height: 370px;
-					width: 22%;
+					height: 550px;
+					width: 19%;
 					margin: 10px 0;
 
 					img {
@@ -1259,18 +1259,36 @@ a {
 			.content {
 				margin-top: 50px;
 				height: 350px;
+				display: block;
 				.arrow {
 					width: 25px;
 				}
 
 				.waper-name {
-					display: none;
+					width: 100%;
+					margin-left: 0;
+					.hmm {
+						display: none;
+					} 
+
+					div {
+						display: flex;
+						justify-content: center;
+						position: sticky;
+						img {
+							width: 50px;
+							height: 50px;
+							margin-left: 0 !important;
+						}
+					}
 				}
 
 				.char {
+					width: 100%;
+					margin-top: 20px;
 					.rong {
-						margin-left: 50px;
-						width: 80%;
+						margin-left: 60px;
+						width: 90%;
 					}
 
 					.orc {
@@ -1278,14 +1296,14 @@ a {
 					}
 
 					.tiennu {
-						margin-top: -70px;
+						margin-top: -100px;
 						width: 120%;
 						margin-left: -20px;
 					}
 
 					.tienca {
-						margin-top: 50px;
-						width: 80%;
+						margin-top: -20px;
+						width: 90%;
 						margin-left: 10px;
 					}
 				}
@@ -1368,9 +1386,9 @@ a {
 					}
 				}
 
-				.wraper-hinhtron {
-					padding: 0 50px;
-				}
+				// .wraper-hinhtron {
+				// 	padding: 0 50px;
+				// }
 			}
 
 			.wraper-content {
@@ -1480,7 +1498,7 @@ a {
 					.child {
 						background-color: #2a282b;
 						width: 47%;
-						height: 170px;
+						height: 300px;
 
 						.color {
 							background-color: #c7f88f;

@@ -38,14 +38,15 @@ export default function Header() {
                     <ul className={`menu ${toggleMenu ? 'is-toggle' : ''}`}>
                         {/* <Link to="/summon">{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</Link>
                         <Link to="/marketplace">{toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</Link> */}
-                        <li title="Comming Soon"> {toggleMenu && <img src={Summon} alt="photos"></img>} Summon</li>
+                        <Link to="/summon">{toggleMenu && <img src={Summon} alt="photos"></img>} Summon</Link>
                         <li title="Comming Soon"> {toggleMenu && <img src={Market} alt="photos"></img>} Marketplace</li>
                         <li title="Comming Soon"> {toggleMenu && <img src={Stake} alt="photos"></img>} Stake</li>
-                        <li title="Comming Soon"> {toggleMenu && <img src={Faq} alt="photos"></img>} Library</li>
+                        <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Desk</a>
+                        <li title="Comming Soon"> {toggleMenu && <img src={Faq} alt="photos"></img>} Demole-Wiki</li>
 
                         {/* <Link to="/faq"><a href="/faq">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a></Link> */}
                         <li title="Comming Soon">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW</li>
-                        <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Desk</a>
+
 
                         <div className="group1-mobile">
                             <p>

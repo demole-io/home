@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
-import img1 from '../assets/img/Mask Group.jpg'
-import img2 from '../assets/img/Mask Group1.jpg'
 import img3 from '../assets/img/Mask Group2.jpg'
-import img4 from '../assets/img/Mask Group3.jpg'
-import img5 from '../assets/img/bn111.jpg'
-import img6 from '../assets/img/bn61.jpg'
-import img7 from '../assets/img/Method Draw Image (4)1.jpg'
-import img8 from '../assets/img/Method Draw Image (1)1.jpg'
+import img9 from '../assets/img/pasted image 0.jpg'
+import img10 from '../assets/img/pasted image 1.jpg'
+import img11 from '../assets/img/pasted image 2.jpg'
+import img12 from '../assets/img/pasted image 3.jpg'
+
 import img from '../assets/img/image3.png'
 import Line from '../assets/img/Group 8092.png'
 import LineMobile from '../assets/img/Group 8104.png'
 export default function Roadmap() {
     const [data] = useState([
         {
-            img: img1,
-            title: "7/2021",
+            img: img3,
+            title: "QII/2021",
             content: [
                 "Character design/ NFT system",
                 "Monster system ( stat/skill/graphic v.v.. )",
@@ -23,67 +21,48 @@ export default function Roadmap() {
 
         },
         {
-            img: img2,
-            title: "8/2021",
+            img: img9,
+            title: " QIII/2021",
             content: [
                 "Monster summon",
                 "Marketplace",
                 "Training ground / Staking",
-                "LP adding"
-            ],
-            imgMobile: img
-
-        },
-        {
-            img: img3,
-            title: "9/2021",
-            content: [
+                "LP adding",
                 "World Boss",
                 "Social features: Chatting, Line-up visiting",
                 "Arena",
                 "Mobile (Android/IOS)"
             ],
             imgMobile: img
+
         },
         {
-            img: img4,
-            title: "10/2021",
+            img: img10,
+            title: "QIV/2021",
             content: [
                 "Auction",
                 "Monster upgrading system",
-            ],
-            imgMobile: img
-        },
-        {
-            img: img5,
-            title: "11/2021",
-            content: [
-                "Campaign/Story"
-            ],
-            imgMobile: img
-        },
-        {
-            img: img6,
-            title: "12/2021",
-            content: [
+                "Campaign/Story",
                 "Boosters"
             ],
             imgMobile: img
         },
         {
-            img: img7,
+            img: img11,
             title: "QI/2022",
             content: [
                 "Pet system",
+                "More in-game activities: Darkness Maze, Olympus tower,...",
                 "More social features: Team up, Guild",
             ],
             imgMobile: img
         },
         {
-            img: img8,
+            img: img12,
             title: "QII/2022",
             content: [
                 "Item crafting system",
+                "More in-game activities",
                 "DAO Voting",
             ],
             imgMobile: img
