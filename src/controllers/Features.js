@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import ArrowLeft from '../assets/img/Frame1.png'
-import ArrowRight from '../assets/img/Frame.png'
 import img1 from '../assets/img/bn6.jpg'
 import img2 from '../assets/img/bn7.jpg'
 import img3 from '../assets/img/bn8.jpg'
@@ -14,8 +12,7 @@ import img9 from '../assets/img/Method Draw Image (4).jpg'
 import img10 from '../assets/img/Method Draw Image (7).jpg'
 
 export default function Features() {
-    const [didMount, setDidMount] = useState(false)
-    const [data, setdata] = useState([
+    const [data] = useState([
         {
             img: img1,
         },
@@ -48,7 +45,7 @@ export default function Features() {
         },
     ])
 
-    const [dataa, setdataa] = useState([
+    const [dataa] = useState([
         {
             img: img5,
             content: {
@@ -73,51 +70,42 @@ export default function Features() {
     ])
 
     const selectedIndex = useRef(0)
-    const [indexx, setindexx] = useState(0)
-    const [interval, setinterval] = useState(false)
+    const [index,setindex] = useState(0)
+    const interval = useRef(null)
 
     useEffect(() => {
-        if (didMount) {
-            console.log("Did Update");
-        } else {
-            setDidMount(true);
-            console.log("Did mount");
+        interval.current = setInterval(() => {
+            selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
+            setindex(selectedIndex.current)
+        }, 3000)
 
-            autoNext()
+        return () => {
+            if(interval.current) clearInterval(interval)
         }
-    });
+    }, [data]);
 
-    const autoNext = () => {
-        setinterval(
-            setInterval(() => {
-                selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
-                setindexx(selectedIndex.current)
-            }, 3000)
-        )
-    }
+    // const stopNext = () => {
+    //     clearInterval(interval)
+    //     setinterval(false)
+    // }
 
-    const stopNext = () => {
-        clearInterval(interval)
-        setinterval(false)
-    }
+    // const onClickLeft = () => {
 
-    const onClickLeft = () => {
+    //     if (interval) {
+    //         stopNext()
+    //     }
+    //     selectedIndex.current = selectedIndex.current === 0 ? data.length - 1 : selectedIndex.current - 1;
+    //     setindexx(selectedIndex.current)
+    // }
 
-        if (interval) {
-            stopNext()
-        }
-        selectedIndex.current = selectedIndex.current === 0 ? data.length - 1 : selectedIndex.current - 1;
-        setindexx(selectedIndex.current)
-    }
+    // const onClickRight = () => {
+    //     if (interval) {
+    //         stopNext()
+    //     }
 
-    const onClickRight = () => {
-        if (interval) {
-            stopNext()
-        }
-
-        selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
-        setindexx(selectedIndex.current)
-    }
+    //     selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
+    //     setindexx(selectedIndex.current)
+    // }
 
     const renderData = () => {
         return (
@@ -127,14 +115,13 @@ export default function Features() {
                         <p>Fully Playable 3D Animation</p>
                         <span>Enjoy amazing monster design and dazzling skill animations in battle!</span>
                     </div>
-                    <img className="imgg" src={data[selectedIndex.current].img} alt="photos"></img>
+                    <img className="imgg" src={data[index].img} alt="photos"></img>
                 </div>
 
                 <div className="wraper-hinhtron">
-                    {data.map((value, index) => {
+                    {data.map((value, key) => {
                         return (
-                            <div className={`hinhtron ${selectedIndex.current === index ? 'selectedd' : ''}`}>
-
+                            <div key={key} className={`hinhtron ${index === key ? 'selectedd' : ''}`}>
                             </div>
                         )
                     })}
@@ -149,7 +136,7 @@ export default function Features() {
     const renderChild = (value, index) => {
         if (index % 2 === 0) {
             return (
-                <div className="wraper-child">
+                <div className="wraper-child" key={index}>
                     <img src={value.img} alt="photos"></img>
 
                     <div>
@@ -160,7 +147,7 @@ export default function Features() {
             )
         } else {
             return (
-                <div  className="wraper-child">
+                <div  className="wraper-child" key={index}>
                     <div>
                         <p>{value.content.title}</p>
                         <span>{value.content.des}</span>

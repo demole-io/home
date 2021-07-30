@@ -22,9 +22,7 @@ const Characters = props => {
         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
         !window.MSStream
 
-
-    const [didMount, setDidMount] = useState(false)
-    const [data, setdata] = useState([
+    const [data] = useState([
         {
             name: 'Treeman Tribe',
             icon: iconOrc,
@@ -52,32 +50,22 @@ const Characters = props => {
     ])
 
     const selected = useRef(0)
-    const [indexx, setindexx] = useState(0)
-    const [interval, setinterval] = useState(false)
+    const [index, setindex] = useState(0)
+    const interval = useRef(null)
 
     useEffect(() => {
-        if (didMount) {
-            console.log("Did Update");
-        } else {
-            setDidMount(true);
-            console.log("Did mount");
+        interval.current = setInterval(() => {
+            selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
+            setindex(selected.current)
+        }, 3000)
 
-            autoNext()
+        return () => {
+            if(interval.current) clearInterval(interval.current)
         }
-    }, []);
-
-    const autoNext = () => {
-        setinterval(
-            setInterval(() => {
-                selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
-                setindexx(selected.current)
-            }, 3000)
-        )
-    }
+    }, [data]);
 
     const stopNext = () => {
-        clearInterval(interval)
-        setinterval(false)
+        if(interval.current) clearInterval(interval)
     }
 
     const onClickLeft = () => {
@@ -85,7 +73,7 @@ const Characters = props => {
             stopNext()
         }
         selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
-        setindexx(selected.current)
+        setindex(selected.current)
     }
 
     const onCliclRight = () => {
@@ -94,7 +82,7 @@ const Characters = props => {
         }
 
         selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
-        setindexx(selected.current)
+        setindex(selected.current)
     }
 
     const onClickName = (index) => {
@@ -103,7 +91,7 @@ const Characters = props => {
         }
 
         selected.current = index;
-        setindexx(selected.current)
+        // setindexx(selected.current)
     }
 
     return (
@@ -120,25 +108,25 @@ const Characters = props => {
                     <div className="waper-name">
                         <img className="hmm" src={Unknow1} alt="photos"></img>
                         <div>
-                            <img onClick={() => onClickName(0)} className={`${selected.current === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }} src={data[0].icon} alt="photos"></img>
-                            <img onClick={() => onClickName(1)} className={`${selected.current === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }} src={data[1].icon} alt="photos"></img>
-                            <img onClick={() => onClickName(2)} className={`${selected.current === 2 ? 'selected' : ''}`} style={{ marginLeft: '10px' }} src={data[2].icon} alt="photos"></img>
-                            <img onClick={() => onClickName(3)} className={`${selected.current === 3 ? 'selected' : ''}`} style={{ marginLeft: '80px' }} src={data[3].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }} src={data[0].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }} src={data[1].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginLeft: '10px' }} src={data[2].icon} alt="photos"></img>
+                            <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginLeft: '80px' }} src={data[3].icon} alt="photos"></img>
                         </div>
                     </div>
 
                     {!isIOS && <div className="char">
-                        {selected.current === 0 && <video muted={true} className="orc" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                        {selected.current === 1 && <video muted={true} className="tienca" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                        {selected.current === 2 && <video muted={true} className="rong" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
-                        {selected.current === 3 && <video muted={true} className="tiennu" autoPlay={true} loop={true} src={data[selected.current].img} type="video/webm"></video>}
+                        {index === 0 && <video muted={true} className="orc" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                        {index === 1 && <video muted={true} className="tienca" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                        {index === 2 && <video muted={true} className="rong" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                        {index === 3 && <video muted={true} className="tiennu" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
                     </div>}
 
                     {isIOS && <div className="char">
-                        {selected.current === 0 && <img className="orc" src={OrcPoster} alt="photos"></img>}
-                        {selected.current === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
-                        {selected.current === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
-                        {selected.current === 3 && <img className="tiennu" src={TiennuPoster} alt="photos"></img>}
+                        {index === 0 && <img className="orc" src={OrcPoster} alt="photos"></img>}
+                        {index === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
+                        {index === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
+                        {index === 3 && <img className="tiennu" src={TiennuPoster} alt="photos"></img>}
                     </div>}
 
 
@@ -146,14 +134,14 @@ const Characters = props => {
                 </div>
 
                 <div className="des">
-                    <p className="name">{data[selected.current].name}</p>
-                    <p className="txtt">{data[selected.current].des}</p>
+                    <p className="name">{data[index].name}</p>
+                    <p className="txtt">{data[index].des}</p>
                 </div>
 
                 <div className="group2-mobie">
                     <div>
-                        <p className="name">{data[selected.current].name}</p>
-                        <p className="txtt">{data[selected.current].des}</p>
+                        <p className="name">{data[index].name}</p>
+                        <p className="txtt">{data[index].des}</p>
                     </div>
                 </div>
             </div>

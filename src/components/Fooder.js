@@ -30,44 +30,44 @@ export default function Fooder() {
                     <p className="title">CONTACT</p>
                     <div>
                         <p>
-                            <a href='https://www.instagram.com/demole.io' target="_blank" without rel="noreferrer">
+                            <a href='https://www.instagram.com/demole.io' target="_blank" rel="noreferrer">
                                 <img src={IconIg} alt="photos"></img>
                             </a>
                         </p>
 
                         <p>
-                            <a href='https://www.facebook.com/Demoleio-701276920706670' target="_blank" without rel="noreferrer">
+                            <a href='https://www.facebook.com/Demoleio-701276920706670' target="_blank" rel="noreferrer">
                                 <img src={IconFb} alt="photos"></img>
                             </a>
                         </p>
 
 
                         <p>
-                            <a href='https://twitter.com/io_demole' target="_blank" without rel="noreferrer">
+                            <a href='https://twitter.com/io_demole' target="_blank" rel="noreferrer">
                                 <img src={TweetIcon} alt="photos"></img>
                             </a>
                         </p>
 
                         <p>
-                            <a href='https://www.reddit.com/user/Demole_io' target="_blank" without rel="noreferrer">
+                            <a href='https://www.reddit.com/user/Demole_io' target="_blank" rel="noreferrer">
                                 <img src={IconReddit} alt="photos"></img>
                             </a>
                         </p>
 
                         <p>
-                            <a href='https://discord.com/channels/870208368743153725/870208369347153971' target="_blank" without rel="noreferrer">
+                            <a href='https://discord.com/channels/870208368743153725/870208369347153971' target="_blank" rel="noreferrer">
                                 <img src={IconDiscord} alt="photos"></img>
                             </a>
                         </p>
 
                         <p>
-                            <a href='https://t.me/demole_io' target="_blank" without rel="noreferrer">
+                            <a href='https://t.me/demole_io' target="_blank" rel="noreferrer">
                                 <img src={IconTele} alt="photos"></img>
                             </a>
                         </p>
 
                         <p>
-                            <a href='https://t.me/Demole_ioCommunity' target="_blank" without rel="noreferrer">
+                            <a href='https://t.me/Demole_ioCommunity' target="_blank" rel="noreferrer">
                                 <img src={IconTele} alt="photos"></img>
                             </a>
                         </p>
@@ -85,44 +85,44 @@ export default function Fooder() {
 
                 <div className="group1">
                     <p>
-                        <a href='https://www.instagram.com/demole.io' target="_blank" without rel="noreferrer">
+                        <a href='https://www.instagram.com/demole.io' target="_blank" rel="noreferrer">
                             <img src={IconIg} alt="photos"></img>
                         </a>
                     </p>
 
                     <p>
-                        <a href='https://www.facebook.com/Demoleio-701276920706670' target="_blank" without rel="noreferrer">
+                        <a href='https://www.facebook.com/Demoleio-701276920706670' target="_blank" rel="noreferrer">
                             <img src={IconFb} alt="photos"></img>
                         </a>
                     </p>
 
 
                     <p>
-                        <a href='https://twitter.com/io_demole' target="_blank" without rel="noreferrer">
+                        <a href='https://twitter.com/io_demole' target="_blank" rel="noreferrer">
                             <img src={TweetIcon} alt="photos"></img>
                         </a>
                     </p>
 
                     <p>
-                        <a href='https://www.reddit.com/user/Demole_io' target="_blank" without rel="noreferrer">
+                        <a href='https://www.reddit.com/user/Demole_io' target="_blank" rel="noreferrer">
                             <img src={IconReddit} alt="photos"></img>
                         </a>
                     </p>
 
                     <p>
-                        <a href='https://discord.com/channels/870208368743153725/870208369347153971' target="_blank" without rel="noreferrer">
+                        <a href='https://discord.com/channels/870208368743153725/870208369347153971' target="_blank" rel="noreferrer">
                             <img src={IconDiscord} alt="photos"></img>
                         </a>
                     </p>
 
                     <p>
-                        <a href='https://t.me/demole_io' target="_blank" without rel="noreferrer">
+                        <a href='https://t.me/demole_io' target="_blank" rel="noreferrer">
                             <img src={IconTele} alt="photos"></img>
                         </a>
                     </p>
 
                     <p>
-                        <a href='https://t.me/Demole_ioCommunity' target="_blank" without rel="noreferrer">
+                        <a href='https://t.me/Demole_ioCommunity' target="_blank" rel="noreferrer">
                             <img src={IconTele} alt="photos"></img>
                         </a>
                     </p>

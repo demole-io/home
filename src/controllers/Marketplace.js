@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 export default function Marketplace() {
 
-    const [filter, setfilter] = useState([
+    const [filter] = useState([
         {
             category: 'Type',
             detail: [
@@ -36,7 +36,7 @@ export default function Marketplace() {
         },
     ])
 
-    const [listMonter, setlistMonter] = useState([
+    const [listMonter] = useState([
         {
             name: 'knight',
             img: Knight,
@@ -410,10 +410,6 @@ export default function Marketplace() {
             ]
         }
     ])
-
-    const buyMonter = (value, index) => {
-
-    }
 
     const renderMonster = (value, index) => {
         return (

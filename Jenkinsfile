@@ -21,7 +21,7 @@ pipeline {
 
     post { 	//No matter success or failure will send information, youid is the group id sent
         always {
-            telegramSend(message:'Build Status: ${PROJECT_NAME} is ${BUILD_STATUS}',chatId:417315413)
+            telegramSend(message:'Build Status: ${PROJECT_NAME} is ${BUILD_STATUS}')
         }
     }
 }

@@ -8,7 +8,7 @@ const MonterDetail = props => {
     const [detail, setdetail] = useState(false)
     const [indexx, setindexx] = useState(false)
 
-    const [bodyParts, setbodyParts] = useState([
+    const [bodyParts] = useState([
         {
             title: 'Body Ribcage',
             des: 'Epic',
@@ -47,7 +47,7 @@ const MonterDetail = props => {
         console.log("Did mount");
         setdetail(props.location && props.location.state ? props.location.state.value : false)
         setindexx(props.location && props.location.state ? props.location.state.indexx : false)
-    }, []);
+    }, [props.location]);
 
     const goBack = () => {
         history.goBack()

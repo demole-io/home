@@ -8,7 +8,7 @@ import $ from 'jquery'
 
 export default function Earn() {
 
-    const [data, setdata] = useState([
+    const [data] = useState([
         {
             title: 'Training ground',
             content: 'Let your monsters practice at the training ground to increase their level and receive $DML tokens even if you are not online.',
@@ -37,34 +37,25 @@ export default function Earn() {
     ])
 
     useEffect(() => {
-        console.log("Did mount");
-
-        jumpp()
         var interver = setInterval(() => {
-            jumpp()
+            for (let i = 0; i < data.length; i++) {
+                setTimeout(() => {
+                    $(`.img-earn-${i}`).addClass("jump")
+                    setTimeout(() => {
+                        $(`.img-earn-${i}`).removeClass("jump")
+                    }, 3000);
+                }, (i + 1) * 2000);
+            }
         }, 10 * 1000)
 
         return () => {
             clearInterval(interver)
         }
-    }, []);
-
-    const jumpp = () => {
-        console.log("JUMP===")
-        for (let i = 0; i < data.length; i++) {
-            setTimeout(() => {
-                $(`.img-earn-${i}`).addClass("jump")
-                setTimeout(() => {
-                    $(`.img-earn-${i}`).removeClass("jump")
-                }, 3000);
-            }, (i + 1) * 2000);
-
-        }
-    }
+    }, [data]);
 
     const renderChild = (value, index) => {
         return (
-            <div className="child">
+            <div className="child" key={index}>
                 <img className={`img-earn-${index}`} src={value.img} alt="photos"
                 ></img>
                 <p className="titlee">{value.title}</p>

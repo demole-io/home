@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
 // import 'react-redux-toastr/src/styles/index.scss'
 import './assets/scss/style.scss';
 import Header from './components/Header';

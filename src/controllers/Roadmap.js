@@ -8,7 +8,7 @@ import img from '../assets/img/image3.png'
 import Line from '../assets/img/Group 8092.png'
 import LineMobile from '../assets/img/Group 8104.png'
 export default function Roadmap() {
-    const [data, setdata] = useState([
+    const [data] = useState([
         {
             img: img1,
             title: "7/2021",
@@ -87,16 +87,16 @@ export default function Roadmap() {
         }
     ])
 
-    const renderData = (value) => {
+    const renderData = (value, index) => {
         return (
-            <div className="child">
+            <div className="child" key={index}>
                 <div className="color"></div>
                 <img src={value.img} alt="photos"></img>
                 <div className="waper-txt">
                     <p className="titlee">{value.title}</p>
                     <ul>
                         {value.content.map((valuee, indexx) => {
-                            return <li>{valuee}</li>
+                            return <li key={indexx}>{valuee}</li>
                         })}
                     </ul>
 
@@ -108,14 +108,14 @@ export default function Roadmap() {
 
     const renderDataMobile = (value, index) => {
         return (
-            <div className="child" style={{marginTop: `${index % 2 !== 0 ? 40  : 10}px`}}>
+            <div className="child" style={{marginTop: `${index % 2 !== 0 ? 40  : 10}px`}} key={index}>
                 <div className="color"></div>
                 <div className="group1" style={{backgroundImage: `url(${value.imgMobile})`}}>
                     <p className="titlee">{value.title}</p>
                 </div>
                 <ul>
                     {value.content.map((valuee, indexx) => {
-                        return <li>{valuee}</li>
+                        return <li key={indexx}>{valuee}</li>
                     })}
                 </ul>
 
@@ -135,7 +135,7 @@ export default function Roadmap() {
                     <img className="line" src={Line} alt="photos"></img>
                     <div className="waper-data">
                         {data.map((value, index) => {
-                            return renderData(value)
+                            return renderData(value, index)
                         })}
                     </div>
                 </div>
