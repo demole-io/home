@@ -3,7 +3,10 @@ import img1 from '../assets/img/Mask Group.jpg'
 import img2 from '../assets/img/Mask Group1.jpg'
 import img3 from '../assets/img/Mask Group2.jpg'
 import img4 from '../assets/img/Mask Group3.jpg'
-
+import img5 from '../assets/img/bn111.jpg'
+import img6 from '../assets/img/bn61.jpg'
+import img7 from '../assets/img/Method Draw Image (4)1.jpg'
+import img8 from '../assets/img/Method Draw Image (1)1.jpg'
 import img from '../assets/img/image3.png'
 import Line from '../assets/img/Group 8092.png'
 import LineMobile from '../assets/img/Group 8104.png'
@@ -52,7 +55,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img2,
+            img: img5,
             title: "11/2021",
             content: [
                 "Campaign/Story"
@@ -60,7 +63,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img4,
+            img: img6,
             title: "12/2021",
             content: [
                 "Boosters"
@@ -68,7 +71,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img1,
+            img: img7,
             title: "QI/2022",
             content: [
                 "Pet system",
@@ -77,7 +80,7 @@ export default function Roadmap() {
             imgMobile: img
         },
         {
-            img: img3,
+            img: img8,
             title: "QII/2022",
             content: [
                 "Item crafting system",

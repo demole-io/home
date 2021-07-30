@@ -15,6 +15,7 @@ import IconIg from '../assets/img/Group 8107.png'
 import IconReddit from '../assets/img/reddit.png'
 import IconDiscord from '../assets/img/discord.png'
 import IconTele from '../assets/img/telegram.png'
+import IconBook from '../assets/img/book.png'
 
 export default function Header() {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -44,6 +45,7 @@ export default function Header() {
 
                         {/* <Link to="/faq"><a href="/faq">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a></Link> */}
                         <li title="Comming Soon">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW</li>
+                        <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Desk</a>
 
                         <div className="group1-mobile">
                             <p>
