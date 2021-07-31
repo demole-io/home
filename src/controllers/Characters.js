@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Unknow1 from '../assets/img/Subtract.png'
-import Knight from '../assets/img/ideal_Dargon.webm'
-import ORC from '../assets/img/ideal_Orc.webm'
-import WARRIOR from '../assets/img/TienNu.webm'
-import MEMALD from '../assets/img/TienCa.webm'
+import Knight from '../assets/img/ezgif.com-gif-maker (9).webm'
+import ORC from '../assets/img/ezgif.com-gif-maker (7).webm'
+import WARRIOR from '../assets/img/ezgif.com-gif-maker (10).webm'
+import MEMALD from '../assets/img/ezgif.com-gif-maker (8).webm'
 
 import iconOrc from '../assets/img/nguoi_cay.png'
 import iconMEMALD from '../assets/img/nguoi_ca.png'
@@ -122,7 +122,7 @@ const Characters = props => {
                         {index === 0 && <img className="orc" src={OrcPoster} alt="photos"></img>}
                         {index === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
                         {index === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
-                        {index === 3 && <img className="tiennu" src={TiennuPoster} alt="photos"></img>}
+                        {index === 3 && <img className="tiennu-iso" src={TiennuPoster} alt="photos"></img>}
                     </div>}
 
 

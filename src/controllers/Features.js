@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import img1 from '../assets/img/bn6.jpg'
+import img8 from '../assets/img/Method Draw Image (1).jpg'
+import img7 from '../assets/img/bn12.jpg'
+import img9 from '../assets/img/Method Draw Image (4).jpg'
+import img10 from '../assets/img/Method Draw Image (7).jpg'
+
 import img4 from '../assets/img/bn9.jpg'
 import img5 from '../assets/img/bn10.jpg'
 import img6 from '../assets/img/bn11.jpg'
-import img7 from '../assets/img/bn12.jpg'
-
-import img8 from '../assets/img/Method Draw Image (1).jpg'
-import img9 from '../assets/img/Method Draw Image (4).jpg'
-import img10 from '../assets/img/Method Draw Image (7).jpg'
 
 export default function Features() {
     const [data] = useState([

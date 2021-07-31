@@ -7,7 +7,7 @@ import img12 from '../assets/img/pasted image 3.jpg'
 
 import img from '../assets/img/image3.png'
 import Line from '../assets/img/Group 8092.png'
-import LineMobile from '../assets/img/Group 8104.png'
+import LineMobile from '../assets/img/Group 8122.png'
 export default function Roadmap() {
     const [data] = useState([
         {
