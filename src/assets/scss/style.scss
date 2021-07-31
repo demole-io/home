@@ -151,6 +151,11 @@ a {
 	-webkit-animation: move-top 3s;
 }
 
+.text-zoom {
+	animation: zoom 2s;
+	-webkit-animation: zoom 2s;
+}
+
 .text-move-left {
 	animation: move-left 3s;
 	-webkit-animation: move-left 3s;
@@ -180,30 +185,51 @@ a {
 	}
 }
 
+@keyframes zoom {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes zoom {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
 
 @keyframes move-left {
 	from {
-	  margin-left: 100%;
-	  width: 300%; 
+		margin-left: 100%;
+		width: 300%;
 	}
-  
+
 	to {
-	  margin-left: 0%;
-	  width: 100%;
+		margin-left: 0%;
+		width: 100%;
 	}
-  }
-			  
-  @-webkit-keyframes move-left {
+}
+
+@-webkit-keyframes move-left {
 	from {
-	  margin-left: 100%;
-	  width: 300%; 
+		margin-left: 100%;
+		width: 300%;
 	}
-  
+
 	to {
-	  margin-left: 0%;
-	  width: 100%;
+		margin-left: 0%;
+		width: 100%;
 	}
-  }
+}
 
 /*#endregion */
 #home {
@@ -508,6 +534,7 @@ a {
 						text-transform: none;
 						font-family: "OpenSans";
 						line-height: 29px;
+						display: block;
 					}
 				}
 			}
@@ -1421,8 +1448,8 @@ a {
 					}
 
 					.tiennu-iso {
-						margin-top: 0px;
-						width: 120%;
+						margin-top: 10px;
+						width: 100%;
 						margin-left: 0px;
 					}
 				}

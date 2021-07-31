@@ -41,12 +41,15 @@ export default function Earn() {
             for (let i = 0; i < data.length; i++) {
                 setTimeout(() => {
                     $(`.img-earn-${i}`).addClass("jump")
+                    $(`.contentt-${i}`).addClass('text-zoom')
                     setTimeout(() => {
                         $(`.img-earn-${i}`).removeClass("jump")
+                        $(`.contentt-${i}`).removeClass('text-zoom')
                     }, 3000);
                 }, (i + 1) * 2000);
             }
         }, 10 * 1000)
+
 
         return () => {
             clearInterval(interver)
@@ -59,7 +62,7 @@ export default function Earn() {
                 <img className={`img-earn-${index}`} src={value.img} alt="photos"
                 ></img>
                 <p className="titlee">{value.title}</p>
-                <p className="contentt">{value.content}</p>
+                <p className={`contentt contentt-${index}`}>{value.content}</p>
             </div>
         )
     }

@@ -9,6 +9,8 @@ import img4 from '../assets/img/bn9.jpg'
 import img5 from '../assets/img/bn10.jpg'
 import img6 from '../assets/img/bn11.jpg'
 
+import $ from 'jquery'
+
 export default function Features() {
     const [data] = useState([
         {
@@ -56,39 +58,34 @@ export default function Features() {
     const [index, setindex] = useState(0)
     const interval = useRef(null)
 
+    const handleScroll = () => {
+        const pageFeatures = document.querySelector("#features")
+        $('#features .container .wraper-content .wraper-child div span').addClass('text-move-top')
+
+        if (pageFeatures.getBoundingClientRect().top > 0) {
+            $('#features .container .wraper-content .wraper-child div span').removeClass('text-move-top')
+        }
+        //BOTTOM
+        if (pageFeatures.getBoundingClientRect().bottom <= 0) {
+            $('#features .container .wraper-content .wraper-child div span').removeClass('text-move-top')
+        }
+    }
+
     useEffect(() => {
         interval.current = setInterval(() => {
             selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
             setindex(selectedIndex.current)
         }, 3000)
 
+        window.addEventListener('scroll', handleScroll);
+
         return () => {
             if (interval.current) clearInterval(interval.current)
+
+            window.removeEventListener('scroll', handleScroll);
+            $('#features .container .wraper-content .wraper-child div span').removeClass('text-move-top')
         }
     }, [data]);
-
-    // const stopNext = () => {
-    //     clearInterval(interval)
-    //     // setinterval(false)
-    // }
-
-    // const onClickLeft = () => {
-
-    //     if (interval) {
-    //         stopNext()
-    //     }
-    //     selectedIndex.current = selectedIndex.current === 0 ? data.length - 1 : selectedIndex.current - 1;
-    //     setindexx(selectedIndex.current)
-    // }
-
-    // const onClickRight = () => {
-    //     if (interval) {
-    //         stopNext()
-    //     }
-
-    //     selectedIndex.current = selectedIndex.current === data.length - 1 ? 0 : selectedIndex.current + 1;
-    //     setindexx(selectedIndex.current)
-    // }
 
     const onClickHinhTron = (indexx) => {
         if (interval.current) clearInterval(interval.current)

@@ -15,6 +15,8 @@ import TiencaPoster from '../assets/img/nguoica.png'
 import RongPoster from '../assets/img/rong 2.png'
 import TiennuPoster from '../assets/img/Tiennu.png'
 
+import $ from 'jquery'
+
 const Characters = props => {
     const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
@@ -51,37 +53,50 @@ const Characters = props => {
     const [index, setindex] = useState(0)
     const interval = useRef(null)
 
+    const handleScroll = () => {
+        const pageCharacters = document.querySelector("#characters")
+        $('#characters .container .des .txtt').addClass('text-zoom')
+        $('#characters .container .group2-mobie .txtt').addClass('text-zoom')
+
+        if (pageCharacters.getBoundingClientRect().top > 0) {
+            $('#characters .container .des .txtt').removeClass('text-zoom')
+            $('#characters .container .group2-mobie .txtt').removeClass('text-zoom')
+        }
+        //BOTTOM
+        if (pageCharacters.getBoundingClientRect().bottom <= 0) {
+            $('#characters .container .des .txtt').removeClass('text-zoom')
+            $('#characters .container .group2-mobie .txtt').removeClass('text-zoom')
+        }
+    }
+
     useEffect(() => {
         interval.current = setInterval(() => {
             selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
             setindex(selected.current)
+            $('#characters .container .des .txtt').addClass('text-zoom')
+            $('#characters .container .group2-mobie .txtt').addClass('text-zoom')
+
+            setTimeout(() => {
+                $('#characters .container .des .txtt').removeClass('text-zoom')
+                $('#characters .container .group2-mobie .txtt').removeClass('text-zoom')
+            }, 2000);
+
         }, 3000)
 
+        window.addEventListener('scroll', handleScroll);
+
         return () => {
-            if(interval.current) clearInterval(interval.current)
+            if (interval.current) clearInterval(interval.current)
+
+            window.removeEventListener('scroll', handleScroll);
+            $('#characters .container .des .txtt').removeClass('text-zoom')
+            $('#characters .container .group2-mobie .txtt').removeClass('text-zoom')
         }
     }, [data]);
 
     const stopNext = () => {
-        if(interval.current) clearInterval(interval.current)
+        if (interval.current) clearInterval(interval.current)
     }
-
-    // const onClickLeft = () => {
-    //     if (interval) {
-    //         stopNext()
-    //     }
-    //     selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
-    //     setindex(selected.current)
-    // }
-
-    // const onCliclRight = () => {
-    //     if (interval) {
-    //         stopNext()
-    //     }
-
-    //     selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
-    //     setindex(selected.current)
-    // }
 
     const onClickName = (index) => {
         stopNext()

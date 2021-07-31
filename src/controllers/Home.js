@@ -1,14 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Phone from '../assets/img/phone1.png'
 import Giff from '../assets/img/RongFX3.webm'
 import Poster from '../assets/img/RongFX3.png'
 import Logo from '../assets/img/logo02 1.png'
+import $ from 'jquery'
 
 export default function Home() {
 
     const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
         !window.MSStream
+
+
+    const handleScroll = () => {
+        const pageHome = document.querySelector("#home")
+
+        if (pageHome.getBoundingClientRect().top <= 0) {
+            $('#home .container .group p').addClass('text-move-top')
+        }
+        //BOTTOM
+        if (pageHome.getBoundingClientRect().bottom <= 0) {
+            $('#home .container .group p').removeClass('text-move-top')
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            $('#home .container .group p').removeClass('text-move-top')
+        }
+    }, []);
 
     return (
         <div id="home">
