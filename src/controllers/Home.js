@@ -35,23 +35,20 @@ const Wrapper = styled.div`
 `;
 
 
-export default function Home() {
+const Home = props => {
     const text1 = `Our early world was in chaos.
     Many monster tribes lived on the same continents and oceans.
     They were born from the seeds of both gods and demons, some of them coming from the universe.
     The tribes often war to expand their territory and show their strength and ambition to dominate the world.
     However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.
     Build your own army of monsters and embark on a journey to liberate the holy land.`
-    const text2 = `Our early world was in chaos.
-    Many monster tribes lived on the same continents and oceans. ${<br></br>}${<br></br>}
-    They were born from the seeds of both gods and demons, some of them coming from the universe.${<br></br>}${<br></br>}
-    The tribes often war to expand their territory and show their strength and ambition to dominate the world.${<br></br>}${<br></br>}
-    However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.${<br></br>}${<br></br>}
-    Build your own army of monsters and embark on a journey to liberate the holy land.`
     const [content, setcontent] = useState("")
     const [animation, setanimation] = useState(false)
+    const [indexx, setindexx] = useState(0)
 
     const typingTimePerCharacter = 0.07
+
+    var textArr = text1.split(".")
 
     useEffect(() => {
 
@@ -73,8 +70,30 @@ export default function Home() {
             }, 2000)
         }, 4000);
 
+        setTimeout(() => {
+            $('#home .container .wraper-hinhtron').css({
+                opacity: '1',
+            })
+        }, 6000);
 
-        const textArr = text1.split(".")
+     
+
+        textArr = text1.split(".")
+        if (props.isMobile) {
+            textArr = [
+                "Our early world was in chaos",
+                "Many monster tribes lived on the same continents and oceans",
+                "They were born from the seeds of both gods and demons,",
+                "some of them coming from the universe",
+                "The tribes often war to expand their territory",
+                "and show their strength and ambition to dominate the world",
+                "However, tribes now have to join together",
+                "to increase their strength",
+                "to fight common enemies - beasts born from the death machines",
+                "Build your own army of monsters and embark on a journey to liberate the holy land"
+            ]
+        }
+
         const typingDelay = []
         let sum = 0
 
@@ -86,14 +105,17 @@ export default function Home() {
         setTimeout(() => {
             textArr.map((value, key) => {
                 setTimeout(() => {
+                    setindexx(key)
                     if (key === 0) {
                         setanimation(true)
+                        setindexx(key)
                         setcontent(value)
                     } else {
                         setanimation(false)
 
                         setTimeout(() => {
                             setanimation(true)
+                            setindexx(key)
                             setcontent(value)
                         }, 3000)
                     }
@@ -101,29 +123,65 @@ export default function Home() {
             })
         }, 3000)
 
-        setTimeout(() => {
-            $('#home .container .content').css({
-                display: 'block',
-            })
 
+        if (props.isMobile) {
             setTimeout(() => {
                 $('#home .container .content').css({
-                    opacity: '1',
-                    transform: "translateY(0px)"
+                    display: 'block',
                 })
-            }, 1000);
-           
-        }, 64 * 1000);
+
+                setTimeout(() => {
+                    $('#home .container .content').css({
+                        opacity: '1',
+                        transform: "translateY(0px)"
+                    })
+                }, 1000);
+
+            }, 70 * 1000);
+
+        } else {
+            setTimeout(() => {
+
+                $('#home .container .wraper-hinhtron').css({
+                    opacity: '0',
+                })
+
+                $('#home .container .content').css({
+                    display: 'block',
+                })
+
+                setTimeout(() => {
+                    $('#home .container .content').css({
+                        opacity: '1',
+                        transform: "translateY(0px)"
+                    })
+                }, 1000);
+
+            }, 64 * 1000);
+
+        }
 
     }, []);
+
+    const onClickHinhTron = () => {
+
+    }
 
     return (
         <div id="home">
             <div className="container">
                 <Wrapper>
                     <img className="title" src={Logo} alt="photos"></img>
-                    <Text len={content.length} animation={animation} typingTime={content.length * typingTimePerCharacter}>{content}</Text>
+                    <Text className="txtt" len={content.length} animation={animation} typingTime={content.length * typingTimePerCharacter}>{content}</Text>
 
+                    <div className="wraper-hinhtron">
+                        {textArr.map((value, key) => {
+                            return (
+                                <div key={key} className={`hinhtron ${indexx === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
+                                </div>
+                            )
+                        })}
+                    </div>
                     <div className="content">
                         <p>Our early world was in chaos.
                             Many monster tribes lived on the same continents and oceans.</p>
@@ -144,8 +202,12 @@ export default function Home() {
                     </div>
 
                 </Wrapper>
+
+
             </div>
 
         </div>
     )
 }
+
+export default Home
