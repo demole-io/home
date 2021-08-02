@@ -280,25 +280,25 @@ a {
 		text-align: center;
 		justify-content: center;
 
-		.wraper-hinhtron {
-			display: flex;
-			justify-content: center;
-			margin-top: 100px;
-			width: 100%;
-			opacity: 0;
-			.hinhtron {
-				width: 10px;
-				height: 10px;
-				border-radius: 50%;
-				border: 1px solid white;
-				margin: 5px;
-				cursor: pointer;
-			}
+		// .wraper-hinhtron {
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	margin-top: 100px;
+		// 	width: 100%;
+		// 	opacity: 0;
+		// 	.hinhtron {
+		// 		width: 10px;
+		// 		height: 10px;
+		// 		border-radius: 50%;
+		// 		border: 1px solid #ce985e;
+		// 		margin: 5px;
+		// 		cursor: pointer;
+		// 	}
 
-			.selectedd {
-				background-color: #fff6e7;
-			}
-		}
+		// 	.selectedd {
+		// 		background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
+		// 	}
+		// }
 
 		.title {
 			width: 60%;
@@ -330,13 +330,13 @@ a {
 				width: 10px;
 				height: 10px;
 				border-radius: 50%;
-				border: 1px solid white;
+				border: 1px solid #ce985e;
 				margin: 5px;
 				cursor: pointer;
 			}
 
 			.selectedd {
-				background-color: #fff6e7;
+				background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
 			}
 		}
 	}

@@ -153,9 +153,9 @@ const Home = props => {
         } else {
             setTimeout(() => {
 
-                $('#home .container .wraper-hinhtron').css({
-                    opacity: '0',
-                })
+                // $('#home .container .wraper-hinhtron').css({
+                //     opacity: '0',
+                // })
 
                 $('#home .container .content').css({
                     display: 'block',
@@ -193,7 +193,7 @@ const Home = props => {
                             )
                         })}
                     </div>
-                    <div className="content">
+                    {/* <div className="content">
                         <p>Our early world was in chaos.
                             Many monster tribes lived on the same continents and oceans.</p>
 
@@ -210,7 +210,7 @@ const Home = props => {
 
                         <p>Build your own army of monsters and embark on a journey to liberate the holy land.</p>
                         <br></br>
-                    </div>
+                    </div> */}
 
                 </Wrapper>
 
