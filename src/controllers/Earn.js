@@ -4,6 +4,11 @@ import Arena from '../assets/img/2@4x.png'
 import Daily from '../assets/img/3@4x.png'
 import Upgrade from '../assets/img/4@4x.png'
 import World from '../assets/img/5@4x.png'
+import khung1 from '../assets/img/playtoearn5.png'
+import khung2 from '../assets/img/playtoearn4.png'
+import khung3 from '../assets/img/playtoearn.png'
+import khung4 from '../assets/img/playtoearn2.png'
+import khung5 from '../assets/img/playtoearn6.png'
 import $ from 'jquery'
 
 export default function Earn() {
@@ -12,27 +17,32 @@ export default function Earn() {
         {
             title: 'Training ground',
             content: 'Let your monsters practice at the training ground to increase their level and receive $DML tokens even if you are not online.',
-            img: Training
+            img: Training,
+            khung: khung1,
         },
         {
             title: 'Daily quests',
             content: 'Complete daily missions for rewards',
-            img: Daily
+            img: Daily,
+            khung: khung2,
         },
         {
             title: 'Arena',
             content: 'Accompanying players around the world to defeat the world Boss and receive valuable rewards',
-            img: Arena
+            img: Arena,
+            khung: khung3,
         },
         {
             title: 'World Bosses',
             content: 'Accompanying players around the world to defeat the world Boss and receive valuable rewards ',
-            img: World
+            img: World,
+            khung: khung4,
         },
         {
             title: 'Marketplace',
             content: 'Find unique monsters and items and exchange with other players.',
-            img: Upgrade
+            img: Upgrade,
+            khung: khung5,
         },
     ])
 
@@ -41,10 +51,10 @@ export default function Earn() {
             for (let i = 0; i < data.length; i++) {
                 setTimeout(() => {
                     $(`.img-earn-${i}`).addClass("jump")
-                    $(`.contentt-${i}`).addClass('text-zoom')
+                    // $(`.contentt-${i}`).addClass('text-zoom')
                     setTimeout(() => {
                         $(`.img-earn-${i}`).removeClass("jump")
-                        $(`.contentt-${i}`).removeClass('text-zoom')
+                        // $(`.contentt-${i}`).removeClass('text-zoom')
                     }, 3000);
                 }, (i + 1) * 2000);
             }
@@ -58,10 +68,11 @@ export default function Earn() {
 
     const renderChild = (value, index) => {
         return (
-            <div className="child" key={index}>
-                <img className={`img-earn-${index}`} src={value.img} alt="photos"
-                ></img>
+            <div className="child" key={index} style={{ backgroundImage: `url(${value.khung})` }}>
                 <p className="titlee">{value.title}</p>
+                <div>
+                    <img className={`img-earn-${index}`} src={value.img} alt="photos"></img>
+                </div>
                 <p className={`contentt contentt-${index}`}>{value.content}</p>
             </div>
         )
@@ -70,13 +81,7 @@ export default function Earn() {
     return (
         <div id="earn">
             <div className="container">
-                <div className="waper-title">
-                    <p className="title">Play to earn</p>
-                    <p className="big-title">Play to earn</p>
-                </div>
-                <p className='txt'>Why invest huge amounts of money in the game when you can make money from it?
-                    <br></br>
-                    Each and every activity in the game is a great source of real-life rewards awaiting for you to explore</p>
+                <p className="title">play to earn</p>
                 <div className="waper-content">
                     {data.map((value, index) => {
                         return renderChild(value, index)

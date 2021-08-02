@@ -1,67 +1,149 @@
-import React, { useEffect } from 'react'
-import Phone from '../assets/img/phone1.png'
-import Giff from '../assets/img/RongFX3.webm'
-import Poster from '../assets/img/RongFX3.png'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/img/logo02 1.png'
 import $ from 'jquery'
+import styled, { keyframes } from 'styled-components'
+
+const TextTyping = keyframes`
+    from {
+        width: 0;
+    }
+`;
+
+const Blink = keyframes`
+    50% {
+        border-color: transparent;
+    }
+`;
+
+const Text = styled.p`
+    width: ${props => props.len || 22}ch;
+    animation: ${TextTyping} ${props => props.typingTime || 5}s steps(${props => props.len || 22}), ${Blink} 0.5s step-end infinite alternate;
+    ${props => !props.animation && "width: '0ch';"}
+    ${props => !props.animation && "animation: 'none';"}
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-weight: bold;
+`;
+
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+`;
+
 
 export default function Home() {
+    const text1 = `Our early world was in chaos.
+    Many monster tribes lived on the same continents and oceans.
+    They were born from the seeds of both gods and demons, some of them coming from the universe.
+    The tribes often war to expand their territory and show their strength and ambition to dominate the world.
+    However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.
+    Build your own army of monsters and embark on a journey to liberate the holy land.`
+    const text2 = `Our early world was in chaos.
+    Many monster tribes lived on the same continents and oceans. ${<br></br>}${<br></br>}
+    They were born from the seeds of both gods and demons, some of them coming from the universe.${<br></br>}${<br></br>}
+    The tribes often war to expand their territory and show their strength and ambition to dominate the world.${<br></br>}${<br></br>}
+    However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.${<br></br>}${<br></br>}
+    Build your own army of monsters and embark on a journey to liberate the holy land.`
+    const [content, setcontent] = useState("")
+    const [animation, setanimation] = useState(false)
 
-    const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
-        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
-        !window.MSStream
-
-
-    const handleScroll = () => {
-        const pageHome = document.querySelector("#home")
-
-        if (pageHome.getBoundingClientRect().top <= 0) {
-            $('#home .container .group p').addClass('text-move-top')
-        }
-        //BOTTOM
-        if (pageHome.getBoundingClientRect().bottom <= 0) {
-            $('#home .container .group p').removeClass('text-move-top')
-        }
-    }
+    const typingTimePerCharacter = 0.07
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            $('#home .container .group p').removeClass('text-move-top')
-        }
+        $('#home .container .title').css({
+            opacity: '1',
+            transform: "translateY(0px)"
+        })
+
+        setTimeout(() => {
+            $('#home .container .title').css({
+                opacity: '0',
+                transform: "translateY(-50px)"
+            })
+
+            setTimeout(() => {
+                $('#home .container .title').css({
+                    display: 'none',
+                })
+            }, 2000)
+        }, 4000);
+
+
+        const textArr = text1.split(".")
+        const typingDelay = []
+        let sum = 0
+
+        textArr.map((value, key) => {
+            typingDelay[key] = sum
+            sum += value.length * typingTimePerCharacter + 3
+        })
+
+        setTimeout(() => {
+            textArr.map((value, key) => {
+                setTimeout(() => {
+                    if (key === 0) {
+                        setanimation(true)
+                        setcontent(value)
+                    } else {
+                        setanimation(false)
+
+                        setTimeout(() => {
+                            setanimation(true)
+                            setcontent(value)
+                        }, 3000)
+                    }
+                }, (typingDelay[key] + 3) * 1000)
+            })
+        }, 3000)
+
+        setTimeout(() => {
+            $('#home .container .content').css({
+                display: 'block',
+            })
+
+            setTimeout(() => {
+                $('#home .container .content').css({
+                    opacity: '1',
+                    transform: "translateY(0px)"
+                })
+            }, 1000);
+           
+        }, 64 * 1000);
+
     }, []);
 
     return (
         <div id="home">
             <div className="container">
-                <img className="title" src={Logo} alt="photos"></img>
-                <p className="content">A vast monster world on Blockchain</p>
+                <Wrapper>
+                    <img className="title" src={Logo} alt="photos"></img>
+                    <Text len={content.length} animation={animation} typingTime={content.length * typingTimePerCharacter}>{content}</Text>
 
-                <div className="group">
-                    <p>Our early world was in chaos. Many monster tribes lived on the same continents and oceans. They were born from the seeds of both gods and demons, some of them coming from the universe. The tribes often war to expand their territory and show their strength and ambition to dominate the world.
-                        <br></br>
-                        <br></br>
-                        However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.
-                        <br></br>
-                        <br></br>
-                        Build your own army of monsters and embark on a journey to liberate the holy land.
-                    </p>
+                    <div className="content">
+                        <p>Our early world was in chaos.
+                            Many monster tribes lived on the same continents and oceans.</p>
 
-                    <div className="sketchfab-embed-wrapper">
-                        <iframe title="Demole.io Model2" frameBorder="0" allowFullScreen allow="fullscreen; autoplay; vr" xr-spatial-tracking="1" execution-while-out-of-viewport="1" execution-while-not-rendered="1" web-share="1" src="https://sketchfab.com/models/9f1e5f3fea9e4ebfb2062cb6be4ce46b/embed?transparent=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&autostart=1"> </iframe>
+                        <br></br>
+
+                        <p>They were born from the seeds of both gods and demons, some of them coming from the universe.</p>
+                        <br></br>
+
+                        <p>The tribes often war to expand their territory and show their strength and ambition to dominate the world.</p>
+                        <br></br>
+
+                        <p>However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.</p>
+                        <br></br>
+
+                        <p>Build your own army of monsters and embark on a journey to liberate the holy land.</p>
+                        <br></br>
                     </div>
-                </div>
 
-
-                <div className="waper-phone">
-                    {!isIOS && <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm" muted={true}></video>}
-                    {isIOS && <img src={Poster} alt="photos" className="wrapper"></img>}
-                    <img src={Phone} alt="photos" className="phone"></img>
-                </div>
-
-
+                </Wrapper>
             </div>
 
         </div>

@@ -45,7 +45,9 @@ export default function Header() {
                         <li className="tip">{toggleMenu && <img src={Stake} alt="photos"></img>} Stake<span>Comming Soon</span></li>
                         <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Deck</a>
                         <li className="tip">{toggleMenu && <img src={Faq} alt="photos"></img>} Demole-Wiki<span>Comming Soon</span></li>
-                        <li className="tip">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW<span>Comming Soon</span></li>
+                        <div className="playnow">
+                            <li className="tip">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW<span>Comming Soon</span></li>
+                        </div>
 
                         <div className="group1-mobile">
                             <p>

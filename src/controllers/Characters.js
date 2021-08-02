@@ -15,6 +15,11 @@ import TiencaPoster from '../assets/img/nguoica.png'
 import RongPoster from '../assets/img/rong 2.png'
 import TiennuPoster from '../assets/img/Tiennu.png'
 
+
+
+import ArrowLeft from '../assets/img/muiten 2.png'
+import ArrowRight from '../assets/img/muiten 1.png'
+
 import $ from 'jquery'
 
 const Characters = props => {
@@ -105,55 +110,60 @@ const Characters = props => {
         setindex(selected.current)
     }
 
+    const onClickLeft = () => {
+        stopNext()
+        selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
+        setindex(selected.current)
+
+    }
+
+
+
+    const onClickRight = () => {
+        stopNext()
+        selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
+        setindex(selected.current)
+    }
+
     return (
         <div id="characters">
             <div className="container">
-                <div className="waper-title">
-                    <p className="title">Characters</p>
-                    <p className="big-title">Characters</p>
-                </div>
+                <div className="wraper-info">
+                    <div className="left">
+                        <img className="arrow" src={ArrowLeft} onClick={() => onClickLeft()} alt="photos"></img>
+                        {!isIOS && <div className="char">
+                            {index === 0 && <video muted={true} className="orc" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                            {index === 1 && <video muted={true} className="tienca" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                            {index === 2 && <video muted={true} className="rong" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                            {index === 3 && <video muted={true} className="tiennu" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                        </div>}
 
-                <div className="content">
-                    {/* <img className="arrow" src={ArrowLeft} alt="photos" onClick={onClickLeft}></img> */}
+                        {isIOS && <div className="char">
+                            {index === 0 && <img className="orc" src={OrcPoster} alt="photos"></img>}
+                            {index === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
+                            {index === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
+                            {index === 3 && <img className="tiennu-iso" src={TiennuPoster} alt="photos"></img>}
+                        </div>}
+                        <img className="arrow" src={ArrowRight} onClick={() => onClickRight()} alt="photos"></img>
+                    </div>
 
-                    <div className="waper-name">
-                        <img className="hmm" src={Unknow1} alt="photos"></img>
+                    <div className="right">
+                        <span>Build your own character</span>
                         <div>
-                            <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginLeft: '40px' }} src={data[0].icon} alt="photos"></img>
-                            <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginLeft: '0px' }} src={data[1].icon} alt="photos"></img>
-                            <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginLeft: '10px' }} src={data[2].icon} alt="photos"></img>
-                            <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginLeft: '80px' }} src={data[3].icon} alt="photos"></img>
+                            <p className="name">{data[index].name}</p>
+                            <p className="txtt">{data[index].des}</p>
                         </div>
                     </div>
-
-                    {!isIOS && <div className="char">
-                        {index === 0 && <video muted={true} className="orc" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
-                        {index === 1 && <video muted={true} className="tienca" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
-                        {index === 2 && <video muted={true} className="rong" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
-                        {index === 3 && <video muted={true} className="tiennu" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
-                    </div>}
-
-                    {isIOS && <div className="char">
-                        {index === 0 && <img className="orc" src={OrcPoster} alt="photos"></img>}
-                        {index === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
-                        {index === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
-                        {index === 3 && <img className="tiennu-iso" src={TiennuPoster} alt="photos"></img>}
-                    </div>}
-
-
-                    {/* <img className="arrow" src={ArrowRight} alt="photos" onClick={onCliclRight}></img> */}
                 </div>
 
-                <div className="des">
-                    <p className="name">{data[index].name}</p>
-                    <p className="txtt">{data[index].des}</p>
-                </div>
-
-                <div className="group2-mobie">
-                    <div>
-                        <p className="name">{data[index].name}</p>
-                        <p className="txtt">{data[index].des}</p>
-                    </div>
+                <div className="wraper-name">
+                    {data.map((value, indexx) => {
+                        return (
+                            <div className={`${index === indexx ? 'selected' : ''}`}>
+                                <img onClick={() => onClickName(indexx)} src={value.icon} alt="photos"></img>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

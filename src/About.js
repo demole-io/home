@@ -10,6 +10,8 @@ import Backed from './controllers/Backed';
 import Fooder from './components/Fooder';
 import Features from './controllers/Features';
 import Earn from './controllers/Earn';
+import Monster from './controllers/Monster';
+import PhoneScreen from './controllers/PhoneScreen';
 
 const width = $("body").width();
 
@@ -22,6 +24,8 @@ class App extends React.Component {
             <div id="about">
                 <Header pathname={pathname} isMobile={isMobile}></Header>
                 <Home></Home>
+                <Monster></Monster>
+                <PhoneScreen></PhoneScreen>
                 <Characters></Characters>
                 <Features></Features>
                 <Earn></Earn>
