@@ -95,6 +95,10 @@ export default function Earn() {
                     })}
                 </div>
 
+                <div className="waper-content-mobile">
+                    {renderChild(data[indexx], indexx)}
+                </div>
+
                 <div className="wraper-hinhtron">
                     {data.map((value, key) => {
                         return (

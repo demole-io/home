@@ -30,19 +30,24 @@ a {
 }
 
 @font-face {
+	font-family: "BebasNeue";
+	src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
 	font-family: "OpenSans";
 	src: url("../fonts/OpenSans-Light.ttf");
 }
 
-@font-face {
-	font-family: "OpenSansBold";
-	src: url("../fonts/OpenSans-Bold.ttf");
-}
+// @font-face {
+// 	font-family: "OpenSansBold";
+// 	src: url("../fonts/OpenSans-Bold.ttf");
+// }
 
-@font-face {
-	font-family: "OpenSansExtraBold";
-	src: url("../fonts/OpenSans-ExtraBold.ttf");
-}
+// @font-face {
+// 	font-family: "OpenSansExtraBold";
+// 	src: url("../fonts/OpenSans-ExtraBold.ttf");
+// }
 
 #about {
 	background-image: url("../img/bg-body.jpg");
@@ -105,6 +110,7 @@ a {
 				margin-left: 0px;
 			}
 			cursor: pointer;
+			font-family: "BebasNeue";
 		}
 
 		a:hover,
@@ -288,7 +294,6 @@ a {
 			display: none;
 
 			p {
-				font-family: "OpenSansBold";
 				color: #fff6e7;
 				font-size: 16px;
 			}
@@ -363,7 +368,7 @@ a {
 			p {
 				font-size: 39px;
 				color: #c1bcb1;
-				font-family: "OpenSansBold";
+				font-family: "BebasNeue";
 				text-transform: uppercase;
 			}
 
@@ -441,7 +446,7 @@ a {
 
 				span {
 					font-size: 32px;
-					font-family: "OpenSansBold";
+					font-family: "BebasNeue";
 					color: #c1bcb1;
 					text-transform: uppercase;
 				}
@@ -457,7 +462,7 @@ a {
 					.name {
 						font-size: 28px;
 						color: #eac27f;
-						font-family: "OpenSansBold";
+						font-family: "BebasNeue";
 						text-transform: uppercase;
 						margin-bottom: 70px;
 					}
@@ -474,13 +479,21 @@ a {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex-wrap: wrap;
+
+			.avai {
+				background-image: url("../img/khungg.png");
+			}
+
+			.invai {
+				background-image: url("../img/khunghuyhieu 3.png");
+			}
 
 			div {
-				background-image: url("../img/khungg.png");
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
-				width: 150px;
-				height: 150px;
+				width: 100px;
+				height: 100px;
 
 				margin: 10px;
 				cursor: pointer;
@@ -506,6 +519,10 @@ a {
 
 		.wraper-cover {
 			margin-bottom: 50px;
+
+			.titlee {
+				display: none;
+			}
 			.slider-card {
 				margin: 50px 0;
 				position: relative;
@@ -527,7 +544,7 @@ a {
 						p {
 							color: #eac27f;
 							font-size: 28px;
-							font-family: "OpenSansBold";
+							font-family: "BebasNeue";
 							text-transform: uppercase;
 						}
 
@@ -571,14 +588,18 @@ a {
 		padding-bottom: 100px;
 		text-align: center;
 
+		.waper-content-mobile {
+			display: none;
+		}
+
 		.wraper-hinhtron {
 			display: none;
 		}
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 60px;
-			font-family: "OpenSansExtraBold";
+			font-size: 100px;
+			font-family: "BebasNeue";
 		}
 		.waper-content {
 			display: flex;
@@ -594,7 +615,7 @@ a {
 				.titlee {
 					color: #eac27f;
 					font-size: 17px;
-					font-family: "OpenSansBold";
+					font-family: "BebasNeue";
 					text-transform: uppercase;
 					margin-bottom: 30px;
 				}
@@ -673,8 +694,8 @@ a {
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 60px;
-			font-family: "OpenSansExtraBold";
+			font-size: 100px;
+			font-family: "BebasNeue";
 			margin-bottom: 300px;
 		}
 		.content {
@@ -708,7 +729,7 @@ a {
 						.titlee {
 							color: #eac27f;
 							font-size: 20px;
-							font-family: "OpenSansBold";
+							font-family: "BebasNeue";
 						}
 					}
 
@@ -784,24 +805,12 @@ a {
 		height: 100%;
 		align-items: center;
 		text-align: center;
-		.waper-title {
-			position: relative;
-
-			p {
-				font-family: "OpenSansExtraBold";
-				text-transform: uppercase;
-			}
-			.title {
-				font-size: 64px;
-			}
-
-			.big-title {
-				position: absolute;
-				top: -50px;
-				left: 140px;
-				font-size: 140px;
-				opacity: 0.1;
-			}
+		.title {
+			text-transform: uppercase;
+			color: #c1bcb1;
+			font-size: 100px;
+			font-family: "BebasNeue";
+			margin-bottom: 300px;
 		}
 
 		.content {
@@ -979,7 +988,7 @@ a {
 				& :last-child {
 					font-size: 40px;
 					margin-top: 10px;
-					font-family: "OpenSansBold";
+					font-family: "BebasNeue";
 				}
 			}
 		}
@@ -1077,7 +1086,7 @@ a {
 						}
 
 						p {
-							font-family: "OpenSansExtraBold";
+							font-family: "BebasNeue";
 							text-transform: uppercase;
 						}
 					}
@@ -1091,7 +1100,7 @@ a {
 						margin-top: 30px;
 						cursor: pointer;
 						text-transform: uppercase;
-						font-family: "OpenSansBold";
+						font-family: "BebasNeue";
 					}
 				}
 			}
@@ -1109,7 +1118,7 @@ a {
 
 	.titlee {
 		font-size: 25px;
-		font-family: "OpenSansExtraBold";
+		font-family: "BebasNeue";
 		margin: 20px 0;
 	}
 
@@ -1126,7 +1135,7 @@ a {
 			}
 
 			p {
-				font-family: "OpenSansExtraBold";
+				font-family: "BebasNeue";
 				text-transform: uppercase;
 				margin: 50px 0;
 			}
@@ -1183,7 +1192,7 @@ a {
 
 						p {
 							font-size: 18px;
-							font-family: "OpenSansBold";
+							font-family: "BebasNeue";
 						}
 					}
 				}
@@ -1202,7 +1211,7 @@ a {
 
 					p {
 						font-size: 18px;
-						font-family: "OpenSansBold";
+						font-family: "BebasNeue";
 					}
 				}
 			}
@@ -1237,7 +1246,7 @@ a {
 					background-color: #ffb337;
 					text-align: center;
 					padding: 10px;
-					font-family: "OpenSansBold";
+					font-family: "BebasNeue";
 					text-transform: uppercase;
 				}
 
@@ -1524,7 +1533,7 @@ a {
 				.titlee {
 					font-size: 24px;
 					color: #c1bcb1;
-					font-family: "OpenSansBold";
+					font-family: "BebasNeue";
 					text-transform: uppercase;
 				}
 
@@ -1581,14 +1590,93 @@ a {
 				}
 			}
 
+			.waper-content-mobile {
+				display: block;
+				width: 100%;
+
+				.child {
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
+					flex: 1;
+					padding-top: 40px;
+					height: 350px;
+					.titlee {
+						color: #eac27f;
+						font-size: 17px;
+						font-family: "BebasNeue";
+						text-transform: uppercase;
+						margin-bottom: 50px;
+					}
+
+					div {
+						width: 100%;
+						margin-bottom: 10px;
+						margin-top: 20px;
+
+						img {
+							width: 90px;
+							height: 90px;
+						}
+
+						.img-earn-3 {
+							width: 30px;
+						}
+					}
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					.contentt {
+						text-align: center;
+						font-size: 10px;
+						padding: 0 75px;
+					}
+
+					@keyframes jump {
+						0% {
+							transform: scale(1, 1) translateY(0);
+						}
+						10% {
+							transform: scale(1.1, 0.9) translateY(0);
+						}
+						30% {
+							transform: scale(0.9, 1.1) translateY(-50px);
+						}
+						50% {
+							transform: scale(1.05, 0.95) translateY(0);
+						}
+						57% {
+							transform: scale(1, 1) translateY(-7px);
+						}
+						64% {
+							transform: scale(1, 1) translateY(0);
+						}
+						100% {
+							transform: scale(1, 1) translateY(0);
+						}
+					}
+					.jump {
+						animation-timing-function: ease;
+						animation-name: jump;
+						animation-duration: 3s;
+						animation-iteration-count: infinite;
+						transform-origin: bottom;
+					}
+				}
+			}
+
 			.waper-content {
+				display: none;
 				margin-top: 20px;
 				width: 100%;
-				display: block;
 				.child {
 					flex: 1;
 					width: 100%;
-
 
 					.titlee {
 						margin: 10px 0;
@@ -1640,68 +1728,49 @@ a {
 
 			.content-mobile {
 				display: block;
-				margin-top: 10px;
-				position: relative;
 
-				.waper-data {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: space-between;
-					.child {
-						background-color: #2a282b;
-						width: 47%;
-						height: 250px;
-
-						.color {
-							background-color: #c7f88f;
-							height: 5px;
-							width: 100%;
-						}
-
-						.group1 {
-							display: flex;
-							align-items: center;
-							padding: 10px;
-							background-size: cover;
+				.child {
+					.group1 {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						.wraper-title {
+							background-image: url("../img/roadmap1.png");
+							background-size: 100% 100%;
 							background-repeat: no-repeat;
-							justify-content: space-between;
-							.titlee {
-								color: #c8b79c;
-								font-size: 20px;
-								font-weight: bold;
-							}
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							padding: 20px 50px;
+							position: relative;
 
-							.date {
-								color: #ce985e;
-								font-size: 15px;
-								font-weight: bold;
+							.titlee {
+								color: #eac27f;
+								font-size: 20px;
+								font-family: "BebasNeue";
 							}
 						}
 
-						ul {
-							text-align: left;
-							padding: 0 10px;
-							li {
-								list-style-type: circle;
-								list-style: inside;
-								color: #c1bcb1;
-								margin: 5px 0;
-								font-size: 10px;
-							}
+						img {
+							height: 100%;
+							margin-left: -20px;
+						}
+					}
+
+					ul {
+						width: 100%;
+						text-align: left;
+						margin-left: 10px;
+						margin-left: 120px;
+						li {
+							color: #fff6e7;
+							list-style-type: circle;
+							list-style: inside;
+							margin: 5px 0;
+							font-size: 12px;
 						}
 					}
 				}
-
-				.line {
-					position: absolute;
-					top: 0;
-					margin-left: -5px;
-					height: 100%;
-				}
-			}
-
-			.txt {
-				font-size: 15px;
 			}
 		}
 	}
