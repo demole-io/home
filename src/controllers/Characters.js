@@ -265,7 +265,7 @@ const Characters = props => {
                     </div>
                     
                     <div className="right">
-                        <span>Build your own character</span>
+                        <span>BUILD YOUR OWN MONSTER SQUAD</span>
                         <div>
                             <p className="name">{data[index].name}</p>
                             <p className="txtt">{data[index].des}</p>
