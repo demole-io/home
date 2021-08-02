@@ -141,7 +141,7 @@ a {
 			padding: 15px 35px;
 			align-items: center;
 			li {
-				color: #EAC27F;
+				color: #eac27f;
 				margin-right: 5px;
 			}
 		}
@@ -289,24 +289,28 @@ a {
 
 			p {
 				font-family: "OpenSansBold";
-				color: #FFF6E7;
+				color: #fff6e7;
 				font-size: 16px;
 			}
 		}
 
-		.group {
+		.wraper-hinhtron {
 			display: flex;
-			align-items: center;
 			justify-content: center;
-
-			p {
-				font-size: 16px;
-				padding-top: 20px;
+			margin-top: 100px;
+			width: 100%;
+			opacity: 0;
+			.hinhtron {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				border: 1px solid white;
+				margin: 5px;
+				cursor: pointer;
 			}
 
-			.txt2,
-			.txt3 {
-				display: none;
+			.selectedd {
+				background-color: #fff6e7;
 			}
 		}
 	}
@@ -356,19 +360,15 @@ a {
 			text-align: left;
 			width: 50%;
 			padding-left: 60px;
-			// margin-left: 50px;
 			p {
-				font-size: 44px;
+				font-size: 39px;
 				color: #c1bcb1;
 				font-family: "OpenSansBold";
+				text-transform: uppercase;
 			}
 
 			span {
 				font-size: 16px;
-			}
-
-			img {
-				display: block;
 			}
 		}
 	}
@@ -383,11 +383,19 @@ a {
 		padding-bottom: 150px;
 		text-align: center;
 
+		.wraper-name-mobile {
+			display: none;
+		}
+
 		.wraper-info {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			height: 50vh;
+
+			.wraper-hinhtron {
+				display: none;
+			}
 
 			.left {
 				width: 50%;
@@ -490,8 +498,6 @@ a {
 }
 
 #features {
-	// min-height: 100vh;
-
 	.container {
 		padding-top: 50px;
 		height: 100%;
@@ -514,7 +520,7 @@ a {
 
 					.wraper-info {
 						position: absolute;
-						bottom: 25px;
+						bottom: 15px;
 						text-align: center;
 						align-items: center;
 						width: 100%;
@@ -564,10 +570,14 @@ a {
 		padding-top: 100px;
 		padding-bottom: 100px;
 		text-align: center;
+
+		.wraper-hinhtron {
+			display: none;
+		}
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 44px;
+			font-size: 60px;
 			font-family: "OpenSansExtraBold";
 		}
 		.waper-content {
@@ -663,7 +673,7 @@ a {
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 44px;
+			font-size: 60px;
 			font-family: "OpenSansExtraBold";
 			margin-bottom: 300px;
 		}
@@ -1349,169 +1359,155 @@ a {
 	}
 
 	#home {
-		padding-top: 70px;
-		min-height: fit-content;
-		margin-bottom: 50px;
 		.container {
 			padding: 10px;
-			margin-top: 50px;
-			.title {
-				display: none;
-			}
-
 			.content {
 				font-size: 16px;
 				margin: 50px 0;
-			}
 
-			.group {
-				display: block;
-				position: relative;
-				padding-top: 400px;
-				margin-top: -100px;
-				margin-bottom: 300px;
 				p {
-					width: 100%;
 					font-size: 10px;
-					padding: 0 20px;
-				}
-
-				.sketchfab-embed-wrapper {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
 				}
 			}
+
+			.txtt {
+				font-size: 10px;
+			}
+		}
+	}
+
+	#monster {
+		.container {
+			padding: 20px;
+		}
+	}
+
+	#phone-screen {
+		.container {
+			padding: 10px;
+			display: block;
 
 			.waper-phone {
-				height: 200px;
 				width: 100%;
 				.wrapper {
-					top: 15px;
-					left: 22px;
-					// width: 91%;
-					height: 155px;
+					top: 10px;
+					left: 25px;
+					width: 90%;
+				}
+			}
+
+			.waper-text {
+				width: 100%;
+				padding-left: 0;
+				text-align: center;
+
+				p {
+					font-size: 24px;
 				}
 
-				.phone {
-					width: 100%;
-					height: 200px;
+				span {
+					font-size: 12px;
 				}
 			}
 		}
 	}
 
 	#characters {
-		min-height: fit-content;
+		// min-height: fit-content;
 		.container {
 			padding: 10px;
-			.waper-title {
-				.title {
-					font-size: 24px;
+
+			.wraper-name-mobile {
+				display: block;
+				position: relative;
+				height: 100px;
+
+				.hmm {
+					width: 100%;
 				}
 
-				.big-title {
-					font-size: 42px;
-					left: 35px;
-					top: -12px;
+				div {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					img {
+						width: 70px;
+						height: 70px;
+						margin: 0 10px;
+					}
 				}
 			}
 
-			.content {
-				margin-top: 50px;
-				height: 350px;
+			.wraper-info {
 				display: block;
-				.arrow {
-					width: 25px;
+				height: 100%;
+
+				.left {
+					width: 100%;
+					margin-top: 50px;
+					.arrow {
+						display: none;
+					}
+
+					.char {
+						width: 90%;
+						height: 400px;
+						.tienca {
+							margin-top: 0px;
+						}
+
+						.tiennu {
+							margin-left: -10px;
+						}
+					}
 				}
 
-				.waper-name {
+				.right {
 					width: 100%;
-					margin-left: 0;
-					.hmm {
+					span {
 						display: none;
 					}
 
 					div {
-						display: flex;
-						justify-content: center;
-						position: sticky;
-						img {
-							width: 50px;
-							height: 50px;
-							margin: 15px !important;
-						}
-
-						.selected {
-							filter: none;
-						}
-					}
-				}
-
-				.char {
-					width: 100%;
-					margin-top: 20px;
-					.rong {
-						margin-left: 60px;
-						width: 90%;
-					}
-
-					.orc {
-						width: 70%;
-					}
-
-					.tiennu {
-						margin-top: -100px;
-						width: 120%;
-						margin-left: -20px;
-					}
-
-					.tienca {
-						margin-top: -20px;
-						width: 90%;
-						margin-left: 10px;
-					}
-
-					.tiennu-iso {
-						margin-top: 10px;
 						width: 100%;
-						margin-left: 0px;
+						padding-top: 50px;
+						.name {
+							font-size: 20px;
+							margin-bottom: 70px;
+						}
+
+						.txtt {
+							font-size: 10px;
+							padding: 0 20px;
+						}
+					}
+				}
+
+				.wraper-hinhtron {
+					display: flex;
+					justify-content: center;
+					.hinhtron {
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						border: 1px solid #ce985e;
+						margin: 5px;
+						cursor: pointer;
+					}
+
+					.selectedd {
+						background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
 					}
 				}
 			}
 
-			.des {
+			.wraper-name {
 				display: none;
-			}
-
-			.group2-mobie {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-
-				background-image: url("../img/Group8094.png");
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-				padding: 20px;
-				height: 130px;
-
-				div {
-					text-align: left;
-					.name {
-						font-size: 20px;
-						margin-bottom: 10px;
-						color: #fff6e7;
-					}
-
-					.txtt {
-						font-size: 10px;
-					}
-				}
-
-				img {
-					width: 30%;
-				}
 			}
 		}
 	}
@@ -1523,59 +1519,35 @@ a {
 		margin-top: 50px;
 		.container {
 			padding: 10px;
-			.waper-title {
-				margin-bottom: 50px;
-				.title {
-					font-size: 24px;
-				}
-
-				.big-title {
-					font-size: 42px;
-					left: 0px;
-					top: -12px;
-				}
-			}
 
 			.wraper-cover {
+				.titlee {
+					font-size: 24px;
+					color: #c1bcb1;
+					font-family: "OpenSansBold";
+					text-transform: uppercase;
+				}
+
 				.slider-card {
 					margin: 20px 0;
 
-					.txt {
-						top: 50px;
-						left: 10px;
-						width: 200px;
-						p {
-							font-size: 20px;
-							margin-bottom: 5px;
-							line-height: 20px;
-						}
+					.wraper-khung {
+						bottom: 0;
+						top: auto;
 
-						span {
-							font-size: 12px;
-							display: inline-block;
-							line-height: 15px;
-						}
-					}
-				}
-			}
+						.wraper-info {
+							bottom: 8px;
+							p,
+							div {
+								display: none;
+							}
 
-			.wraper-content {
-				.wraper-child {
-					margin-bottom: 30px;
-					img {
-						width: 50%;
-					}
-					div {
-						width: 45%;
-						span {
-							font-size: 10px;
-							display: inline-block;
-							line-height: 15px;
-						}
-
-						p {
-							font-size: 16px;
-							line-height: 20px;
+							span {
+								font-size: 8px;
+								line-height: 10px;
+								display: block;
+								padding: 0 70px;
+							}
 						}
 					}
 				}
@@ -1588,45 +1560,53 @@ a {
 		padding-top: 50px;
 		.container {
 			padding: 10px;
-			.waper-title {
-				margin-bottom: 50px;
-				.title {
-					font-size: 24px;
+			.title {
+				font-size: 40px;
+			}
+
+			.wraper-hinhtron {
+				display: flex;
+				justify-content: center;
+				.hinhtron {
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					border: 1px solid #ce985e;
+					margin: 5px;
+					cursor: pointer;
 				}
 
-				.big-title {
-					font-size: 42px;
-					left: 20px;
-					top: -12px;
+				.selectedd {
+					background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
 				}
 			}
 
-			.txt {
-				font-size: 12px;
-				line-height: 12px;
-			}
 			.waper-content {
-				flex-wrap: wrap;
 				margin-top: 20px;
-
+				width: 100%;
+				display: block;
 				.child {
-					margin: 5px 20px;
+					flex: 1;
+					width: 100%;
 
-					img {
-						width: 60px;
-						height: 70px;
+
+					.titlee {
+						margin: 10px 0;
+						font-size: 12px;
+						line-height: 19px;
+					}
+
+					div {
+						img {
+							width: 50px;
+							height: 60px;
+						}
 					}
 
 					.contentt {
 						font-size: 10px;
 						line-height: 14px;
 						margin-top: 0px;
-					}
-
-					.titlee {
-						margin: 10px 0;
-						font-size: 12px;
-						line-height: 19px;
 					}
 				}
 			}

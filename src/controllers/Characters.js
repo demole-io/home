@@ -125,9 +125,26 @@ const Characters = props => {
         setindex(selected.current)
     }
 
+    const onClickHinhTron = (key) => {
+        stopNext()
+
+        selected.current = key;
+        setindex(selected.current)
+    }
+
     return (
         <div id="characters">
             <div className="container">
+                <div className="wraper-name-mobile">
+                    <div>
+                        <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginTop: '55px' }} src={data[0].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[1].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[2].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginTop: '55px' }} src={data[3].icon} alt="photos"></img>
+                    </div>
+
+                    <img className="hmm" src={Unknow1} alt="photos"></img>
+                </div>
                 <div className="wraper-info">
                     <div className="left">
                         <img className="arrow" src={ArrowLeft} onClick={() => onClickLeft()} alt="photos"></img>
@@ -147,6 +164,15 @@ const Characters = props => {
                         <img className="arrow" src={ArrowRight} onClick={() => onClickRight()} alt="photos"></img>
                     </div>
 
+                    <div className="wraper-hinhtron">
+                        {data.map((value, key) => {
+                            return (
+                                <div key={key} className={`hinhtron ${index === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    
                     <div className="right">
                         <span>Build your own character</span>
                         <div>
@@ -154,6 +180,8 @@ const Characters = props => {
                             <p className="txtt">{data[index].des}</p>
                         </div>
                     </div>
+
+                   
                 </div>
 
                 <div className="wraper-name">

@@ -46,6 +46,8 @@ export default function Earn() {
         },
     ])
 
+    const [indexx, setindexx] = useState(0)
+
     useEffect(() => {
         var interver = setInterval(() => {
             for (let i = 0; i < data.length; i++) {
@@ -66,6 +68,11 @@ export default function Earn() {
         }
     }, [data]);
 
+    const onClickHinhTron = (key) => {
+        setindexx(key)
+
+    }
+
     const renderChild = (value, index) => {
         return (
             <div className="child" key={index} style={{ backgroundImage: `url(${value.khung})` }}>
@@ -85,6 +92,15 @@ export default function Earn() {
                 <div className="waper-content">
                     {data.map((value, index) => {
                         return renderChild(value, index)
+                    })}
+                </div>
+
+                <div className="wraper-hinhtron">
+                    {data.map((value, key) => {
+                        return (
+                            <div key={key} className={`hinhtron ${indexx === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
+                            </div>
+                        )
                     })}
                 </div>
             </div>

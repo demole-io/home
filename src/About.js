@@ -27,7 +27,7 @@ class App extends React.Component {
                 <Monster></Monster>
                 <PhoneScreen></PhoneScreen>
                 <Characters></Characters>
-                <Features></Features>
+                <Features isMobile={isMobile}></Features>
                 <Earn></Earn>
                 <Roadmap></Roadmap>
                 <Backed></Backed>

@@ -21,7 +21,9 @@ export default function PhoneScreen() {
 
                 <div className="waper-text">
                     <p>Defi Monster Legends</p>
-                    <img src={Vector} alt="photos"></img>
+                    <div>
+                        <img src={Vector} alt="photos"></img>
+                    </div>
                     <span>Build your own army of monsters and embark on a journey to liberate the holy land.</span>
                 </div>
             </div>

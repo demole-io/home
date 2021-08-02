@@ -4,28 +4,11 @@ import img2 from '../assets/img/f2.jpg'
 import img3 from '../assets/img/f3.jpg'
 import img4 from '../assets/img/f4.jpg'
 import khung from '../assets/img/khung.png'
+import khungMobile from '../assets/img/khungmobile.png'
 import Vector from '../assets/img/Group 8120.png'
 import $ from 'jquery'
 
-export default function Features() {
-    // const [data] = useState([
-    //     {
-    //         img: img1,
-    //     },
-    //     {
-    //         img: img8,
-    //     },
-    //     {
-    //         img: img7,
-    //     },
-    //     {
-    //         img: img9,
-    //     },
-    //     {
-    //         img: img10,
-    //     }
-    // ])
-
+const Features = props => {
     const [dataa] = useState([
         {
             img: img1,
@@ -38,7 +21,7 @@ export default function Features() {
             img: img2,
             content: {
                 title: 'Play it your way',
-                des: 'Immerse yourself in an engaging world of monsters with endless content and quests to explore.\n\n OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.'
+                des: `Immerse yourself in an engaging world of monsters with endless content and quests to explore. OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.`
             }
         },
         {
@@ -99,17 +82,19 @@ export default function Features() {
     const renderData = () => {
         return (
             <div className="wraper-cover">
+                 <p className="titlee">{dataa[index].content.title}</p>
                 <div className="slider-card">
                     <img className="imgg" src={dataa[index].img} alt="photos"></img>
 
                     <div className="wraper-khung">
-                        <img className="khung" src={khung} alt="photos"></img>
+                        <img className="khung" src={props.isMobile ? khungMobile : khung} alt="photos"></img>
                         <div className="wraper-info">
                             <p>{dataa[index].content.title}</p>
                             <div>
                                 <img src={Vector} alt="photos"></img>
                             </div>
-                            <span>{dataa[index].content.des}</span>
+                           {index === 1 && <span>Immerse yourself in an engaging world of monsters with endless content and quests to explore.<br></br> OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</span>}
+                           {index !== 1 && <span>{dataa[index].content.des}</span>}
                         </div>
                     </div>
                 </div>
@@ -136,3 +121,5 @@ export default function Features() {
 
     )
 }
+
+export default Features
