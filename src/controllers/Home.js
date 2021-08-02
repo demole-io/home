@@ -36,19 +36,74 @@ const Wrapper = styled.div`
 
 
 const Home = props => {
-    const text1 = `Our early world was in chaos.
-    Many monster tribes lived on the same continents and oceans.
-    They were born from the seeds of both gods and demons, some of them coming from the universe.
-    The tribes often war to expand their territory and show their strength and ambition to dominate the world.
-    However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.
-    Build your own army of monsters and embark on a journey to liberate the holy land.`
+    const textArr = [
+        "Our early world was in chaos",
+        "Many monster tribes lived on the same continents and oceans",
+        "They were born from the seeds of both gods and demons",
+        "Some of them coming from the universe",
+        "The tribes often war to expand their territory",
+        "And show their strength and ambition to dominate the world",
+        "However, tribes now have to join together",
+        "To increase their strength",
+        "To fight common enemies - beasts born from the death machines",
+        "Build your own army of monsters and embark on a journey to liberate the holy land"
+    ]
+
+    let textArrAnimation = textArr
     const [content, setcontent] = useState("")
     const [animation, setanimation] = useState(false)
-    const [indexx, setindexx] = useState(0)
+    const currentIndex = useRef(0)
+    const timeoutArr = useRef([])
+    const typingDelay = []
 
     const typingTimePerCharacter = 0.07
 
-    var textArr = text1.split(".")
+    function calcDelay() {
+        let sum = 0
+
+        textArrAnimation.map((value, key) => {
+            typingDelay[key] = sum
+            sum += value.length * typingTimePerCharacter + 3
+        })
+    }
+
+    function setTypingText(index, text, callback) {
+        setanimation(false)
+        timeoutArr.current[index] = setTimeout(() => {
+            if (index === 0) {
+                setanimation(true)
+                setcontent(text)
+                callback()
+            } else {
+                setanimation(false)
+                setTimeout(() => {
+                    setanimation(true)
+                    setcontent(text)
+                    callback()
+                }, 3000)
+            }
+        },index === 0 ? 0 : (typingDelay[index] + 3) * 1000)
+    }
+
+    function clearAllTimeout () {
+        timeoutArr.current.map(value => {
+            clearTimeout(value)
+        })
+    }
+
+    function runAnimation (startIndex) {
+        textArrAnimation = textArr
+        textArrAnimation.splice(0, startIndex)
+        currentIndex.current = startIndex
+
+        calcDelay()
+        clearAllTimeout()
+        textArrAnimation.map((value, key) => {
+            setTypingText(key, value, () => {
+                currentIndex.current++
+            })
+        })
+    }
 
     useEffect(() => {
 
@@ -76,53 +131,9 @@ const Home = props => {
             })
         }, 6000);
 
-     
-
-        textArr = text1.split(".")
-        if (props.isMobile) {
-            textArr = [
-                "Our early world was in chaos",
-                "Many monster tribes lived on the same continents and oceans",
-                "They were born from the seeds of both gods and demons,",
-                "some of them coming from the universe",
-                "The tribes often war to expand their territory",
-                "and show their strength and ambition to dominate the world",
-                "However, tribes now have to join together",
-                "to increase their strength",
-                "to fight common enemies - beasts born from the death machines",
-                "Build your own army of monsters and embark on a journey to liberate the holy land"
-            ]
-        }
-
-        const typingDelay = []
-        let sum = 0
-
-        textArr.map((value, key) => {
-            typingDelay[key] = sum
-            sum += value.length * typingTimePerCharacter + 3
-        })
-
-        setTimeout(() => {
-            textArr.map((value, key) => {
-                setTimeout(() => {
-                    setindexx(key)
-                    if (key === 0) {
-                        setanimation(true)
-                        setindexx(key)
-                        setcontent(value)
-                    } else {
-                        setanimation(false)
-
-                        setTimeout(() => {
-                            setanimation(true)
-                            setindexx(key)
-                            setcontent(value)
-                        }, 3000)
-                    }
-                }, (typingDelay[key] + 3) * 1000)
-            })
-        }, 3000)
-
+        setTimeout( () => {
+            runAnimation(0)
+        }, 6000)
 
         if (props.isMobile) {
             setTimeout(() => {
@@ -163,8 +174,8 @@ const Home = props => {
 
     }, []);
 
-    const onClickHinhTron = () => {
-
+    const onClickHinhTron = (index) => {
+        runAnimation(index)
     }
 
     return (
@@ -177,7 +188,7 @@ const Home = props => {
                     <div className="wraper-hinhtron">
                         {textArr.map((value, key) => {
                             return (
-                                <div key={key} className={`hinhtron ${indexx === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
+                                <div key={key} className={`hinhtron ${currentIndex.current === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
                                 </div>
                             )
                         })}
