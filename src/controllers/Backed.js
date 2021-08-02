@@ -32,10 +32,7 @@ export default function Backed() {
     return (
         <div id="backed">
             <div className="container">
-                <div className="waper-title">
-                    <p className="title">BACKED BY</p>
-                    <p className="big-title">BACKED BY</p>
-                </div>
+            <p className="title">BACKED BY</p>
                 <div className="content">
                     {/* {data.map((value, index) => {
                         return <img src={value.img} alt="photos"></img>

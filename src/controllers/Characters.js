@@ -7,19 +7,33 @@ import MEMALD from '../assets/img/ezgif.com-gif-maker (8).webm'
 
 import iconOrc from '../assets/img/nguoi_cay.png'
 import iconMEMALD from '../assets/img/nguoi_ca.png'
-import iconKnight from '../assets/img/rong.png'
-import iconWARRIOR from '../assets/img/Group 8112.png'
+import iconKnight from '../assets/img/rong1.png'
+import iconWARRIOR from '../assets/img/thien_than.png'
 
 import OrcPoster from '../assets/img/Orc2.png'
 import TiencaPoster from '../assets/img/nguoica.png'
 import RongPoster from '../assets/img/rong 2.png'
 import TiennuPoster from '../assets/img/Tiennu.png'
 
-
-
 import ArrowLeft from '../assets/img/muiten 2.png'
 import ArrowRight from '../assets/img/muiten 1.png'
 
+
+import Char1 from '../assets/img/Người Cây.png'
+import Char2 from '../assets/img/Người chim.png'
+import Char3 from '../assets/img/Người sói.png'
+import Char4 from '../assets/img/Sương Tím.png'
+import Char5 from '../assets/img/Undead.png'
+import Char6 from '../assets/img/Nanh Orc.png'
+import Char7 from '../assets/img/4.png'
+import Char8 from '../assets/img/8.png'
+import Char9 from '../assets/img/Khỉ Sắt.png'
+import Char10 from '../assets/img/Chim Bạc.png'
+import Char11 from '../assets/img/Đế Vương.png'
+import Char12 from '../assets/img/Giáp Bạc.png'
+import Char13 from '../assets/img/Alien.png'
+import Char14 from '../assets/img/Khô lâu.png'
+import Char15 from '../assets/img/Linh Hồn.png'
 import $ from 'jquery'
 
 const Characters = props => {
@@ -52,6 +66,80 @@ const Characters = props => {
             img: WARRIOR,
             des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
         }
+    ])
+
+    const [dataa] = useState([
+        {
+            name: 'Treeman Tribe',
+            icon: iconOrc,
+            img: ORC,
+            des: 'The murky old forests at the foot of the high cliffs in the northern part of the continent are inhabited by the Tree Tribe. Their territory is almost impregnable because of the murky darkness that is very scary. The inhabitants of the tribe were born from the trunks of thousands of years old trees, so their bodies were firm and soft, hazardous in team battles.'
+        },
+        {
+            name: 'Merman Tribe',
+            icon: iconMEMALD,
+            img: MEMALD,
+            des: 'Conquering the entire ocean, the Mermen have long harbored ambitions to dominate the continent. Mastering the vast sea, the Mermaids are especially strong in underwater battles. They regularly sent troops by the rivers to raid Middle-earth and infiltrate the mazes to loot resources.'
+        },
+        {
+            name: 'Dragon Tribe',
+            icon: iconKnight,
+            img: Knight,
+            des: 'Living in the caves on the high cliffs of the northern continent, the Dragon tribe is a mighty tribe with wings spread in the sky, a muscular body, and sharp claws. Dragons also have hard scales like armor to protect the body. With the advantage of flying high, the dragon tribe proved to be dominant in single hunting.'
+        },
+        {
+            name: 'Angel Tribe',
+            icon: iconWARRIOR,
+            img: WARRIOR,
+            des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
+        },
+        {
+            icon: Char1
+        },
+        {
+            icon: Char2
+        },
+
+        {
+            icon: Char3
+        },
+        {
+            icon: Char4
+        },
+        {
+            icon: Char5
+        },
+        {
+            icon: Char6
+        },
+        {
+            icon: Char7
+        },
+        {
+            icon: Char8
+        },
+        {
+            icon: Char9
+        },
+        {
+            icon: Char10
+        },
+        {
+            icon: Char11
+        },
+        {
+            icon: Char12
+        },
+        {
+            icon: Char13
+        },
+        {
+            icon: Char14
+        },
+        // {
+        //     icon: Char15
+        // },
+
     ])
 
     const selected = useRef(0)
@@ -104,6 +192,9 @@ const Characters = props => {
     }
 
     const onClickName = (index) => {
+        if (index > 3) {
+            return;
+        }
         stopNext()
 
         selected.current = index;
@@ -125,9 +216,26 @@ const Characters = props => {
         setindex(selected.current)
     }
 
+    const onClickHinhTron = (key) => {
+        stopNext()
+
+        selected.current = key;
+        setindex(selected.current)
+    }
+
     return (
         <div id="characters">
             <div className="container">
+                <div className="wraper-name-mobile">
+                    <div>
+                        <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginTop: '55px' }} src={data[0].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[1].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[2].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginTop: '55px' }} src={data[3].icon} alt="photos"></img>
+                    </div>
+
+                    <img className="hmm" src={Unknow1} alt="photos"></img>
+                </div>
                 <div className="wraper-info">
                     <div className="left">
                         <img className="arrow" src={ArrowLeft} onClick={() => onClickLeft()} alt="photos"></img>
@@ -147,6 +255,15 @@ const Characters = props => {
                         <img className="arrow" src={ArrowRight} onClick={() => onClickRight()} alt="photos"></img>
                     </div>
 
+                    <div className="wraper-hinhtron">
+                        {data.map((value, key) => {
+                            return (
+                                <div key={key} className={`hinhtron ${index === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    
                     <div className="right">
                         <span>Build your own character</span>
                         <div>
@@ -154,12 +271,14 @@ const Characters = props => {
                             <p className="txtt">{data[index].des}</p>
                         </div>
                     </div>
+
+                   
                 </div>
 
                 <div className="wraper-name">
-                    {data.map((value, indexx) => {
+                    {dataa.map((value, indexx) => {
                         return (
-                            <div className={`${index === indexx ? 'selected' : ''}`}>
+                            <div className={`${index === indexx ? 'selected' : ''} ${value.name ? 'avai' : 'invai'}`}>
                                 <img onClick={() => onClickName(indexx)} src={value.icon} alt="photos"></img>
                             </div>
                         )

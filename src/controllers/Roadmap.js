@@ -13,6 +13,7 @@ import khungTitle from '../assets/img/roadmap1.png'
 import ArrowUp from '../assets/img/roadmap3.png'
 import ArrowDown from '../assets/img/roadmap2.png'
 import hmm from '../assets/img/roadmap4.png'
+import ArowerRight from '../assets/img/roadmap5.png'
 
 export default function Roadmap() {
     const [data] = useState([
@@ -116,16 +117,20 @@ export default function Roadmap() {
 
     const renderDataMobile = (value, index) => {
         return (
-            <div className="child" style={{ marginTop: `${index % 2 !== 0 ? 40 : 10}px` }} key={index}>
-                <div className="color"></div>
-                <div className="group1" style={{ backgroundImage: `url(${value.imgMobile})` }}>
-                    <p className="titlee">{value.title}</p>
+            <div className="child" key={index}>
+                <div className="group1">
+                    <div className="wraper-title">
+                        <p className="titlee">{value.title}</p>
+                    </div>
+                    <img src={ArowerRight} alt="photos"></img>
                 </div>
+
                 <ul>
                     {value.content.map((valuee, indexx) => {
                         return <li key={indexx}>{valuee}</li>
                     })}
                 </ul>
+
 
             </div>
         )
@@ -150,7 +155,6 @@ export default function Roadmap() {
                             return renderDataMobile(value, index)
                         })}
                     </div>
-                    <img className="line" src={LineMobile} alt="photos"></img>
                 </div>
             </div>
 
