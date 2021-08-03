@@ -57,7 +57,6 @@ a {
 	background-color: transparent;
 	padding-top: 20px;
 
-	opacity: 0;
 	.icon-mobile {
 		display: none;
 	}
@@ -306,7 +305,6 @@ a {
 		padding-top: 50px;
 		text-align: center;
 		justify-content: center;
-;
 		.title {
 			opacity: 0;
 			transform: translateY(50px);
@@ -393,13 +391,17 @@ a {
 			margin: auto;
 			width: 60%;
 
-			.wrapper {
+			div {
 				position: absolute;
-				top: 15px;
-				left: 35px;
+				top: 13px;
+				left: 15px;
 				border-radius: 20px;
-				width: 92%;
-				height: 270px;
+				overflow: hidden;
+				width: 96%;
+				height: 285px;
+				.wrapper {
+					width: 100%;
+				}
 			}
 
 			.phone {
@@ -1539,15 +1541,13 @@ a {
 
 			.waper-phone {
 				width: 100%;
-				align-items: center;
-				justify-content: center;
-				display: flex;
-				.wrapper {
-					top: 10px;
-					left: 25px;
-					width: 90%;
-					height: 82%;
+				div {
+					top: 8px;
+					left: 9px;
+					width: 96%;
+					height: 87%;
 				}
+	
 			}
 
 			.waper-text {

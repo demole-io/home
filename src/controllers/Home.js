@@ -45,6 +45,10 @@ const Home = props => {
 
     useEffect(() => {
 
+        $('.header').css({
+            opacity: '0',
+        })
+
         window.addEventListener('scroll', handleScroll);
 
         $('#home .container .title').css({

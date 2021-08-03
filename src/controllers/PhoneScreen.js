@@ -1,7 +1,7 @@
 import React from 'react'
 import Phonee from '../assets/img/phone1.png'
 import Vector from '../assets/img/Group 8120.png'
-
+import Vid from '../assets/img/BG16-9_1.mp4'
 export default function PhoneScreen() {
 
     // const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
@@ -12,15 +12,9 @@ export default function PhoneScreen() {
         <div id="phone-screen">
             <div className="container">
                 <div className="waper-phone">
-                    {/* {!isIOS && <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm" muted={true}></video>}
-                    {isIOS && <img src={Poster} alt="photos" className="wrapper"></img>} */}
-                    <iframe src='https://www.youtube.com/embed/IHxXy2s6GGM?&autoplay=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=IHxXy2s6GGM&mute=1'
-                        frameBorder='0'
-                        allow='autoplay; encrypted-media'
-                        allowFullScreen
-                        title='video'
-                        className="wrapper"
-                    />
+                    <div>
+                        <video className="wrapper" autoPlay={true} loop={true} src={Vid} type="video/mp4" muted={true}></video>
+                    </div>
                     <img src={Phonee} alt="photos" className="phone"></img>
                 </div>
 
