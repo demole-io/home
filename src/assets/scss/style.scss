@@ -397,6 +397,7 @@ a {
 				height: 285px;
 				.wrapper {
 					width: 100%;
+					margin-top: -50px;
 				}
 			}
 
@@ -1542,6 +1543,10 @@ a {
 					left: 9px;
 					width: 96%;
 					height: 87%;
+
+					.wrapper {
+						margin-top: -30px;
+					}
 				}
 	
 			}
