@@ -56,6 +56,8 @@ a {
 	align-items: center;
 	background-color: transparent;
 	padding-top: 20px;
+
+	opacity: 0;
 	.icon-mobile {
 		display: none;
 	}
@@ -264,6 +266,37 @@ a {
 	}
 }
 
+@keyframes jump {
+	0% {
+		transform: scale(1, 1) translateY(0);
+	}
+	10% {
+		transform: scale(1.1, 0.9) translateY(0);
+	}
+	30% {
+		transform: scale(0.9, 1.1) translateY(-50px);
+	}
+	50% {
+		transform: scale(1.05, 0.95) translateY(0);
+	}
+	57% {
+		transform: scale(1, 1) translateY(-7px);
+	}
+	64% {
+		transform: scale(1, 1) translateY(0);
+	}
+	100% {
+		transform: scale(1, 1) translateY(0);
+	}
+}
+.jump {
+	animation-timing-function: ease;
+	animation-name: jump;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom;
+}
+
 /*#endregion */
 #home {
 	min-height: calc(100vh - 120px);
@@ -273,9 +306,8 @@ a {
 		padding-top: 50px;
 		text-align: center;
 		justify-content: center;
-
+;
 		.title {
-			width: 60%;
 			opacity: 0;
 			transform: translateY(50px);
 			transition: all 2s ease;
@@ -285,6 +317,10 @@ a {
 			font-size: 20px;
 			line-height: 22px;
 			opacity: 0;
+			display: none;
+			height: 200px;
+			align-items: flex-end;
+			justify-content: center;
 
 			transform: translateY(50px);
 			transition: all 2s ease;
@@ -322,7 +358,7 @@ a {
 
 			p {
 				font-size: 10px;
-				color: #FFF6E7;
+				color: #fff6e7;
 			}
 		}
 	}
@@ -682,37 +718,6 @@ a {
 					align-items: center;
 					display: flex;
 				}
-
-				@keyframes jump {
-					0% {
-						transform: scale(1, 1) translateY(0);
-					}
-					10% {
-						transform: scale(1.1, 0.9) translateY(0);
-					}
-					30% {
-						transform: scale(0.9, 1.1) translateY(-50px);
-					}
-					50% {
-						transform: scale(1.05, 0.95) translateY(0);
-					}
-					57% {
-						transform: scale(1, 1) translateY(-7px);
-					}
-					64% {
-						transform: scale(1, 1) translateY(0);
-					}
-					100% {
-						transform: scale(1, 1) translateY(0);
-					}
-				}
-				.jump {
-					animation-timing-function: ease;
-					animation-name: jump;
-					animation-duration: 3s;
-					animation-iteration-count: infinite;
-					transform-origin: bottom;
-				}
 			}
 		}
 	}
@@ -947,8 +952,11 @@ a {
 		}
 
 		.srollUp {
+			opacity: 0;
 			cursor: pointer;
-			margin-left: 50px;
+			position: fixed;
+			bottom: 50px;
+			right: 50px;
 		}
 	}
 
@@ -1970,10 +1978,13 @@ a {
 			display: block;
 			padding: 10px;
 			text-align: center;
-		
+
 			.srollUp {
-				width: 100%;
-				text-align: right;
+				opacity: 0;
+				cursor: pointer;
+				position: fixed;
+				bottom: 50px;
+				right: 10px;
 			}
 			.title {
 				p {

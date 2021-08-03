@@ -26,7 +26,26 @@ const Home = props => {
     const timeoutArr = useRef([])
     const [indexx, setindexx] = useState(0)
 
+    const handleScroll = () => {
+        const pageHome = document.querySelector("#home")
+
+        if (pageHome.getBoundingClientRect().top > 0) {
+            $('.srollUp').css({
+                opacity: '0',
+            })
+        }
+        //BOTTOM
+        if (pageHome.getBoundingClientRect().bottom <= 0) {
+            $('.srollUp').css({
+                opacity: '1',
+            })
+        }
+    }
+
+
     useEffect(() => {
+
+        window.addEventListener('scroll', handleScroll);
 
         $('#home .container .title').css({
             opacity: '1',
@@ -40,11 +59,22 @@ const Home = props => {
             })
 
             setTimeout(() => {
+                $('.header').css({
+                    opacity: '1',
+                    transition: 'opacity 1s'
+                })
+
                 $('#home .container .title').css({
                     display: 'none',
                 })
+
+                // $(`#home .container .txt`).css({
+                //     display: 'block',
+                // })
             }, 2000)
         }, 4000);
+
+
 
         runText(0, 6000)
         setTimeout(() => {
@@ -55,6 +85,7 @@ const Home = props => {
 
         return () => {
             clearTimeoutt()
+            window.removeEventListener('scroll', handleScroll);
         }
     }, []);
 
@@ -62,19 +93,33 @@ const Home = props => {
         for (let i = j; i < 5; i++) {
             timeoutArr.current[i] = setTimeout(() => {
                 setindexx(i)
+
                 $(`#home .container .txt${i}`).css({
-                    opacity: '1',
-                    transform: "translateY(0px)"
+                    display: 'flex',
                 })
 
-                if (i < 4) {
-                    setTimeout(() => {
-                        $(`#home .container .txt${i}`).css({
-                            opacity: '0',
-                            transform: "translateY(-50px)"
-                        })
-                    }, 6000);
-                }
+                setTimeout(() => {
+                    $(`#home .container .txt${i}`).css({
+                        opacity: '1',
+                        transform: "translateY(0px)"
+                    })
+
+                    if (i < 4) {
+                        setTimeout(() => {
+                            $(`#home .container .txt${i}`).css({
+                                opacity: '0',
+                                transform: "translateY(-50px)"
+                            })
+
+                            setTimeout(() => {
+                                $(`#home .container .txt${i}`).css({
+                                    display: 'none',
+                                })
+                            }, 1000);
+                        }, 6000);
+                    }
+                }, 1000);
+
             }, time);
             time = time + 7000;
         }
@@ -88,6 +133,10 @@ const Home = props => {
 
     const clearText = () => {
         clearTimeoutt()
+
+        $(`#home .container .txt`).css({
+            display: 'none',
+        })
 
         $(`#home .container .txt`).css({
             opacity: '0',
@@ -127,7 +176,7 @@ const Home = props => {
                 </Wrapper>
 
                 <div className="waper-scroll-down">
-                    <img src={ScrollDown} alt="photos" onClick={() => onClickScroll()}></img>
+                    <img className="jump" src={ScrollDown} alt="photos" onClick={() => onClickScroll()}></img>
                     <p>Explore incredible world</p>
                 </div>
             </div>
