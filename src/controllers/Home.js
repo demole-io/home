@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Logo from '../assets/img/logo02 1.png'
 import $ from 'jquery'
 import styled from 'styled-components'
@@ -24,7 +24,7 @@ const Home = props => {
 
 
     const timeoutArr = useRef([])
-    const [indexx, setindexx] = useState(0)
+    // const [indexx, setindexx] = useState(0)
 
     const handleScroll = () => {
         const pageHome = document.querySelector("#home")
@@ -83,14 +83,13 @@ const Home = props => {
             }, 2000)
         }, 4000);
 
-
-
         runText(0, 6000)
-        setTimeout(() => {
-            $('#home .container .wraper-hinhtron').css({
-                opacity: '1',
-            })
-        }, 6000);
+
+        // setTimeout(() => {
+        //     $('#home .container .wraper-hinhtron').css({
+        //         opacity: '1',
+        //     })
+        // }, 6000);
 
         return () => {
             clearTimeoutt()
@@ -101,7 +100,7 @@ const Home = props => {
     const runText = (j, time) => {
         for (let i = j; i < 5; i++) {
             timeoutArr.current[i] = setTimeout(() => {
-                setindexx(i)
+                // setindexx(i)
 
                 $(`#home .container .txt${i}`).css({
                     display: 'flex',
@@ -124,13 +123,13 @@ const Home = props => {
                                 $(`#home .container .txt${i}`).css({
                                     display: 'none',
                                 })
-                            }, 1000);
+                            }, 2000);
                         }, 6000);
                     }
-                }, 1000);
+                }, 100);
 
             }, time);
-            time = time + 7000;
+            time = time + 8000;
         }
     }
 
@@ -140,25 +139,25 @@ const Home = props => {
         ))
     }
 
-    const clearText = () => {
-        clearTimeoutt()
+    // const clearText = () => {
+    //     clearTimeoutt()
 
-        $(`#home .container .txt`).css({
-            display: 'none',
-        })
+    //     $(`#home .container .txt`).css({
+    //         display: 'none',
+    //     })
 
-        $(`#home .container .txt`).css({
-            opacity: '0',
-            transform: "translateY(50px)"
-        })
-    }
+    //     $(`#home .container .txt`).css({
+    //         opacity: '0',
+    //         transform: "translateY(50px)"
+    //     })
+    // }
 
-    const onClickHinhTron = (index) => {
-        clearText()
-        setTimeout(() => {
-            runText(index, 0)
-        }, 1000);
-    }
+    // const onClickHinhTron = (index) => {
+    //     clearText()
+    //     setTimeout(() => {
+    //         runText(index, 0)
+    //     }, 1000);
+    // }
 
     const onClickScroll = () => {
         $([document.documentElement, document.body]).animate({
@@ -173,7 +172,7 @@ const Home = props => {
                     {textArr.map((value, index) => {
                         return <p key={index} className={`txt txt${index}`}>{value}</p>
                     })}
-                    <div className="wraper-hinhtron">
+                    {/* <div className="wraper-hinhtron">
                         {textArr.map((value, key) => {
                             return (
                                 <div key={key} className={`hinhtron ${indexx === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
@@ -181,7 +180,7 @@ const Home = props => {
                             )
                         })}
 
-                    </div>
+                    </div> */}
                 </Wrapper>
 
                 <div className="waper-scroll-down">

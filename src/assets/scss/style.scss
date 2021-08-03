@@ -302,7 +302,6 @@ a {
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 50px;
 		text-align: center;
 		justify-content: center;
 		.title {
@@ -316,9 +315,6 @@ a {
 			line-height: 22px;
 			opacity: 0;
 			display: none;
-			height: 200px;
-			align-items: flex-end;
-			justify-content: center;
 
 			transform: translateY(50px);
 			transition: all 2s ease;
