@@ -287,6 +287,8 @@ a {
 
 			transform: translateY(50px);
 			transition: all 2s ease;
+
+			padding: 0 250px;
 		}
 
 		.wraper-hinhtron {
@@ -1476,19 +1478,9 @@ a {
 		min-height: fit-content;
 		.container {
 			padding: 10px;
-			.content {
-				font-size: 16px;
-				margin: 50px 0;
-
-				p {
-					font-size: 10px;
-				}
+			.txt {
+				padding: 0;
 			}
-
-			.txtt {
-				font-size: 10px;
-			}
-
 			.wraper-hinhtron {
 				.hinhtron {
 					margin: 10px;
