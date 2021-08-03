@@ -280,17 +280,13 @@ a {
 			transition: all 2s ease;
 		}
 
-		.content {
+		.txt {
+			font-size: 20px;
+			line-height: 22px;
 			opacity: 0;
+			
 			transform: translateY(50px);
 			transition: all 2s ease;
-			display: none;
-
-			p {
-				font-family: "OpenSansBold";
-				color: #fff6e7;
-				font-size: 16px;
-			}
 		}
 
 		.wraper-hinhtron {
@@ -379,7 +375,7 @@ a {
 
 #characters {
 	min-height: 100vh;
-	padding-top: 100px;
+	padding-top: 200px;
 	padding-bottom: 300px;
 	.container {
 		height: 100%;
@@ -484,7 +480,7 @@ a {
 			align-items: center;
 			justify-content: center;
 			flex-wrap: wrap;
-			margin-top: 100px;
+			margin-top: 150px;
 			z-index: 30;
 
 			.avai {
@@ -901,7 +897,6 @@ a {
 				color: #ffb337;
 				font-size: 10px;
 				font-weight: bold;
-			
 			}
 		}
 
@@ -1516,6 +1511,7 @@ a {
 
 	#characters {
 		// min-height: fit-content;
+		padding-bottom: 0px;
 		.container {
 			padding: 10px;
 
@@ -1636,7 +1632,8 @@ a {
 		padding-top: 50px;
 		padding-bottom: 0px;
 		min-height: fit-content;
-		margin-top: 50px;
+		margin-top: 0;
+		padding-top: 100px;
 		.container {
 			padding: 10px;
 
@@ -1694,6 +1691,7 @@ a {
 			.wraper-hinhtron {
 				display: flex;
 				justify-content: center;
+				margin-top: 50px;
 				.hinhtron {
 					width: 10px;
 					height: 10px;
@@ -1715,7 +1713,7 @@ a {
 					background-size: 100% 100%;
 					background-repeat: no-repeat;
 					flex: 1;
-					padding-top: 40px;
+					padding-top: 20px;
 					height: 350px;
 					.titlee {
 						color: #eac27f;
@@ -1727,7 +1725,7 @@ a {
 
 					div {
 						width: 100%;
-						margin-bottom: 10px;
+						margin-bottom: 30px;
 						margin-top: 20px;
 
 						img {
@@ -1875,7 +1873,7 @@ a {
 						width: 100%;
 						text-align: left;
 						padding-left: 150px;
-					
+
 						li {
 							color: #fff6e7;
 							list-style-type: circle;
