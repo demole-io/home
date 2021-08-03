@@ -1,5 +1,4 @@
 import React from 'react'
-
 import TweetIcon from '../assets/img/Group.png'
 import IconFb from '../assets/img/Group 8105.png'
 import IconIg from '../assets/img/Group 8107.png'
@@ -7,8 +6,17 @@ import IconReddit from '../assets/img/reddit.png'
 import IconDiscord from '../assets/img/discord.png'
 import IconTele from '../assets/img/telegram.png'
 import { Link } from "react-router-dom";
+import ScrollUp from '../assets/img/Group 8162.png'
+import $ from 'jquery'
 
 export default function Fooder() {
+
+    const onClickScroll = () => {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(".header").offset().top
+        }, 2000);
+    }
+
     return (
         <div id="fooder">
             <div className="container is-web">
@@ -82,10 +90,16 @@ export default function Fooder() {
                     <p>Email: business@demole.io</p>
                 </div>
 
+                <img className="srollUp" src={ScrollUp} alt="photos" onClick={() => onClickScroll()}></img>
+
 
             </div>
 
             <div className="container is-mobie">
+                <div className="srollUp">
+                    <img src={ScrollUp} alt="photos" onClick={() => onClickScroll()}></img>
+                </div>
+
                 <div className="title">
                     {/* <p>ABOUT</p> */}
                     <p>CONTACT US</p>
@@ -138,6 +152,7 @@ export default function Fooder() {
                     </p>
                 </div>
 
+                <p>Email: business@demole.io</p>
                 <div className="line"></div>
 
                 <p className="txt">Copyright © 2021 Laaqiq. <br></br> All Rights Reserved.</p>

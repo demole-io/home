@@ -2,13 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/img/logo02 1.png'
 import $ from 'jquery'
 import styled from 'styled-components'
+import ScrollDown from '../assets/img/Group 8142.png'
 
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 80vh;
+    height: 75vh;
 `;
 
 
@@ -101,13 +102,18 @@ const Home = props => {
         }, 1000);
     }
 
+    const onClickScroll = () => {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#monster").offset().top
+        }, 2000);
+    }
     return (
         <div id="home">
             <div className="container">
                 <Wrapper>
                     <img className="title" src={Logo} alt="photos"></img>
                     {textArr.map((value, index) => {
-                        return <p className={`txt txt${index}`}>{value}</p>
+                        return <p key={index} className={`txt txt${index}`}>{value}</p>
                     })}
                     <div className="wraper-hinhtron">
                         {textArr.map((value, key) => {
@@ -119,6 +125,11 @@ const Home = props => {
 
                     </div>
                 </Wrapper>
+
+                <div className="waper-scroll-down">
+                    <img src={ScrollDown} alt="photos" onClick={() => onClickScroll()}></img>
+                    <p>Explore incredible world</p>
+                </div>
             </div>
 
         </div>

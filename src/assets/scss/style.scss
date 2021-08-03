@@ -266,6 +266,7 @@ a {
 
 /*#endregion */
 #home {
+	min-height: calc(100vh - 120px);
 	.container {
 		height: 100%;
 		align-items: center;
@@ -308,6 +309,20 @@ a {
 
 			.selectedd {
 				background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
+			}
+		}
+
+		.waper-scroll-down {
+			width: 100%;
+			text-align: center;
+
+			img {
+				cursor: pointer;
+			}
+
+			p {
+				font-size: 10px;
+				color: #FFF6E7;
 			}
 		}
 	}
@@ -870,7 +885,7 @@ a {
 			a {
 				border-radius: 2px;
 				font-size: 20px;
-				font-weight: 600;
+				font-weight: 400;
 				text-transform: uppercase;
 				cursor: pointer;
 				font-family: "BebasNeue";
@@ -929,6 +944,11 @@ a {
 					}
 				}
 			}
+		}
+
+		.srollUp {
+			cursor: pointer;
+			margin-left: 50px;
 		}
 	}
 
@@ -1950,6 +1970,11 @@ a {
 			display: block;
 			padding: 10px;
 			text-align: center;
+		
+			.srollUp {
+				width: 100%;
+				text-align: right;
+			}
 			.title {
 				p {
 					font-weight: bold;
