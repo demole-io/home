@@ -64,6 +64,11 @@ const Home = props => {
                     transition: 'opacity 1s'
                 })
 
+                $('#home .container .waper-scroll-down').css({
+                    opacity: '1',
+                    transition: 'opacity 1s'
+                })
+
                 $('#home .container .title').css({
                     display: 'none',
                 })
