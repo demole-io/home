@@ -4,16 +4,19 @@ import Knight from '../assets/img/ezgif.com-gif-maker (9).webm'
 import ORC from '../assets/img/ezgif.com-gif-maker (7).webm'
 import WARRIOR from '../assets/img/ezgif.com-gif-maker (10).webm'
 import MEMALD from '../assets/img/ezgif.com-gif-maker (8).webm'
+import SHADOW from '../assets/img/ezgif.com-gif-maker (11).webm'
 
 import iconOrc from '../assets/img/nguoi_cay.png'
 import iconMEMALD from '../assets/img/nguoi_ca.png'
 import iconKnight from '../assets/img/rong1.png'
 import iconWARRIOR from '../assets/img/thien_than.png'
+import iconSHADOW from '../assets/img/bong_dem.png'
 
 import OrcPoster from '../assets/img/Orc2.png'
 import TiencaPoster from '../assets/img/nguoica.png'
 import RongPoster from '../assets/img/rong 2.png'
 import TiennuPoster from '../assets/img/Tiennu.png'
+import ShadowPoster from '../assets/img/ezgif.com-gif-maker_11_-removebg-preview.png'
 
 import ArrowLeft from '../assets/img/muiten 2.png'
 import ArrowRight from '../assets/img/muiten 1.png'
@@ -65,6 +68,12 @@ const Characters = props => {
             icon: iconWARRIOR,
             img: WARRIOR,
             des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
+        },
+        {
+            name: 'Shadow Tribe',
+            icon: iconSHADOW,
+            img: SHADOW,
+            des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         }
     ])
 
@@ -92,6 +101,12 @@ const Characters = props => {
             icon: iconWARRIOR,
             img: WARRIOR,
             des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
+        },
+        {
+            name: 'Shadow Tribe',
+            icon: iconSHADOW,
+            img: SHADOW,
+            des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         },
         {
             icon: Char1
@@ -136,10 +151,9 @@ const Characters = props => {
         {
             icon: Char14
         },
-        // {
-        //     icon: Char15
-        // },
-
+        {
+            icon: Char15
+        }
     ])
 
     const selected = useRef(0)
@@ -192,7 +206,7 @@ const Characters = props => {
     }
 
     const onClickName = (index) => {
-        if (index > 3) {
+        if (index > 4) {
             return;
         }
         stopNext()
@@ -228,10 +242,11 @@ const Characters = props => {
             <div className="container">
                 <div className="wraper-name-mobile">
                     <div>
-                        <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginTop: '55px' }} src={data[0].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginTop: '70px' }} src={data[0].icon} alt="photos"></img>
                         <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[1].icon} alt="photos"></img>
-                        <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[2].icon} alt="photos"></img>
-                        <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginTop: '55px' }} src={data[3].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginTop: '-65px' }} src={data[2].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginTop: '-30px' }} src={data[3].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(4)} className={`${index === 4 ? 'selected' : ''}`} style={{ marginTop: '70px' }} src={data[4].icon} alt="photos"></img>
                     </div>
 
                     <img className="hmm" src={Unknow1} alt="photos"></img>
@@ -244,6 +259,7 @@ const Characters = props => {
                             {index === 1 && <video muted={true} className="tienca" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
                             {index === 2 && <video muted={true} className="rong" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
                             {index === 3 && <video muted={true} className="tiennu" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
+                            {index === 4 && <video muted={true} className="shadow" autoPlay={true} loop={true} src={data[index].img} type="video/webm"></video>}
                         </div>}
 
                         {isIOS && <div className="char">
@@ -251,6 +267,7 @@ const Characters = props => {
                             {index === 1 && <img className="tienca" src={TiencaPoster} alt="photos"></img>}
                             {index === 2 && <img className="rong" src={RongPoster} alt="photos"></img>}
                             {index === 3 && <img className="tiennu-iso" src={TiennuPoster} alt="photos"></img>}
+                            {index === 4 && <img className="shadow" src={ShadowPoster} alt="photos"></img>}
                         </div>}
                         <img className="arrow" src={ArrowRight} onClick={() => onClickRight()} alt="photos"></img>
                     </div>
@@ -263,7 +280,7 @@ const Characters = props => {
                             )
                         })}
                     </div>
-                    
+
                     <div className="right">
                         <span>BUILD YOUR OWN MONSTER SQUAD</span>
                         <div>
@@ -272,13 +289,13 @@ const Characters = props => {
                         </div>
                     </div>
 
-                   
+
                 </div>
 
                 <div className="wraper-name">
                     {dataa.map((value, indexx) => {
                         return (
-                            <div className={`${index === indexx ? 'selected' : ''} ${value.name ? 'avai' : 'invai'}`}>
+                            <div key={indexx} className={`${index === indexx ? 'selected' : ''} ${value.name ? 'avai' : 'invai'}`}>
                                 <img onClick={() => onClickName(indexx)} src={value.icon} alt="photos"></img>
                             </div>
                         )

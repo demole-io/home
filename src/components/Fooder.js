@@ -6,25 +6,32 @@ import IconIg from '../assets/img/Group 8107.png'
 import IconReddit from '../assets/img/reddit.png'
 import IconDiscord from '../assets/img/discord.png'
 import IconTele from '../assets/img/telegram.png'
+import { Link } from "react-router-dom";
 
 export default function Fooder() {
     return (
         <div id="fooder">
             <div className="container is-web">
                 {/* <img src={Img} alt="photos"></img> */}
-                {/* <div>
-                    <p className="title">ABOUT</p>
-                    <p>Project Overview</p>
-                    <p>Token Metrics</p>
-                    <p>Gameplay</p>
-                </div>
+                <div className="cop-header">
+                    {/* <p className="title">FAQ</p> */}
+                    {/* <p>Summon</p>
+                    <p>Marketplace</p>
+                    <p>Stake</p>
+                    <p>Pitch Deck</p>
+                    <p>Demole-Wiki</p>
+                    <p>Stake</p> */}
 
-                <div>
-                    <p className="title">FAQ</p>
-                    <p>Disclaimer</p>
-                    <p>Disclaimer</p>
-                    <p>Token Address</p>
-                </div> */}
+
+                    <Link to="/summon">Summon</Link>
+
+                    <li className="tip">Marketplace<span>Coming Soon</span></li>
+                    <li className="tip">Stake<span>Coming Soon</span></li>
+                    <li>
+                        <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">Pitch Deck</a>
+                    </li>
+                    <li className="tip">Demole-Wiki<span>Coming Soon</span></li>
+                </div>
 
                 <div>
                     <p className="title">CONTACT</p>
@@ -72,7 +79,10 @@ export default function Fooder() {
                             </a>
                         </p>
                     </div>
+                    <p>Email: business@demole.io</p>
                 </div>
+
+
             </div>
 
             <div className="container is-mobie">

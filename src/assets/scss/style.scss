@@ -131,13 +131,14 @@ a {
 			z-index: 100;
 			left: 0px;
 			margin: 10px;
-			width: 110px;
+			width: 95px;
 			position: absolute;
 			top: 20px;
 			text-decoration: none;
 			border-radius: 16px;
 			color: #ffb337;
 			font-size: 10px;
+			font-weight: bold;
 		}
 
 		.playnow {
@@ -279,26 +280,6 @@ a {
 		padding-top: 50px;
 		text-align: center;
 		justify-content: center;
-
-		// .wraper-hinhtron {
-		// 	display: flex;
-		// 	justify-content: center;
-		// 	margin-top: 100px;
-		// 	width: 100%;
-		// 	opacity: 0;
-		// 	.hinhtron {
-		// 		width: 10px;
-		// 		height: 10px;
-		// 		border-radius: 50%;
-		// 		border: 1px solid #ce985e;
-		// 		margin: 5px;
-		// 		cursor: pointer;
-		// 	}
-
-		// 	.selectedd {
-		// 		background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
-		// 	}
-		// }
 
 		.title {
 			width: 60%;
@@ -501,6 +482,7 @@ a {
 			align-items: center;
 			justify-content: center;
 			flex-wrap: wrap;
+			margin-top: 50px;
 
 			.avai {
 				background-image: url("../img/khungg.png");
@@ -513,10 +495,10 @@ a {
 			div {
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
-				width: 100px;
-				height: 100px;
+				width: 95px;
+				height: 95px;
 
-				margin: 10px;
+				margin: 5px;
 				cursor: pointer;
 
 				display: flex;
@@ -542,7 +524,10 @@ a {
 			margin-bottom: 50px;
 
 			.titlee {
-				display: none;
+				color: #eac27f;
+				font-size: 40px;
+				font-family: "BebasNeue";
+				text-transform: uppercase;
 			}
 			.slider-card {
 				margin: 50px 0;
@@ -558,20 +543,24 @@ a {
 
 					.wraper-info {
 						position: absolute;
-						bottom: 15px;
+						bottom: 10px;
 						text-align: center;
 						align-items: center;
 						width: 100%;
-						p {
-							color: #eac27f;
-							font-size: 28px;
-							font-family: "BebasNeue";
-							text-transform: uppercase;
-						}
+						height: 100px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						// p {
+						// 	color: #eac27f;
+						// 	font-size: 28px;
+						// 	font-family: "BebasNeue";
+						// 	text-transform: uppercase;
+						// }
 
 						span {
 							display: block;
-							font-size: 12px;
+							font-size: 16px;
 							color: #fff6e7;
 							padding: 0 250px;
 						}
@@ -859,14 +848,58 @@ a {
 #fooder {
 	.is-web {
 		height: 100%;
-		align-items: flex-start;
+		align-items: flex-end;
 		text-align: center;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		padding-bottom: 100px;
+		padding-top: 100px;
+
+		.cop-header {
+			li,
+			a {
+				border-radius: 2px;
+				font-size: 20px;
+				font-weight: 600;
+				text-transform: uppercase;
+				cursor: pointer;
+				font-family: "BebasNeue";
+				margin-top: 10px;
+			}
+
+			a:hover,
+			li:hover {
+				color: #ffb337;
+			}
+
+			li.tip:hover {
+				position: relative;
+			}
+			li.tip span {
+				display: none;
+			}
+			li.tip:hover span {
+				border: #c0c0c0 1px dotted;
+				padding: 5px 10px;
+				display: block;
+				z-index: 100;
+				right: -110px;
+				margin: 10px;
+				width: 95px;
+				position: absolute;
+				top: -10px;
+				text-decoration: none;
+				border-radius: 16px;
+				color: #ffb337;
+				font-size: 10px;
+				font-weight: bold;
+			
+			}
+		}
 
 		div {
 			text-align: left;
+			margin-left: 200px;
 			.title {
 				margin-bottom: 20px;
 				font-weight: bold;
@@ -877,8 +910,14 @@ a {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				margin-bottom: 10px;
+				margin-left: 0;
+
 				p {
-					margin: 10px;
+					margin-right: 10px;
+					img {
+						width: 25px;
+					}
 				}
 			}
 		}
@@ -1405,6 +1444,12 @@ a {
 			.txtt {
 				font-size: 10px;
 			}
+
+			.wraper-hinhtron {
+				.hinhtron {
+					margin: 10px;
+				}
+			}
 		}
 	}
 
@@ -1471,9 +1516,9 @@ a {
 					left: 0;
 
 					img {
-						width: 70px;
-						height: 70px;
-						margin: 0 10px;
+						width: 60px;
+						height: 60px;
+						margin: 0 5px;
 					}
 				}
 			}
@@ -1496,8 +1541,19 @@ a {
 							margin-top: 0px;
 						}
 
+						.tiennu-iso {
+							width: 120%;
+							margin-top: 50px;
+						}
+
 						.tiennu {
 							margin-left: -10px;
+						}
+
+						.shadow {
+							width: 100%;
+							margin-left: 40px;
+							margin-top: -20px;
 						}
 					}
 				}
@@ -1513,12 +1569,16 @@ a {
 						padding-top: 50px;
 						.name {
 							font-size: 20px;
-							margin-bottom: 70px;
+							margin-bottom: 40px;
 						}
 
 						.txtt {
 							font-size: 10px;
 							padding: 0 20px;
+							height: 200px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
 						}
 					}
 				}
@@ -1531,7 +1591,7 @@ a {
 						height: 10px;
 						border-radius: 50%;
 						border: 1px solid #ce985e;
-						margin: 5px;
+						margin: 10px;
 						cursor: pointer;
 					}
 
@@ -1571,11 +1631,12 @@ a {
 						top: auto;
 
 						.wraper-info {
-							bottom: 8px;
-							p,
-							div {
-								display: none;
-							}
+							bottom: 0px;
+							height: 50px;
+							// p,
+							// div {
+							// 	display: none;
+							// }
 
 							span {
 								font-size: 8px;
@@ -1584,6 +1645,12 @@ a {
 								padding: 0 70px;
 							}
 						}
+					}
+				}
+
+				.wraper-hinhtron {
+					.hinhtron {
+						margin: 10px;
 					}
 				}
 			}
@@ -1607,7 +1674,7 @@ a {
 					height: 10px;
 					border-radius: 50%;
 					border: 1px solid #ce985e;
-					margin: 5px;
+					margin: 10px;
 					cursor: pointer;
 				}
 
@@ -1619,7 +1686,6 @@ a {
 			.waper-content-mobile {
 				display: block;
 				width: 100%;
-
 				.child {
 					background-size: 100% 100%;
 					background-repeat: no-repeat;
@@ -1631,7 +1697,7 @@ a {
 						font-size: 17px;
 						font-family: "BebasNeue";
 						text-transform: uppercase;
-						margin-bottom: 50px;
+						margin-bottom: 30px;
 					}
 
 					div {
@@ -1661,6 +1727,10 @@ a {
 						text-align: center;
 						font-size: 10px;
 						padding: 0 75px;
+						height: 100px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
 
 					@keyframes jump {

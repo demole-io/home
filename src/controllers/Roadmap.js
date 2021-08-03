@@ -4,12 +4,7 @@ import img9 from '../assets/img/pasted image 0.jpg'
 import img10 from '../assets/img/pasted image 1.jpg'
 import img11 from '../assets/img/pasted image 2.jpg'
 import img12 from '../assets/img/pasted image 3.jpg'
-
 import img from '../assets/img/image3.png'
-import Line from '../assets/img/Group 8092.png'
-import LineMobile from '../assets/img/Group 8122.png'
-
-import khungTitle from '../assets/img/roadmap1.png'
 import ArrowUp from '../assets/img/roadmap3.png'
 import ArrowDown from '../assets/img/roadmap2.png'
 import hmm from '../assets/img/roadmap4.png'
@@ -78,7 +73,7 @@ export default function Roadmap() {
 
     const renderData = (value, index) => {
         return (
-            <div className="child">
+            <div key={index} className="child">
                 {(index % 2 === 1) && <div className="child-le" key={index}>
 
                     <div className="wraper-title">

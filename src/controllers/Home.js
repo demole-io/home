@@ -56,11 +56,11 @@ const Home = props => {
     const timeoutArr = useRef([])
     const typingDelay = []
 
-    const typingTimePerCharacter = 0.07
+    const typingTimePerCharacter = 0.03
 
     function calcDelay() {
-        let sum = 0
 
+        let sum = 0;
         textArrAnimation.map((value, key) => {
             typingDelay[key] = sum
             sum += value.length * typingTimePerCharacter + 3
@@ -82,27 +82,27 @@ const Home = props => {
                     callback()
                 }, 3000)
             }
-        },index === 0 ? 0 : (typingDelay[index] + 3) * 1000)
+        }, index === 0 ? 0 : (typingDelay[index] + 3) * 1000)
     }
 
-    function clearAllTimeout () {
-        timeoutArr.current.map(value => {
+    function clearAllTimeout() {
+        timeoutArr.current.map(value => (
             clearTimeout(value)
-        })
+        ))
     }
 
-    function runAnimation (startIndex) {
+    function runAnimation(startIndex) {
         textArrAnimation = textArr
         textArrAnimation.splice(0, startIndex)
         currentIndex.current = startIndex
 
         calcDelay()
         clearAllTimeout()
-        textArrAnimation.map((value, key) => {
+        textArrAnimation.map((value, key) => (
             setTypingText(key, value, () => {
                 currentIndex.current++
             })
-        })
+        ))
     }
 
     useEffect(() => {
@@ -131,47 +131,9 @@ const Home = props => {
             })
         }, 6000);
 
-        setTimeout( () => {
+        setTimeout(() => {
             runAnimation(0)
         }, 6000)
-
-        if (props.isMobile) {
-            setTimeout(() => {
-                $('#home .container .content').css({
-                    display: 'block',
-                })
-
-                setTimeout(() => {
-                    $('#home .container .content').css({
-                        opacity: '1',
-                        transform: "translateY(0px)"
-                    })
-                }, 1000);
-
-            }, 70 * 1000);
-
-        } else {
-            setTimeout(() => {
-
-                // $('#home .container .wraper-hinhtron').css({
-                //     opacity: '0',
-                // })
-
-                $('#home .container .content').css({
-                    display: 'block',
-                })
-
-                setTimeout(() => {
-                    $('#home .container .content').css({
-                        opacity: '1',
-                        transform: "translateY(0px)"
-                    })
-                }, 1000);
-
-            }, 64 * 1000);
-
-        }
-
     }, []);
 
     const onClickHinhTron = (index) => {
@@ -193,28 +155,7 @@ const Home = props => {
                             )
                         })}
                     </div>
-                    {/* <div className="content">
-                        <p>Our early world was in chaos.
-                            Many monster tribes lived on the same continents and oceans.</p>
-
-                        <br></br>
-
-                        <p>They were born from the seeds of both gods and demons, some of them coming from the universe.</p>
-                        <br></br>
-
-                        <p>The tribes often war to expand their territory and show their strength and ambition to dominate the world.</p>
-                        <br></br>
-
-                        <p>However, tribes now have to join together to increase their strength to fight common enemies - beasts born from the death machines.</p>
-                        <br></br>
-
-                        <p>Build your own army of monsters and embark on a journey to liberate the holy land.</p>
-                        <br></br>
-                    </div> */}
-
                 </Wrapper>
-
-
             </div>
 
         </div>

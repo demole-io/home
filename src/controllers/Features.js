@@ -5,7 +5,7 @@ import img3 from '../assets/img/f3.jpg'
 import img4 from '../assets/img/f4.jpg'
 import khung from '../assets/img/khung.png'
 import khungMobile from '../assets/img/khungmobile.png'
-import Vector from '../assets/img/Group 8120.png'
+// import Vector from '../assets/img/Group 8120.png'
 import $ from 'jquery'
 
 const Features = props => {
@@ -82,19 +82,19 @@ const Features = props => {
     const renderData = () => {
         return (
             <div className="wraper-cover">
-                 <p className="titlee">{dataa[index].content.title}</p>
+                <p className="titlee">{dataa[index].content.title}</p>
                 <div className="slider-card">
                     <img className="imgg" src={dataa[index].img} alt="photos"></img>
 
                     <div className="wraper-khung">
                         <img className="khung" src={props.isMobile ? khungMobile : khung} alt="photos"></img>
                         <div className="wraper-info">
-                            <p>{dataa[index].content.title}</p>
-                            <div>
+                            {/* <p>{dataa[index].content.title}</p> */}
+                            {/* <div>
                                 <img src={Vector} alt="photos"></img>
-                            </div>
-                           {index === 1 && <span>Immerse yourself in an engaging world of monsters with endless content and quests to explore.<br></br> OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</span>}
-                           {index !== 1 && <span>{dataa[index].content.des}</span>}
+                            </div> */}
+                            {index === 1 && <span>Immerse yourself in an engaging world of monsters with endless content and quests to explore.<br></br> OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</span>}
+                            {index !== 1 && <span>{dataa[index].content.des}</span>}
                         </div>
                     </div>
                 </div>
