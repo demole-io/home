@@ -8,7 +8,7 @@ import SHADOW from '../assets/img/ezgif.com-gif-maker (11).webm'
 
 import iconOrc from '../assets/img/nguoi_cay.png'
 import iconMEMALD from '../assets/img/nguoi_ca.png'
-import iconKnight from '../assets/img/rong1.png'
+import iconKnight from '../assets/img/rong12.png'
 import iconWARRIOR from '../assets/img/thien_than.png'
 import iconSHADOW from '../assets/img/bong_dem.png'
 

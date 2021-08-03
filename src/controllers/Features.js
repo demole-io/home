@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import img1 from '../assets/img/f1.jpg'
-import img2 from '../assets/img/f2.jpg'
-import img3 from '../assets/img/f3.jpg'
-import img4 from '../assets/img/f4.jpg'
+import img1 from '../assets/img/f1.png'
+import img2 from '../assets/img/f2.png'
+import img3 from '../assets/img/f3.png'
+import img4 from '../assets/img/f4.png'
 import khung from '../assets/img/khung.png'
 import khungMobile from '../assets/img/khungmobile.png'
 // import Vector from '../assets/img/Group 8120.png'
