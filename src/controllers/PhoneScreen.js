@@ -3,18 +3,28 @@ import Poster from '../assets/img/RongFX3.png'
 import Giff from '../assets/img/RongFX3.webm'
 import Phonee from '../assets/img/phone1.png'
 import Vector from '../assets/img/Group 8120.png'
+import YouTube from 'react-youtube';
+
 export default function PhoneScreen() {
 
     const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
         !window.MSStream
 
+
+    const opts = {
+        playerVars: {
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: 1,
+        },
+    };
     return (
         <div id="phone-screen">
             <div className="container">
                 <div className="waper-phone">
-                    {!isIOS && <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm" muted={true}></video>}
-                    {isIOS && <img src={Poster} alt="photos" className="wrapper"></img>}
+                    {/* {!isIOS && <video className="wrapper" autoPlay={true} loop={true} src={Giff} type="video/webm" muted={true}></video>}
+                    {isIOS && <img src={Poster} alt="photos" className="wrapper"></img>} */}
+                    <YouTube className="wrapper" videoId="IHxXy2s6GGM" opts={opts} />
                     <img src={Phonee} alt="photos" className="phone"></img>
                 </div>
 
