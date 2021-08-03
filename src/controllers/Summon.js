@@ -11,10 +11,7 @@ export default function Summon() {
     const summonSection = useRef(null)
 
     useEffect(() => {
-
         const summonSectionHeight = summonSection.current.offsetHeight
-
-        console.log(summonSectionHeight);
 
         video.current.addEventListener("loadeddata", () => {
             const videoHeight = video.current.videoHeight
@@ -27,12 +24,21 @@ export default function Summon() {
         };
     }, []);
 
-    const onClickPay = () => {
+    function resetAnimation () {
+        dragon.current.style.opacity = 0
         video.current.play()
+    }
+
+    function runAnimation () {
         dragon.current.style["z-index"] = 1
         setTimeout(() => {
             dragon.current.style.opacity = 1
         }, 1200)
+    }
+
+    const onClickPay = () => {
+        resetAnimation()
+        runAnimation()
     }
 
     return (
