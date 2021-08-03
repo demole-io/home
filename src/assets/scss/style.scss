@@ -36,7 +36,7 @@ a {
 
 @font-face {
 	font-family: "OpenSans";
-	src: url("../fonts/OpenSans-Light.ttf");
+	src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 #about {
@@ -92,7 +92,7 @@ a {
 		li,
 		a {
 			border-radius: 2px;
-			margin-left: 40px;
+			margin-left: 80px;
 			font-size: 20px;
 			font-weight: 600;
 			text-transform: uppercase;
@@ -101,6 +101,7 @@ a {
 			}
 			cursor: pointer;
 			font-family: "BebasNeue";
+			font-weight: 400;
 		}
 
 		a:hover,
@@ -137,6 +138,7 @@ a {
 			background-repeat: no-repeat;
 			padding: 15px 35px;
 			align-items: center;
+			margin-left: 80px;
 			li {
 				color: #eac27f;
 				margin-right: 5px;
@@ -263,7 +265,6 @@ a {
 
 /*#endregion */
 #home {
-	min-height: 100vh;
 	.container {
 		height: 100%;
 		align-items: center;
@@ -327,7 +328,7 @@ a {
 }
 
 #phone-screen {
-	padding-top: 100px;
+	padding-top: 150px;
 	min-height: 80vh;
 	.container {
 		height: 100%;
@@ -358,14 +359,16 @@ a {
 			width: 50%;
 			padding-left: 60px;
 			p {
-				font-size: 39px;
+				font-size: 44px;
 				color: #c1bcb1;
 				font-family: "BebasNeue";
 				text-transform: uppercase;
+				letter-spacing: 0.05em;
 			}
 
 			span {
 				font-size: 16px;
+				font-weight: 400;
 			}
 		}
 	}
@@ -373,11 +376,11 @@ a {
 
 #characters {
 	min-height: 100vh;
+	padding-top: 100px;
+	padding-bottom: 300px;
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 100px;
-		padding-bottom: 150px;
 		text-align: center;
 
 		.wraper-name-mobile {
@@ -430,6 +433,10 @@ a {
 						width: 130%;
 						// margin-left: 50px;
 					}
+
+					.shadow {
+						margin-top: 70px;
+					}
 				}
 			}
 
@@ -441,6 +448,7 @@ a {
 					font-family: "BebasNeue";
 					color: #c1bcb1;
 					text-transform: uppercase;
+					letter-spacing: 0.05em;
 				}
 
 				div {
@@ -504,6 +512,7 @@ a {
 }
 
 #features {
+	padding-top: 100px;
 	.container {
 		padding-top: 50px;
 		height: 100%;
@@ -602,6 +611,7 @@ a {
 			color: #c1bcb1;
 			font-size: 100px;
 			font-family: "BebasNeue";
+			letter-spacing: 0.05em;
 		}
 		.waper-content {
 			display: flex;
@@ -698,6 +708,7 @@ a {
 			font-size: 100px;
 			font-family: "BebasNeue";
 			margin-bottom: 200px;
+			letter-spacing: 0.05em;
 		}
 		.content {
 			padding-right: 80px;
@@ -1402,6 +1413,16 @@ a {
 				align-items: center;
 				margin-top: 20px;
 			}
+
+			.playnow {
+				margin-left: 0;
+				padding: 15px 25px;
+			}
+
+			li.tip:hover span {
+				left: 25px;
+				top: 30px;
+			}
 		}
 		.is-toggle {
 			margin-right: 0px;
@@ -1539,7 +1560,7 @@ a {
 						}
 
 						.tiennu {
-							margin-left: -10px;
+							margin-left: -40px;
 						}
 
 						.shadow {
@@ -1815,7 +1836,7 @@ a {
 					.group1 {
 						display: flex;
 						align-items: center;
-						justify-content: space-between;
+						justify-content: center;
 						.wraper-title {
 							background-image: url("../img/roadmap1.png");
 							background-size: 100% 100%;
@@ -1835,15 +1856,15 @@ a {
 
 						img {
 							height: 100%;
-							margin-left: -20px;
+							margin-left: -22px;
 						}
 					}
 
 					ul {
 						width: 100%;
 						text-align: left;
-						margin-left: 10px;
-						margin-left: 120px;
+						padding-left: 150px;
+					
 						li {
 							color: #fff6e7;
 							list-style-type: circle;
