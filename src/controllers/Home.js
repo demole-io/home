@@ -51,6 +51,10 @@ const Home = props => {
                 opacity: '1',
             })
         }, 6000);
+
+        return () => {
+            clearTimeoutt()
+        }
     }, []);
 
     const runText = (j, time) => {
@@ -75,10 +79,14 @@ const Home = props => {
         }
     }
 
-    const clearText = () => {
+    const clearTimeoutt = () => {
         timeoutArr.current.map(value => (
             clearTimeout(value)
         ))
+    }
+
+    const clearText = () => {
+        clearTimeoutt()
 
         $(`#home .container .txt`).css({
             opacity: '0',
