@@ -296,6 +296,25 @@ a {
 	transform-origin: bottom;
 }
 
+.flickity-button {
+	display: none;
+}
+
+.flickity-page-dots {
+	li {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		border: 1px solid #ce985e;
+		margin: 10px;
+		cursor: pointer;
+	}
+
+	.is-selected {
+		background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
+	}
+}
+
 /*#endregion */
 #home {
 	min-height: calc(100vh - 120px);
@@ -362,10 +381,11 @@ a {
 #monster {
 	.container {
 		height: 100%;
+		text-align: center;
 
 		.sketchfab-embed-wrapper {
 			iframe {
-				width: 100%;
+				width: 70%;
 				height: 80vh;
 			}
 		}
@@ -494,7 +514,8 @@ a {
 			}
 
 			.right {
-				width: 47%;
+				width: 45%;
+				text-align: center;
 
 				span {
 					font-size: 32px;
@@ -509,9 +530,10 @@ a {
 					background-image: url("../img/characterb1.png");
 					background-size: 100% 100%;
 					background-repeat: no-repeat;
-					width: 488px;
+					// width: 488px;
 					height: 358px;
 					padding-top: 40px;
+					text-align: center;
 					.name {
 						font-size: 28px;
 						color: #eac27f;
@@ -581,35 +603,45 @@ a {
 				font-size: 40px;
 				font-family: "BebasNeue";
 				text-transform: uppercase;
+				margin-bottom: 50px;
 			}
-			.slider-card {
-				margin: 50px 0;
-				position: relative;
+
+			.carousel {
+				text-align: center;
+				.flickity-page-dots {
+					bottom: -50px;
+				}
+
+				.carousel-cell {
+					position: relative;
+				}
+
+				.carousel-cell img {
+					display: block;
+					max-height: 100%;
+					margin-bottom: 50px;
+				}
+
 				.wraper-khung {
 					position: absolute;
-					top: 10px;
+					z-index: 10;
+					top: 105px;
 					left: 0;
+					padding: 0 30px;
 					.khung {
-						width: 95%;
+						width: 100%;
 						position: relative;
 					}
 
 					.wraper-info {
 						position: absolute;
-						bottom: 10px;
-						text-align: center;
-						align-items: center;
+						bottom: 55px;
+						left: 0;
 						width: 100%;
 						height: 100px;
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						// p {
-						// 	color: #eac27f;
-						// 	font-size: 28px;
-						// 	font-family: "BebasNeue";
-						// 	text-transform: uppercase;
-						// }
 
 						span {
 							display: block;
@@ -618,28 +650,6 @@ a {
 							padding: 0 250px;
 						}
 					}
-				}
-
-				.imgg {
-					width: 100%;
-				}
-			}
-
-			.wraper-hinhtron {
-				display: flex;
-				justify-content: center;
-				margin-top: 70px;
-				.hinhtron {
-					width: 10px;
-					height: 10px;
-					border-radius: 50%;
-					border: 1px solid #ce985e;
-					margin: 5px;
-					cursor: pointer;
-				}
-
-				.selectedd {
-					background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
 				}
 			}
 		}
@@ -1516,7 +1526,7 @@ a {
 
 			.title {
 				width: 80%;
-				margin-top: 200px;
+				margin-top: 0px;
 			}
 			.wraper-hinhtron {
 				.hinhtron {
@@ -1537,7 +1547,6 @@ a {
 
 			.sketchfab-embed-wrapper {
 				iframe {
-					width: 100%;
 					height: 50vh;
 				}
 			}
@@ -1546,7 +1555,7 @@ a {
 
 	#phone-screen {
 		min-height: fit-content;
-		padding-top: 150px;
+		padding-top: 100px;
 		.container {
 			padding: 10px;
 			display: block;
@@ -1582,8 +1591,10 @@ a {
 
 	#characters {
 		padding-bottom: 0px;
+		padding-top: 200px;
 		.container {
 			padding: 10px;
+			padding-top: 100px;
 
 			.wraper-name-mobile {
 				display: block;
@@ -1606,8 +1617,8 @@ a {
 					width: 100%;
 
 					img {
-						width: 60px;
-						height: 60px;
+						width: 50px;
+						height: 50px;
 						margin: 0 5px;
 					}
 				}
@@ -1618,16 +1629,26 @@ a {
 				height: 100%;
 				.left {
 					width: 100%;
-					margin-top: 30px;
+					// margin-top: 30px;
 					.arrow {
 						display: none;
 					}
 
 					.char {
-						width: 90%;
-						height: 350px;
+						width: 100%;
+						height: 300px;
+						.orc {
+							height: 80%;
+						}
 						.tienca {
 							margin-top: 0px;
+							// width: 100%;
+							height: 100%;
+						}
+
+						.rong {
+							height: 80%;
+							// width: 100%;
 						}
 
 						.tiennu-iso {
@@ -1636,11 +1657,13 @@ a {
 						}
 
 						.tiennu {
-							margin-left: -40px;
+							margin-left: -70px;
+							height: 100%;
+							margin-top: -50px;
 						}
 
 						.shadow {
-							width: 100%;
+							height: 100%;
 							margin-left: 40px;
 							margin-top: -20px;
 						}
@@ -1649,22 +1672,24 @@ a {
 
 				.right {
 					width: 100%;
+					padding: 0 30px;
 					span {
 						display: none;
 					}
 
 					div {
 						width: 100%;
-						padding-top: 40px;
+						padding-top: 25px;
+						height: 220px;
 						.name {
-							font-size: 30px;
-							margin-bottom: 40px;
+							font-size: 20px;
+							margin-bottom: 10px;
 						}
 
 						.txtt {
-							font-size: 16px;
+							font-size: 10px;
 							padding: 0 20px;
-							height: 200px;
+							height: 150px;
 							display: flex;
 							justify-content: center;
 							align-items: center;
@@ -1677,6 +1702,7 @@ a {
 					justify-content: center;
 					position: relative;
 					z-index: 10;
+					margin-top: -30px;
 					.hinhtron {
 						width: 10px;
 						height: 10px;
@@ -1699,36 +1725,48 @@ a {
 	}
 
 	#features {
-		padding-top: 50px;
+		padding-top: 250px;
 		padding-bottom: 0px;
 		min-height: fit-content;
 		margin-top: 0;
-		padding-top: 100px;
 		.container {
 			padding: 10px;
 
 			.wraper-cover {
+				margin-top: 100px;
 				.titlee {
 					font-size: 24px;
 					color: #c1bcb1;
 					font-family: "BebasNeue";
 					text-transform: uppercase;
+					margin-bottom: 20px;
 				}
 
-				.slider-card {
-					margin: 20px 0;
+				.carousel {
+
+					.flickity-page-dots {
+						bottom: 0px;
+					}
+					.carousel-cell {
+						width: 100%; /* full width */
+					}
+
+					.carousel-cell img {
+						width: 100%;
+					}
 
 					.wraper-khung {
-						bottom: -1px;
 						top: auto;
+						bottom: 50px;
+						padding: 0;
+						
+						.khung {
+							margin-bottom: 0;
+						}
 
 						.wraper-info {
-							bottom: 2px;
-							height: 55px;
-							// p,
-							// div {
-							// 	display: none;
-							// }
+							bottom: 5px;
+							height: 40px;
 
 							span {
 								font-size: 8px;
@@ -1737,12 +1775,6 @@ a {
 								padding: 0 70px;
 							}
 						}
-					}
-				}
-
-				.wraper-hinhtron {
-					.hinhtron {
-						margin: 10px;
 					}
 				}
 			}
@@ -1763,24 +1795,8 @@ a {
 				width: 100%;
 				padding-bottom: 100px;
 
-				.flickity-button {
-					display: none;
-				}
-
 				.flickity-page-dots {
 					bottom: -70px;
-					li {
-						width: 10px;
-						height: 10px;
-						border-radius: 50%;
-						border: 1px solid #ce985e;
-						margin: 10px;
-						cursor: pointer;
-					}
-
-					.is-selected {
-						background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
-					}
 				}
 
 				.gallery-cell {
