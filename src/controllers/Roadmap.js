@@ -32,8 +32,7 @@ export default function Roadmap() {
                 "LP adding",
                 "World Boss",
                 "Social features: Chatting, Line-up visiting",
-                "Arena",
-                "Mobile (Android/IOS)"
+                "Arena"
             ],
             imgMobile: img
 
@@ -45,7 +44,8 @@ export default function Roadmap() {
                 "Auction",
                 "Monster upgrading system",
                 "Campaign/Story",
-                "Boosters"
+                "Boosters",
+                "Mobile (Android/IOS)"
             ],
             imgMobile: img
         },

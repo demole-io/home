@@ -671,7 +671,7 @@ a {
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 100px;
+			font-size: 44px;
 			font-family: "BebasNeue";
 			letter-spacing: 0.05em;
 		}
@@ -741,7 +741,7 @@ a {
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 100px;
+			font-size: 44px;
 			font-family: "BebasNeue";
 			margin-bottom: 200px;
 			letter-spacing: 0.05em;
@@ -786,12 +786,12 @@ a {
 							width: 350px;
 							z-index: 10;
 							position: absolute;
-							bottom: -185px;
+							bottom: -165px;
 							left: 20px;
 							display: flex;
 							align-items: flex-start;
 							justify-content: center;
-							height: 200px;
+							height: 180px;
 							img {
 								height: 100%;
 							}
@@ -814,12 +814,12 @@ a {
 						.wraper-content {
 							width: 320px;
 							position: absolute;
-							top: -115px;
+							top: -135px;
 							left: 25px;
 							display: flex;
 							align-items: flex-end;
 							justify-content: center;
-							height: 130px;
+							height: 150px;
 							img {
 								height: 100%;
 							}
@@ -1788,13 +1788,14 @@ a {
 		.container {
 			padding: 10px;
 			.title {
-				font-size: 70px;
+				font-size: 24px;
 			}
 
 			.waper-content-mobile {
 				display: block;
 				width: 100%;
 				padding-bottom: 100px;
+				margin-top: 50px;
 
 				.flickity-page-dots {
 					bottom: -70px;
@@ -1923,7 +1924,7 @@ a {
 		.container {
 			padding: 10px;
 			.title {
-				font-size: 70px;
+				font-size: 24px;
 				margin-bottom: 50px;
 			}
 
@@ -1987,16 +1988,8 @@ a {
 	#backed {
 		.container {
 			padding: 10px;
-			.waper-title {
-				.title {
-					font-size: 24px;
-				}
-
-				.big-title {
-					font-size: 42px;
-					left: 60px;
-					top: -12px;
-				}
+			.title {
+				font-size: 24px;
 			}
 
 			.content {
