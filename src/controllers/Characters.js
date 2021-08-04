@@ -188,7 +188,7 @@ const Characters = props => {
                 $('#characters .container .group2-mobie .txtt').removeClass('text-zoom')
             }, 2000);
 
-        }, 3000)
+        }, 10000)
 
         window.addEventListener('scroll', handleScroll);
 
@@ -242,11 +242,11 @@ const Characters = props => {
             <div className="container">
                 <div className="wraper-name-mobile">
                     <div>
-                        <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginTop: '70px' }} src={data[0].icon} alt="photos"></img>
-                        <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginTop: '-35px' }} src={data[1].icon} alt="photos"></img>
-                        <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginTop: '-65px' }} src={data[2].icon} alt="photos"></img>
-                        <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginTop: '-30px' }} src={data[3].icon} alt="photos"></img>
-                        <img onClick={() => onClickName(4)} className={`${index === 4 ? 'selected' : ''}`} style={{ marginTop: '70px' }} src={data[4].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(0)} className={`${index === 0 ? 'selected' : ''}`} style={{ marginTop: '50px' }} src={data[0].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(1)} className={`${index === 1 ? 'selected' : ''}`} style={{ marginTop: '-15px' }} src={data[1].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(2)} className={`${index === 2 ? 'selected' : ''}`} style={{ marginTop: '-30px' }} src={data[2].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(3)} className={`${index === 3 ? 'selected' : ''}`} style={{ marginTop: '-15px' }} src={data[3].icon} alt="photos"></img>
+                        <img onClick={() => onClickName(4)} className={`${index === 4 ? 'selected' : ''}`} style={{ marginTop: '50px' }} src={data[4].icon} alt="photos"></img>
                     </div>
 
                     <img className="hmm" src={Unknow1} alt="photos"></img>

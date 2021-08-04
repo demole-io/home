@@ -90,7 +90,7 @@ export default function Earn() {
 
                 <div className="waper-content-mobile">
                     <div className="gallery js-flickity"
-                        data-flickity-options='{ "wrapAround": true }'>
+                        data-flickity-options='{ "wrapAround": true, "autoPlay": 7000 }'>
 
                         {data.map((value, index) => {
                             return renderChild(value, index)

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Header from '../components/Header'
-import PayBtn from '../assets/img/DEMO BUTTOnn.png'
+import PayBtn from '../assets/img/Layer 1.png'
 import Dragon from '../assets/img/rong 2.png'
 import EggOpen from '../assets/video/egg-open.mp4'
 

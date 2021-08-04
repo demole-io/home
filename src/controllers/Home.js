@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Logo from '../assets/img/logo02 1.png'
 import $ from 'jquery'
 import styled from 'styled-components'
@@ -24,7 +24,7 @@ const Home = props => {
 
 
     const timeoutArr = useRef([])
-    const [indexx, setindexx] = useState(0)
+    // const [indexx, setindexx] = useState(0)
 
     const handleScroll = () => {
         const pageHome = document.querySelector("#home")
@@ -100,7 +100,7 @@ const Home = props => {
     const runText = (j, time) => {
         for (let i = j; i < 5; i++) {
             timeoutArr.current[i] = setTimeout(() => {
-                setindexx(i)
+                // setindexx(i)
 
                 $(`#home .container .txt${i}`).css({
                     display: 'flex',
@@ -156,12 +156,12 @@ const Home = props => {
         })
     }
 
-    const onClickHinhTron = (index) => {
-        clearText()
-        setTimeout(() => {
-            runText(index, 0)
-        }, 1000);
-    }
+    // const onClickHinhTron = (index) => {
+    //     clearText()
+    //     setTimeout(() => {
+    //         runText(index, 0)
+    //     }, 1000);
+    // }
 
     const onClickScroll = () => {
         $([document.documentElement, document.body]).animate({
@@ -176,7 +176,7 @@ const Home = props => {
                     {textArr.map((value, index) => {
                         return <p key={index} className={`txt txt${index}`}>{value}</p>
                     })}
-                    <div className="wraper-hinhtron">
+                    {/* <div className="wraper-hinhtron">
                         {textArr.map((value, key) => {
                             return (
                                 <div key={key} className={`hinhtron ${indexx === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
@@ -184,11 +184,11 @@ const Home = props => {
                             )
                         })}
 
-                    </div>
+                    </div> */}
                 </Wrapper>
 
                 <div className="waper-scroll-down">
-                    <img className="jump" src={ScrollDown} alt="photos" onClick={() => onClickScroll()}></img>
+                    <img src={ScrollDown} alt="photos" onClick={() => onClickScroll()}></img>
                     <p>Explore incredible world</p>
                 </div>
             </div>

@@ -1,12 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import img1 from '../assets/img/f1.png'
 import img2 from '../assets/img/f2.png'
 import img3 from '../assets/img/f3.png'
 import img4 from '../assets/img/f4.png'
 import khung from '../assets/img/khung.png'
 import khungMobile from '../assets/img/khungmobile.png'
-// import Vector from '../assets/img/Group 8120.png'
-import $ from 'jquery'
 
 const Features = props => {
     const [dataa] = useState([
@@ -40,71 +38,30 @@ const Features = props => {
         },
     ])
 
-    const selectedIndex = useRef(0)
-    const [index, setindex] = useState(0)
-    const interval = useRef(null)
+    const renderChild = (key) => {
+        return (
+            <div key={key} className={`carousel-cell`}>
+                <p className="titlee">{dataa[key].content.title}</p>
 
-    const handleScroll = () => {
-        const pageFeatures = document.querySelector("#features")
-        $('#features .container .wraper-content .wraper-child div span').addClass('text-move-top')
+                <img className="carousel-cell-image" data-flickity-lazyload={dataa[key].img} alt="photos"></img>
 
-        if (pageFeatures.getBoundingClientRect().top > 0) {
-            $('#features .container .wraper-content .wraper-child div span').removeClass('text-move-top')
-        }
-        //BOTTOM
-        if (pageFeatures.getBoundingClientRect().bottom <= 0) {
-            $('#features .container .wraper-content .wraper-child div span').removeClass('text-move-top')
-        }
-    }
-
-    useEffect(() => {
-        interval.current = setInterval(() => {
-            selectedIndex.current = selectedIndex.current === dataa.length - 1 ? 0 : selectedIndex.current + 1;
-            setindex(selectedIndex.current)
-        }, 3000)
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            if (interval.current) clearInterval(interval.current)
-
-            window.removeEventListener('scroll', handleScroll);
-            $('#features .container .wraper-content .wraper-child div span').removeClass('text-move-top')
-        }
-    }, [dataa]);
-
-    const onClickHinhTron = (indexx) => {
-        if (interval.current) clearInterval(interval.current)
-        selectedIndex.current = indexx;
-        setindex(selectedIndex.current)
+                <div className="wraper-khung">
+                    <img className="khung" src={props.isMobile ? khungMobile : khung} alt="photos"></img>
+                    <div className="wraper-info">
+                        {key === 1 && <span>Immerse yourself in an engaging world of monsters with endless content and quests to explore.<br></br> OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</span>}
+                        {key !== 1 && <span>{dataa[key].content.des}</span>}
+                    </div>
+                </div>
+            </div>
+        )
     }
 
     const renderData = () => {
         return (
             <div className="wraper-cover">
-                <p className="titlee">{dataa[index].content.title}</p>
-                <div className="slider-card">
-                    <img className="imgg" src={dataa[index].img} alt="photos"></img>
-
-                    <div className="wraper-khung">
-                        <img className="khung" src={props.isMobile ? khungMobile : khung} alt="photos"></img>
-                        <div className="wraper-info">
-                            {/* <p>{dataa[index].content.title}</p> */}
-                            {/* <div>
-                                <img src={Vector} alt="photos"></img>
-                            </div> */}
-                            {index === 1 && <span>Immerse yourself in an engaging world of monsters with endless content and quests to explore.<br></br> OR Just spend 10 minutes a day to prepare your squad and your monsters will battle for you automatically.</span>}
-                            {index !== 1 && <span>{dataa[index].content.des}</span>}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="wraper-hinhtron">
+                <div className="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "autoPlay": 7000 }'>
                     {dataa.map((value, key) => {
-                        return (
-                            <div key={key} className={`hinhtron ${index === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
-                            </div>
-                        )
+                        return renderChild(key)
                     })}
                 </div>
             </div>
