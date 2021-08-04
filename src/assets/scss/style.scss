@@ -658,9 +658,6 @@ a {
 			display: none;
 		}
 
-		.wraper-hinhtron {
-			display: none;
-		}
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
@@ -1419,6 +1416,7 @@ a {
 
 	.header {
 		margin-top: 0;
+		padding-top: 0;
 		.container {
 			display: block;
 			background-color: transparent;
@@ -1506,8 +1504,13 @@ a {
 		min-height: fit-content;
 		.container {
 			padding: 10px;
+			.vanvan {
+				height: 30vh;
+			}
 			.txt {
 				padding: 0;
+				font-size: 10px;
+				line-height: 12px;
 			}
 
 			.title {
@@ -1519,6 +1522,10 @@ a {
 					margin: 10px;
 				}
 			}
+
+			.waper-scroll-down {
+				display: none;
+			}
 		}
 	}
 
@@ -1526,16 +1533,22 @@ a {
 		min-height: fit-content;
 		.container {
 			padding: 20px;
+
+			.sketchfab-embed-wrapper {
+				iframe {
+					width: 100%;
+					height: 50vh;
+				}
+			}
 		}
 	}
 
 	#phone-screen {
 		min-height: fit-content;
+		padding-top: 150px;
 		.container {
 			padding: 10px;
 			display: block;
-			padding-bottom: 100px;
-
 			.waper-phone {
 				width: 100%;
 				div {
@@ -1548,7 +1561,6 @@ a {
 						margin-top: -20px;
 					}
 				}
-	
 			}
 
 			.waper-text {
@@ -1568,7 +1580,6 @@ a {
 	}
 
 	#characters {
-		// min-height: fit-content;
 		padding-bottom: 0px;
 		.container {
 			padding: 10px;
@@ -1604,17 +1615,16 @@ a {
 			.wraper-info {
 				display: block;
 				height: 100%;
-
 				.left {
 					width: 100%;
-					margin-top: 50px;
+					margin-top: 30px;
 					.arrow {
 						display: none;
 					}
 
 					.char {
 						width: 90%;
-						height: 400px;
+						height: 350px;
 						.tienca {
 							margin-top: 0px;
 						}
@@ -1664,7 +1674,8 @@ a {
 				.wraper-hinhtron {
 					display: flex;
 					justify-content: center;
-					margin-top: 30px;
+					position: relative;
+					z-index: 10;
 					.hinhtron {
 						width: 10px;
 						height: 10px;
@@ -1746,31 +1757,41 @@ a {
 				font-size: 70px;
 			}
 
-			.wraper-hinhtron {
-				display: flex;
-				justify-content: center;
-				margin-top: 50px;
-				.hinhtron {
-					width: 10px;
-					height: 10px;
-					border-radius: 50%;
-					border: 1px solid #ce985e;
-					margin: 10px;
-					cursor: pointer;
-				}
-
-				.selectedd {
-					background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
-				}
-			}
-
 			.waper-content-mobile {
 				display: block;
 				width: 100%;
+				padding-bottom: 100px;
+
+				.flickity-button {
+					display: none;
+				}
+
+				.flickity-page-dots {
+					bottom: -70px;
+					li {
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						border: 1px solid #ce985e;
+						margin: 10px;
+						cursor: pointer;
+					}
+
+					.is-selected {
+						background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
+					}
+				}
+
+				.gallery-cell {
+					width: 66%;
+					height: 200px;
+					margin-right: 10px;
+					counter-increment: gallery-cell;
+				}
+
 				.child {
 					background-size: 100% 100%;
 					background-repeat: no-repeat;
-					flex: 1;
 					padding-top: 20px;
 					height: 350px;
 					.titlee {
@@ -1807,7 +1828,7 @@ a {
 					.contentt {
 						text-align: center;
 						font-size: 12px;
-						padding: 0 85px;
+						padding: 0 40px;
 						height: 100px;
 						display: flex;
 						justify-content: center;
@@ -1880,7 +1901,7 @@ a {
 
 	#roadmap {
 		padding-top: 50px;
-
+		padding-bottom: 150px;
 		.container {
 			padding: 10px;
 			.title {
