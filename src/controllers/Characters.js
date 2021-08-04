@@ -4,7 +4,7 @@ import Knight from '../assets/img/ezgif.com-gif-maker (9).webm'
 import ORC from '../assets/img/ezgif.com-gif-maker (7).webm'
 import WARRIOR from '../assets/img/ezgif.com-gif-maker (10).webm'
 import MEMALD from '../assets/img/ezgif.com-gif-maker (8).webm'
-import SHADOW from '../assets/img/ezgif.com-gif-maker (11).webm'
+import SHADOW from '../assets/webm/idealBoss-1.webm'
 
 import iconOrc from '../assets/img/nguoi_cay.png'
 import iconMEMALD from '../assets/img/nguoi_ca.png'
