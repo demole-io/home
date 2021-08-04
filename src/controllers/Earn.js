@@ -46,8 +46,6 @@ export default function Earn() {
         },
     ])
 
-    const [indexx, setindexx] = useState(0)
-
     useEffect(() => {
         var interver = setInterval(() => {
             for (let i = 0; i < data.length; i++) {
@@ -67,11 +65,6 @@ export default function Earn() {
             clearInterval(interver)
         }
     }, [data]);
-
-    const onClickHinhTron = (key) => {
-        setindexx(key)
-
-    }
 
     const renderChild = (value, index) => {
         return (
@@ -96,8 +89,6 @@ export default function Earn() {
                 </div>
 
                 <div className="waper-content-mobile">
-                    {/* {renderChild(data[indexx], indexx)} */}
-
                     <div className="gallery js-flickity"
                         data-flickity-options='{ "wrapAround": true }'>
 
