@@ -75,7 +75,7 @@ export default function Earn() {
 
     const renderChild = (value, index) => {
         return (
-            <div className="child" key={index} style={{ backgroundImage: `url(${value.khung})` }}>
+            <div className="child gallery-cell" key={index} style={{ backgroundImage: `url(${value.khung})` }}>
                 <p className="titlee">{value.title}</p>
                 <div>
                     <img className={`img-earn-${index}`} src={value.img} alt="photos"></img>
@@ -96,16 +96,16 @@ export default function Earn() {
                 </div>
 
                 <div className="waper-content-mobile">
-                    {renderChild(data[indexx], indexx)}
-                </div>
+                    {/* {renderChild(data[indexx], indexx)} */}
 
-                <div className="wraper-hinhtron">
-                    {data.map((value, key) => {
-                        return (
-                            <div key={key} className={`hinhtron ${indexx === key ? 'selectedd' : ''}`} onClick={() => onClickHinhTron(key)}>
-                            </div>
-                        )
-                    })}
+                    <div className="gallery js-flickity"
+                        data-flickity-options='{ "wrapAround": true }'>
+
+                        {data.map((value, index) => {
+                            return renderChild(value, index)
+                        })}
+                    </div>
+
                 </div>
             </div>
         </div>
