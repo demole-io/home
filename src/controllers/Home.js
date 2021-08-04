@@ -171,7 +171,7 @@ const Home = props => {
     return (
         <div id="home">
             <div className="container">
-                <Wrapper>
+                <Wrapper className="vanvan">
                     <img className="title" src={Logo} alt="photos"></img>
                     {textArr.map((value, index) => {
                         return <p key={index} className={`txt txt${index}`}>{value}</p>
