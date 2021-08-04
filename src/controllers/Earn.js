@@ -28,7 +28,7 @@ export default function Earn() {
         },
         {
             title: 'Arena',
-            content: 'Accompanying players around the world to defeat the world Boss and receive valuable rewards',
+            content: 'Compete with other players in the arena ranking for exclusive rewards',
             img: Arena,
             khung: khung3,
         },
