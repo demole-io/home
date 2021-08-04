@@ -13,7 +13,7 @@ export default function PhoneScreen() {
             <div className="container">
                 <div className="waper-phone">
                     <div>
-                        <video className="wrapper" autoPlay={true} loop={true} src={Vid} type="video/mp4" muted={true}></video>
+                        <video className="wrapper" autoPlay={true} loop={true} src={Vid} type="video/mp4" muted={true} playsInline={true}></video>
                     </div>
                     <img src={Phonee} alt="photos" className="phone"></img>
                 </div>

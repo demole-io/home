@@ -44,7 +44,7 @@ export default function Summon() {
     return (
         <div id="summon" ref={summonSection}>
             <div className="video-background">
-                <video preload="auto" ref={video} src={EggOpen} muted={true} type="video/mp4"></video>
+                <video preload="auto" ref={video} src={EggOpen} muted={true} type="video/mp4" playsInline={true}></video>
             </div>
             <img ref={dragon} className="dragon" src={Dragon} alt="photos"></img>
             <div className="wrapper">
