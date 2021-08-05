@@ -891,7 +891,7 @@ a {
 		align-items: flex-end;
 		text-align: center;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		padding-bottom: 100px;
 		padding-top: 100px;
 
@@ -938,7 +938,6 @@ a {
 
 		div {
 			text-align: left;
-			margin-left: 200px;
 			.title {
 				margin-bottom: 20px;
 				font-weight: bold;
@@ -1112,14 +1111,16 @@ a {
 		.waper-info {
 			display: flex;
 			justify-content: space-around;
-			border-width: 1px;
-			border-style: solid;
-			border-image: linear-gradient(to left, #0c0c0c 1%, #ffb337 50%, #0c0c0c 100%) 100% 0 100% 0/1px 0 1px 0
-				stretch;
+			// border-width: 1px;
+			// border-style: solid;
+			// border-image: linear-gradient(to left, #0c0c0c 1%, #ffb337 50%, #0c0c0c 100%) 100% 0 100% 0/1px 0 1px 0
+			// 	stretch;
+			border: 1px solid #a7a7a7;
+			border-radius: 27px;
 			padding: 10px;
 			margin-top: 50px;
 			div {
-				text-align: left;
+				text-align: center;
 
 				& :last-child {
 					font-size: 40px;
@@ -1132,9 +1133,9 @@ a {
 		.menuu {
 			display: flex;
 			margin-top: 50px;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-items: flex-end;
-			width: 50%;
+			width: 100%;
 
 			p {
 				cursor: pointer;
@@ -1145,6 +1146,20 @@ a {
 				span {
 					font-size: 7px;
 					margin-bottom: 2px;
+				}
+			}
+
+			.search {
+				border-radius: 15px;
+				border: 1px solid #838383;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 5px 10px;
+
+				input {
+					background-color: transparent;
+					margin-left: 5px;
 				}
 			}
 		}
@@ -1184,9 +1199,9 @@ a {
 					width: 30%;
 					height: 400px;
 					border-radius: 20px;
-					border: 3px solid white;
+					border: 1px solid white;
 					margin: 5px;
-					background-color: black;
+					background-color: #1a1a1a;
 					padding: 20px;
 					align-items: center;
 					text-align: center;
@@ -1213,7 +1228,7 @@ a {
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
-						margin-bottom: 30px;
+						margin-bottom: 10px;
 
 						span {
 							background-color: #2ee36d;
@@ -1227,13 +1242,17 @@ a {
 						}
 					}
 
+					.price {
+						margin-top: 10px;
+					}
+
 					button {
 						background-image: linear-gradient(180deg, #ffb337 0%, #ff8037 100%);
 						border-radius: 10px;
 						width: 100%;
 						padding: 10px;
 						font-size: 20px;
-						margin-top: 30px;
+						margin-top: 10px;
 						cursor: pointer;
 						text-transform: uppercase;
 						font-family: "BebasNeue";
@@ -1276,9 +1295,22 @@ a {
 				margin: 50px 0;
 			}
 
-			img {
-				width: 100%;
+			.waper-char {
+				position: relative;
+				display: flex;
+				margin-top: 350px;
+
+				img {
+					width: 80%;
+				}
+
+				.char {
+					position: absolute;
+					bottom: 100px;
+					left: 80px;
+				}
 			}
+
 			.back {
 				cursor: pointer;
 				font-family: "OpenSans";
@@ -1295,6 +1327,11 @@ a {
 				border-radius: 16px;
 				padding: 5px 10px;
 				margin-right: 20px;
+			}
+
+			.btn1 {
+				background-color: #cfffd7;
+				color: #008014;
 			}
 
 			.group1 {
@@ -1369,38 +1406,38 @@ a {
 					}
 				}
 			}
+		}
+	}
 
-			.offer-table {
-				border-radius: 4px;
-				border: 0.5px solid white;
-				margin-bottom: 20px;
-				border-top-left-radius: 16px;
-				border-top-right-radius: 16px;
-				overflow: hidden;
-				margin-top: 20px;
-				.txt {
-					background-color: #ffb337;
-					text-align: center;
-					padding: 10px;
-					font-family: "BebasNeue";
-					text-transform: uppercase;
-				}
+	.offer-table {
+		border-radius: 4px;
+		border: 0.5px solid white;
+		margin-bottom: 20px;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		overflow: hidden;
+		margin-top: 50px;
+		.txt {
+			background-color: #ffb337;
+			text-align: center;
+			padding: 10px;
+			font-family: "BebasNeue";
+			text-transform: uppercase;
+		}
 
-				.waper-offer {
-					display: flex;
-					padding: 10px 20px;
-					border-top: 1px solid #dee2e5;
-					text-align: left;
-					p {
-						flex: 1;
-					}
-				}
+		.waper-offer {
+			display: flex;
+			padding: 10px 20px;
+			border-top: 1px solid #dee2e5;
+			text-align: left;
+			p {
+				flex: 1;
+			}
+		}
 
-				.tl {
-					p {
-						font-weight: bold;
-					}
-				}
+		.tl {
+			p {
+				font-weight: bold;
 			}
 		}
 	}

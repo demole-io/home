@@ -8,6 +8,7 @@ import IconTele from '../assets/img/telegram.png'
 import { Link } from "react-router-dom";
 import ScrollUp from '../assets/img/Group 8162.png'
 import $ from 'jquery'
+import Logo from '../assets/img/DEMOLE-logo02 1.png'
 
 export default function Fooder() {
 
@@ -21,6 +22,12 @@ export default function Fooder() {
         <div id="fooder">
             <div className="container is-web">
                 {/* <img src={Img} alt="photos"></img> */}
+
+                <Link to="/">
+                    <img src={Logo} alt="photos"></img>
+                </Link>
+
+                <p></p>
                 <div className="cop-header">
                     {/* <p className="title">FAQ</p> */}
                     {/* <p>Summon</p>
@@ -99,6 +106,10 @@ export default function Fooder() {
                 <div className="srollUp">
                     <img src={ScrollUp} alt="photos" onClick={() => onClickScroll()}></img>
                 </div>
+
+                <Link to="/">
+                    <img src={Logo} alt="photos"></img>
+                </Link>
 
                 <div className="title">
                     {/* <p>ABOUT</p> */}
