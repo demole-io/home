@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Fooder from '../components/Fooder'
 import Header from '../components/Header'
 import Elip from '../assets/img/Ellipse 19.png'
+import BucDung from '../assets/img/DaiTrung 1.png'
 import { useHistory } from "react-router-dom";
 
 const MonterDetail = props => {
@@ -122,15 +123,28 @@ const MonterDetail = props => {
                         <p className="back" onClick={() => goBack()}> &lt; Back</p>
                         <span>#{indexx + 1}</span>
                         <p>{detail.name}</p>
-                        <img src={detail.img} alt="photos"></img>
+                        <div className="waper-char">
+                            <img className="char" src={detail.img} alt="photos"></img>
+                            <img src={BucDung} alt="photos"></img>
+                        </div>
+
                     </div>
                     <div className="right">
                         <div className="group1">
+                            <button className="btn1">Transfer</button>
                             <button>BUY NOW</button>
+                        </div>
+
+                        <div className="group1">
                             <div>
                                 <span>${detail.dola}</span>
                                 <p>Floor Price: {detail.floorPrice} BNB</p>
                             </div>
+                            <div>
+                                <p>PRICE:</p>
+                                <p>500 XXX</p>
+                            </div>
+
                         </div>
                         <div className="group2">
                             <div className="gr-child">
@@ -180,13 +194,10 @@ const MonterDetail = props => {
                                 return renderChildBody(value, index)
                             })}
                         </div>
-
-
-                        {detail.offers && renderOffers()}
-                        <button>Make offer</button>
-
                     </div>
                 </div>
+
+                {detail.offers && renderOffers()}
 
                 {/* <div className="waper-event">
                     <p className="titlee">SALE HISTORY</p>

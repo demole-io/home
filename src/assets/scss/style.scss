@@ -1116,7 +1116,7 @@ a {
 			// border-image: linear-gradient(to left, #0c0c0c 1%, #ffb337 50%, #0c0c0c 100%) 100% 0 100% 0/1px 0 1px 0
 			// 	stretch;
 			border: 1px solid #a7a7a7;
-			border-radius: 27px;
+			border-radius: 26px;
 			padding: 10px;
 			margin-top: 50px;
 			div {
@@ -1326,21 +1326,23 @@ a {
 				cursor: pointer;
 				border-radius: 16px;
 				padding: 5px 10px;
-				margin-right: 20px;
 			}
 
 			.btn1 {
 				background-color: #cfffd7;
 				color: #008014;
+				margin-right: 10px;
 			}
 
 			.group1 {
 				display: flex;
 				justify-content: flex-end;
 				align-items: center;
+				margin-bottom: 10px;
 
 				div {
 					text-align: right;
+					margin-left: 50px;
 					span {
 						color: #606060;
 					}
@@ -2203,11 +2205,13 @@ a {
 
 	#marketplace {
 		.container {
+			padding: 10px;
 			.des {
 				display: none;
 			}
 
 			.waper-info {
+				border-radius: 10px;
 				div {
 					& :first-child {
 						font-size: 10px;
@@ -2222,19 +2226,31 @@ a {
 			.menuu {
 				display: block;
 				text-align: left;
+
+				.search {
+					margin-top: 10px;
+					justify-content: flex-start;
+				}
 			}
 
 			.waper-content {
 				display: block;
 
 				.waper-list-monter {
-					// display: block;
-					// text-align: center;
-					// align-items: center;
 					align-items: center;
 					justify-content: center;
+					padding: 10px;
 					.monter {
-						width: 90%;
+						width: 100%;
+						padding: 20px;
+						height: 450px;
+						.img {
+							margin-top: 20px;
+							height: 250px;
+							img {
+								width: 80%;
+							}
+						}
 					}
 				}
 			}
@@ -2242,49 +2258,56 @@ a {
 	}
 
 	#monter-detail {
-		.waper-info {
-			display: block;
+		.container { 
+			padding: 10px;
+			.waper-info {
+				display: block;
+	
+				.left {
+					width: 100%;
+					.waper-char {
+						margin-bottom: 50px;
+						margin-top: 200px;
 
-			// .left {
-			// 	width: 100%;
-			// }
+						img {
+							width: 80%;
+						}
 
-			.right {
-				// width: 100%;
-
-				button {
-					margin-right: 0;
-					margin-bottom: 10px;
-				}
-				.group1 {
-					display: block;
-					text-align: right;
-				}
-
-				.group2 {
-					padding: 10px;
-					.owner {
-						font-size: 13px;
+						.char {
+							left: 50px;
+							bottom: 60px;
+						}
 					}
 				}
-
-				.group4 {
-					.gr-child {
-						width: 45%;
-						margin: 5px;
-
-						div {
-							p {
-								font-size: 14px;
-							}
-
-							span {
-								font-size: 10px;
+	
+				.right {
+					.group2 {
+						padding: 10px;
+						.owner {
+							font-size: 13px;
+						}
+					}
+	
+					.group4 {
+						.gr-child {
+							width: 45%;
+							margin: 5px;
+	
+							div {
+								p {
+									font-size: 14px;
+								}
+	
+								span {
+									font-size: 10px;
+								}
 							}
 						}
 					}
 				}
 			}
+
 		}
+		
 	}
 }

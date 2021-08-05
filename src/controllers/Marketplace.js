@@ -4,8 +4,10 @@ import Knight from '../assets/img/rong 2.png'
 import ORC from '../assets/img/Orc2.png'
 import WARRIOR from '../assets/img/Tiennu.png'
 import MEMALD from '../assets/img/nguoica.png'
+import SHADOW from '../assets/img/ezgif.com-gif-maker_11_-removebg-preview.png'
 import Fooder from '../components/Fooder'
 import { Link } from 'react-router-dom'
+import SearchIcon from '../assets/img/akar-icons_search.png'
 
 export default function Marketplace() {
 
@@ -408,6 +410,99 @@ export default function Marketplace() {
                     time: '	2 days ago'
                 },
             ]
+        },
+        {
+            name: 'SHADOW',
+            img: SHADOW,
+            level: 1,
+            type: 'Thunder',
+            floorPrice: 0.11,
+            dola: 31.2,
+            class: 'Knight',
+            owner: '0xaf469c0e3015ed0683c46a694dd80cfd7f280bed',
+            strength: 'Knight',
+            ability: 1,
+            intelligence: 'Thunder',
+            luck: 'Thunder',
+            offers: [
+                {
+                    from: '0x7f...60f9',
+                    price: 5,
+                    time: '	2 days ago'
+                },
+                {
+                    from: '0x7f...60f9',
+                    price: 5,
+                    time: '	2 days ago'
+                },
+                {
+                    from: '0x7f...60f9',
+                    price: 5,
+                    time: '	2 days ago'
+                },
+                {
+                    from: '0x7f...60f9',
+                    price: 5,
+                    time: '	2 days ago'
+                },
+                {
+                    from: '0x7f...60f9',
+                    price: 5,
+                    time: '	2 days ago'
+                },
+            ],
+            events: [
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+                {
+                    event: 'OFFER',
+                    price: 0.05,
+                    from: '0x7f...60f9',
+                    to: '0x7f...60f9',
+                    time: '	2 days ago'
+                },
+            ]
         }
     ])
 
@@ -415,13 +510,19 @@ export default function Marketplace() {
         return (
             <div className="monter">
                 <div className="title">
-                    <span>#{index + 1}</span>
-                    <p>{value.name}</p>
                     <p></p>
+                    <p>{value.name}</p>
+                    <span>#{index + 1}</span>
+
                 </div>
 
                 <div className="img">
                     <img src={value.img} alt="photos"></img>
+                </div>
+
+                <div className="price">
+                    <p>PRICE: 500 XXX</p>
+                    <p>Floor Price: {value.floorPrice} UNI</p>
                 </div>
 
                 <Link to={{
@@ -510,6 +611,10 @@ export default function Marketplace() {
                     <div>
                         <span>Sort</span>
                         <p>Lowest ID</p>
+                    </div>
+                    <div className="search">
+                        <img src={SearchIcon} alt="photos"></img>
+                        <input placeholder="Search NFT character"></input>
                     </div>
                 </div>
 
