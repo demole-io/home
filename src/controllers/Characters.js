@@ -22,21 +22,24 @@ import ArrowLeft from '../assets/img/muiten 2.png'
 import ArrowRight from '../assets/img/muiten 1.png'
 
 
-import Char1 from '../assets/img/Người Cây.png'
-import Char2 from '../assets/img/Người chim.png'
-import Char3 from '../assets/img/Người sói.png'
-import Char4 from '../assets/img/Sương Tím.png'
-import Char5 from '../assets/img/Undead.png'
-import Char6 from '../assets/img/Nanh Orc.png'
-import Char7 from '../assets/img/4.png'
-import Char8 from '../assets/img/8.png'
-import Char9 from '../assets/img/Khỉ Sắt.png'
-import Char10 from '../assets/img/Chim Bạc.png'
-import Char11 from '../assets/img/Đế Vương.png'
-import Char12 from '../assets/img/Giáp Bạc.png'
-import Char13 from '../assets/img/Alien.png'
-import Char14 from '../assets/img/Khô lâu.png'
-import Char15 from '../assets/img/Linh Hồn.png'
+import Char2 from '../assets/img/chien binh.png'
+import Char3 from '../assets/img/chim.png'
+import Char4 from '../assets/img/cung thủ.png'
+import Char5 from '../assets/img/kỵ sĩ.png'
+import Char6 from '../assets/img/nguoi khong lo.png'
+import Char7 from '../assets/img/nguoi lun.png'
+import Char8 from '../assets/img/nguoi soi.png'
+import Char9 from '../assets/img/nguoi xuong.png'
+import Char10 from '../assets/img/nhan ma.png'
+import Char11 from '../assets/img/phap su.png'
+// import Char12 from '../assets/img/Giáp Bạc.png'
+// import Char13 from '../assets/img/Alien.png'
+// import Char14 from '../assets/img/Khô lâu.png'
+// import Char15 from '../assets/img/Linh Hồn.png'
+
+
+
+
 import $ from 'jquery'
 
 const Characters = props => {
@@ -108,9 +111,9 @@ const Characters = props => {
             img: SHADOW,
             des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         },
-        {
-            icon: Char1
-        },
+        // {
+        //     icon: Char1
+        // },
         {
             icon: Char2
         },
@@ -142,18 +145,18 @@ const Characters = props => {
         {
             icon: Char11
         },
-        {
-            icon: Char12
-        },
-        {
-            icon: Char13
-        },
-        {
-            icon: Char14
-        },
-        {
-            icon: Char15
-        }
+        // {
+        //     icon: Char12
+        // },
+        // {
+        //     icon: Char13
+        // },
+        // {
+        //     icon: Char14
+        // },
+        // {
+        //     icon: Char15
+        // }
     ])
 
     const selected = useRef(0)

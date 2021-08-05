@@ -558,6 +558,7 @@ a {
 			flex-wrap: wrap;
 			margin-top: 150px;
 			z-index: 30;
+			padding: 0 100px;
 
 			.avai {
 				background-image: url("../img/khungg.png");
@@ -857,9 +858,10 @@ a {
 		.title {
 			text-transform: uppercase;
 			color: #c1bcb1;
-			font-size: 100px;
+			font-size: 44px;
 			font-family: "BebasNeue";
-			margin-bottom: 300px;
+			margin-bottom: 200px;
+			letter-spacing: 0.05em;
 		}
 
 		.content {
@@ -1746,7 +1748,6 @@ a {
 				}
 
 				.carousel {
-
 					.flickity-page-dots {
 						bottom: 0px;
 					}
@@ -1762,7 +1763,7 @@ a {
 						top: auto;
 						bottom: 50px;
 						padding: 0;
-						
+
 						.khung {
 							margin-bottom: 0;
 						}
@@ -1999,9 +2000,6 @@ a {
 					width: 70px;
 					margin: 10px;
 				}
-			}
-
-			.sketchfab-embed-wrapper {
 			}
 		}
 	}
