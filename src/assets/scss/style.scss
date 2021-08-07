@@ -55,7 +55,6 @@ a {
 	display: flex;
 	align-items: center;
 	background-color: transparent;
-	padding-top: 20px;
 
 	.icon-mobile {
 		display: none;
@@ -379,6 +378,7 @@ a {
 }
 
 #monster {
+	margin-bottom: 200px;
 	.container {
 		height: 100%;
 		text-align: center;
@@ -386,21 +386,21 @@ a {
 		.sketchfab-embed-wrapper {
 			iframe {
 				width: 70%;
-				height: 80vh;
+				height: 500px;
 			}
 		}
 	}
 }
 
 #phone-screen {
-	padding-top: 150px;
-	min-height: 80vh;
+	padding-top: 0px;
+	margin-bottom: 200px;
+	// min-height: 80vh;
 	.container {
 		height: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 200px;
 
 		.waper-phone {
 			position: relative;
@@ -447,9 +447,10 @@ a {
 }
 
 #characters {
-	min-height: 100vh;
-	padding-top: 200px;
-	padding-bottom: 300px;
+	// min-height: 100vh;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 200px;
 	.container {
 		height: 100%;
 		align-items: center;
@@ -475,7 +476,6 @@ a {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-
 				.arrow {
 					cursor: pointer;
 					z-index: 10;
@@ -504,12 +504,26 @@ a {
 					.rong {
 						z-index: 2;
 						width: 130%;
-						// margin-left: 50px;
+						margin-left: 50px;
 					}
 
 					.shadow {
 						margin-top: 70px;
 						width: 500px;
+					}
+
+					.hobbit,
+					.wolf {
+						width: 70%;
+					}
+
+					.goblin {
+						width: 100%;
+						margin-left: 50px;
+					}
+
+					.cow {
+						width: 100%;
 					}
 				}
 			}
@@ -590,9 +604,9 @@ a {
 }
 
 #features {
-	padding-top: 100px;
+	padding-top: 50px;
 	.container {
-		padding-top: 50px;
+		padding-top: 0px;
 		height: 100%;
 		align-items: center;
 		text-align: center;
@@ -659,11 +673,12 @@ a {
 }
 
 #earn {
+	padding-top: 50px;
 	.container {
 		height: 100%;
 		align-items: center;
-		padding-top: 100px;
-		padding-bottom: 100px;
+		
+		padding-bottom: 0px;
 		text-align: center;
 
 		.waper-content-mobile {
@@ -733,8 +748,8 @@ a {
 }
 
 #roadmap {
-	min-height: 100vh;
-	padding-top: 150px;
+	padding-top: 50px;
+	margin-bottom: 200px;
 	.container {
 		height: 100%;
 		align-items: center;
@@ -850,7 +865,7 @@ a {
 }
 
 #backed {
-	min-height: 100vh;
+	// min-height: 100vh;
 	.container {
 		height: 100%;
 		align-items: center;
@@ -878,8 +893,8 @@ a {
 		.sketchfab-embed-wrapper {
 			margin-top: -250px;
 			iframe {
-				width: 50%;
-				height: 90vh;
+				width: 70%;
+				height: 1000px;
 			}
 		}
 	}
@@ -892,8 +907,8 @@ a {
 		text-align: center;
 		display: flex;
 		justify-content: space-between;
-		padding-bottom: 100px;
-		padding-top: 100px;
+		padding-bottom: 50px;
+		padding-top: 0px;
 
 		.cop-header {
 			li,
@@ -1470,19 +1485,24 @@ a {
 	.header {
 		margin-top: 0;
 		padding-top: 0;
+		height: 80px;
 		.container {
 			display: block;
 			background-color: transparent;
+			padding: 20px;
 		}
 		.icon-mobile {
 			float: right;
-			top: 20px;
-			width: 30px;
+			height: 15px;
 			margin-top: 13px;
 			margin-right: 20px;
 			display: block;
 			position: relative;
 			z-index: 2;
+		}
+
+		.logo {
+			height: 35px;
 		}
 		.waper-logo {
 			display: flex;
@@ -1556,9 +1576,11 @@ a {
 	#home {
 		min-height: fit-content;
 		.container {
-			padding: 10px;
+			padding: 0 20px;
 			.vanvan {
-				height: 30vh;
+				height: auto;
+				margin-top: 30px;
+				height: 150px;
 			}
 			.txt {
 				padding: 0;
@@ -1584,12 +1606,14 @@ a {
 
 	#monster {
 		min-height: fit-content;
+		margin-bottom: 0;
 		.container {
-			padding: 20px;
+			padding: 0 20px;
 
 			.sketchfab-embed-wrapper {
 				iframe {
-					height: 50vh;
+					margin-top: 32px;
+					height: 300px;
 				}
 			}
 		}
@@ -1597,9 +1621,10 @@ a {
 
 	#phone-screen {
 		min-height: fit-content;
-		padding-top: 100px;
+		padding-top: 40px;
+		margin-bottom: 0;
 		.container {
-			padding: 10px;
+			padding: 20px;
 			display: block;
 			.waper-phone {
 				width: 100%;
@@ -1619,13 +1644,20 @@ a {
 				width: 100%;
 				padding-left: 0;
 				text-align: center;
+				margin-top: 30px;
+
+				div {
+					display: none;
+				}
 
 				p {
 					font-size: 24px;
 				}
 
 				span {
-					font-size: 12px;
+					display: block;
+					font-size: 10px;
+					padding: 0 50px;
 				}
 			}
 		}
@@ -1633,10 +1665,11 @@ a {
 
 	#characters {
 		padding-bottom: 0px;
-		padding-top: 200px;
+		padding-top: 50px;
+		min-height: fit-content;
+		margin-bottom: 0;
 		.container {
-			padding: 10px;
-			padding-top: 100px;
+			padding: 20px;
 
 			.wraper-name-mobile {
 				display: block;
@@ -1659,9 +1692,9 @@ a {
 					width: 100%;
 
 					img {
-						width: 50px;
-						height: 50px;
-						margin: 0 5px;
+						width: 40px;
+						height: 40px;
+						margin: 0 2px;
 					}
 				}
 			}
@@ -1671,27 +1704,24 @@ a {
 				height: 100%;
 				.left {
 					width: 100%;
-					// margin-top: 30px;
 					.arrow {
 						display: none;
 					}
 
 					.char {
 						width: 100%;
-						height: 300px;
+						height: 270px;
 						padding: 0 50px;
 						.orc {
 							height: 80%;
 						}
 						.tienca {
 							margin-top: 0px;
-							// width: 100%;
 							height: 100%;
 						}
 
 						.rong {
 							height: 80%;
-							// width: 100%;
 						}
 
 						.tiennu-iso {
@@ -1710,6 +1740,10 @@ a {
 							margin-left: 20px;
 							margin-top: -20px;
 							width: 100%;
+						}
+
+						.hobbit {
+							width: 60%;
 						}
 					}
 				}
@@ -1769,15 +1803,17 @@ a {
 	}
 
 	#features {
-		padding-top: 250px;
+		// padding-top: 250px;
+		padding-top: 50px;
 		padding-bottom: 0px;
 		min-height: fit-content;
 		margin-top: 0;
 		.container {
-			padding: 10px;
+			padding: 20px;
 
 			.wraper-cover {
-				margin-top: 100px;
+				margin-top: 10px;
+				margin-bottom: 0;
 				.titlee {
 					font-size: 24px;
 					color: #c1bcb1;
@@ -1826,9 +1862,9 @@ a {
 
 	#earn {
 		padding-bottom: 0px;
-		padding-top: 50px;
+		padding-top: 0px;
 		.container {
-			padding: 10px;
+			padding: 20px;
 			.title {
 				font-size: 24px;
 			}
@@ -1836,11 +1872,11 @@ a {
 			.waper-content-mobile {
 				display: block;
 				width: 100%;
-				padding-bottom: 100px;
-				margin-top: 50px;
+				padding-bottom: 50px;
+				margin-top: 20px;
 
 				.flickity-page-dots {
-					bottom: -70px;
+					bottom: -50px;
 				}
 
 				.gallery-cell {
@@ -1961,13 +1997,14 @@ a {
 	}
 
 	#roadmap {
-		padding-top: 50px;
-		padding-bottom: 150px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-bottom: 0;
 		.container {
-			padding: 10px;
+			padding: 20px;
 			.title {
 				font-size: 24px;
-				margin-bottom: 50px;
+				margin-bottom: 10px;
 			}
 
 			.hmm {
@@ -2013,6 +2050,7 @@ a {
 						width: 100%;
 						text-align: left;
 						padding-left: 150px;
+						margin-top: -30px;
 
 						li {
 							color: #fff6e7;
@@ -2028,8 +2066,9 @@ a {
 	}
 
 	#backed {
+		min-height: fit-content;
 		.container {
-			padding: 10px;
+			padding: 20px;
 			.title {
 				font-size: 24px;
 			}
@@ -2038,6 +2077,12 @@ a {
 				img {
 					width: 70px;
 					margin: 10px;
+				}
+			}
+
+			.sketchfab-embed-wrapper {
+				iframe {
+					height: 50vh;
 				}
 			}
 		}
@@ -2050,7 +2095,7 @@ a {
 
 		.is-mobie {
 			display: block;
-			padding: 10px;
+			padding: 20px;
 			text-align: center;
 
 			.srollUp {
@@ -2080,19 +2125,19 @@ a {
 				height: 0.5px;
 				width: 100%;
 				opacity: 0.2;
-				margin: 20px 0;
+				margin: 10px 0;
 			}
 
 			.txt {
 				color: rgba(255, 255, 255, 0.502972);
-				margin-bottom: 30px;
+				margin-bottom: 10px;
 			}
 
 			.group2 {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				margin-bottom: 30px;
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -2258,11 +2303,11 @@ a {
 	}
 
 	#monter-detail {
-		.container { 
+		.container {
 			padding: 10px;
 			.waper-info {
 				display: block;
-	
+
 				.left {
 					width: 100%;
 					.waper-char {
@@ -2279,7 +2324,7 @@ a {
 						}
 					}
 				}
-	
+
 				.right {
 					.group2 {
 						padding: 10px;
@@ -2287,17 +2332,17 @@ a {
 							font-size: 13px;
 						}
 					}
-	
+
 					.group4 {
 						.gr-child {
 							width: 45%;
 							margin: 5px;
-	
+
 							div {
 								p {
 									font-size: 14px;
 								}
-	
+
 								span {
 									font-size: 10px;
 								}
@@ -2306,8 +2351,6 @@ a {
 					}
 				}
 			}
-
 		}
-		
 	}
 }

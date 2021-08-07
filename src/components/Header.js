@@ -31,7 +31,7 @@ export default function Header() {
                 <img src={toggleMenu ? IconClose : IconMobile} className="icon-mobile" alt="photos" onClick={onClickToggleMenu}></img>
                 {toggleMenu && <div className="ovelay-mobile"></div>}
                 <Link to="/">
-                    <img src={Logo} alt="photos"></img>
+                    <img className="logo" src={Logo} alt="photos"></img>
                 </Link>
 
                 <div className="right">

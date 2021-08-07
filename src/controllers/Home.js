@@ -62,6 +62,15 @@ const Home = props => {
                 transform: "translateY(-50px)"
             })
 
+            if (props.isMobile) {
+                setTimeout(() => {
+                    $('#home .container .vanvan').css({
+                        height: '50px',
+                        transition: 'height 1s'
+                    })
+                }, 2000);
+            }
+
             setTimeout(() => {
                 $('.header').css({
                     opacity: '1',

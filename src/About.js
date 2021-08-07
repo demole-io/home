@@ -23,7 +23,7 @@ class App extends React.Component {
         return (
             <div id="about">
                 <Header pathname={pathname} isMobile={isMobile}></Header>
-                <Home></Home>
+                <Home isMobile={isMobile}></Home>
                 <Monster></Monster>
                 <PhoneScreen></PhoneScreen>
                 <Characters></Characters>
