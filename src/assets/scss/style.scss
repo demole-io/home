@@ -2498,4 +2498,26 @@ a {
 			}
 		}
 	}
+
+	#our-team {
+		.container {
+			padding: 20px;
+
+			.titleTxt {
+				padding: 24px;
+				width: 100%;
+			}
+
+			.description {
+				width: 100%;
+				padding: 20px;
+				margin: 0;
+				margin-bottom: 65px;
+			}
+
+			.list-team {
+				flex-wrap: wrap;
+			}
+		}
+	}
 }
