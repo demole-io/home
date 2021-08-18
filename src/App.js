@@ -7,8 +7,14 @@ import Summon from './controllers/Summon';
 import Faq from './controllers/Faq';
 import Marketplace from './controllers/Marketplace';
 import MonterDetail from './controllers/MonterDetail';
+import OurTeam from './controllers/OurTeam';
 
 const routes = [
+    {
+        path: '/our-team',
+        exact: false,
+        main: ({ location, match }) => <OurTeam></OurTeam>
+    },
     {
         path: '/monster-detail/:index',
         exact: false,

@@ -39,6 +39,11 @@ a {
 	src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+	font-family: "EvilEmpire";
+	src: url("../fonts/EvilEmpire.otf");
+}
+
 #about {
 	background-image: url("../img/bg-body.png");
 	background-repeat: no-repeat;
@@ -677,7 +682,7 @@ a {
 	.container {
 		height: 100%;
 		align-items: center;
-		
+
 		padding-bottom: 0px;
 		text-align: center;
 
@@ -1455,6 +1460,142 @@ a {
 		.tl {
 			p {
 				font-weight: bold;
+			}
+		}
+	}
+}
+
+#our-team {
+	background-color:  #0F1323;
+	min-height: 100vh;
+
+	.container {
+		.titleTxt {
+			padding: 24px 312px;
+			border-width: 2px;
+			border-style: solid;
+			border-image: linear-gradient(to left, #0c0c0c 1%, #ffb337 50%, #0c0c0c 100%) 100% 0 100% 0/1px 0 1px 0
+				stretch;
+			text-align: center;
+			font-family: "EvilEmpire";
+			font-size: 48px;
+			line-height: 55px;
+			width: 866px;
+			margin: auto;
+			margin-top: 46px;
+			margin-bottom: 37px;
+		}
+
+		.description {
+			padding: 40px;
+			background-color: #1a1e30;
+			border: 1px solid #292f49;
+			border-radius: 16px;
+			font-size: 18px;
+			line-height: 26px;
+			color: #afb9cf;
+			margin-left: 138px;
+			margin-right: 138px;
+			margin-bottom: 65px;
+		}
+
+		.list-team {
+			display: flex;
+			// flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 91px;
+		}
+
+		.child {
+			width: 350px;
+			align-items: center;
+			.card {
+				position: relative;
+				display: flex;
+				align-items: flex-start;
+				transition: 0.4s ease-out;
+				height: 450px;
+				margin-bottom: 64px;
+				cursor: pointer;
+
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+					& > .info {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: block;
+					width: 100%;
+					height: 100%;
+					border-radius: 15px;
+					background: rgba(black, 0.6);
+					z-index: 2;
+					transition: 0.5s;
+					opacity: 0;
+				}
+
+				.name {
+					font-weight: bold;
+					font-size: 24px;
+					margin-bottom: 10px;
+					margin-top: 28px;
+				}
+
+				.office {
+					color: #9298ab;
+					font-size: 18px;
+				}
+
+				.wrapper-image {
+					position: absolute;
+					top: 0;
+					left: 0;
+					text-align: center;
+					width: 100%;
+					.avatar {
+						width: 100%;
+					}
+
+					.icon-in {
+						position: absolute;
+						bottom: 105px;
+						right: 20px;
+					}
+				}
+
+				.info {
+					position: relative;
+					z-index: 3;
+					opacity: 0;
+					transform: translateY(-30px);
+					transition: 0.5s;
+					background-color: rgba(26, 30, 48, 0.9);
+					border: 1px solid #292f49;
+					box-shadow: 0px 0px 2px 6px #1a1e30;
+					border-radius: 8px;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+					padding-left: 20px;
+					padding-right: 20px;
+
+					.des {
+						margin-top: 20px;
+						font-size: 12px;
+						line-height: 24px;
+						text-align: left;
+					}
+				}
 			}
 		}
 	}
