@@ -45,6 +45,8 @@ const Home = props => {
 
     useEffect(() => {
 
+        document.body.style.overflow = "hidden"
+
         $('.header').css({
             opacity: '0',
         })
@@ -62,6 +64,7 @@ const Home = props => {
                 transform: "translateY(-50px)"
             })
 
+            
             if (props.isMobile) {
                 setTimeout(() => {
                     $('#home .container .vanvan').css({
@@ -72,6 +75,12 @@ const Home = props => {
             }
 
             setTimeout(() => {
+                document.body.style.overflow = "auto"
+
+                $('#home').css({
+                    height: "fit-content"
+                })
+
                 $('.header').css({
                     opacity: '1',
                     transition: 'opacity 1s'

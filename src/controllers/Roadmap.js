@@ -17,22 +17,23 @@ export default function Roadmap() {
             title: "QII/2021",
             content: [
                 "Character design/ NFT system",
-                "Monster system ( stat/skill/graphic v.v.. )",
+                "Monster system (stat/skill/graphic v.v.. )",
             ],
             imgMobile: img
 
         },
         {
             img: img9,
-            title: " QIII/2021",
+            title: "QIII/2021",
             content: [
                 "Monster summon",
                 "Marketplace",
                 "Training ground / Staking",
                 "LP adding",
-                "World Boss",
-                "Social features: Chatting, Line-up visiting",
-                "Arena"
+                "Campaign/Story",
+                "Social features",
+                "Arena",
+                "Mobile (Android/IOS)"
             ],
             imgMobile: img
 
@@ -43,9 +44,9 @@ export default function Roadmap() {
             content: [
                 "Auction",
                 "Monster upgrading system",
-                "Campaign/Story",
+                "World Boss",
                 "Boosters",
-                "Mobile (Android/IOS)"
+                
             ],
             imgMobile: img
         },
@@ -54,7 +55,6 @@ export default function Roadmap() {
             title: "QI/2022",
             content: [
                 "Pet system",
-                "More in-game activities: Darkness Maze, Olympus tower,...",
                 "More social features: Team up, Guild",
             ],
             imgMobile: img
@@ -64,7 +64,6 @@ export default function Roadmap() {
             title: "QII/2022",
             content: [
                 "Item crafting system",
-                "More in-game activities",
                 "DAO Voting",
             ],
             imgMobile: img
