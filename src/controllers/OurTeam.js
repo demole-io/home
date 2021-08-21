@@ -5,6 +5,7 @@ import IconIn from '../assets/img/icon-in.png'
 import Emilian from '../assets/img/Emilian Gomoi.jpg'
 import Catalin from '../assets/img/Catalin Anton.jpg'
 import Denis from '../assets/img/Denis Znamenskiy.jpg'
+import Rae from '../assets/img/Rae Lim.jpg'
 
 export default function OurTeam() {
     const [data, setdata] = useState([
@@ -27,7 +28,14 @@ export default function OurTeam() {
             name: 'Denis Znamenskiy',
             office: 'CEO',
             description: 'Denis Znamenskiy is CEO (Chief executive officer) of Demole.io. As a SPAC professional, he participated as a speaker at international blockchain events, advising fintech companies (Algochain, PrismCoin, Bibox, IndexChain, Demole.io). With solid experience, he had worked as a systematic hedge fund manager focusing on liquid strategies, an algorithmic trader and quantitative research analyst, and an algorithmic Trading, Statistical Arbitrage, HFT (High-Frequency Trading), Cross-asset portfolio management, back-test, and optimization.',
-            in: 'https://www.linkedin.com/in/denisznamenskiy/ '
+            in: 'https://www.linkedin.com/in/denisznamenskiy/'
+        },
+        {
+            img: Rae,
+            name: 'Rae Lim',
+            office: 'CMO',
+            description: ' ',
+            in: 'https://www.linkedin.com/in/rae-lim-33a39310b/'
         },
     ])
 
