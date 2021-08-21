@@ -6,6 +6,7 @@ import Market from '../assets/img/map_grocery-or-supermarket.png'
 import Stake from '../assets/img/ant-design_dollar-circle-filled.png'
 import Summon from '../assets/img/raphael_opensource.png'
 import Faq from '../assets/img/akar-icons_question-fill.png'
+import Team from '../assets/img/team.svg'
 import Commun from '../assets/img/fluent_people-community-20-filled.png'
 import { Link } from "react-router-dom";
 
@@ -45,6 +46,7 @@ export default function Header() {
                         <li className="tip">{toggleMenu && <img src={Stake} alt="photos"></img>} Stake<span>Coming Soon</span></li>
                         <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Deck</a>
                         <li className="tip">{toggleMenu && <img src={Faq} alt="photos"></img>} Demole-Wiki<span>Coming Soon</span></li>
+                        <Link to="/our-team">{toggleMenu && <img src={Team} alt="photos" width="24" fill="white"></img>} Our Team</Link>
                         <div className="playnow">
                             <li className="tip">{toggleMenu && <img src={Commun} alt="photos"></img>} PLAY NOW<span>Coming Soon</span></li>
                         </div>
