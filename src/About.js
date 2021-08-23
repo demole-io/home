@@ -1,6 +1,7 @@
 import React from 'react';
 // import 'react-redux-toastr/src/styles/index.scss'
 import './assets/scss/style.scss';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Header from './components/Header';
 import Home from './controllers/Home';
 import $ from 'jquery'

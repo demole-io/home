@@ -300,25 +300,6 @@ a {
 	transform-origin: bottom;
 }
 
-.flickity-button {
-	display: none;
-}
-
-.flickity-page-dots {
-	li {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		border: 1px solid #ce985e;
-		margin: 10px;
-		cursor: pointer;
-	}
-
-	.is-selected {
-		background: linear-gradient(180deg, #ddae6f 0%, #fff6e7 100%);
-	}
-}
-
 /*#endregion */
 #home {
 	min-height: calc(100vh - 120px);
@@ -616,61 +597,53 @@ a {
 		align-items: center;
 		text-align: center;
 
-		.wraper-cover {
+		.titlee {
+			color: #eac27f;
+			font-size: 40px;
+			font-family: "BebasNeue";
+			text-transform: uppercase;
 			margin-bottom: 50px;
+		}
 
-			.titlee {
-				color: #eac27f;
-				font-size: 40px;
-				font-family: "BebasNeue";
-				text-transform: uppercase;
-				margin-bottom: 50px;
+		.carousel-slider {
+			height: 700px;
+		}
+		.carousel-cell {
+			position: relative;
+		}
+
+		.carousel-cell img {
+			display: block;
+			max-height: 100%;
+			margin-bottom: 50px;
+		}
+
+		.wraper-khung {
+			position: absolute;
+			z-index: 10;
+			top: 105px;
+			left: 0;
+			padding: 0 30px;
+			.khung {
+				width: 100%;
+				position: relative;
 			}
 
-			.carousel {
-				text-align: center;
-				.flickity-page-dots {
-					bottom: -50px;
-				}
+			.wraper-info {
+				position: absolute;
+				bottom: 55px;
+				left: 0;
+				width: 100%;
+				height: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
-				.carousel-cell {
-					position: relative;
-				}
-
-				.carousel-cell img {
+				span {
 					display: block;
-					max-height: 100%;
-					margin-bottom: 50px;
-				}
-
-				.wraper-khung {
-					position: absolute;
-					z-index: 10;
-					top: 105px;
-					left: 0;
-					padding: 0 30px;
-					.khung {
-						width: 100%;
-						position: relative;
-					}
-
-					.wraper-info {
-						position: absolute;
-						bottom: 55px;
-						left: 0;
-						width: 100%;
-						height: 100px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-
-						span {
-							display: block;
-							font-size: 16px;
-							color: #fff6e7;
-							padding: 0 250px;
-						}
-					}
+					font-size: 16px;
+					color: #fff6e7;
+					padding: 0 250px;
 				}
 			}
 		}
@@ -1466,7 +1439,7 @@ a {
 }
 
 #our-team {
-	background-color:  #0F1323;
+	background-color: #0f1323;
 	min-height: 100vh;
 
 	.container {
@@ -1958,49 +1931,46 @@ a {
 		.container {
 			padding: 20px;
 
-			.wraper-cover {
-				margin-top: 10px;
-				margin-bottom: 0;
-				.titlee {
-					font-size: 24px;
-					color: #c1bcb1;
-					font-family: "BebasNeue";
-					text-transform: uppercase;
-					margin-bottom: 20px;
+			.carousel-slider {
+				height: 280px;
+			}
+
+			.titlee {
+				font-size: 24px;
+				color: #c1bcb1;
+				font-family: "BebasNeue";
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+
+
+			.carousel-cell {
+				width: 100%; /* full width */
+			}
+
+			.carousel-cell img {
+				width: 100%;
+			}
+
+
+			.wraper-khung {
+				top: auto;
+				bottom: 0;
+				padding: 0;
+
+				.khung {
+					margin-bottom: 0;
 				}
 
-				.carousel {
-					.flickity-page-dots {
-						bottom: 0px;
-					}
-					.carousel-cell {
-						width: 100%; /* full width */
-					}
+				.wraper-info {
+					bottom: 5px;
+					height: 40px;
 
-					.carousel-cell img {
-						width: 100%;
-					}
-
-					.wraper-khung {
-						top: auto;
-						bottom: 50px;
-						padding: 0;
-
-						.khung {
-							margin-bottom: 0;
-						}
-
-						.wraper-info {
-							bottom: 5px;
-							height: 40px;
-
-							span {
-								font-size: 8px;
-								line-height: 10px;
-								display: block;
-								padding: 0 70px;
-							}
-						}
+					span {
+						font-size: 8px;
+						line-height: 10px;
+						display: block;
+						padding: 0 70px;
 					}
 				}
 			}
@@ -2019,15 +1989,13 @@ a {
 			.waper-content-mobile {
 				display: block;
 				width: 100%;
-				padding-bottom: 50px;
 				margin-top: 20px;
 
-				.flickity-page-dots {
-					bottom: -50px;
+				.carousel-slider {
+					height: 400px;
 				}
-
+			
 				.gallery-cell {
-					width: 66%;
 					height: 200px;
 					margin-right: 10px;
 					counter-increment: gallery-cell;

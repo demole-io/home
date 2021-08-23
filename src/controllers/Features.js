@@ -5,6 +5,7 @@ import img3 from '../assets/img/f3.png'
 import img4 from '../assets/img/f4.png'
 import khung from '../assets/img/khung.png'
 import khungMobile from '../assets/img/khungmobile.png'
+import Carousel from "../components/Carousel";
 
 const Features = props => {
     const [dataa] = useState([
@@ -43,7 +44,7 @@ const Features = props => {
             <div key={key} className={`carousel-cell`}>
                 <p className="titlee">{dataa[key].content.title}</p>
 
-                <img className="carousel-cell-image" data-flickity-lazyload={dataa[key].img} alt="photos"></img>
+                <img className="carousel-cell-image" src={dataa[key].img} alt="photos"></img>
 
                 <div className="wraper-khung">
                     <img className="khung" src={props.isMobile ? khungMobile : khung} alt="photos"></img>
@@ -56,22 +57,14 @@ const Features = props => {
         )
     }
 
-    const renderData = () => {
-        return (
-            <div className="wraper-cover">
-                <div className="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "autoPlay": 7000 }'>
-                    {dataa.map((value, key) => {
-                        return renderChild(key)
-                    })}
-                </div>
-            </div>
-
-        )
-    }
     return (
         <div id="features">
             <div className="container">
-                {renderData()}
+                <Carousel>
+                    {dataa.map((value, index) => {
+                        return renderChild(index)
+                    })}
+                </Carousel>
             </div>
 
         </div>

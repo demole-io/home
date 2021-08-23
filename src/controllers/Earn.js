@@ -10,6 +10,7 @@ import khung3 from '../assets/img/playtoearn.png'
 import khung4 from '../assets/img/playtoearn2.png'
 import khung5 from '../assets/img/playtoearn6.png'
 import $ from 'jquery'
+import Carousel from "../components/Carousel";
 
 export default function Earn() {
 
@@ -89,13 +90,11 @@ export default function Earn() {
                 </div>
 
                 <div className="waper-content-mobile">
-                    <div className="gallery js-flickity"
-                        data-flickity-options='{ "wrapAround": true, "autoPlay": 7000 }'>
-
+                    <Carousel centerMode={true} centerSlidePercentage={70}>
                         {data.map((value, index) => {
                             return renderChild(value, index)
                         })}
-                    </div>
+                    </Carousel>
 
                 </div>
             </div>
