@@ -34,8 +34,10 @@ export default function OurTeam() {
             img: Rae,
             name: 'Rae Lim',
             office: 'CMO',
-            description: ' ',
-            in: 'https://www.linkedin.com/in/rae-lim-33a39310b/'
+            description: `Rae Lim is the CMO (Chief Marketing Officer) at Demole.io.
+            The beginning of her career took place in multinational FMCG companies, where she was responsible for planning, developing, implementing and monitoring business marketing strategies.
+            With a passion to contribute to societal goals by engaging in ethically-oriented practices, she managed various corporate social responsibility projects that involved government, stakeholders and the public in a British multinational company, which was at that time the third largest in the world (based on gross revenue).`,
+            in: 'https://www.linkedin.com/in/theraelim'
         },
     ])
 
