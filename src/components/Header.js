@@ -66,7 +66,7 @@ export default function Header() {
 
 
                             <p>
-                                <a href='https://twitter.com/io_demole' target="_blank" rel="noreferrer">
+                                <a href='https://twitter.com/demoleio' target="_blank" rel="noreferrer">
                                     <img src={TweetIcon} alt="photos"></img>
                                 </a>
                             </p>
