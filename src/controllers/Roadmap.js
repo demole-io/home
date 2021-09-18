@@ -56,15 +56,6 @@ export default function Roadmap() {
             ],
             imgMobile: img
         },
-        {
-            img: img12,
-            title: "QII/2022",
-            content: [
-                "Item crafting system",
-                "DAO Voting",
-            ],
-            imgMobile: img
-        }
     ])
 
     const renderData = (value, index) => {

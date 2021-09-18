@@ -745,18 +745,23 @@ a {
 			padding-right: 80px;
 			.waper-data {
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				flex-wrap: wrap;
 
 				.child {
 					width: 19%;
 					position: relative;
 					overflow: visible;
+					margin-left: 13px;
 					.line {
 						position: absolute;
 						bottom: 13px;
 						right: -55px;
 						width: 49%;
+					}
+
+					&:first-child {
+						margin-left: 0px;
 					}
 
 					.wraper-title {
