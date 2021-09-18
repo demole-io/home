@@ -14,48 +14,45 @@ export default function Roadmap() {
     const [data] = useState([
         {
             img: img3,
-            title: "QII/2021",
+            title: "QIII/2021",
             content: [
-                "Character design/ NFT system",
-                "Monster system (stat/skill/graphic v.v.. )",
+                "Character design, NFT system",
+                "Game design and testing",
+                "Partnerships",
+                "Fundraising"
             ],
             imgMobile: img
 
         },
         {
             img: img9,
-            title: "QIII/2021",
+            title: "QIV/2021",
             content: [
-                "Monster summon",
+                "NFT Offerings",
+                "TGE/Listing",
                 "Marketplace",
-                "Training ground / Staking",
-                "LP adding",
-                "Campaign/Story",
-                "Social features",
-                "Arena",
-                "Mobile (Android/IOS)"
+                "Training ground, Monster Nest",
+                "Game release: Campaign, World Boss, Arena",
             ],
             imgMobile: img
 
         },
         {
             img: img10,
-            title: "QIV/2021",
+            title: "QI/2022",
             content: [
-                "Auction",
-                "Monster upgrading system",
-                "World Boss",
-                "Boosters",
-                
+                "Pet system",
+                "Item system",
+                "Booster system",
+                "More social features",
             ],
             imgMobile: img
         },
         {
             img: img11,
-            title: "QI/2022",
+            title: "QII/2022",
             content: [
-                "Pet system",
-                "More social features: Team up, Guild",
+                "Tournament",
             ],
             imgMobile: img
         },
