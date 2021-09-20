@@ -738,7 +738,7 @@ a {
 			color: #c1bcb1;
 			font-size: 44px;
 			font-family: "BebasNeue";
-			margin-bottom: 200px;
+			margin-bottom: 300px;
 			letter-spacing: 0.05em;
 		}
 		.content {
@@ -835,6 +835,93 @@ a {
 									font-size: 12px;
 								}
 							}
+						}
+					}
+				}
+			}
+
+			.wrapper-data {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				position: relative;
+				.line {
+					position: absolute;
+					top: 0;
+				}
+
+				.child {
+					width: 25%;
+					overflow: visible;
+					text-align: left;
+					.wraper-title {
+						width: 200px;
+						background-size: 100% 100%;	// background-image: url("../img/roadmap1.png");
+						background-repeat: no-repeat;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 20px 30px;
+						position: relative;
+
+						.titlee {
+							font-size: 30px;
+							font-family: "BebasNeue";
+							margin-left: 30px;
+						}
+
+						.index {
+							position: absolute;
+							left: 25px;
+							font-family: "BebasNeue";
+							color: #eac27f;
+							font-size: 35px;
+						}
+					}
+
+					.wraper-content {
+						width: 350px;
+						z-index: 10;
+						display: flex;
+						align-items: flex-start;
+						justify-content: center;
+						height: 180px;
+						img {
+							height: 100%;
+						}
+						ul {
+							width: 50%;
+							text-align: left;
+							margin-left: 10px;
+							padding-left: 20px;
+							li {
+								color: #fff6e7;
+								margin: 5px 0;
+								font-size: 12px;
+							}
+						}
+					}
+				}
+
+				.child-le {
+					margin-top: -252px;
+					.wraper-title { 
+						margin-left: 51px;
+					}
+					.wraper-content { 
+						margin-top: -5px;
+					}
+				}
+
+				.child-chan {
+					margin-top: 2px;
+					.wraper-title { 
+						margin-top: -5px;
+						margin-left: 49px;
+					}
+					.wraper-content {
+						ul {
+							padding-top: 20px;
 						}
 					}
 				}
@@ -1948,7 +2035,6 @@ a {
 				margin-bottom: 20px;
 			}
 
-
 			.carousel-cell {
 				width: 100%; /* full width */
 			}
@@ -1956,7 +2042,6 @@ a {
 			.carousel-cell img {
 				width: 100%;
 			}
-
 
 			.wraper-khung {
 				top: auto;
@@ -1999,7 +2084,7 @@ a {
 				.carousel-slider {
 					height: 400px;
 				}
-			
+
 				.gallery-cell {
 					height: 200px;
 					margin-right: 10px;

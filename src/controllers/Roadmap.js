@@ -10,6 +10,11 @@ import ArrowDown from '../assets/img/roadmap2.png'
 import hmm from '../assets/img/roadmap4.png'
 import ArowerRight from '../assets/img/roadmap5.png'
 
+import Line from '../assets/img/Rectangle 11.png'
+import LineDung from '../assets/img/Rectangle 11 copy 2.png'
+import BtnChan from '../assets/img/button1.png'
+import BtnLe from '../assets/img/button2.png'
+
 export default function Roadmap() {
     const [data] = useState([
         {
@@ -97,6 +102,43 @@ export default function Roadmap() {
         )
     }
 
+    const renderDataa = (value, index) => {
+        return (
+            <>
+                {(index % 2 === 1) && <div className="child child-le" key={index}>
+                    <div className="wraper-title" style={{ backgroundImage: `url(${BtnLe})` }}>
+                        <p className="index">{index + 1}</p>
+                        <p className="titlee">{value.title}</p>
+                    </div>
+
+                    <div className="wraper-content">
+                        <img src={LineDung} alt="photos"></img>
+                        <ul>
+                            {value.content.map((valuee, indexx) => {
+                                return <li key={indexx}>- {valuee}</li>
+                            })}
+                        </ul>
+                    </div>
+                </div>}
+
+                {(index % 2 === 0) && <div className="child child-chan" key={index}>
+                    <div className="wraper-content">
+                        <img src={LineDung} alt="photos"></img>
+                        <ul>
+                            {value.content.map((valuee, indexx) => {
+                                return <li key={indexx}>- {valuee}</li>
+                            })}
+                        </ul>
+                    </div>
+                    <div className="wraper-title" style={{ backgroundImage: `url(${BtnChan})` }}>
+                        <p className="index">{index + 1}</p>
+                        <p className="titlee">{value.title}</p>
+                    </div>
+                </div>}
+            </>
+        )
+    }
+
     const renderDataMobile = (value, index) => {
         return (
             <div className="child" key={index}>
@@ -124,9 +166,10 @@ export default function Roadmap() {
             <div className="container">
                 <p className="title">roadmap</p>
                 <div className="content">
-                    <div className="waper-data">
+                    <div className="wrapper-data">
+                        <img className="line" src={Line} alt="photos"></img>
                         {data.map((value, index) => {
-                            return renderData(value, index)
+                            return renderDataa(value, index)
                         })}
                     </div>
                 </div>
