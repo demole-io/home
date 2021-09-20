@@ -326,7 +326,7 @@ const Characters = props => {
                 </div>
 
                 <div className="wraper-name">
-                    {dataa.map((value, indexx) => {
+                    {data.map((value, indexx) => {
                         return (
                             <div key={indexx} className={`${index === indexx ? 'selected' : ''} ${value.name ? 'avai' : 'invai'}`}>
                                 <img onClick={() => onClickName(indexx)} src={value.icon} alt="photos"></img>
