@@ -19,7 +19,8 @@ export default function Roadmap() {
     const [data] = useState([
         {
             img: img3,
-            title: "QIII/2021",
+            title: "QIII",
+            year: "2021",
             content: [
                 "Character design, NFT system",
                 "Game design and testing",
@@ -31,7 +32,8 @@ export default function Roadmap() {
         },
         {
             img: img9,
-            title: "QIV/2021",
+            title: "QIV",
+            year: "2021",
             content: [
                 "NFT Offerings",
                 "TGE/Listing",
@@ -44,7 +46,8 @@ export default function Roadmap() {
         },
         {
             img: img10,
-            title: "QI/2022",
+            title: "QI",
+            year: "2022",
             content: [
                 "Pet system",
                 "Item system",
@@ -55,7 +58,8 @@ export default function Roadmap() {
         },
         {
             img: img11,
-            title: "QII/2022",
+            title: "QII",
+            year: "2022",
             content: [
                 "Tournament",
             ],
@@ -108,7 +112,7 @@ export default function Roadmap() {
                 {(index % 2 === 1) && <div className="child child-le" key={index}>
                     <div className="wraper-title" style={{ backgroundImage: `url(${BtnLe})` }}>
                         <p className="index">{index + 1}</p>
-                        <p className="titlee">{value.title}</p>
+                        <p className="titlee">{value.title} <span>{value.year}</span></p>
                     </div>
 
                     <div className="wraper-content">
@@ -132,7 +136,7 @@ export default function Roadmap() {
                     </div>
                     <div className="wraper-title" style={{ backgroundImage: `url(${BtnChan})` }}>
                         <p className="index">{index + 1}</p>
-                        <p className="titlee">{value.title}</p>
+                        <p className="titlee">{value.title} <span>{value.year}</span></p>
                     </div>
                 </div>}
             </>
