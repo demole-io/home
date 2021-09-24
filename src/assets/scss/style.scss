@@ -950,8 +950,8 @@ a {
 			color: #c1bcb1;
 			font-size: 44px;
 			font-family: "BebasNeue";
-			margin-bottom: 200px;
 			letter-spacing: 0.05em;
+			margin-bottom: 100px;
 		}
 
 		.content {
@@ -959,14 +959,10 @@ a {
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: space-between;
-
-			img {
-				margin: 20px;
-			}
 		}
 
 		.sketchfab-embed-wrapper {
-			margin-top: -250px;
+			margin-top: -300px;
 			iframe {
 				width: 70%;
 				height: 1000px;
@@ -2277,6 +2273,7 @@ a {
 
 	#backed {
 		min-height: fit-content;
+		padding-top: 150px;
 		.container {
 			padding: 20px;
 			.title {
@@ -2285,14 +2282,14 @@ a {
 
 			.content {
 				img {
-					width: 70px;
-					margin: 10px;
+					width: 90px;
 				}
 			}
 
 			.sketchfab-embed-wrapper {
+				margin-top: 0px;
 				iframe {
-					height: 50vh;
+					height: 30vh;
 				}
 			}
 		}
