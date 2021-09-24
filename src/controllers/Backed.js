@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Metrix from '../assets/img/logo-metrix.png'
-import Interchainventures from '../assets/img/logo-interchainventures.webp'
+import Interchainventures from '../assets/img/logo-interchainventures.png'
 import Lupa from '../assets/img/LupaX.png'
 
 export default function Backed() {
