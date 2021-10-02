@@ -84,7 +84,7 @@ export default function Header() {
                             </p>
 
                             <p>
-                                <a href='https://t.me/demole_io' target="_blank" rel="noreferrer">
+                                <a href='https://t.me/Demoleio' target="_blank" rel="noreferrer">
                                     <img src={IconTele} alt="photos"></img>
                                 </a>
                             </p>
