@@ -2,19 +2,30 @@ import React, { useState } from 'react'
 import Metrix from '../assets/img/logo-metrix.png'
 import Interchainventures from '../assets/img/logo-interchainventures.png'
 import Lupa from '../assets/img/LupaX.png'
+import DaoMaker from '../assets/img/dao-maker.svg'
+import LDCapial from '../assets/img/ld-capital.svg'
 
 export default function Backed() {
+
+    const [data2, setdata2] = useState([
+        { img: DaoMaker },
+        { img: LDCapial },
+    ])
 
     const [data, setdata] = useState([
         { img: Metrix },
         { img: Interchainventures },
         { img: Lupa }
-
     ])
     return (
         <div id="backed">
             <div className="container">
                 <p className="title">BACKED BY</p>
+                <div className="content" style={{marginBottom: 100}}>
+                    {data2.map((value, index) => {
+                        return <img src={value.img} height={100} alt="photos"></img>
+                    })}
+                </div>
                 <div className="content">
                     {data.map((value, index) => {
                         return <img src={value.img} alt="photos"></img>
