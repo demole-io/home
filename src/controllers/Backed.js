@@ -4,12 +4,14 @@ import Interchainventures from '../assets/img/logo-interchainventures.png'
 import Lupa from '../assets/img/LupaX.png'
 import DaoMaker from '../assets/img/dao-maker.svg'
 import LDCapial from '../assets/img/ld-capital.svg'
+import Gate from '../assets/img/gate-logo.png'
 
 export default function Backed() {
 
     const [data2, setdata2] = useState([
         { img: DaoMaker },
         { img: LDCapial },
+        { img: Gate }
     ])
 
     const [data, setdata] = useState([
@@ -21,9 +23,9 @@ export default function Backed() {
         <div id="backed">
             <div className="container">
                 <p className="title">BACKED BY</p>
-                <div className="content" style={{marginBottom: 100}}>
+                <div className="content" style={{ marginBottom: 50 }}>
                     {data2.map((value, index) => {
-                        return <img src={value.img} height={100} alt="photos"></img>
+                        return <img src={value.img} width={250} alt="photos"></img>
                     })}
                 </div>
                 <div className="content">
