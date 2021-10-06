@@ -78,7 +78,7 @@ export default function Header() {
                             </p>
 
                             <p>
-                                <a href='https://discord.com/invite/w5BTuxtKQA' target="_blank" rel="noreferrer">
+                                <a href='https://discord.gg/NZJBZ9xH8M' target="_blank" rel="noreferrer">
                                     <img src={IconDiscord} alt="photos"></img>
                                 </a>
                             </p>
