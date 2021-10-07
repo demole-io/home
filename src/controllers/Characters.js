@@ -1,38 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Unknow1 from '../assets/img/Subtract.png'
-import Knight from '../assets/img/ezgif.com-gif-maker (9).webm'
-import ORC from '../assets/img/ezgif.com-gif-maker (7).webm'
+
+
+import GOBLIN from '../assets/webm/Elf_Clan.webm'
+import ORC from '../assets/webm/Wood_Clan.webm'
+import MEMALD from '../assets/webm/Water_Clan.webm'
+import Knight from '../assets/webm/Dragon_Clan.webm'
+import SHADOW from '../assets/webm/Ghost_Clan.webm'
+
+import iconGOBLIN from '../assets/img/phap su.png'
+import iconOrc from '../assets/img/nguoi_cay.png'
+import iconMEMALD from '../assets/img/nguoi_ca.png'
+import iconKnight from '../assets/img/rong12.png'
+import iconSHADOW from '../assets/img/bong_dem.png'
+
+import GoblinPoster from '../assets/webm/Elf_Clan.png'
+import OrcPoster from '../assets/webm/Wood_Clan.png'
+import TiencaPoster from '../assets/webm/Water_Clan.png'
+import RongPoster from '../assets/webm/Dragon_Clan.png'
+import ShadowPoster from '../assets/webm/Ghost_Clan.png'
+
+//
 import WARRIOR from '../assets/webm/tiennu.webm'
-import MEMALD from '../assets/webm/tienca.webm'
-import SHADOW from '../assets/webm/shadow.webm'
-import GOBLIN from '../assets/webm/Goblin_idle.webm'
 import HOBBIT from '../assets/webm/Hobbit.webm'
 import WOLF from '../assets/webm/ideal_nguoiSoi.webm'
 import COW from '../assets/webm/NguoiDauBo.webm'
 
-import iconOrc from '../assets/img/nguoi_cay.png'
-import iconMEMALD from '../assets/img/nguoi_ca.png'
-import iconKnight from '../assets/img/rong12.png'
 import iconWARRIOR from '../assets/img/thien_than.png'
-import iconSHADOW from '../assets/img/bong_dem.png'
-import iconGOBLIN from '../assets/img/phap su.png'
 import iconCOW from '../assets/img/nguoi xuong.png'
 import iconHobbit from '../assets/img/nguoi lun.png'
 import iconWolf from '../assets/img/nguoi soi.png'
 
-
-import OrcPoster from '../assets/img/Orc2.png'
-import TiencaPoster from '../assets/webm/tienca__1_-removebg-preview.png'
-import RongPoster from '../assets/img/rong 2.png'
 import TiennuPoster from '../assets/webm/tiennu-removebg-preview.png'
-import ShadowPoster from '../assets/webm/shadow-removebg-preview.png'
-import GoblinPoster from '../assets/webm/Goblin_idle-removebg-preview.png'
 import HobbitPoster from '../assets/webm/Hobbit-removebg-preview.png'
 import WolfPoster from '../assets/webm/ideal_nguoiSoi-removebg-preview.png'
 import CowPoster from '../assets/webm/NguoiDauBo-removebg-preview.png'
-
-import ArrowLeft from '../assets/img/muiten 2.png'
-import ArrowRight from '../assets/img/muiten 1.png'
 
 import Char2 from '../assets/img/chien binh.png'
 import Char3 from '../assets/img/chim.png'
@@ -40,6 +42,10 @@ import Char4 from '../assets/img/cung thủ.png'
 import Char5 from '../assets/img/kỵ sĩ.png'
 import Char6 from '../assets/img/nguoi khong lo.png'
 import Char10 from '../assets/img/nhan ma.png'
+//
+
+import ArrowLeft from '../assets/img/muiten 2.png'
+import ArrowRight from '../assets/img/muiten 1.png'
 
 const Characters = props => {
     const isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
@@ -74,14 +80,14 @@ const Characters = props => {
             marginTop: -30,
             des: 'Living in the caves on the high cliffs of the northern continent, the Dragon tribe is a mighty tribe with wings spread in the sky, a muscular body, and sharp claws. Dragons also have hard scales like armor to protect the body. With the advantage of flying high, the dragon tribe proved to be dominant in single hunting.'
         },
-        {
-            name: 'Angel Tribe',
-            icon: iconWARRIOR,
-            img: WARRIOR,
-            className: 'tiennu',
-            poster: TiennuPoster,
-            marginTop: -15,
-            des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
+          {
+            name: 'GOBLIN Tribe',
+            icon: iconGOBLIN,
+            img: GOBLIN,
+            className: 'goblin',
+            poster: GoblinPoster,
+            marginTop:10,
+            des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         },
         {
             name: 'Shadow Tribe',
@@ -92,6 +98,15 @@ const Characters = props => {
             marginTop: 50,
             des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         },
+        // {
+        //     name: 'Angel Tribe',
+        //     icon: iconWARRIOR,
+        //     img: WARRIOR,
+        //     className: 'tiennu',
+        //     poster: TiennuPoster,
+        //     marginTop: -15,
+        //     des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
+        // },
         // {
         //     name: 'HOBBIT Tribe',
         //     icon: iconHobbit,
@@ -294,11 +309,7 @@ const Characters = props => {
                         {isIOS && <div className="char">
                             {data.map((value, indexx) => {
                                 if (index === indexx) {
-                                    if (indexx === 3) {
-                                        return <img className="tiennu-iso" src={value.poster} alt="photos"></img>
-                                    } else {
-                                        return <img className={value.className} src={value.poster} alt="photos"></img>
-                                    }
+                                    return <img className={value.className + "-ios"} src={value.poster} alt="photos"></img>
                                 }
                             })}
                         </div>}
