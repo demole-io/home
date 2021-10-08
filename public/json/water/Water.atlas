@@ -1,0 +1,393 @@
+
+Water.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 314, 1163
+  size: 304, 420
+  orig: 306, 422
+  offset: 1, 1
+  index: -1
+Earth
+  rotate: true
+  xy: 673, 741
+  size: 392, 578
+  orig: 394, 580
+  offset: 1, 1
+  index: -1
+Earth_A
+  rotate: true
+  xy: 563, 1469
+  size: 249, 299
+  orig: 251, 301
+  offset: 1, 1
+  index: -1
+Fire_A
+  rotate: true
+  xy: 254, 1503
+  size: 243, 307
+  orig: 245, 309
+  offset: 1, 1
+  index: -1
+Fx/1 (1)
+  rotate: false
+  xy: 2, 2018
+  size: 53, 23
+  orig: 400, 400
+  offset: 72, 218
+  index: -1
+Fx/1 (10)
+  rotate: false
+  xy: 1498, 1888
+  size: 320, 153
+  orig: 400, 400
+  offset: 53, 73
+  index: -1
+Fx/1 (11)
+  rotate: false
+  xy: 2, 1763
+  size: 321, 155
+  orig: 400, 400
+  offset: 53, 68
+  index: -1
+Fx/1 (12)
+  rotate: false
+  xy: 1617, 1649
+  size: 339, 196
+  orig: 400, 400
+  offset: 36, 47
+  index: -1
+Fx/1 (13)
+  rotate: false
+  xy: 1179, 1889
+  size: 317, 152
+  orig: 400, 400
+  offset: 58, 62
+  index: -1
+Fx/1 (14)
+  rotate: false
+  xy: 956, 1714
+  size: 320, 173
+  orig: 400, 400
+  offset: 55, 42
+  index: -1
+Fx/1 (15)
+  rotate: false
+  xy: 325, 1748
+  size: 302, 158
+  orig: 400, 400
+  offset: 72, 58
+  index: -1
+Fx/1 (4)
+  rotate: false
+  xy: 141, 1920
+  size: 269, 121
+  orig: 400, 400
+  offset: 52, 117
+  index: -1
+Fx/1 (5)
+  rotate: false
+  xy: 412, 1908
+  size: 282, 133
+  orig: 400, 400
+  offset: 50, 103
+  index: -1
+Fx/1 (6)
+  rotate: false
+  xy: 629, 1720
+  size: 325, 172
+  orig: 400, 400
+  offset: 35, 74
+  index: -1
+Fx/1 (8)
+  rotate: false
+  xy: 860, 1894
+  size: 317, 147
+  orig: 400, 400
+  offset: 51, 82
+  index: -1
+Fx/1 (9)
+  rotate: false
+  xy: 1278, 1712
+  size: 337, 174
+  orig: 400, 400
+  offset: 34, 60
+  index: -1
+Fx/2 (1)
+  rotate: false
+  xy: 57, 1959
+  size: 82, 82
+  orig: 400, 400
+  offset: 161, 159
+  index: -1
+Fx/2 (10)
+  rotate: true
+  xy: 337, 836
+  size: 325, 334
+  orig: 400, 400
+  offset: 60, 23
+  index: -1
+Fx/2 (12)
+  rotate: true
+  xy: 864, 1461
+  size: 251, 312
+  orig: 400, 400
+  offset: 73, 38
+  index: -1
+Fx/2 (14)
+  rotate: false
+  xy: 1820, 1847
+  size: 199, 194
+  orig: 400, 400
+  offset: 99, 101
+  index: -1
+Fx/2 (2)
+  rotate: true
+  xy: 696, 1898
+  size: 143, 162
+  orig: 400, 400
+  offset: 145, 114
+  index: -1
+Fx/2 (3)
+  rotate: true
+  xy: 1178, 1448
+  size: 262, 281
+  orig: 400, 400
+  offset: 86, 41
+  index: -1
+Fx/2 (4)
+  rotate: true
+  xy: 1461, 1366
+  size: 281, 294
+  orig: 400, 400
+  offset: 80, 38
+  index: -1
+Fx/2 (5)
+  rotate: true
+  xy: 2, 1201
+  size: 300, 310
+  orig: 400, 400
+  offset: 73, 34
+  index: -1
+Fx/2 (6)
+  rotate: true
+  xy: 736, 1150
+  size: 309, 316
+  orig: 400, 400
+  offset: 70, 30
+  index: -1
+Fx/2 (7)
+  rotate: true
+  xy: 1414, 1041
+  size: 323, 326
+  orig: 400, 400
+  offset: 61, 27
+  index: -1
+Fx/2 (8)
+  rotate: true
+  xy: 2, 836
+  size: 325, 333
+  orig: 400, 400
+  offset: 61, 24
+  index: -1
+L_Arm
+  rotate: true
+  xy: 981, 196
+  size: 438, 446
+  orig: 438, 446
+  offset: 0, 0
+  index: -1
+Metal
+  rotate: false
+  xy: 1429, 2
+  size: 552, 632
+  orig: 554, 634
+  offset: 1, 1
+  index: -1
+Metal_A
+  rotate: false
+  xy: 1054, 1135
+  size: 358, 311
+  orig: 360, 313
+  offset: 1, 1
+  index: -1
+R_Arm
+  rotate: false
+  xy: 2, 422
+  size: 524, 412
+  orig: 524, 412
+  offset: 0, 0
+  index: -1
+Water
+  rotate: true
+  xy: 1253, 636
+  size: 403, 481
+  orig: 405, 483
+  offset: 1, 1
+  index: -1
+Water_A
+  rotate: true
+  xy: 2, 1525
+  size: 236, 250
+  orig: 238, 252
+  offset: 1, 1
+  index: -1
+Wood_A
+  rotate: true
+  xy: 528, 325
+  size: 414, 451
+  orig: 416, 453
+  offset: 1, 1
+  index: -1
+
+Water2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fire
+  rotate: false
+  xy: 1270, 2
+  size: 518, 639
+  orig: 520, 641
+  offset: 1, 1
+  index: -1
+Head_1
+  rotate: false
+  xy: 2, 643
+  size: 1308, 1180
+  orig: 1310, 1182
+  offset: 1, 1
+  index: -1
+Tail_3
+  rotate: true
+  xy: 1312, 695
+  size: 1128, 589
+  orig: 1128, 589
+  offset: 0, 0
+  index: -1
+weapon_3
+  rotate: true
+  xy: 2, 23
+  size: 618, 1266
+  orig: 620, 1268
+  offset: 1, 1
+  index: -1
+
+Water3.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_3
+  rotate: false
+  xy: 2, 698
+  size: 1123, 1317
+  orig: 1125, 1319
+  offset: 1, 1
+  index: -1
+weapon_1
+  rotate: false
+  xy: 1127, 872
+  size: 514, 1143
+  orig: 516, 1145
+  offset: 1, 1
+  index: -1
+weapon_2
+  rotate: false
+  xy: 1127, 2
+  size: 538, 868
+  orig: 540, 870
+  offset: 1, 1
+  index: -1
+weapon_5
+  rotate: true
+  xy: 2, 167
+  size: 529, 1123
+  orig: 531, 1125
+  offset: 1, 1
+  index: -1
+
+Water4.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_2
+  rotate: false
+  xy: 2, 526
+  size: 1254, 1086
+  orig: 1254, 1086
+  offset: 0, 0
+  index: -1
+Tail_5
+  rotate: true
+  xy: 1258, 494
+  size: 1118, 473
+  orig: 1118, 473
+  offset: 0, 0
+  index: -1
+Wood
+  rotate: true
+  xy: 1115, 2
+  size: 490, 687
+  orig: 492, 689
+  offset: 1, 1
+  index: -1
+weapon_4
+  rotate: true
+  xy: 2, 11
+  size: 513, 1111
+  orig: 515, 1113
+  offset: 1, 1
+  index: -1
+
+Water5.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_4
+  rotate: false
+  xy: 2, 481
+  size: 1073, 1142
+  orig: 1075, 1144
+  offset: 1, 1
+  index: -1
+Tail_1
+  rotate: false
+  xy: 1010, 26
+  size: 867, 453
+  orig: 867, 453
+  offset: 0, 0
+  index: -1
+Tail_2
+  rotate: false
+  xy: 2, 2
+  size: 1006, 477
+  orig: 1006, 477
+  offset: 0, 0
+  index: -1
+Tail_4
+  rotate: true
+  xy: 1077, 804
+  size: 819, 453
+  orig: 819, 453
+  offset: 0, 0
+  index: -1
+
+Water6.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_5
+  rotate: false
+  xy: 2, 2
+  size: 1118, 1132
+  orig: 1118, 1132
+  offset: 0, 0
+  index: -1

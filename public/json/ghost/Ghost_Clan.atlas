@@ -1,0 +1,233 @@
+
+Ghost_Clan.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fx/1 (1)
+  rotate: true
+  xy: 1736, 910
+  size: 325, 114
+  orig: 400, 182
+  offset: 25, 30
+  index: -1
+Fx/1 (2)
+  rotate: false
+  xy: 1616, 774
+  size: 331, 126
+  orig: 400, 182
+  offset: 22, 22
+  index: -1
+Fx/1 (3)
+  rotate: true
+  xy: 1592, 902
+  size: 333, 142
+  orig: 400, 182
+  offset: 19, 15
+  index: -1
+Fx/1 (4)
+  rotate: true
+  xy: 1852, 917
+  size: 318, 158
+  orig: 400, 182
+  offset: 40, 4
+  index: -1
+Fx/1 (5)
+  rotate: false
+  xy: 1616, 1237
+  size: 336, 167
+  orig: 400, 182
+  offset: 33, 0
+  index: -1
+Fx/1 (6)
+  rotate: false
+  xy: 1616, 1406
+  size: 347, 171
+  orig: 400, 182
+  offset: 30, 0
+  index: -1
+Fx/1 (7)
+  rotate: false
+  xy: 1616, 1579
+  size: 358, 176
+  orig: 400, 182
+  offset: 26, 0
+  index: -1
+Fx/1 (8)
+  rotate: false
+  xy: 1616, 1757
+  size: 365, 137
+  orig: 400, 182
+  offset: 24, 16
+  index: -1
+Fx/1 (9)
+  rotate: false
+  xy: 1616, 1896
+  size: 367, 143
+  orig: 400, 182
+  offset: 24, 13
+  index: -1
+body_W
+  rotate: true
+  xy: 667, 13
+  size: 812, 947
+  orig: 812, 947
+  offset: 0, 0
+  index: -1
+body_WT
+  rotate: false
+  xy: 2, 2
+  size: 663, 823
+  orig: 663, 823
+  offset: 0, 0
+  index: -1
+head_W
+  rotate: false
+  xy: 2, 827
+  size: 1588, 1212
+  orig: 1590, 1214
+  offset: 1, 1
+  index: -1
+
+Ghost_Clan2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+R_arm_W
+  rotate: true
+  xy: 2, 2
+  size: 772, 843
+  orig: 774, 845
+  offset: 1, 1
+  index: -1
+body_E
+  rotate: false
+  xy: 1070, 1163
+  size: 726, 853
+  orig: 726, 853
+  offset: 0, 0
+  index: -1
+body_F
+  rotate: true
+  xy: 847, 36
+  size: 738, 837
+  orig: 738, 837
+  offset: 0, 0
+  index: -1
+head_MT
+  rotate: false
+  xy: 2, 776
+  size: 1066, 1240
+  orig: 1068, 1242
+  offset: 1, 1
+  index: -1
+
+Ghost_Clan3.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_arm_E
+  rotate: false
+  xy: 1154, 357
+  size: 675, 614
+  orig: 677, 616
+  offset: 1, 1
+  index: -1
+R_arm_WT
+  rotate: false
+  xy: 1154, 973
+  size: 615, 926
+  orig: 617, 928
+  offset: 1, 1
+  index: -1
+body_MT
+  rotate: true
+  xy: 2, 2
+  size: 673, 958
+  orig: 673, 958
+  offset: 0, 0
+  index: -1
+head_F
+  rotate: false
+  xy: 2, 677
+  size: 1150, 1222
+  orig: 1152, 1224
+  offset: 1, 1
+  index: -1
+
+Ghost_Clan4.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_arm_MT
+  rotate: false
+  xy: 785, 63
+  size: 712, 661
+  orig: 714, 663
+  offset: 1, 1
+  index: -1
+L_arm_W
+  rotate: true
+  xy: 2, 2
+  size: 722, 781
+  orig: 724, 783
+  offset: 1, 1
+  index: -1
+R_arm_E
+  rotate: false
+  xy: 1077, 1188
+  size: 630, 702
+  orig: 632, 704
+  offset: 1, 1
+  index: -1
+head_WT
+  rotate: false
+  xy: 2, 726
+  size: 1073, 1164
+  orig: 1075, 1166
+  offset: 1, 1
+  index: -1
+
+Ghost_Clan5.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_arm_F
+  rotate: true
+  xy: 2, 2
+  size: 675, 619
+  orig: 677, 621
+  offset: 1, 1
+  index: -1
+L_arm_WT
+  rotate: true
+  xy: 623, 2
+  size: 675, 614
+  orig: 677, 616
+  offset: 1, 1
+  index: -1
+R_arm_F
+  rotate: true
+  xy: 1092, 681
+  size: 580, 702
+  orig: 582, 704
+  offset: 1, 1
+  index: -1
+R_arm_MT
+  rotate: true
+  xy: 1092, 1263
+  size: 575, 715
+  orig: 577, 717
+  offset: 1, 1
+  index: -1
+head_E
+  rotate: false
+  xy: 2, 679
+  size: 1088, 1159
+  orig: 1090, 1161
+  offset: 1, 1
+  index: -1

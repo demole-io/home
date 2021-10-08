@@ -1,0 +1,419 @@
+
+Elf_Clan.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armor_E
+  rotate: true
+  xy: 979, 29
+  size: 373, 515
+  orig: 375, 517
+  offset: 1, 1
+  index: -1
+Armor_F
+  rotate: true
+  xy: 2, 182
+  size: 344, 528
+  orig: 346, 530
+  offset: 1, 1
+  index: -1
+Armor_W
+  rotate: true
+  xy: 1496, 2
+  size: 399, 402
+  orig: 401, 404
+  offset: 1, 1
+  index: -1
+Armor_WT
+  rotate: true
+  xy: 532, 138
+  size: 379, 445
+  orig: 381, 447
+  offset: 1, 1
+  index: -1
+Fx/2 (1)
+  rotate: false
+  xy: 2, 1860
+  size: 139, 127
+  orig: 350, 350
+  offset: 105, 113
+  index: -1
+Fx/2 (10)
+  rotate: true
+  xy: 989, 430
+  size: 333, 336
+  orig: 350, 350
+  offset: 14, 3
+  index: -1
+Fx/2 (11)
+  rotate: true
+  xy: 1669, 403
+  size: 336, 340
+  orig: 350, 350
+  offset: 13, 1
+  index: -1
+Fx/2 (12)
+  rotate: true
+  xy: 1327, 404
+  size: 335, 340
+  orig: 350, 350
+  offset: 15, 1
+  index: -1
+Fx/2 (13)
+  rotate: false
+  xy: 1447, 741
+  size: 329, 302
+  orig: 350, 350
+  offset: 16, 31
+  index: -1
+Fx/2 (2)
+  rotate: false
+  xy: 381, 1609
+  size: 200, 195
+  orig: 350, 350
+  offset: 78, 78
+  index: -1
+Fx/2 (3)
+  rotate: false
+  xy: 1774, 1569
+  size: 245, 229
+  orig: 350, 350
+  offset: 46, 59
+  index: -1
+Fx/2 (4)
+  rotate: false
+  xy: 1630, 1316
+  size: 265, 251
+  orig: 350, 350
+  offset: 38, 49
+  index: -1
+Fx/2 (5)
+  rotate: false
+  xy: 1727, 1045
+  size: 284, 269
+  orig: 350, 350
+  offset: 30, 43
+  index: -1
+Fx/2 (6)
+  rotate: false
+  xy: 1152, 765
+  size: 293, 292
+  orig: 350, 350
+  offset: 27, 28
+  index: -1
+Fx/2 (7)
+  rotate: true
+  xy: 2, 546
+  size: 312, 319
+  orig: 350, 350
+  offset: 22, 12
+  index: -1
+Fx/2 (8)
+  rotate: true
+  xy: 323, 528
+  size: 320, 326
+  orig: 350, 350
+  offset: 19, 8
+  index: -1
+Fx/2 (9)
+  rotate: true
+  xy: 651, 519
+  size: 329, 336
+  orig: 350, 350
+  offset: 14, 5
+  index: -1
+Leg_Back1_E
+  rotate: true
+  xy: 721, 1800
+  size: 187, 377
+  orig: 187, 377
+  offset: 0, 0
+  index: -1
+Leg_Back1_F
+  rotate: true
+  xy: 1100, 1800
+  size: 187, 377
+  orig: 187, 377
+  offset: 0, 0
+  index: -1
+Leg_Back1_M
+  rotate: true
+  xy: 1479, 1800
+  size: 187, 377
+  orig: 187, 377
+  offset: 0, 0
+  index: -1
+Leg_Back1_W
+  rotate: true
+  xy: 988, 1592
+  size: 206, 377
+  orig: 206, 377
+  offset: 0, 0
+  index: -1
+Leg_Back1_WT
+  rotate: true
+  xy: 2, 1624
+  size: 187, 377
+  orig: 187, 377
+  offset: 0, 0
+  index: -1
+Leg_Back2_E
+  rotate: false
+  xy: 583, 1603
+  size: 197, 195
+  orig: 199, 197
+  offset: 1, 1
+  index: -1
+Leg_Back2_F
+  rotate: true
+  xy: 523, 1806
+  size: 181, 196
+  orig: 183, 198
+  offset: 1, 1
+  index: -1
+Leg_Back2_M
+  rotate: true
+  xy: 326, 1813
+  size: 174, 195
+  orig: 176, 197
+  offset: 1, 1
+  index: -1
+Leg_Back2_W
+  rotate: true
+  xy: 782, 1602
+  size: 196, 204
+  orig: 198, 206
+  offset: 1, 1
+  index: -1
+Leg_Back2_WT
+  rotate: true
+  xy: 143, 1819
+  size: 168, 181
+  orig: 170, 183
+  offset: 1, 1
+  index: -1
+Leg_Front1_E
+  rotate: true
+  xy: 2, 1117
+  size: 255, 573
+  orig: 255, 573
+  offset: 0, 0
+  index: -1
+Leg_Front1_F
+  rotate: true
+  xy: 577, 1107
+  size: 255, 573
+  orig: 255, 573
+  offset: 0, 0
+  index: -1
+Leg_Front1_M
+  rotate: true
+  xy: 1152, 1059
+  size: 255, 573
+  orig: 255, 573
+  offset: 0, 0
+  index: -1
+Leg_Front1_W
+  rotate: true
+  xy: 2, 860
+  size: 255, 573
+  orig: 255, 573
+  offset: 0, 0
+  index: -1
+Leg_Front1_WT
+  rotate: true
+  xy: 577, 850
+  size: 255, 573
+  orig: 255, 573
+  offset: 0, 0
+  index: -1
+Leg_Front2_E
+  rotate: true
+  xy: 1367, 1572
+  size: 226, 405
+  orig: 226, 405
+  offset: 0, 0
+  index: -1
+Leg_Front2_F
+  rotate: true
+  xy: 2, 1381
+  size: 226, 405
+  orig: 226, 405
+  offset: 0, 0
+  index: -1
+Leg_Front2_M
+  rotate: true
+  xy: 409, 1374
+  size: 226, 405
+  orig: 226, 405
+  offset: 0, 0
+  index: -1
+Leg_Front2_W
+  rotate: true
+  xy: 1223, 1322
+  size: 248, 405
+  orig: 248, 405
+  offset: 0, 0
+  index: -1
+Leg_Front2_WT
+  rotate: true
+  xy: 816, 1364
+  size: 226, 405
+  orig: 226, 405
+  offset: 0, 0
+  index: -1
+
+Elf_Clan2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armor_M
+  rotate: true
+  xy: 2, 1201
+  size: 422, 435
+  orig: 424, 437
+  offset: 1, 1
+  index: -1
+Wings_E
+  rotate: false
+  xy: 439, 1090
+  size: 1606, 533
+  orig: 1606, 533
+  offset: 0, 0
+  index: -1
+Wings_F
+  rotate: false
+  xy: 2, 546
+  size: 1606, 542
+  orig: 1606, 542
+  offset: 0, 0
+  index: -1
+Wings_M
+  rotate: false
+  xy: 2, 2
+  size: 1606, 542
+  orig: 1606, 542
+  offset: 0, 0
+  index: -1
+
+Elf_Clan3.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body_E
+  rotate: false
+  xy: 2, 2
+  size: 844, 583
+  orig: 848, 583
+  offset: 2, 0
+  index: -1
+Body_F
+  rotate: false
+  xy: 848, 2
+  size: 844, 583
+  orig: 848, 583
+  offset: 2, 0
+  index: -1
+Wings_W
+  rotate: false
+  xy: 2, 1131
+  size: 1606, 542
+  orig: 1606, 542
+  offset: 0, 0
+  index: -1
+Wings_WT
+  rotate: false
+  xy: 2, 587
+  size: 1606, 542
+  orig: 1606, 542
+  offset: 0, 0
+  index: -1
+
+Elf_Clan4.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body_M
+  rotate: false
+  xy: 2, 2
+  size: 844, 583
+  orig: 848, 583
+  offset: 2, 0
+  index: -1
+Body_W
+  rotate: true
+  xy: 1400, 870
+  size: 844, 583
+  orig: 844, 583
+  offset: 0, 0
+  index: -1
+Body_WT
+  rotate: false
+  xy: 848, 2
+  size: 844, 583
+  orig: 848, 583
+  offset: 2, 0
+  index: -1
+Head_E
+  rotate: false
+  xy: 2, 587
+  size: 1396, 1127
+  orig: 1396, 1127
+  offset: 0, 0
+  index: -1
+
+Elf_Clan5.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_F
+  rotate: false
+  xy: 2, 2
+  size: 1396, 1127
+  orig: 1396, 1127
+  offset: 0, 0
+  index: -1
+
+Elf_Clan6.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_M
+  rotate: false
+  xy: 2, 2
+  size: 1396, 1127
+  orig: 1396, 1127
+  offset: 0, 0
+  index: -1
+
+Elf_Clan7.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_W
+  rotate: false
+  xy: 2, 2
+  size: 1396, 1127
+  orig: 1396, 1127
+  offset: 0, 0
+  index: -1
+
+Elf_Clan8.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_WT
+  rotate: false
+  xy: 2, 2
+  size: 1396, 1127
+  orig: 1396, 1127
+  offset: 0, 0
+  index: -1
