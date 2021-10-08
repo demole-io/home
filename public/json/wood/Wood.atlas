@@ -1,330 +1,78 @@
-
 Wood.png
-size: 2040,1882
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
+size:1953,1723
+filter:Linear,Linear
+pma:true
 Body_1
-  rotate: false
-  xy: 549, 728
-  size: 420, 493
-  orig: 422, 495
-  offset: 1, 1
-  index: -1
+bounds:624,250,420,493
+offsets:1,1,422,495
 Fx/1 (1)
-  rotate: true
-  xy: 102, 1795
-  size: 85, 98
-  orig: 400, 400
-  offset: 159, 4
-  index: -1
+bounds:1743,54,85,98
+offsets:159,4,400,400
 Fx/1 (11)
-  rotate: true
-  xy: 2, 1284
-  size: 238, 364
-  orig: 400, 400
-  offset: 91, 20
-  index: -1
+bounds:906,786,238,364
+offsets:91,20,400,400
+rotate:90
 Fx/1 (13)
-  rotate: true
-  xy: 1395, 1446
-  size: 233, 356
-  orig: 400, 400
-  offset: 85, 31
-  index: -1
+bounds:1272,791,233,356
+offsets:85,31,400,400
+rotate:90
 Fx/1 (15)
-  rotate: true
-  xy: 368, 1236
-  size: 241, 340
-  orig: 400, 400
-  offset: 84, 47
-  index: -1
+bounds:641,7,241,340
+offsets:84,47,400,400
+rotate:90
 Fx/1 (17)
-  rotate: true
-  xy: 710, 1223
-  size: 242, 315
-  orig: 400, 400
-  offset: 83, 60
-  index: -1
+bounds:1630,782,242,315
+offsets:83,60,400,400
+rotate:90
 Fx/1 (19)
-  rotate: true
-  xy: 1753, 1433
-  size: 237, 285
-  orig: 400, 400
-  offset: 83, 75
-  index: -1
+bounds:1046,126,237,285
+offsets:83,75,400,400
 Fx/1 (21)
-  rotate: true
-  xy: 375, 1483
-  size: 219, 266
-  orig: 400, 400
-  offset: 96, 89
-  index: -1
+bounds:1615,561,219,266
+offsets:96,89,400,400
+rotate:90
 Fx/1 (23)
-  rotate: true
-  xy: 1553, 1681
-  size: 199, 223
-  orig: 400, 400
-  offset: 106, 117
-  index: -1
+bounds:1285,43,199,223
+offsets:106,117,400,400
+rotate:90
 Fx/1 (29)
-  rotate: false
-  xy: 2, 1801
-  size: 98, 79
-  orig: 400, 400
-  offset: 119, 165
-  index: -1
+bounds:1830,54,98,79
+offsets:119,165,400,400
+rotate:90
 Fx/1 (3)
-  rotate: true
-  xy: 202, 1742
-  size: 138, 172
-  orig: 400, 400
-  offset: 157, 14
-  index: -1
+bounds:1743,154,138,172
+offsets:157,14,400,400
 Fx/1 (5)
-  rotate: true
-  xy: 376, 1709
-  size: 171, 257
-  orig: 400, 400
-  offset: 153, 10
-  index: -1
+bounds:1442,532,171,257
+offsets:153,10,400,400
 Fx/1 (7)
-  rotate: true
-  xy: 914, 1700
-  size: 180, 337
-  orig: 400, 400
-  offset: 149, 10
-  index: -1
+bounds:2,8,180,337
+offsets:149,10,400,400
+rotate:90
 Fx/1 (9)
-  rotate: true
-  xy: 2, 1524
-  size: 216, 371
-  orig: 400, 400
-  offset: 116, 11
-  index: -1
+bounds:1046,413,216,371
+offsets:116,11,400,400
 Hand_1
-  rotate: false
-  xy: 643, 1479
-  size: 261, 223
-  orig: 263, 225
-  offset: 1, 1
-  index: -1
-L_hand_1
-  rotate: true
-  xy: 1253, 1694
-  size: 186, 298
-  orig: 188, 300
-  offset: 1, 1
-  index: -1
-L_hand_2
-  rotate: true
-  xy: 2, 834
-  size: 400, 545
-  orig: 402, 547
-  offset: 1, 1
-  index: -1
-L_hand_3
-  rotate: true
-  xy: 1491, 1037
-  size: 394, 518
-  orig: 397, 520
-  offset: 2, 1
-  index: -1
-L_hand_5
-  rotate: true
-  xy: 971, 529
-  size: 506, 587
-  orig: 509, 589
-  offset: 1, 1
-  index: -1
-L_hand_6
-  rotate: true
-  xy: 1027, 1053
-  size: 391, 462
-  orig: 393, 464
-  offset: 1, 1
-  index: -1
-Leg_L_1
-  rotate: true
-  xy: 1778, 1672
-  size: 208, 231
-  orig: 208, 231
-  offset: 0, 0
-  index: -1
-Leg_L_2
-  rotate: true
-  xy: 635, 1704
-  size: 176, 277
-  orig: 176, 277
-  offset: 0, 0
-  index: -1
-Leg_R_1
-  rotate: true
-  xy: 906, 1467
-  size: 231, 247
-  orig: 231, 247
-  offset: 0, 0
-  index: -1
-Leg_R_2
-  rotate: true
-  xy: 1155, 1461
-  size: 231, 238
-  orig: 231, 238
-  offset: 0, 0
-  index: -1
-R_Hand_1
-  rotate: false
-  xy: 624, 2
-  size: 1070, 525
-  orig: 1070, 525
-  offset: 0, 0
-  index: -1
-Wood
-  rotate: false
-  xy: 2, 173
-  size: 620, 553
-  orig: 622, 555
-  offset: 1, 1
-  index: -1
-
-Wood2.png
-size: 1982,2003
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-Earth
-  rotate: false
-  xy: 1217, 1385
-  size: 647, 616
-  orig: 649, 618
-  offset: 1, 1
-  index: -1
-Fire
-  rotate: false
-  xy: 635, 724
-  size: 815, 659
-  orig: 835, 681
-  offset: 10, 10
-  index: -1
-Head_1
-  rotate: false
-  xy: 1027, 2
-  size: 953, 720
-  orig: 955, 722
-  offset: 1, 1
-  index: -1
-L_hand_4
-  rotate: true
-  xy: 602, 1408
-  size: 593, 613
-  orig: 595, 615
-  offset: 1, 1
-  index: -1
-Metal
-  rotate: true
-  xy: 2, 784
-  size: 622, 631
-  orig: 624, 633
-  offset: 1, 1
-  index: -1
-R_Hand_3
-  rotate: false
-  xy: 2, 27
-  size: 1023, 695
-  orig: 1023, 695
-  offset: 0, 0
-  index: -1
-Water
-  rotate: false
-  xy: 2, 1428
-  size: 598, 573
-  orig: 600, 575
-  offset: 1, 1
-  index: -1
-
-Wood3.png
-size: 2028,1453
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-Head_2
-  rotate: false
-  xy: 1059, 120
-  size: 967, 1331
-  orig: 967, 1331
-  offset: 0, 0
-  index: -1
-Head_5
-  rotate: false
-  xy: 2, 2
-  size: 1055, 1449
-  orig: 1055, 1449
-  offset: 0, 0
-  index: -1
-
-Wood4.png
-size: 1946,1675
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
+bounds:1285,244,261,223
+offsets:1,1,263,225
+rotate:90
 Head_3
-  rotate: true
-  xy: 968, 771
-  size: 902, 976
-  orig: 904, 978
-  offset: 1, 1
-  index: -1
-Head_6
-  rotate: true
-  xy: 2, 2
-  size: 767, 1404
-  orig: 767, 1404
-  offset: 0, 0
-  index: -1
-R_Hand_2
-  rotate: false
-  xy: 2, 953
-  size: 964, 720
-  orig: 964, 720
-  offset: 0, 0
-  index: -1
-
-Wood5.png
-size: 1978,1266
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-Head_4
-  rotate: false
-  xy: 2, 2
-  size: 1181, 1262
-  orig: 1181, 1262
-  offset: 0, 0
-  index: -1
-R_hand_6
-  rotate: true
-  xy: 1185, 57
-  size: 1207, 791
-  orig: 1207, 791
-  offset: 0, 0
-  index: -1
-
-Wood6.png
-size: 1676,1124
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-R_Hand_4
-  rotate: true
-  xy: 890, 30
-  size: 1092, 784
-  orig: 1092, 784
-  offset: 0, 0
-  index: -1
-R_hand_5
-  rotate: true
-  xy: 2, 2
-  size: 1120, 886
-  orig: 1120, 886
-  offset: 0, 0
-  index: -1
+bounds:2,745,902,976
+offsets:1,1,904,978
+L_hand_1
+bounds:341,2,186,298
+offsets:1,1,188,300
+rotate:90
+Leg_L_1
+bounds:1743,328,208,231
+Leg_L_2
+bounds:1264,507,176,277
+Leg_R_1
+bounds:1510,283,231,247
+Leg_R_2
+bounds:1510,43,231,238
+R_Hand_3
+bounds:906,1026,1023,695
+Wood
+bounds:2,190,620,553
+offsets:1,1,622,555

@@ -1,569 +1,94 @@
-
 Dragon_Clan.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
+size:2048,2048
+filter:Linear,Linear
+pma:true
 Arm_back
-  rotate: false
-  xy: 663, 1616
-  size: 218, 213
-  orig: 218, 213
-  offset: 0, 0
-  index: -1
-Arm_back_E
-  rotate: true
-  xy: 2, 1482
-  size: 218, 240
-  orig: 218, 240
-  offset: 0, 0
-  index: -1
-Arm_back_MT
-  rotate: false
-  xy: 883, 1603
-  size: 218, 213
-  orig: 218, 213
-  offset: 0, 0
-  index: -1
-Arm_back_W
-  rotate: false
-  xy: 1684, 1551
-  size: 218, 216
-  orig: 218, 216
-  offset: 0, 0
-  index: -1
-Arm_back_WT
-  rotate: false
-  xy: 1464, 1554
-  size: 218, 213
-  orig: 218, 213
-  offset: 0, 0
-  index: -1
+bounds:1195,1662,218,213
 Arm_front_merged
-  rotate: true
-  xy: 632, 1384
-  size: 217, 395
-  orig: 217, 395
-  offset: 0, 0
-  index: -1
-Arm_front_merged_E
-  rotate: true
-  xy: 429, 892
-  size: 261, 403
-  orig: 261, 403
-  offset: 0, 0
-  index: -1
-Arm_front_merged_MT
-  rotate: true
-  xy: 1595, 46
-  size: 328, 434
-  orig: 336, 437
-  offset: 8, 0
-  index: -1
-Arm_front_merged_W
-  rotate: true
-  xy: 1286, 1088
-  size: 232, 395
-  orig: 232, 395
-  offset: 0, 0
-  index: -1
-Arm_front_merged_WT
-  rotate: true
-  xy: 2, 921
-  size: 248, 425
-  orig: 276, 425
-  offset: 0, 0
-  index: -1
+bounds:1415,1658,217,395
+rotate:90
 BackL
-  rotate: true
-  xy: 2, 1907
-  size: 65, 129
-  orig: 67, 131
-  offset: 1, 1
-  index: -1
-BackL_E
-  rotate: true
-  xy: 395, 1879
-  size: 93, 164
-  orig: 95, 166
-  offset: 1, 1
-  index: -1
-BackL_MT
-  rotate: true
-  xy: 133, 1907
-  size: 65, 129
-  orig: 67, 131
-  offset: 1, 1
-  index: -1
-BackL_W
-  rotate: true
-  xy: 264, 1907
-  size: 65, 129
-  orig: 67, 131
-  offset: 1, 1
-  index: -1
-BackL_WT
-  rotate: true
-  xy: 561, 1877
-  size: 95, 203
-  orig: 97, 205
-  offset: 1, 1
-  index: -1
+bounds:2,1810,65,129
+offsets:1,1,67,131
+rotate:90
 BackR
-  rotate: true
-  xy: 1521, 759
-  size: 300, 332
-  orig: 302, 334
-  offset: 1, 1
-  index: -1
-BackR_E
-  rotate: true
-  xy: 2, 619
-  size: 300, 373
-  orig: 302, 375
-  offset: 1, 1
-  index: -1
-BackR_MT
-  rotate: true
-  xy: 377, 590
-  size: 300, 373
-  orig: 302, 375
-  offset: 1, 1
-  index: -1
-BackR_W
-  rotate: true
-  xy: 752, 527
-  size: 300, 332
-  orig: 302, 334
-  offset: 1, 1
-  index: -1
-BackR_WT
-  rotate: true
-  xy: 1683, 1061
-  size: 259, 333
-  orig: 261, 335
-  offset: 1, 1
-  index: -1
+bounds:1544,1290,300,332
+offsets:1,1,302,334
+rotate:90
 Fx/1 (1)
-  rotate: true
-  xy: 766, 1831
-  size: 141, 188
-  orig: 568, 401
-  offset: 0, 106
-  index: -1
-Fx/1 (12)
-  rotate: false
-  xy: 558, 223
-  size: 479, 302
-  orig: 568, 401
-  offset: 37, 50
-  index: -1
-Fx/1 (13)
-  rotate: false
-  xy: 1159, 791
-  size: 360, 295
-  orig: 568, 401
-  offset: 60, 52
-  index: -1
-Fx/1 (14)
-  rotate: false
-  xy: 320, 1171
-  size: 304, 278
-  orig: 568, 401
-  offset: 116, 57
-  index: -1
-Fx/1 (15)
-  rotate: false
-  xy: 1029, 1339
-  size: 283, 219
-  orig: 568, 401
-  offset: 132, 79
-  index: -1
-Fx/1 (16)
-  rotate: false
-  xy: 956, 1818
-  size: 209, 154
-  orig: 568, 401
-  offset: 144, 121
-  index: -1
-Fx/1 (2)
-  rotate: true
-  xy: 363, 1668
-  size: 207, 298
-  orig: 568, 401
-  offset: 0, 53
-  index: -1
-Fx/1 (3)
-  rotate: false
-  xy: 1642, 376
-  size: 382, 381
-  orig: 568, 401
-  offset: 0, 8
-  index: -1
-Head_Mask_W
-  rotate: true
-  xy: 834, 829
-  size: 277, 323
-  orig: 279, 325
-  offset: 1, 1
-  index: -1
-Leg_back
-  rotate: true
-  xy: 1624, 1322
-  size: 227, 316
-  orig: 227, 316
-  offset: 0, 0
-  index: -1
-Leg_back_E
-  rotate: true
-  xy: 2, 1222
-  size: 227, 316
-  orig: 227, 316
-  offset: 0, 0
-  index: -1
-Leg_back_MT
-  rotate: true
-  xy: 944, 1108
-  size: 229, 340
-  orig: 229, 340
-  offset: 0, 0
-  index: -1
-Leg_back_W
-  rotate: true
-  xy: 626, 1155
-  size: 227, 316
-  orig: 227, 316
-  offset: 0, 0
-  index: -1
-Leg_back_WT
-  rotate: true
-  xy: 1314, 1328
-  size: 224, 308
-  orig: 224, 308
-  offset: 0, 0
-  index: -1
-Leg_front
-  rotate: true
-  xy: 1167, 1769
-  size: 203, 359
-  orig: 203, 359
-  offset: 0, 0
-  index: -1
-Leg_front_E
-  rotate: true
-  xy: 1528, 1769
-  size: 203, 359
-  orig: 203, 359
-  offset: 0, 0
-  index: -1
-Leg_front_MT
-  rotate: true
-  xy: 244, 1451
-  size: 215, 386
-  orig: 215, 386
-  offset: 0, 0
-  index: -1
-Leg_front_W
-  rotate: true
-  xy: 1103, 1560
-  size: 207, 359
-  orig: 207, 359
-  offset: 0, 0
-  index: -1
-Leg_front_WT
-  rotate: true
-  xy: 2, 1702
-  size: 203, 359
-  orig: 203, 359
-  offset: 0, 0
-  index: -1
-Mouth
-  rotate: false
-  xy: 1086, 465
-  size: 554, 292
-  orig: 554, 292
-  offset: 0, 0
-  index: -1
-Mouth_E
-  rotate: false
-  xy: 2, 296
-  size: 554, 292
-  orig: 554, 292
-  offset: 0, 0
-  index: -1
-Mouth_W
-  rotate: false
-  xy: 1039, 171
-  size: 554, 292
-  orig: 554, 292
-  offset: 0, 0
-  index: -1
-Mouth_WT
-  rotate: false
-  xy: 2, 2
-  size: 554, 292
-  orig: 554, 292
-  offset: 0, 0
-  index: -1
-
-Dragon_Clan2.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-Head
-  rotate: false
-  xy: 1031, 71
-  size: 789, 1027
-  orig: 791, 1029
-  offset: 1, 1
-  index: -1
-Head_MT
-  rotate: true
-  xy: 887, 1100
-  size: 795, 1027
-  orig: 797, 1029
-  offset: 1, 1
-  index: -1
-Head_W
-  rotate: true
-  xy: 2, 2
-  size: 818, 1027
-  orig: 820, 1029
-  offset: 1, 1
-  index: -1
-Head_WT
-  rotate: false
-  xy: 2, 822
-  size: 883, 1073
-  orig: 885, 1075
-  offset: 1, 1
-  index: -1
-
-Dragon_Clan3.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-Body_WT
-  rotate: false
-  xy: 1348, 1453
-  size: 693, 512
-  orig: 693, 512
-  offset: 0, 0
-  index: -1
-Fx/1 (11)
-  rotate: false
-  xy: 1348, 1133
-  size: 544, 318
-  orig: 568, 401
-  offset: 24, 47
-  index: -1
-Head_E
-  rotate: false
-  xy: 2, 938
-  size: 789, 1027
-  orig: 791, 1029
-  offset: 1, 1
-  index: -1
-Head_Mask_E
-  rotate: true
-  xy: 2, 119
-  size: 817, 603
-  orig: 819, 605
-  offset: 1, 1
-  index: -1
-HornBack
-  rotate: true
-  xy: 607, 83
-  size: 853, 553
-  orig: 855, 555
-  offset: 1, 1
-  index: -1
-HornBack_E
-  rotate: true
-  xy: 793, 1112
-  size: 853, 553
-  orig: 855, 555
-  offset: 1, 1
-  index: -1
-HornBack_MT
-  rotate: false
-  xy: 1162, 557
-  size: 853, 553
-  orig: 855, 555
-  offset: 1, 1
-  index: -1
-HornBack_W
-  rotate: false
-  xy: 1162, 2
-  size: 853, 553
-  orig: 855, 555
-  offset: 1, 1
-  index: -1
-
-Dragon_Clan4.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-Body
-  rotate: false
-  xy: 1369, 907
-  size: 629, 459
-  orig: 629, 459
-  offset: 0, 0
-  index: -1
-Body_E
-  rotate: false
-  xy: 721, 1383
-  size: 706, 463
-  orig: 706, 466
-  offset: 0, 0
-  index: -1
-Body_MT
-  rotate: false
-  xy: 2, 1378
-  size: 717, 468
-  orig: 717, 468
-  offset: 0, 0
-  index: -1
-Body_W
-  rotate: false
-  xy: 721, 918
-  size: 646, 463
-  orig: 646, 467
-  offset: 0, 0
-  index: -1
+bounds:133,1734,141,188
+offsets:0,106,568,401
+rotate:90
 Fx/1 (10)
-  rotate: false
-  xy: 1340, 160
-  size: 564, 361
-  orig: 568, 401
-  offset: 4, 23
-  index: -1
+bounds:1413,927,564,361
+offsets:4,23,568,401
+Fx/1 (11)
+bounds:483,1054,544,318
+offsets:24,47,568,401
+Fx/1 (12)
+bounds:2,1088,479,302
+offsets:37,50,568,401
+Fx/1 (13)
+bounds:1182,1361,360,295
+offsets:60,52,568,401
+Fx/1 (14)
+bounds:320,1392,304,278
+offsets:116,57,568,401
+Fx/1 (15)
+bounds:1812,1592,283,219
+offsets:132,79,568,401
+rotate:90
+Fx/1 (16)
+bounds:323,1721,209,154
+offsets:144,121,568,401
+Fx/1 (2)
+bounds:895,1668,207,298
+offsets:0,53,568,401
+rotate:90
+Fx/1 (3)
+bounds:1029,978,382,381
+offsets:0,8,568,401
 Fx/1 (4)
-  rotate: false
-  xy: 804, 147
-  size: 534, 400
-  orig: 568, 401
-  offset: 0, 1
-  index: -1
+bounds:2,268,534,400
+offsets:0,1,568,401
 Fx/1 (5)
-  rotate: false
-  xy: 2, 975
-  size: 568, 401
-  orig: 568, 401
-  offset: 0, 0
-  index: -1
-Fx/1 (6)
-  rotate: false
-  xy: 2, 572
-  size: 568, 401
-  orig: 568, 401
-  offset: 0, 0
-  index: -1
+bounds:1108,2,568,401
 Fx/1 (7)
-  rotate: true
-  xy: 404, 2
-  size: 568, 398
-  orig: 568, 401
-  offset: 0, 0
-  index: -1
+bounds:1008,527,568,398
+offsets:0,0,568,401
 Fx/1 (8)
-  rotate: true
-  xy: 2, 2
-  size: 568, 400
-  orig: 568, 401
-  offset: 0, 0
-  index: -1
+bounds:538,125,568,400
+offsets:0,0,568,401
 Fx/1 (9)
-  rotate: false
-  xy: 1346, 523
-  size: 568, 382
-  orig: 568, 401
-  offset: 0, 10
-  index: -1
-Mouth_MT
-  rotate: false
-  xy: 804, 549
-  size: 540, 367
-  orig: 540, 367
-  offset: 0, 0
-  index: -1
-WingL_MT
-  rotate: true
-  xy: 1429, 1368
-  size: 478, 582
-  orig: 478, 582
-  offset: 0, 0
-  index: -1
-
-Dragon_Clan5.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
+bounds:438,670,568,382
+offsets:0,10,568,401
+Leg_back
+bounds:2,1505,227,316
+rotate:90
+Leg_front
+bounds:534,1672,203,359
+rotate:90
+Mouth
+bounds:626,1374,554,292
 WingL
-  rotate: false
-  xy: 2, 863
-  size: 444, 520
-  orig: 444, 520
-  offset: 0, 0
-  index: -1
-WingL_E
-  rotate: true
-  xy: 2, 417
-  size: 444, 520
-  orig: 444, 520
-  offset: 0, 0
-  index: -1
-WingL_W
-  rotate: true
-  xy: 448, 939
-  size: 444, 520
-  orig: 444, 520
-  offset: 0, 0
-  index: -1
-WingL_WT
-  rotate: false
-  xy: 524, 417
-  size: 444, 520
-  orig: 444, 520
-  offset: 0, 0
-  index: -1
+bounds:1578,405,444,520
 WingR
-  rotate: true
-  xy: 2, 2
-  size: 413, 434
-  orig: 413, 434
-  offset: 0, 0
-  index: -1
-WingR_E
-  rotate: true
-  xy: 438, 2
-  size: 413, 434
-  orig: 413, 434
-  offset: 0, 0
-  index: -1
-WingR_MT
-  rotate: true
-  xy: 874, 2
-  size: 413, 434
-  orig: 413, 434
-  offset: 0, 0
-  index: -1
-WingR_W
-  rotate: true
-  xy: 970, 970
-  size: 413, 434
-  orig: 413, 434
-  offset: 0, 0
-  index: -1
-WingR_WT
-  rotate: true
-  xy: 970, 555
-  size: 413, 434
-  orig: 413, 434
-  offset: 0, 0
-  index: -1
+bounds:2,673,413,434
+rotate:90
+
+Dragon_Clan_2.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Body
+bounds:572,793,629,459
+Fx/1 (6)
+bounds:2,851,568,401
+Head
+bounds:2,2,789,1027
+offsets:1,1,791,1029
+rotate:90
+HornBack
+bounds:1203,399,853,553
+offsets:1,1,855,555
+rotate:90
