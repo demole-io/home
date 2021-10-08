@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Unknow1 from '../assets/img/Subtract.png'
 
-import iconGOBLIN from '../assets/img/phap su.png'
+import iconWARRIOR from '../assets/img/thien_than.png'
 import iconOrc from '../assets/img/nguoi_cay.png'
 import iconMEMALD from '../assets/img/nguoi_ca.png'
 import iconKnight from '../assets/img/rong12.png'
 import iconSHADOW from '../assets/img/bong_dem.png'
 
-import iconWARRIOR from '../assets/img/thien_than.png'
+import iconGOBLIN from '../assets/img/phap su.png'
+
 import iconCOW from '../assets/img/nguoi xuong.png'
 import iconHobbit from '../assets/img/nguoi lun.png'
 import iconWolf from '../assets/img/nguoi soi.png'
@@ -52,10 +53,10 @@ const Characters = props => {
         },
         {
             json: 'elf',
-            name: 'GOBLIN Tribe',
-            icon: iconGOBLIN,
+            name: 'Angel Tribe',
+            icon: iconWARRIOR,
             marginTop: -15,
-            des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
+            des: 'The remote Arctic place covered by snow all year round is the home of the Angel tribe. They were born from holy souls. When they grow up, the members of the Angel Tribe spread out everywhere, linking up with many different tribes to help them fight. The Angel Tribe is famous as a tribe that has no enemies.'
         },
         {
             json: 'ghost',
