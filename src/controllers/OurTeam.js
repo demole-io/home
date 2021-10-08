@@ -8,7 +8,7 @@ import Denis from '../assets/img/Denis Znamenskiy.jpg'
 import Rae from '../assets/img/Rae Lim.jpg'
 
 export default function OurTeam() {
-    const [data, setdata] = useState([{
+    const [data] = useState([{
         img: Denis,
         name: 'Denis Znamenskiy',
         office: 'CEO',

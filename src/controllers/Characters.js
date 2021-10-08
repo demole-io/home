@@ -33,30 +33,35 @@ const Characters = props => {
             json: 'wood',
             name: 'Treeman Tribe',
             icon: iconOrc,
+            marginTop: 50,
             des: 'The murky old forests at the foot of the high cliffs in the northern part of the continent are inhabited by the Tree Tribe. Their territory is almost impregnable because of the murky darkness that is very scary. The inhabitants of the tribe were born from the trunks of thousands of years old trees, so their bodies were firm and soft, hazardous in team battles.'
         },
         {
             json: 'water',
             name: 'Merman Tribe',
             icon: iconMEMALD,
+            marginTop: -15,
             des: 'Conquering the entire ocean, the Mermen have long harbored ambitions to dominate the continent. Mastering the vast sea, the Mermaids are especially strong in underwater battles. They regularly sent troops by the rivers to raid Middle-earth and infiltrate the mazes to loot resources.'
         },
         {
             json: 'dragon',
             name: 'Dragon Tribe',
             icon: iconKnight,
+            marginTop: -30,
             des: 'Living in the caves on the high cliffs of the northern continent, the Dragon tribe is a mighty tribe with wings spread in the sky, a muscular body, and sharp claws. Dragons also have hard scales like armor to protect the body. With the advantage of flying high, the dragon tribe proved to be dominant in single hunting.'
         },
         {
             json: 'elf',
             name: 'GOBLIN Tribe',
             icon: iconGOBLIN,
+            marginTop: -15,
             des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         },
         {
             json: 'ghost',
             name: 'Shadow Tribe',
             icon: iconSHADOW,
+            marginTop: 50,
             des: 'The shadow tribe is not of the world. Coming from the center of the galaxy, Shadow warriors are created by dark energy, extremely cruel and bloodthirsty. This hideously terrifying Shadow warrior desperately seeks for a world to live long in and to harbor ambitions for domination.'
         },
         // {
@@ -184,6 +189,9 @@ const Characters = props => {
 
         selected.current = index;
         setindex(selected.current)
+
+        setArt(index)
+
     }
 
     const onClickLeft = () => {
@@ -191,12 +199,16 @@ const Characters = props => {
         selected.current = selected.current === 0 ? data.length - 1 : selected.current - 1;
         setindex(selected.current)
 
+        setArt(selected.current)
+
     }
 
     const onClickRight = () => {
         stopNext()
         selected.current = selected.current === data.length - 1 ? 0 : selected.current + 1;
         setindex(selected.current)
+
+        setArt(selected.current)
     }
 
     const onClickHinhTron = (key) => {
@@ -204,18 +216,54 @@ const Characters = props => {
 
         selected.current = key;
         setindex(selected.current)
+
+        setArt(selected.current)
     }
 
-    useEffect(() => {
-        const app = new PIXI.Application({
-            width: 500, height: 500, transparent: true
-        });
+    const setArt = (index) => {
+        if (data[index].json === 'wood') {
+            app.stage.addChild(artWood);
+        }
+
+        if (data[index].json === 'water') {
+            app.stage.addChild(artWater);
+        }
+
+        if (data[index].json === 'dragon') {
+            app.stage.addChild(artDragon);
+        }
+
+        if (data[index].json === 'elf') {
+            app.stage.addChild(artElf);
+        }
+
+        if (data[index].json === 'ghost') {
+            app.stage.addChild(artGhost);
+        }
 
         const characters = document.querySelector('#characters .char');
         $("#characters .char").empty();
         characters.appendChild(app.view);
+    }
 
+    const app = new PIXI.Application({
+        width: 500, height: 500, transparent: true
+    });
+
+    const [artDragon, setartDragon] = useState()
+    const [artElf, setartElf] = useState()
+    const [artGhost, setartGhost] = useState()
+    const [artWater, setartWater] = useState()
+    const [artWood, setartWood] = useState()
+
+
+    useEffect(() => {
         // load spine data
+        const characters = document.querySelector('#characters .char');
+        $("#characters .char").empty();
+        characters.appendChild(app.view);
+
+        console.log("useEffect")
         app.loader
             .add('dragon', '/json/dragon/Dragon_Clan.json')
             .add('elf', '/json/elf/Elf_Clan.json')
@@ -225,71 +273,90 @@ const Characters = props => {
             .load(onAssetsLoaded);
 
         function onAssetsLoaded(loader, res) {
-            const spineData = res[data[index].json].spineData
-            let art = new Spine(spineData);
-            art.x = app.screen.width / 2;
-            art.y = app.screen.height - 150;
+            const spineDataDragon = res.dragon.spineData
+            const spineDataElf = res.elf.spineData
+            const spineDataGhost = res.ghost.spineData
+            const spineDataWater = res.water.spineData
+            const spineDataWood = res.wood.spineData
 
-            if (data[index].json === 'dragon') {
-                const Head = spineData.findSkin('Head/Head_1')
-                const Body = spineData.findSkin('Body/Body_1')
-                const Wing = spineData.findSkin('Wing/Wing_1')
-                Head.addSkin(Body)
-                Head.addSkin(Wing)
-                art.skeleton.setSkinByName('Head/Head_1');
-            }
+            //Dragon
+            let artDragon = new Spine(spineDataDragon);
+            artDragon.x = app.screen.width / 2;
+            artDragon.y = app.screen.height - 150;
+            const HeadDragon = spineDataDragon.findSkin('Head/Head_1')
+            const BodyDragon = spineDataDragon.findSkin('Body/Body_1')
+            const WingDragon = spineDataDragon.findSkin('Wing/Wing_1')
+            HeadDragon.addSkin(BodyDragon)
+            HeadDragon.addSkin(WingDragon)
+            artDragon.skeleton.setSkinByName('Head/Head_1');
+            artDragon.scale.set(0.2);
+            artDragon.state.setAnimation(0, 'show', true);
+            setartDragon(artDragon)
 
-            if (data[index].json === 'elf') {
-                const Head = spineData.findSkin('Head/Head_1')
-                const Body = spineData.findSkin('Body/Body_1')
-                const Wing = spineData.findSkin('Wing/Wing_1')
-                Head.addSkin(Body)
-                Head.addSkin(Wing)
-                art.skeleton.setSkinByName('Head/Head_1');
-            }
+            //Elf
+            let artElf = new Spine(spineDataElf);
+            artElf.x = app.screen.width / 2;
+            artElf.y = app.screen.height - 150;
+            const HeadElf = spineDataElf.findSkin('Head/Head_1')
+            const BodyElf = spineDataElf.findSkin('Body/Body_1')
+            const WingElf = spineDataElf.findSkin('Wing/Wing_1')
+            HeadElf.addSkin(BodyElf)
+            HeadElf.addSkin(WingElf)
+            artElf.skeleton.setSkinByName('Head/Head_1');
+            artElf.scale.set(0.2);
+            artElf.state.setAnimation(0, 'show', true);
+            setartElf(artElf)
 
-            if (data[index].json === 'ghost') {
-                const Head = spineData.findSkin('Head/Head_1')
-                const Body = spineData.findSkin('Body/Body_1')
-                const Hand = spineData.findSkin('Hand/Hand_1')
-                Head.addSkin(Body)
-                Head.addSkin(Hand)
-                art.skeleton.setSkinByName('Head/Head_1');
+            //Ghost
+            let artGhost = new Spine(spineDataGhost);
+            artGhost.x = app.screen.width - 300;
+            artGhost.y = app.screen.height - 100;
+            const HeadGhost = spineDataGhost.findSkin('Head/Head_1')
+            const BodyGhost = spineDataGhost.findSkin('Body/Body_1')
+            const HandGhost = spineDataGhost.findSkin('Hand/Hand_1')
+            HeadGhost.addSkin(BodyGhost)
+            HeadGhost.addSkin(HandGhost)
+            artGhost.skeleton.setSkinByName('Head/Head_1');
+            artGhost.scale.set(0.2);
+            artGhost.state.setAnimation(0, 'show', true);
+            setartGhost(artGhost)
 
-                art.y = app.screen.height - 100;
-                art.x = app.screen.width - 300;
-            }
 
-            if (data[index].json === 'water') {
-                const Head = spineData.findSkin('Head/Head_1')
-                const Armor = spineData.findSkin('Armor/Wood')
-                const Tail = spineData.findSkin('Tail/Tail_1')
-                const Weapon = spineData.findSkin('Weapon/Weapon_3')
-                Head.addSkin(Armor)
-                Head.addSkin(Tail)
-                Head.addSkin(Weapon)
-                art.skeleton.setSkinByName('Head/Head_1');
-                art.x = app.screen.width - 200;
-            }
+            //Water
+            let artWater = new Spine(spineDataWater);
+            artWater.x = app.screen.width - 200;
+            artWater.y = app.screen.height - 150;
+            const HeadWater = spineDataWater.findSkin('Head/Head_1')
+            const ArmorWater = spineDataWater.findSkin('Armor/Wood')
+            const TailWater = spineDataWater.findSkin('Tail/Tail_1')
+            const WeaponWater = spineDataWater.findSkin('Weapon/Weapon_3')
+            HeadWater.addSkin(ArmorWater)
+            HeadWater.addSkin(TailWater)
+            HeadWater.addSkin(WeaponWater)
+            artWater.skeleton.setSkinByName('Head/Head_1');
+            artWater.scale.set(0.2);
+            artWater.state.setAnimation(0, 'show', true);
+            setartWater(artWater)
 
-            if (data[index].json === 'wood') {
-                const Head = spineData.findSkin('Head/Head_3')
-                const LeftHand = spineData.findSkin('L_Hand/L_Hand_1')
-                const Armor = spineData.findSkin('Armor/Wood')
-                const RightHand = spineData.findSkin('R_Hand/R_Hand_3')
-                Head.addSkin(LeftHand)
-                Head.addSkin(Armor)
-                Head.addSkin(RightHand)
-                art.skeleton.setSkinByName('Head/Head_3');
-                art.x = app.screen.width - 120;
-            }
-           
-            art.scale.set(0.2);
-            art.state.setAnimation(0, 'show', true);
-            app.stage.addChild(art);
+            //Wood
+            let artWood = new Spine(spineDataWood);
+            artWood.x = app.screen.width - 120;
+            artWood.y = app.screen.height - 150;
+            const HeadWood = spineDataWood.findSkin('Head/Head_3')
+            const LeftHandWood = spineDataWood.findSkin('L_Hand/L_Hand_1')
+            const ArmorWood = spineDataWood.findSkin('Armor/Wood')
+            const RightHandWood = spineDataWood.findSkin('R_Hand/R_Hand_3')
+            HeadWood.addSkin(LeftHandWood)
+            HeadWood.addSkin(ArmorWood)
+            HeadWood.addSkin(RightHandWood)
+            artWood.skeleton.setSkinByName('Head/Head_3');
+            artWood.scale.set(0.2);
+            artWood.state.setAnimation(0, 'show', true);
+            setartWood(artWood)
+
+            app.stage.addChild(artWood);
         }
-
-    }, [index])
+    }, [])
 
     return (
         <div id="characters">
@@ -297,7 +364,7 @@ const Characters = props => {
                 <div className="wraper-name-mobile">
                     <div>
                         {data.map((value, indexx) => {
-                            return <img onClick={() => onClickName(indexx)} className={`${index === indexx ? 'selected' : ''}`} style={{ marginTop: `${value.marginTop}px` }} src={value.icon} alt="photos"></img>
+                            return <img key={indexx} onClick={() => onClickName(indexx)} className={`${index === indexx ? 'selected' : ''}`} style={{ marginTop: `${value.marginTop}px` }} src={value.icon} alt="photos"></img>
                         })}
                     </div>
 

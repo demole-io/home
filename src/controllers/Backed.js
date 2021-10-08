@@ -17,7 +17,7 @@ import Raptor from '../assets/LOGO/logo.png'
 import Newave from '../assets/LOGO/Newave Capital logo1.svg'
 
 export default function Backed() {
-    const [data, setdata] = useState([
+    const [data] = useState([
         { img: AC },
         { img: BasicCapital },
         { img: ConsensusLab },
@@ -40,7 +40,7 @@ export default function Backed() {
                 <p className="title">BACKED BY</p>
                 <div className="content">
                     {data.map((value, index) => {
-                        return <div>
+                        return <div key={index}>
                             <img src={value.img} alt="photos"></img>
                         </div>
                     })}
