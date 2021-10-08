@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import Logo from '../assets/img/logo02 1.png'
 import $ from 'jquery'
 import styled from 'styled-components'
@@ -42,9 +42,64 @@ const Home = props => {
         }
     }
 
+    const clearTimeoutt = () => {
+        timeoutArr.current.map(value => (clearTimeout(value)))
+    }
+
+    const clearText = useCallback( () => {
+        clearTimeoutt()
+
+        $(`#home .container .txt`).css({
+            display: 'none',
+        })
+
+        $(`#home .container .txt`).css({
+            opacity: '0',
+            transform: "translateY(50px)"
+        })
+    }, [])
+
+    const runText = useCallback( (j, time) => {
+        for (let i = j; i < 5; i++) {
+            timeoutArr.current[i] = setTimeout(() => {
+                // setindexx(i)
+
+                $(`#home .container .txt${i}`).css({
+                    display: 'flex',
+                })
+
+                setTimeout(() => {
+                    $(`#home .container .txt${i}`).css({
+                        opacity: '1',
+                        transform: "translateY(0px)"
+                    })
+
+                    setTimeout(() => {
+                        $(`#home .container .txt${i}`).css({
+                            opacity: '0',
+                            transform: "translateY(-50px)"
+                        })
+
+                        setTimeout(() => {
+                            $(`#home .container .txt${i}`).css({
+                                display: 'none',
+                            })
+                            if (i === 4) {
+                                clearText()
+                                setTimeout(() => {
+                                    runText(0, 0)
+                                }, 1000);
+                            }
+                        }, 2000);
+                    }, 6000);
+                }, 100);
+
+            }, time);
+            time = time + 8000;
+        }
+    }, [clearText])
 
     useEffect(() => {
-
         document.body.style.overflow = "hidden"
 
         $('.header').css({
@@ -113,66 +168,7 @@ const Home = props => {
             clearTimeoutt()
             window.removeEventListener('scroll', handleScroll);
         }
-    }, []);
-
-    const runText = (j, time) => {
-        for (let i = j; i < 5; i++) {
-            timeoutArr.current[i] = setTimeout(() => {
-                // setindexx(i)
-
-                $(`#home .container .txt${i}`).css({
-                    display: 'flex',
-                })
-
-                setTimeout(() => {
-                    $(`#home .container .txt${i}`).css({
-                        opacity: '1',
-                        transform: "translateY(0px)"
-                    })
-
-                    setTimeout(() => {
-                        $(`#home .container .txt${i}`).css({
-                            opacity: '0',
-                            transform: "translateY(-50px)"
-                        })
-
-                        setTimeout(() => {
-                            $(`#home .container .txt${i}`).css({
-                                display: 'none',
-                            })
-                            if (i === 4) {
-                                clearText()
-                                setTimeout(() => {
-                                    runText(0, 0)
-                                }, 1000);
-                            }
-                        }, 2000);
-                    }, 6000);
-                }, 100);
-
-            }, time);
-            time = time + 8000;
-        }
-    }
-
-    const clearTimeoutt = () => {
-        timeoutArr.current.map(value => (
-            clearTimeout(value)
-        ))
-    }
-
-    const clearText = () => {
-        clearTimeoutt()
-
-        $(`#home .container .txt`).css({
-            display: 'none',
-        })
-
-        $(`#home .container .txt`).css({
-            opacity: '0',
-            transform: "translateY(50px)"
-        })
-    }
+    }, [props.isMobile, runText]);
 
     // const onClickHinhTron = (index) => {
     //     clearText()
