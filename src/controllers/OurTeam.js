@@ -2,42 +2,65 @@ import Header from "../components/Header";
 import Footer from "../components/Fooder";
 import { useState } from "react";
 import IconIn from '../assets/img/icon-in.png'
-import Emilian from '../assets/img/Emilian Gomoi.jpg'
-import Catalin from '../assets/img/Catalin Anton.jpg'
-import Denis from '../assets/img/Denis Znamenskiy.jpg'
-import Rae from '../assets/img/Rae Lim.jpg'
+import Logan from '../assets/Team/logan1.jpg'
+import Vincent from '../assets/Team/vin.jpg'
+import Phan from '../assets/Team/TA.jpg'
+import Denis from '../assets/Team/denis.jpg'
+import Emilian from '../assets/Team/gomoi.jpg'
+import Catalin from '../assets/Team/anton.jpg'
+import Rae from '../assets/Team/lim.jpg'
 
 export default function OurTeam() {
-    const [data] = useState([{
-        img: Denis,
-        name: 'Denis Znamenskiy',
-        office: 'CEO',
-        description: 'Denis Znamenskiy is CEO (Chief executive officer) of Demole.io. As a SPAC professional, he participated as a speaker at international blockchain events, advising fintech companies (Algochain, PrismCoin, Bibox, IndexChain, Demole.io). With solid experience, he had worked as a systematic hedge fund manager focusing on liquid strategies, an algorithmic trader and quantitative research analyst, and an algorithmic Trading, Statistical Arbitrage, HFT (High-Frequency Trading), Cross-asset portfolio management, back-test, and optimization.',
-        in: 'https://www.linkedin.com/in/denisznamenskiy/'
-    },
-    {
-        img: Emilian,
-        name: 'Emilian Gomoi',
-        office: 'CTO',
-        description: 'Emilian Gomoi is CTO (Chief technology officer) at DEMOLE.io. He is experienced as a business executive and CEO of  Romanian company, with direct experience in overseas outsourcing projects in IT design, training and the Multimedia industry. Since the start of his career journey, he was a Physicist engineer with vast experience in electronic engineering and other related engineering disciplines. Besides being a software Developer and Project Manager for over 40 years, he also was licensed as Foreign Expert by the State Administration of Foreign Experts Affairs of China.',
-        in: 'https://www.linkedin.com/in/emiliangomoi/'
-    },
-    {
-        img: Catalin,
-        name: 'Catalin Anton',
-        office: 'COO',
-        description: 'Catalin Anton is COO (Chief organization officer) of Demole.io. Combining exceptional supply chain and logistics operations, procurement & IT experience, he increased efficiency, customer satisfaction, staff & financial performance for several organizations for  multi-national & national organizations he worked. With expertise includes Asian and European market strategy, business organization and analytics, performance management, contracts, sales channels, and manufacturing operations, he will take charge of managing the working procedure in D.A.R Labs.',
-        in: 'https://www.linkedin.com/in/antoncatalin/'
-    },
-    {
-        img: Rae,
-        name: 'Rae Lim',
-        office: 'CMO',
-        description: `Rae Lim is the CMO (Chief Marketing Officer) at Demole.io.
-            The beginning of her career took place in multinational FMCG companies, where she was responsible for planning, developing, implementing and monitoring business marketing strategies.
-            With a passion to contribute to societal goals by engaging in ethically-oriented practices, she managed various corporate social responsibility projects that involved government, stakeholders and the public in a British multinational company, which was at that time the third largest in the world (based on gross revenue).`,
-        in: 'https://www.linkedin.com/in/theraelim'
-    },
+    const [data] = useState([
+        {
+            img: Logan,
+            name: 'Logan Nguyen',
+            office: 'Founder',
+            description: 'Logan Nguyen is the founder of Demole.io. With six years working in the banking and finance sectors, he possessed a strong background in strategy management, customer experience, fintech, and marketing. He entered the crypto market in 2017 under different roles from an investor and project manager to start-up founder.',
+            in: 'https://www.linkedin.com/in/nguyenduclong/'
+        },
+        {
+            img: Vincent,
+            name: 'Vincent Giap',
+            office: 'Founder',
+            description: 'Vincent Giap is the founder of Demole.io. He earned intuitive expertise in the crypto market combined with his expert knowledge in different fields, from finance to business management. He was behind the success of so many firms and companies, ranging from import-export to securities investment and crypto ventures.',
+            in: 'https://www.linkedin.com/in/vincent-giap-929810211/'
+        },
+        {
+            img: Phan,
+            name: 'Phan Tuan Anh',
+            office: 'Blockchain lead',
+            description: 'Tuan Anh has 5 years of experience in smart contract design and code. Besides outsourcing for international projects, he has developed Empow blockchain specialized for social media. With his experience in technical structure, strategic thinking, and start-up training, he directly supervises and manages the work for the members of the blockchain team.',
+            in: 'https://www.linkedin.com/in/ceoempow/'
+        },
+        {
+            img: Denis,
+            name: 'Denis Znamenskiy',
+            office: 'CEO',
+            description: 'Denis Znamenskiy is CEO of Demole.io. As a SPAC professional, Denis has  participated as a speaker at international blockchain events, advising fintech companies (Algochain, PrismCoin, Bibox, IndexChain, Demole.io). With solid experience in these field, he has worked as a systematic hedge fund manager focusing on liquid strategies, an algorithmic trader and quantitative research analyst, and an algorithmic Trading, Statistical Arbitrage, HFT (High-Frequency Trading), Cross-asset portfolio management, back-test, and optimization.',
+            in: 'https://www.linkedin.com/in/denisznamenskiy/'
+        },
+        {
+            img: Emilian,
+            name: 'Emilian Gomoi',
+            office: 'CTO',
+            description: 'Emilian Gomoi is the CTO at Demole.io. Emillian was the CEO of a Romanian company - Rongir Co. Ltd., with direct experience in overseas outsourcing projects in IT design, training and the Multimedia industry.  Emillian by trade is a Physicist engineer with vast experience in electronic engineering and other related engineering disciplines. Besides being a software Developer and Project Manager for over 40 years, he also was licensed as Foreign Expert by the State Administration of Foreign Experts Affairs of China.',
+            in: 'https://www.linkedin.com/in/emiliangomoi/'
+        },
+        {
+            img: Catalin,
+            name: 'Catalin Anton',
+            office: 'COO',
+            description: 'Catalin Anton is COO of Demole.io. Combining exceptional supply chain and logistics operations, procurement & IT experience.Catalin has increased efficiency, customer satisfaction, staff & financial performance for several organizations includingmulti-national & national organizations.  Catalins expertise includes Asian and European market strategy, business organization and analytics, performance management, contracts, sales channels, and manufacturing operations.',
+            in: 'https://www.linkedin.com/in/antoncatalin/'
+        },
+        {
+            img: Rae,
+            name: 'Rae Lim',
+            office: 'CMO',
+            description: `Rae earned multiple expertise marketing in multinational FMCG companies to managing CSR corporates in a British multinational companies, and running start-ups. In 2018, she joined a digital assets advisory in Singapore to manage its marketing and investor relations. She has experience dealing with clients and projects that require investment access, funding projects, liquidity, consultancy, contracts and private placements in emerging technology markets.`,
+            in: 'https://www.linkedin.com/in/theraelim'
+        },
     ])
 
     const renderMember = (value) => {
