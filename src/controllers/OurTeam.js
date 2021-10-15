@@ -27,13 +27,6 @@ export default function OurTeam() {
             in: 'https://www.linkedin.com/in/vincent-giap-929810211/'
         },
         {
-            img: Phan,
-            name: 'Phan Tuan Anh',
-            office: 'Blockchain lead',
-            description: 'Tuan Anh has 5 years of experience in smart contract design and code. Besides outsourcing for international projects, he has developed Empow blockchain specialized for social media. With his experience in technical structure, strategic thinking, and start-up training, he directly supervises and manages the work for the members of the blockchain team.',
-            in: 'https://www.linkedin.com/in/ceoempow/'
-        },
-        {
             img: Denis,
             name: 'Denis Znamenskiy',
             office: 'CEO',
@@ -46,6 +39,13 @@ export default function OurTeam() {
             office: 'CTO',
             description: 'Emilian Gomoi is the CTO at Demole.io. Emillian was the CEO of a Romanian company - Rongir Co. Ltd., with direct experience in overseas outsourcing projects in IT design, training and the Multimedia industry.  Emillian by trade is a Physicist engineer with vast experience in electronic engineering and other related engineering disciplines. Besides being a software Developer and Project Manager for over 40 years, he also was licensed as Foreign Expert by the State Administration of Foreign Experts Affairs of China.',
             in: 'https://www.linkedin.com/in/emiliangomoi/'
+        },
+        {
+            img: Phan,
+            name: 'Phan Tuan Anh',
+            office: 'Blockchain lead',
+            description: 'Tuan Anh has 5 years of experience in smart contract design and code. Besides outsourcing for international projects, he has developed Empow blockchain specialized for social media. With his experience in technical structure, strategic thinking, and start-up training, he directly supervises and manages the work for the members of the blockchain team.',
+            in: 'https://www.linkedin.com/in/ceoempow/'
         },
         {
             img: Catalin,

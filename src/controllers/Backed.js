@@ -15,6 +15,11 @@ import MetrixCapital from '../assets/LOGO/logo-metrix.png'
 import Gate from '../assets/LOGO/gate-logo.png'
 import Raptor from '../assets/LOGO/logo.png'
 import Newave from '../assets/LOGO/Newave Capital logo1.svg'
+import Au21 from '../assets/LOGO/au21.png'
+import Capstonetrade from '../assets/LOGO/footer_logo.png'
+import M6 from '../assets/LOGO/1200px-M6_logo_2020.svg.png'
+import Evg from '../assets/LOGO/evg.svg'
+import Rikkei from '../assets/LOGO/77c4d5f.png'
 
 export default function Backed() {
     const [data] = useState([
@@ -33,6 +38,11 @@ export default function Backed() {
         { img: Gate },
         { img: Raptor },
         { img: Newave },
+        { img: Au21 },
+        { img: Capstonetrade },
+        { img: M6 },
+        { img: Evg },
+        { img: Rikkei }
     ])
     return (
         <div id="backed">
