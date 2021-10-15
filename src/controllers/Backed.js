@@ -38,11 +38,11 @@ export default function Backed() {
         { img: Gate },
         { img: Raptor },
         { img: Newave },
-        { img: Au21 },
-        { img: Capstonetrade },
-        { img: M6 },
-        { img: Evg },
-        { img: Rikkei }
+        // { img: Au21 },
+        // { img: Capstonetrade },
+        // { img: M6 },
+        // { img: Evg },
+        // { img: Rikkei }
     ])
     return (
         <div id="backed">
