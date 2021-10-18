@@ -90,12 +90,7 @@ export default function OurTeam() {
             <div className="container">
                 <p className="titleTxt">OUR TEAM</p>
                 <p className="description">
-                    D.A.R Labs is a game publisher that owns a team of over 50 veteran game and platform developers in blockchain generally and cryptocurrency particularly. We are passionate about the delight of bringing a new foundation shift for blockchain-based games.
-                    <br></br><br></br>
-                    The D.A.R ecosystem is the perfect synthesis of NFT gaming and DeFi environment, giving chances to users to have fun and earn profit synchronously. The comprehensive ecosystem is made up of a 3D role-playing NFT game with fantastic gameplay, a cross-chained NFT marketplace, NFT collectibles, and HERO token. Furthermore, a great social network experience bringed by our supportive community is another perfection.
-                    <br></br><br></br>
-                    D.A.R young team is passionate about blockchain and the game industry. We’re game-lovers with the desire to create legendary characters and bring them to life. That’s why we soon started working in D.A.R Labs to introduce the magic of Blockchain technology to billions of players. To think about the team, let’s say: Unstoppable, unbelievable, and unprecedented - 3U for 1-another-U that’s “universe” built by D.A.R Labs.
-
+                    D.A.R Labs is a Game and Blockchain Development Group with a team of experts and experienced professions in different fields from Game Dev, Tech/Engineering, Finance and BA. We are in partnership with more than __++top-tier financial corporations, VCs, and influencers worldwide. We provide full-package business services from advisory to business modelling and marketing for early startups.
                 </p>
                 <div className="list-team">
                     {data.map((value, index) => {
