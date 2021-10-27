@@ -43,7 +43,7 @@ export default function Header() {
 
                         {/* <Link to="/faq"><a href="/faq">{toggleMenu && <img src={Faq} alt="photos"></img>} FAQ</a></Link> */}
                         <li className="tip">{toggleMenu && <img src={Market} alt="photos"></img>} Marketplace<span>Coming Soon</span></li>
-                        <li className="tip">{toggleMenu && <img src={Stake} alt="photos"></img>} Stake<span>Coming Soon</span></li>
+                        <a href="https://stake.demole.io/" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={Stake} alt="photos"></img>}Stake</a>
                         <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">{toggleMenu && <img src={IconBook} alt="photos"></img>}Pitch Deck</a>
                         <li className="tip">{toggleMenu && <img src={Faq} alt="photos"></img>} Demole-Wiki<span>Coming Soon</span></li>
                         <Link to="/our-team">{toggleMenu && <img src={Team} alt="photos" width="24" fill="white"></img>} Our Team</Link>
