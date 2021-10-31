@@ -916,7 +916,24 @@ a {
 			div {
 				width: 150px;
 				margin: 0 20px 20px 20px;
-
+				&:nth-child(7) img{
+					width: 80%;
+				}
+				&:nth-child(5) img{
+					width: 80%;
+				}
+				&:nth-child(11) img{
+					width: 80%;
+				}
+				&:nth-child(12) img{
+					padding: 12px;
+				}
+				&:nth-child(15) img{
+					width: 80%;
+				}
+				&:nth-child(17) img{
+					width: 90%;
+				}
 				img {
 					width: 100%;
 				}
@@ -2222,7 +2239,6 @@ a {
 					margin: 0 10px 10px 10px;
 				}
 			}
-
 			.sketchfab-embed-wrapper {
 				margin-top: -100px;
 				iframe {
