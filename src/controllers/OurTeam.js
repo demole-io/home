@@ -90,7 +90,7 @@ export default function OurTeam() {
             <div className="container">
                 <p className="titleTxt">OUR TEAM</p>
                 <p className="description">
-                    D.A.R Labs is a Game and Blockchain Development Group with a team of experts and experienced professions in different fields from Game Dev, Tech/Engineering, Finance and BA. We are in partnership with more than __++top-tier financial corporations, VCs, and influencers worldwide. We provide full-package business services from advisory to business modelling and marketing for early startups.
+                    D.A.R Labs is a Game and Blockchain Development Group with a team of experts and experienced professions in different fields from Game Dev, Tech/Engineering, Finance and BA. We are in partnership with more than 300+ top-tier financial corporations, VCs, and influencers worldwide. We provide full-package business services from advisory to business modelling and marketing for early startups.
                 </p>
                 <div className="list-team">
                     {data.map((value, index) => {
