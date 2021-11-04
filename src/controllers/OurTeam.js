@@ -30,7 +30,7 @@ export default function OurTeam() {
             img: Denis,
             name: 'Denis Znamenskiy',
             office: 'CEO',
-            description: 'Denis Znamenskiy is CEO of Demole.io. As a SPAC professional, Denis has  participated as a speaker at international blockchain events, advising fintech companies (Algochain, PrismCoin, Bibox, IndexChain, Demole.io). With solid experience in these field, he has worked as a systematic hedge fund manager focusing on liquid strategies, an algorithmic trader and quantitative research analyst, and an algorithmic Trading, Statistical Arbitrage, HFT (High-Frequency Trading), Cross-asset portfolio management, back-test, and optimization.',
+            description: 'Denis Znamenskiy is CEO of Demole.io. As a SPAC professional, Denis has  participated as a speaker at international blockchain events, advising fintech companies (PrismCoin, Bibox, IndexChain, Demole.io). With solid experience in these field, he has worked as a systematic hedge fund manager focusing on liquid strategies, an algorithmic trader and quantitative research analyst, and an algorithmic Trading, Statistical Arbitrage, HFT (High-Frequency Trading), Cross-asset portfolio management, back-test, and optimization.',
             in: 'https://www.linkedin.com/in/denisznamenskiy/'
         },
         {
