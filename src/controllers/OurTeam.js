@@ -51,7 +51,7 @@ export default function OurTeam() {
             img: Rae,
             name: 'Rae Lim',
             office: 'CMO',
-            description: `Rea earned multiple expertise from marketing in multinational FMCG companies to managing CSR corporates in a British multinational companies, and running her own start-ups. She joined a digital asset advisory in Singapore in 2018 in which she experienced in Finance and Investors relation, PR & Marketing, and consultancy in emerging technology markets.`,
+            description: 'Rea earned multiple expertise from marketing in multinational FMCG companies to managing CSR corporates in a British multinational companies, and running her own start-ups. In 2018, she joined a digital assets advisory in Singapore to manage its marketing and investor relations. She has experience dealing with clients and projects that require investment access, funding projects, liquidity, consultancy, contracts and private placements in emerging technology markets.',
             in: 'https://www.linkedin.com/in/theraelim'
         },
     ])
