@@ -1547,7 +1547,7 @@ a {
 		.list-team {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: flex-start;
+			justify-content: center;
 			align-items: center;
 			margin-bottom: 91px;
 		}
@@ -1556,7 +1556,11 @@ a {
 			width: 260px;
 			align-items: center;
 			margin-right: 13px;
-			&:nth-child(4n) {
+			&:nth-child(1) {
+				margin-left: 200px;
+			}&:nth-child(2) {
+				margin-right: 200px;
+			}&:nth-child(6) {
 				margin-right: 0;
 			}
 			.card {
