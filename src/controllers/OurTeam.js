@@ -41,13 +41,6 @@ export default function OurTeam() {
             in: 'https://www.linkedin.com/in/emiliangomoi/'
         },
         {
-            img: Phan,
-            name: 'Phan Tuan Anh',
-            office: 'Blockchain lead',
-            description: 'Tuan Anh has 5 years of experience in smart contract design and code. Besides outsourcing for international projects, he has developed Empow blockchain specialized for social media. With his experience in technical structure, strategic thinking, and start-up training, he directly supervises and manages the work for the members of the blockchain team.',
-            in: 'https://www.linkedin.com/in/ceoempow/'
-        },
-        {
             img: Catalin,
             name: 'Catalin Anton',
             office: 'COO',
