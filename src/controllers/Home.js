@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react'
-import Logo from '../assets/img/logo02 1.png'
+import Logo from '../assets/img/logo-demole.png'
 import $ from 'jquery'
 import styled from 'styled-components'
 import ScrollDown from '../assets/img/Group 8142.png'
@@ -186,7 +186,7 @@ const Home = props => {
         <div id="home">
             <div className="container">
                 <Wrapper className="vanvan">
-                    <img className="title" src={Logo} alt="photos"></img>
+                    <img className="title banner" src={Logo} alt="photos"></img>
                     {textArr.map((value, index) => {
                         return <p key={index} className={`txt txt${index}`}>{value}</p>
                     })}
