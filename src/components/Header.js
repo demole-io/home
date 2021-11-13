@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IconMobile from '../assets/img/icon-mobile.svg'
 import IconClose from '../assets/img/icon-close.svg'
-import Logo from '../assets/img/DEMOLE-logo02 1.png'
+import Logo from '../assets/img/demole-logo.png'
 import Market from '../assets/img/map_grocery-or-supermarket.png'
 import Stake from '../assets/img/ant-design_dollar-circle-filled.png'
 import Summon from '../assets/img/raphael_opensource.png'
