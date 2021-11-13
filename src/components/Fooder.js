@@ -8,7 +8,7 @@ import IconTele from '../assets/img/telegram.png'
 import { Link } from "react-router-dom";
 import ScrollUp from '../assets/img/Group 8162.png'
 import $ from 'jquery'
-import Logo from '../assets/img/DEMOLE-logo02 1.png'
+import Logo from '../assets/img/demole-logo.png'
 
 export default function Fooder() {
 
@@ -108,7 +108,7 @@ export default function Fooder() {
                 </div>
 
                 <Link to="/">
-                    <img src={Logo} alt="photos"></img>
+                    <img className="logo" src={Logo} alt="photos"></img>
                 </Link>
 
                 <div className="title">
