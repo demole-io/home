@@ -255,7 +255,18 @@ a {
 	overflow: hidden;
 	border-right: 3px solid;
 }
-
+img.logo{
+	width: 40%;
+}
+.is-web a img{
+	width: 100%;
+}
+.is-web a{
+	width: 150px;
+}
+.banner{
+	width: 50%;
+}
 @keyframes text-typing {
 	from {
 		width: 0;
