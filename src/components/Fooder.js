@@ -38,10 +38,10 @@ export default function Fooder() {
                     <p>Stake</p> */}
 
 
-                    <Link to="/summon">Summon</Link>
+                    <li><Link to="/summon">Summon</Link></li>
 
                     <li className="tip">Marketplace<span>Coming Soon</span></li>
-                    <li className="tip">Stake<span>Coming Soon</span></li>
+                    <li className="tip"><a href="https://app.demole.io/stake" target="_blank" rel="noreferrer">Stake</a></li>
                     <li>
                         <a href="/Demole_PitchDeck.pdf" target="_blank" rel="noopener noreferrer">Pitch Deck</a>
                     </li>
