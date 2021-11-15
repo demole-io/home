@@ -33,6 +33,7 @@ export default function Backed() {
         { img: LDCapital },
         { img: M6 },
         { img: Magnus },
+        { img: AC },
         { img: Au21 },
         { img: logoX21 },
         { img: BasicCapital },
