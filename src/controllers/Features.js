@@ -30,13 +30,13 @@ const Features = props => {
                 des: 'Collaborate with global players to defeat world bosses or compete with them on leaderboards. Make friends worldwide through Friends and Guild features'
             }
         },
-        {
-            img: img4,
-            content: {
-                title: 'Create and trade your own NFT',
-                des: 'Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.'
-            }
-        },
+//         {
+//             img: img4,
+//             content: {
+//                 title: 'Create and trade your own NFT',
+//                 des: 'Powered by blockchain technology, your monsters and items are unique and tradable in the marketplace.'
+//             }
+//         },
     ])
 
     const renderChild = (key) => {
